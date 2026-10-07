@@ -1,15 +1,15 @@
 # Power converter circuits from the Δ-Seeker paper: how do they work?
 
-This folder is for Mayowa. It has everything needed to simulate and understand the four
+This folder has everything needed to simulate and understand the four
 power converters shown in Fig. 7 of our paper (`docs/Paper_2026_DATE_DeltaSeeker_latest.pdf`,
 Section IV, Table III). Nothing else from the project (the generative model, the search loop,
 the LLM controller) is included. You do not need them for this goal.
 
 ## Goal
 
-When we presented these results, people asked how these circuits actually work. For example
+We need to check how these circuits actually work. For example
 for D1: which switch is the high-side switch, which is the low-side switch, how does the
-switching happen. We want to show this in the next update. Your job:
+switching happen. We want to show this in the next update. 
 
 **Step 1. The parent circuits.**
 Each of our four discovered circuits was made by adding a few components to a circuit that
