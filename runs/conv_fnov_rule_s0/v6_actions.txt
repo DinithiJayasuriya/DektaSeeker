@@ -1,0 +1,50 @@
+Gen 0 -> RESCUE targets=['126064a1', '444d5e72', 'c4dc45fc']
+       1 attempted, 0 kept, 0 became feasible; 3/3 survived selection, 3 on front0
+Gen 1 -> RESCUE targets=['330b8066', '3c7e83a3', 'f7694157', '392c0049']
+       4 attempted, 1 kept, 1 became feasible; 1/1 still feasible at k=2; 5/5 survived selection, 1 on front0
+Gen 2 -> RESCUE targets=['e58f5082', '330b8066', 'e90d6cc7', '3e01ecd0']
+       3 attempted, 0 kept, 0 became feasible; 4/4 survived selection, 0 on front0
+Gen 3 -> RESCUE targets=['e58f5082', '330b8066', 'e90d6cc7', '3e01ecd0']
+       2 attempted, 0 kept, 0 became feasible; 4/4 survived selection, 0 on front0
+Gen 4 -> STEER
+       next-gen child novelty 0.344 -> 0.314, duplicate rate 0.011 -> 0.0, generated faulty fraction 0.667 -> 0.721 (memory lambda 8.0), feasible fd>=2 0 -> 1, cosmetic children 0.231 -> 0.3
+Gen 5 -> RESCUE targets=['994c5359', '33943728', '8d4c55a2', 'e58f5082']
+       3 attempted, 2 kept, 1 became feasible; 1/1 still feasible at k=2; 6/6 survived selection, 0 on front0
+Gen 6 -> RESCUE targets=['a1fb6b6c', 'e5c7b1e0', '994c5359', '33943728']
+       4 attempted, 3 kept, 2 became feasible; 2/2 still feasible at k=2; 7/7 survived selection, 0 on front0
+Gen 7 -> STEER
+       next-gen child novelty 0.445 -> 0.292, duplicate rate 0.021 -> 0.011, generated faulty fraction 0.747 -> 0.699 (memory lambda 8.0), feasible fd>=2 2 -> 2, cosmetic children 0.25 -> 0.44
+Gen 8 -> STEER
+       next-gen child novelty 0.292 -> 0.247, duplicate rate 0.011 -> 0.0, generated faulty fraction 0.699 -> 0.795 (memory lambda 12.0), feasible fd>=2 2 -> 3, cosmetic children 0.44 -> 0.5
+Gen 9 -> STEER
+       next-gen child novelty 0.247 -> 0.296, duplicate rate 0.0 -> 0.0, generated faulty fraction 0.795 -> 0.672 (memory lambda 18.0), feasible fd>=2 3 -> 3, cosmetic children 0.5 -> 0.556
+Gen 10 -> STEER
+       next-gen child novelty 0.296 -> 0.291, duplicate rate 0.0 -> 0.0, generated faulty fraction 0.672 -> 0.742 (memory lambda 27.0), feasible fd>=2 3 -> 5, cosmetic children 0.556 -> 0.481
+Gen 11 -> STEER
+       next-gen child novelty 0.291 -> 0.404, duplicate rate 0.0 -> 0.0, generated faulty fraction 0.742 -> 0.839 (memory lambda 40.5), feasible fd>=2 5 -> 6, cosmetic children 0.481 -> 0.333
+Gen 12 -> STEER
+       next-gen child novelty 0.404 -> 0.285, duplicate rate 0.0 -> 0.011, generated faulty fraction 0.839 -> 0.681 (memory lambda 60.75), feasible fd>=2 6 -> 10, cosmetic children 0.333 -> 0.391
+Gen 13 -> RACING
+       +14 sizings; front0 confirmed 2, entered 0, left 0
+Gen 14 -> STEER
+       next-gen child novelty 0.366 -> 0.377, duplicate rate 0.0 -> 0.011, generated faulty fraction 0.727 -> 0.8 (memory lambda 64.0), feasible fd>=2 13 -> 15, cosmetic children 0.333 -> 0.407
+Gen 15 -> STEER
+       next-gen child novelty 0.377 -> 0.376, duplicate rate 0.011 -> 0.011, generated faulty fraction 0.8 -> 0.808 (memory lambda 64.0), feasible fd>=2 15 -> 20, cosmetic children 0.407 -> 0.273
+Gen 16 -> STEER
+       next-gen child novelty 0.376 -> 0.272, duplicate rate 0.011 -> 0.0, generated faulty fraction 0.808 -> 0.6 (memory lambda 64.0), feasible fd>=2 20 -> 21, cosmetic children 0.273 -> 0.385
+Gen 17 -> STEER
+       next-gen child novelty 0.272 -> 0.324, duplicate rate 0.0 -> 0.012, generated faulty fraction 0.6 -> 0.576 (memory lambda 64.0), feasible fd>=2 21 -> 21, cosmetic children 0.385 -> 0.2
+Gen 18 -> VERIFY targets=['c1eedd4e', 'd9268f85', '06d5484d']
+       3 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB; 3/3 survived selection, 1 on front0
+Gen 19 -> VERIFY targets=['49a9850d', '45003d93']
+       2 verified (+4 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 0 on front0
+Gen 20 -> VERIFY targets=['07cc4f36', 'aec86f77', 'ce03019c', '64a92ff9']
+       4 verified (+8 sizings), 0 lost feasibility, 0 dropped >3 dB; 4/4 survived selection, 1 on front0
+Gen 21 -> VERIFY targets=['0622da7a', '8e349d3c']
+       2 verified (+4 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 0 on front0
+Gen 22 -> VERIFY targets=['48a97e2e', '6167c487']
+       2 verified (+4 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 1 on front0
+Gen 23 -> VERIFY targets=['c13bc206']
+       1 verified (+2 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 0 on front0
+Gen 24 -> STEER
+       pending (measured next generation)

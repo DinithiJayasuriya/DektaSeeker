@@ -1,0 +1,42 @@
+Gen 0 -> REPAIR targets=['6b7e9524', 'af48068c']
+       1 attempts, 1 structurally valid+simulated, 1 recovered, 0 improved; 3/3 survived selection, 0 on front0
+Gen 1 -> RACING
+       +237 sizings; front0 confirmed 1, entered 0, left 0
+Gen 2 -> VERIFY targets=['c28a3435']
+       1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 1 on front0
+Gen 3 -> VERIFY targets=['1afd93c3']
+       1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 0 on front0
+Gen 4 -> RESCUE targets=['074e4db1', '11403b0e', '41d18042', '9ad7dc9c']
+       4 attempted, 2 kept, 2 became feasible; 6/6 survived selection, 1 on front0
+Gen 5 -> RACING
+       +5 sizings; front0 confirmed 1, entered 0, left 2
+Gen 6 -> RESCUE targets=['11403b0e', '1d74cf86', '9ad7dc9c']
+       3 attempted, 1 kept, 1 became feasible; 3/4 survived selection, 0 on front0
+Gen 7 -> VERIFY targets=['da417ff3']
+       1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 1 on front0
+Gen 8 -> RACING
+       +4 sizings; front0 confirmed 3, entered 0, left 0
+Gen 9 -> RESCUE targets=['9440b074', 'c4d38396', '9f05c51b']
+       3 attempted, 0 kept, 0 became feasible; 3/3 survived selection, 0 on front0
+Gen 10 -> VERIFY targets=['b7516c6d']
+       1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 0 on front0
+Gen 11 -> VERIFY targets=['f6c1c68a', '399ab60a']
+       2 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 1 on front0
+Gen 12 -> RESCUE targets=['059e3e90', 'c4d38396', '11403b0e', '59f0950b']
+       4 attempted, 1 kept, 0 became feasible; 5/5 survived selection, 0 on front0
+Gen 13 -> VERIFY targets=['99d06f7f', '0f685bd8']
+       2 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 1 on front0
+Gen 14 -> RACING
+       +4 sizings; front0 confirmed 2, entered 3, left 2
+Gen 15 -> VERIFY targets=['73252e29', '96526225', 'f31a5a21', '014dfedc']
+       4 verified (+12 sizings), 0 lost feasibility, 0 dropped >3 dB; 4/4 survived selection, 1 on front0
+Gen 16 -> VERIFY targets=['0ab278e1', '53c59df4']
+       2 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 0 on front0
+Gen 17 -> VERIFY targets=['471b128d', '15c2d005']
+       2 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 0 on front0
+Gen 18 -> RACING
+       +11 sizings; front0 confirmed 1, entered 0, left 3
+Gen 19 -> VERIFY targets=['22697eb4']
+       1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 0 on front0
+Gen 20 -> VERIFY targets=['6782d3e8', 'e6906251']
+       2 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 0 on front0

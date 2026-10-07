@@ -1,0 +1,671 @@
+{
+ "gens": [
+  {
+   "gen": 0,
+   "evaluated": 47,
+   "run_best_feasible_fd": 0,
+   "run_feasible_fd_ge2": 0,
+   "run_feasible_fd_ge1": 0,
+   "audit_sims": 0,
+   "struct_frac": 0.25
+  },
+  {
+   "gen": 1,
+   "evaluated": 96,
+   "run_best_feasible_fd": 0,
+   "run_feasible_fd_ge2": 0,
+   "run_feasible_fd_ge1": 0,
+   "audit_sims": 0,
+   "struct_frac": 0.25,
+   "sizings": 63,
+   "n_struct_children": 12
+  },
+  {
+   "gen": 2,
+   "evaluated": 95,
+   "run_best_feasible_fd": 0,
+   "run_feasible_fd_ge2": 0,
+   "run_feasible_fd_ge1": 0,
+   "audit_sims": 0,
+   "struct_frac": 0.25,
+   "sizings": 106,
+   "n_struct_children": 12
+  },
+  {
+   "gen": 3,
+   "evaluated": 90,
+   "run_best_feasible_fd": 0,
+   "run_feasible_fd_ge2": 0,
+   "run_feasible_fd_ge1": 0,
+   "audit_sims": 0,
+   "struct_frac": 0.25,
+   "sizings": 146,
+   "n_struct_children": 12
+  },
+  {
+   "gen": 4,
+   "evaluated": 93,
+   "run_best_feasible_fd": 0,
+   "run_feasible_fd_ge2": 0,
+   "run_feasible_fd_ge1": 0,
+   "audit_sims": 0,
+   "struct_frac": 0.4,
+   "sizings": 190,
+   "n_struct_children": 12
+  },
+  {
+   "gen": 5,
+   "evaluated": 90,
+   "run_best_feasible_fd": 4,
+   "run_feasible_fd_ge2": 1,
+   "run_feasible_fd_ge1": 1,
+   "audit_sims": 18,
+   "struct_frac": 0.4,
+   "sizings": 250,
+   "n_struct_children": 19
+  },
+  {
+   "gen": 6,
+   "evaluated": 89,
+   "run_best_feasible_fd": 4,
+   "run_feasible_fd_ge2": 1,
+   "run_feasible_fd_ge1": 1,
+   "audit_sims": 48,
+   "struct_frac": 0.4,
+   "sizings": 318,
+   "n_struct_children": 19
+  },
+  {
+   "gen": 7,
+   "evaluated": 93,
+   "run_best_feasible_fd": 4,
+   "run_feasible_fd_ge2": 2,
+   "run_feasible_fd_ge1": 2,
+   "audit_sims": 80,
+   "struct_frac": 0.4,
+   "sizings": 391,
+   "n_struct_children": 19
+  },
+  {
+   "gen": 8,
+   "evaluated": 87,
+   "run_best_feasible_fd": 4,
+   "run_feasible_fd_ge2": 2,
+   "run_feasible_fd_ge1": 2,
+   "audit_sims": 135,
+   "struct_frac": 0.55,
+   "sizings": 477,
+   "n_struct_children": 19
+  },
+  {
+   "gen": 9,
+   "evaluated": 81,
+   "run_best_feasible_fd": 4,
+   "run_feasible_fd_ge2": 3,
+   "run_feasible_fd_ge1": 4,
+   "audit_sims": 262,
+   "struct_frac": 0.6,
+   "sizings": 635,
+   "n_struct_children": 26
+  },
+  {
+   "gen": 10,
+   "evaluated": 84,
+   "run_best_feasible_fd": 4,
+   "run_feasible_fd_ge2": 3,
+   "run_feasible_fd_ge1": 4,
+   "audit_sims": 366,
+   "struct_frac": 0.6,
+   "sizings": 773,
+   "n_struct_children": 29
+  },
+  {
+   "gen": 11,
+   "evaluated": 81,
+   "run_best_feasible_fd": 4,
+   "run_feasible_fd_ge2": 5,
+   "run_feasible_fd_ge1": 6,
+   "audit_sims": 497,
+   "struct_frac": 0.6,
+   "sizings": 935,
+   "n_struct_children": 29
+  },
+  {
+   "gen": 12,
+   "evaluated": 77,
+   "run_best_feasible_fd": 4,
+   "run_feasible_fd_ge2": 6,
+   "run_feasible_fd_ge1": 9,
+   "audit_sims": 597,
+   "struct_frac": 0.6,
+   "sizings": 1063,
+   "n_struct_children": 29
+  },
+  {
+   "gen": 13,
+   "evaluated": 77,
+   "run_best_feasible_fd": 4,
+   "run_feasible_fd_ge2": 10,
+   "run_feasible_fd_ge1": 13,
+   "audit_sims": 718,
+   "struct_frac": 0.6,
+   "sizings": 1224,
+   "n_struct_children": 29
+  },
+  {
+   "gen": 14,
+   "evaluated": 78,
+   "run_best_feasible_fd": 4,
+   "run_feasible_fd_ge2": 13,
+   "run_feasible_fd_ge1": 17,
+   "audit_sims": 792,
+   "struct_frac": 0.6,
+   "sizings": 1326,
+   "n_struct_children": 29
+  },
+  {
+   "gen": 15,
+   "evaluated": 83,
+   "run_best_feasible_fd": 4,
+   "run_feasible_fd_ge2": 15,
+   "run_feasible_fd_ge1": 21,
+   "audit_sims": 903,
+   "struct_frac": 0.6,
+   "sizings": 1466,
+   "n_struct_children": 29
+  },
+  {
+   "gen": 16,
+   "evaluated": 80,
+   "run_best_feasible_fd": 4,
+   "run_feasible_fd_ge2": 19,
+   "run_feasible_fd_ge1": 25,
+   "audit_sims": 1003,
+   "struct_frac": 0.6,
+   "sizings": 1593,
+   "n_struct_children": 29
+  },
+  {
+   "gen": 17,
+   "evaluated": 78,
+   "run_best_feasible_fd": 4,
+   "run_feasible_fd_ge2": 22,
+   "run_feasible_fd_ge1": 29,
+   "audit_sims": 1146,
+   "struct_frac": 0.6,
+   "sizings": 1766,
+   "n_struct_children": 29
+  },
+  {
+   "gen": 18,
+   "evaluated": 67,
+   "run_best_feasible_fd": 4,
+   "run_feasible_fd_ge2": 22,
+   "run_feasible_fd_ge1": 29,
+   "audit_sims": 1158,
+   "struct_frac": 0.6,
+   "sizings": 1799,
+   "n_struct_children": 29
+  },
+  {
+   "gen": 19,
+   "evaluated": 76,
+   "run_best_feasible_fd": 4,
+   "run_feasible_fd_ge2": 24,
+   "run_feasible_fd_ge1": 31,
+   "audit_sims": 1250,
+   "struct_frac": 0.6,
+   "sizings": 1921,
+   "n_struct_children": 29
+  },
+  {
+   "gen": 20,
+   "evaluated": 72,
+   "run_best_feasible_fd": 4,
+   "run_feasible_fd_ge2": 25,
+   "run_feasible_fd_ge1": 32,
+   "audit_sims": 1383,
+   "struct_frac": 0.6,
+   "sizings": 2082,
+   "n_struct_children": 29
+  },
+  {
+   "gen": 21,
+   "evaluated": 70,
+   "run_best_feasible_fd": 4,
+   "run_feasible_fd_ge2": 31,
+   "run_feasible_fd_ge1": 40,
+   "audit_sims": 1498,
+   "struct_frac": 0.6,
+   "sizings": 2223,
+   "n_struct_children": 29
+  },
+  {
+   "gen": 22,
+   "evaluated": 77,
+   "run_best_feasible_fd": 4,
+   "run_feasible_fd_ge2": 34,
+   "run_feasible_fd_ge1": 45,
+   "audit_sims": 1602,
+   "struct_frac": 0.6,
+   "sizings": 2359,
+   "n_struct_children": 29
+  },
+  {
+   "gen": 23,
+   "evaluated": 73,
+   "run_best_feasible_fd": 4,
+   "run_feasible_fd_ge2": 38,
+   "run_feasible_fd_ge1": 50,
+   "audit_sims": 1697,
+   "struct_frac": 0.6,
+   "sizings": 2477,
+   "n_struct_children": 29
+  },
+  {
+   "gen": 24,
+   "evaluated": 79,
+   "run_best_feasible_fd": 4,
+   "run_feasible_fd_ge2": 44,
+   "run_feasible_fd_ge1": 57,
+   "audit_sims": 1837,
+   "struct_frac": 0.6,
+   "sizings": 2646,
+   "n_struct_children": 29
+  }
+ ],
+ "audit_sims": 1837,
+ "audited": 163,
+ "moves": {
+  "sc_branch": {
+   "tried": 728,
+   "invalid": 0,
+   "collapsed": 3,
+   "too_big": 681,
+   "dup": 0,
+   "accepted": 44
+  },
+  "lc_path": {
+   "tried": 752,
+   "invalid": 0,
+   "collapsed": 7,
+   "too_big": 682,
+   "dup": 2,
+   "accepted": 61
+  },
+  "transfer_L": {
+   "tried": 1033,
+   "invalid": 0,
+   "collapsed": 0,
+   "too_big": 912,
+   "dup": 0,
+   "accepted": 121
+  },
+  "switch_path": {
+   "tried": 363,
+   "invalid": 13,
+   "collapsed": 1,
+   "too_big": 322,
+   "dup": 0,
+   "accepted": 27
+  },
+  "insert_series": {
+   "tried": 587,
+   "invalid": 1,
+   "collapsed": 19,
+   "too_big": 523,
+   "dup": 0,
+   "accepted": 44
+  },
+  "rewire": {
+   "tried": 233,
+   "invalid": 50,
+   "collapsed": 52,
+   "too_big": 0,
+   "dup": 3,
+   "accepted": 128
+  },
+  "cell_graft": {
+   "tried": 1249,
+   "invalid": 0,
+   "collapsed": 6,
+   "too_big": 1197,
+   "dup": 0,
+   "accepted": 46
+  }
+ },
+ "struct_log": [
+  {
+   "gen": 1,
+   "trigger": "struct_frac",
+   "n": 12,
+   "ops": {
+    "cell_graft": 5,
+    "insert_series": 3,
+    "sc_branch": 2,
+    "lc_path": 2
+   },
+   "feasible": 0
+  },
+  {
+   "gen": 2,
+   "trigger": "struct_frac",
+   "n": 11,
+   "ops": {
+    "insert_series": 2,
+    "sc_branch": 3,
+    "lc_path": 4,
+    "cell_graft": 2
+   },
+   "feasible": 1
+  },
+  {
+   "gen": 3,
+   "trigger": "struct_frac",
+   "n": 11,
+   "ops": {
+    "insert_series": 2,
+    "lc_path": 3,
+    "sc_branch": 2,
+    "cell_graft": 2,
+    "transfer_L": 2
+   },
+   "feasible": 0
+  },
+  {
+   "gen": 4,
+   "trigger": "struct_frac",
+   "n": 11,
+   "ops": {
+    "sc_branch": 2,
+    "cell_graft": 3,
+    "switch_path": 1,
+    "insert_series": 1,
+    "transfer_L": 3,
+    "lc_path": 1
+   },
+   "feasible": 0
+  },
+  {
+   "gen": 5,
+   "trigger": "struct_frac",
+   "n": 18,
+   "ops": {
+    "rewire": 2,
+    "sc_branch": 7,
+    "cell_graft": 2,
+    "lc_path": 3,
+    "insert_series": 1,
+    "transfer_L": 3
+   },
+   "feasible": 2
+  },
+  {
+   "gen": 6,
+   "trigger": "struct_frac",
+   "n": 16,
+   "ops": {
+    "rewire": 3,
+    "lc_path": 3,
+    "cell_graft": 3,
+    "insert_series": 1,
+    "sc_branch": 3,
+    "transfer_L": 3
+   },
+   "feasible": 1
+  },
+  {
+   "gen": 7,
+   "trigger": "struct_frac",
+   "n": 19,
+   "ops": {
+    "lc_path": 5,
+    "cell_graft": 2,
+    "transfer_L": 6,
+    "insert_series": 3,
+    "sc_branch": 1,
+    "rewire": 2
+   },
+   "feasible": 3
+  },
+  {
+   "gen": 8,
+   "trigger": "struct_frac",
+   "n": 18,
+   "ops": {
+    "rewire": 3,
+    "insert_series": 2,
+    "transfer_L": 6,
+    "lc_path": 2,
+    "cell_graft": 3,
+    "sc_branch": 2
+   },
+   "feasible": 6
+  },
+  {
+   "gen": 9,
+   "trigger": "struct_frac",
+   "n": 24,
+   "ops": {
+    "lc_path": 7,
+    "sc_branch": 1,
+    "cell_graft": 3,
+    "transfer_L": 9,
+    "rewire": 1,
+    "insert_series": 2,
+    "switch_path": 1
+   },
+   "feasible": 12
+  },
+  {
+   "gen": 10,
+   "trigger": "struct_frac",
+   "n": 23,
+   "ops": {
+    "sc_branch": 7,
+    "transfer_L": 8,
+    "lc_path": 1,
+    "rewire": 3,
+    "insert_series": 2,
+    "cell_graft": 2
+   },
+   "feasible": 10
+  },
+  {
+   "gen": 11,
+   "trigger": "struct_frac",
+   "n": 23,
+   "ops": {
+    "lc_path": 7,
+    "transfer_L": 4,
+    "sc_branch": 1,
+    "rewire": 7,
+    "cell_graft": 3,
+    "insert_series": 1
+   },
+   "feasible": 12
+  },
+  {
+   "gen": 12,
+   "trigger": "struct_frac",
+   "n": 21,
+   "ops": {
+    "sc_branch": 3,
+    "lc_path": 1,
+    "transfer_L": 5,
+    "cell_graft": 5,
+    "insert_series": 2,
+    "rewire": 3,
+    "switch_path": 2
+   },
+   "feasible": 9
+  },
+  {
+   "gen": 13,
+   "trigger": "struct_frac",
+   "n": 21,
+   "ops": {
+    "lc_path": 3,
+    "transfer_L": 6,
+    "sc_branch": 2,
+    "insert_series": 4,
+    "rewire": 5,
+    "switch_path": 1
+   },
+   "feasible": 13
+  },
+  {
+   "gen": 14,
+   "trigger": "struct_frac",
+   "n": 23,
+   "ops": {
+    "transfer_L": 10,
+    "lc_path": 3,
+    "rewire": 7,
+    "insert_series": 1,
+    "switch_path": 1,
+    "cell_graft": 1
+   },
+   "feasible": 9
+  },
+  {
+   "gen": 15,
+   "trigger": "struct_frac",
+   "n": 23,
+   "ops": {
+    "transfer_L": 9,
+    "sc_branch": 2,
+    "lc_path": 2,
+    "insert_series": 2,
+    "rewire": 6,
+    "cell_graft": 1,
+    "switch_path": 1
+   },
+   "feasible": 11
+  },
+  {
+   "gen": 16,
+   "trigger": "struct_frac",
+   "n": 22,
+   "ops": {
+    "lc_path": 2,
+    "sc_branch": 2,
+    "rewire": 8,
+    "transfer_L": 7,
+    "cell_graft": 1,
+    "insert_series": 1,
+    "switch_path": 1
+   },
+   "feasible": 11
+  },
+  {
+   "gen": 17,
+   "trigger": "struct_frac",
+   "n": 26,
+   "ops": {
+    "rewire": 10,
+    "cell_graft": 2,
+    "lc_path": 4,
+    "transfer_L": 5,
+    "switch_path": 4,
+    "insert_series": 1
+   },
+   "feasible": 14
+  },
+  {
+   "gen": 18,
+   "trigger": "struct_frac",
+   "n": 15,
+   "ops": {
+    "insert_series": 2,
+    "rewire": 6,
+    "transfer_L": 2,
+    "cell_graft": 1,
+    "lc_path": 3,
+    "switch_path": 1
+   },
+   "feasible": 3
+  },
+  {
+   "gen": 19,
+   "trigger": "struct_frac",
+   "n": 23,
+   "ops": {
+    "transfer_L": 5,
+    "insert_series": 4,
+    "rewire": 10,
+    "switch_path": 1,
+    "lc_path": 1,
+    "cell_graft": 2
+   },
+   "feasible": 8
+  },
+  {
+   "gen": 20,
+   "trigger": "struct_frac",
+   "n": 20,
+   "ops": {
+    "transfer_L": 6,
+    "rewire": 9,
+    "cell_graft": 1,
+    "lc_path": 1,
+    "switch_path": 2,
+    "sc_branch": 1
+   },
+   "feasible": 11
+  },
+  {
+   "gen": 21,
+   "trigger": "struct_frac",
+   "n": 18,
+   "ops": {
+    "insert_series": 2,
+    "rewire": 8,
+    "lc_path": 2,
+    "transfer_L": 5,
+    "switch_path": 1
+   },
+   "feasible": 11
+  },
+  {
+   "gen": 22,
+   "trigger": "struct_frac",
+   "n": 26,
+   "ops": {
+    "rewire": 15,
+    "switch_path": 3,
+    "transfer_L": 3,
+    "insert_series": 4,
+    "sc_branch": 1
+   },
+   "feasible": 11
+  },
+  {
+   "gen": 23,
+   "trigger": "struct_frac",
+   "n": 23,
+   "ops": {
+    "rewire": 8,
+    "transfer_L": 8,
+    "insert_series": 1,
+    "switch_path": 3,
+    "cell_graft": 1,
+    "sc_branch": 2
+   },
+   "feasible": 9
+  },
+  {
+   "gen": 24,
+   "trigger": "struct_frac",
+   "n": 24,
+   "ops": {
+    "rewire": 12,
+    "switch_path": 4,
+    "lc_path": 1,
+    "transfer_L": 6,
+    "cell_graft": 1
+   },
+   "feasible": 12
+  }
+ ]
+}

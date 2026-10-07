@@ -1,0 +1,1498 @@
+=== conv V6 starting: Sun Sep 13 14:52:13 CDT 2026 === seed=0 --pop 48 --gens 6 --final_k 4 --adapt_k 4 --adapt_rounds 2 --tree_parallel 24 --v5 --v5_per_gen 4 --v5_calls 64 --v5_audit_calls 32 --v6 -> runs/conv_g20_v6_s0
+[outer] torch seeded from --seed 0: gen-0 sampling and SDEdit draws are PAIRED across arms
+[conv] DOMAIN = power converters. bench point: VIN=100.0 ROUT=50.0 FSW=100000 L=0.0005 C=1e-05 COUT=1e-05 RON=0.05 DCR=0.25 ESR=0.03; corners=['nominal', 'heavy_load', 'light_load', 'low_line_tol']
+[conv] spec sheet: {'target_vout': 50.0, 'tol': 0.05, 'ripple_frac': 0.05, 'eff_floor': 0.9, 'refine_steps': 2}
+[outer] loading converter novelty reference (LaMAGIC train split, distinct graphs) ...
+[outer] 37514 distinct training graphs (of 176738) for novelty reference
+<frozen importlib._bootstrap>:228: RuntimeWarning: to-Python converter for std::pair<double, double> already registered; second conversion method ignored.
+/home/dinithi/miniconda3/envs/digress/lib/python3.9/site-packages/torch/nn/init.py:405: UserWarning: Initializing zero-element tensors is a no-op
+  warnings.warn("Initializing zero-element tensors is a no-op")
+[train] weighted edge CE -- class weights: [0.014, 1.245, 1.245, 1.245, 1.245, 1.245, 1.245, 1.245, 0.027, 1.245]
+Marginal distribution of the classes: tensor([0.1442, 0.1440, 0.0000, 0.0000, 0.0000, 0.1145, 0.1085, 0.0000, 0.0000,
+        0.0000, 0.0967, 0.0000, 0.0000, 0.0967, 0.0967, 0.1987]) for nodes, tensor([0.7830, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.2170,
+        0.0000]) for edges
+[conv] lamagic model loaded: last-v1.ckpt T=500 n_label_classes=5 Xdim=16 Edim=10 (all 306 tensors matched)
+[outer] T=500  t*=150 (frac 0.3)  pop=48 gens=20 k=1  family=converter
+[outer] generation steering: duty label 0.5 (class 2), CFG scale 0.0
+[outer] FRONT DIVERSITY: dedup_front=True, struct_crowd weight=0.75
+[outer] persistent eval pool: 24 worker processes (parallel ngspice for gen-0 AND every generation)
+[outer] RESCUE ON: up to 4/gen, violation <= 0.3. Genome edits only, strict-gated before SPICE.
+  [conv rescue] ON, model=gpt-5-mini, max 128 calls, <= 2 edits each
+  [conv repair] LLM ON, model=gpt-5-mini, max 160 calls
+[outer] VERSION 5 REPAIR ON (converter checker): <= 4 attempts/gen, 128 in-loop LLM calls + 32 for the final audit; raw+repaired netlists -> runs/conv_g20_v6_s0/v5_repairs/
+  [v6 controller] LLM ON, model=gpt-5-mini
+[outer] VERSION 6 CONTROLLER ON (converter prompt): tools=['RACING', 'REPAIR', 'RESCUE', 'STEER', 'VERIFY'] limits={'RESCUE': 4, 'RACING': 2, 'RACING_k': 4, 'REPAIR': 4, 'VERIFY': 4, 'STEER': 1, 'CONTINUE': 0}. Automatic rescue/racing/v5-repair are OFF; the controller decides each generation.
+[outer] FEASIBILITY IN SELECTION: feasible always dominates infeasible; infeasible ordered by distance to the spec in 4 band(s). The final front admits ONLY feasible circuits.
+[outer] ADAPTIVE k: contested candidates refined to k<=4 corners over 2 round(s); ranking score lambda=1.0; sizing_budget=off
+
+[outer] === generation 0: initial population ===
+[outer] 48 VALIDITY-GUIDED SMC samples (ess=0.5 beta=2.0 start_frac=0.4 every=25 clone_cap=4 freeze_below=50); health = converter validity gate
+  smc 1/48: stage=     pending gain=None nov=0.0
+  smc 2/48: stage=     pending gain=None nov=0.0
+  smc 3/48: stage=     pending gain=None nov=0.0
+  smc 4/48: stage=     pending gain=None nov=0.0
+  smc 5/48: stage=     pending gain=None nov=0.0
+  smc 6/48: stage=     pending gain=None nov=0.0
+  smc 7/48: stage=     pending gain=None nov=0.0
+  smc 8/48: stage=     pending gain=None nov=0.0
+  smc 9/48: stage=     pending gain=None nov=0.0
+  smc 10/48: stage=     pending gain=None nov=0.0
+  smc 11/48: stage=     pending gain=None nov=0.0
+  smc 12/48: stage=     pending gain=None nov=0.0
+  smc 13/48: stage=     pending gain=None nov=0.0
+  smc 14/48: stage=     pending gain=None nov=0.0
+  smc 15/48: stage=     pending gain=None nov=0.0
+  smc 16/48: stage=     pending gain=None nov=0.0
+  smc 17/48: stage=     pending gain=None nov=0.0
+  smc 18/48: stage=     pending gain=None nov=0.0
+  smc 19/48: stage=     pending gain=None nov=0.0
+  smc 20/48: stage=     pending gain=None nov=0.0
+  smc 21/48: stage=     pending gain=None nov=0.0
+  smc 22/48: stage=     pending gain=None nov=0.0
+  smc 23/48: stage=     pending gain=None nov=0.0
+  smc 24/48: stage=     pending gain=None nov=0.0
+  smc 25/48: stage=     pending gain=None nov=0.0
+  smc 26/48: stage=     pending gain=None nov=0.0
+  smc 27/48: stage=     pending gain=None nov=0.0
+  smc 28/48: stage=     pending gain=None nov=0.0
+  smc 29/48: stage=     pending gain=None nov=0.0
+  smc 30/48: stage=     pending gain=None nov=0.0
+  smc 31/48: stage=     pending gain=None nov=0.0
+  smc 32/48: stage=     pending gain=None nov=0.0
+  smc 33/48: stage=     pending gain=None nov=0.0
+  smc 34/48: stage=     pending gain=None nov=0.0
+  smc 35/48: stage=     pending gain=None nov=0.0
+  smc 36/48: stage=     pending gain=None nov=0.0
+  smc 37/48: stage=     pending gain=None nov=0.0
+  smc 38/48: stage=     pending gain=None nov=0.0
+  smc 39/48: stage=     pending gain=None nov=0.0
+  smc 40/48: stage=     pending gain=None nov=0.0
+  smc 41/48: stage=     pending gain=None nov=0.0
+  smc 42/48: stage=     pending gain=None nov=0.0
+  smc 43/48: stage=     pending gain=None nov=0.0
+  smc 44/48: stage=     pending gain=None nov=0.0
+  smc 45/48: stage=     pending gain=None nov=0.0
+  smc 46/48: stage=     pending gain=None nov=0.0
+  smc 47/48: stage=     pending gain=None nov=0.0
+  smc 48/48: stage=     pending gain=None nov=0.0
+  [smc] 2 resample events (start<=s_int=200, every 25)
+  init 1/48: stage=      scored eff%=99.651 feas=False nov=0.0801  passthrough: output ignores duty
+  init 2/48: stage=      scored eff%=96.474 feas=False nov=0.0  Vout 96.5 misses 50.0
+  init 3/48: stage=      scored eff%=98.085 feas=False nov=0.0  Vout 98.1 misses 50.0
+  init 4/48: stage=      scored eff%=96.474 feas=False nov=0.0  Vout 96.5 misses 50.0
+  init 5/48: stage=      scored eff%=98.501 feas=False nov=0.0691  Vout 98.5 misses 50.0
+  init 6/48: stage=      scored eff%=96.474 feas=False nov=0.0  Vout 96.5 misses 50.0
+  init 7/48: stage=      scored eff%=98.322 feas=False nov=0.0  Vout 98.3 misses 50.0
+  init 8/48: stage=      scored eff%=98.376 feas=False nov=0.0  Vout 98.4 misses 50.0
+  init 9/48: stage=      scored eff%=96.474 feas=False nov=0.0  Vout 96.5 misses 50.0
+  init 10/48: stage=      scored eff%=98.501 feas=False nov=0.0691  Vout 98.5 misses 50.0
+  init 11/48: stage=      scored eff%=98.518 feas=False nov=0.0639  Vout 98.5 misses 50.0
+  init 12/48: stage=      scored eff%=98.501 feas=False nov=0.0691  Vout 98.5 misses 50.0
+  init 13/48: stage=      scored eff%=16.821 feas=False nov=0.0  Vout 16.8 misses 50.0
+  init 14/48: stage=      scored eff%=62.534 feas=False nov=0.0  Vout 62.5 misses 50.0
+  init 15/48: stage=      scored eff%=98.085 feas=False nov=0.0  Vout 98.1 misses 50.0
+  init 16/48: stage=      scored eff%=69.666 feas=False nov=0.0  Vout 98.3 misses 50.0
+  init 17/48: stage=struct_reject eff%=None feas=False nov=0.0714  ['no_vin_vout_path']
+  init 18/48: stage=      scored eff%=99.9 feas=False nov=0.1105  passthrough: output ignores duty
+  init 19/48: stage=struct_reject eff%=None feas=False nov=0.0602  ['no_vin_vout_path']
+  init 20/48: stage=      scored eff%=99.796 feas=False nov=0.0  passthrough: output ignores duty
+  init 21/48: stage=      scored eff%=99.651 feas=False nov=0.0801  passthrough: output ignores duty
+  init 22/48: stage=      scored eff%=98.561 feas=False nov=0.0955  Vout 98.6 misses 50.0
+  init 23/48: stage=      scored eff%=99.651 feas=False nov=0.0801  passthrough: output ignores duty
+  init 24/48: stage=      scored eff%=2.521 feas=False nov=0.0  Vout 98.3 misses 50.0
+  init 25/48: stage=      scored eff%=99.37 feas=True nov=0.0  
+  init 26/48: stage=      scored eff%=99.404 feas=False nov=0.0871  passthrough: output ignores duty
+  init 27/48: stage=      scored eff%=0.0 feas=False nov=0.0801  passthrough: output ignores duty
+  init 28/48: stage=      scored eff%=98.322 feas=False nov=0.0  Vout 98.3 misses 50.0
+  init 29/48: stage=      scored eff%=98.586 feas=False nov=0.0683  Vout 98.5 misses 50.0
+  init 30/48: stage=      scored eff%=0.0 feas=False nov=0.0737  passthrough: output ignores duty
+  init 31/48: stage=      scored eff%=98.085 feas=False nov=0.0  Vout 98.1 misses 50.0
+  init 32/48: stage=      scored eff%=99.651 feas=False nov=0.0801  passthrough: output ignores duty
+  init 33/48: stage=      scored eff%=98.322 feas=False nov=0.0  Vout 98.3 misses 50.0
+  init 34/48: stage=      scored eff%=98.518 feas=False nov=0.0639  Vout 98.5 misses 50.0
+  init 35/48: stage=      scored eff%=99.651 feas=False nov=0.0801  passthrough: output ignores duty
+  init 36/48: stage=      scored eff%=54.329 feas=False nov=0.0588  Vout 98.3 misses 50.0
+  init 37/48: stage=struct_reject eff%=None feas=False nov=0.1111  ['device_degree']
+  init 38/48: stage=      scored eff%=98.322 feas=False nov=0.0  Vout 98.3 misses 50.0
+  init 39/48: stage=      scored eff%=0.611 feas=False nov=0.1105  Vout 98.3 misses 50.0
+  init 40/48: stage=      scored eff%=97.751 feas=False nov=0.092  Vout 97.7 misses 50.0
+  init 41/48: stage=      scored eff%=96.474 feas=False nov=0.0  Vout 96.5 misses 50.0
+  init 42/48: stage=      scored eff%=96.852 feas=False nov=0.0  Vout 98.3 misses 50.0
+  init 43/48: stage=      scored eff%=98.322 feas=False nov=0.0  Vout 98.3 misses 50.0
+  init 44/48: stage=      scored eff%=98.518 feas=False nov=0.0639  Vout 98.5 misses 50.0
+  init 45/48: stage=struct_reject eff%=None feas=False nov=0.1128  ['vout_short']
+  init 46/48: stage=struct_reject eff%=None feas=False nov=0.0714  ['no_vin_vout_path']
+  init 47/48: stage=      scored eff%=69.856 feas=False nov=0.0  Vout 98.5 misses 50.0
+  init 48/48: stage=struct_reject eff%=None feas=False nov=0.0588  ['no_vin_vout_path']
+  [gen0] 48 evaluated in 0.7 min; 42 scored, 1 feasible
+  [v6 plan] gen0: REPAIR targets=['6b7e9524', 'af48068c'] budget=2 params={} :: Two candidates are in struct_reject but flagged as faulty_promising (repair_needed=true, novelty >0.11). REPAIR is the appropriate, budget-efficient interventio
+    [conv repair] v6_0_0 V6_CONTROLLER:STRUCTURAL:VOUT_SHORT: 1 edit(s) [LIKELY] struct_reject(None) -> scored(99.9) SUCCESS RECOVERED
+
+  ===== V6 TRACE gen 0 =====
+  OBSERVED STATE: feasible 1/48 near-feasible 24 best 99.9 front-alive 1 hv 0.0 (d None) uncertain 25 struct-fail 12 pressure 0.125 faulty-promising 2 dup 0.375 stall(best/front) 0/0 sims 25
+  RELEVANT HISTORY: g0 REPAIR -> 1 attempts, 1 structurally valid+simulated, 1 recovered, 0 improved
+  CONTROLLER DECISION: REPAIR (Two candidates are in struct_reject but flagged as faulty_promising (repair_needed=true, novelty >0.11). REPAIR is the appropriate, budget-efficient intervention to reconnect faulty terminals so these)
+  TARGETS: ['6b7e9524', 'af48068c']
+  EXISTING TOOL CALLED: repair_v5.RepairControllerV5.repair_targets  cost={'sizings': 1, 'llm_calls': 1, 'wall_s': 64.1}
+  RESULT: {'targets': 2, 'attempts': 1, 'successes': 1, 'recovered': 1, 'improved': 0}
+  STATE CHANGE: {'near_feasible_count': {'before': 24, 'after': 25}, 'best_gain': {'before': 99.9, 'after': 99.94}}
+
+[outer] gen0 {'front0': 1, 'alive_in_front0': 1, 'best_gain': 99.37, 'max_novelty': 0.0}
+  [discovered] +1 new front circuit(s); set now 1
+
+[outer] === generation 1: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.046  accepted nov u=0.063  (delta=+0.018; delta<<0 would mean the gate is trading novelty for wireability)
+  child 1/48: stage=      scored eff%=0.342 feas=False nov=0.1071
+  child 2/48: stage=      scored eff%=0.191 feas=False nov=0.1071
+  child 3/48: stage=      scored eff%=0.41 feas=False nov=0.0871
+  child 4/48: stage=       error eff%=None feas=False nov=0.1056
+  child 5/48: stage=      scored eff%=97.379 feas=False nov=0.1056
+  child 6/48: stage=      scored eff%=98.744 feas=False nov=0.0
+  child 7/48: stage=      scored eff%=0.0 feas=False nov=0.0742
+  child 8/48: stage=        dead eff%=None feas=False nov=0.0
+  child 9/48: stage=      scored eff%=0.165 feas=False nov=0.1029
+  child 10/48: stage=      scored eff%=98.445 feas=False nov=0.0
+  child 11/48: stage=      scored eff%=99.9 feas=False nov=0.1029
+  child 12/48: stage=      scored eff%=98.718 feas=False nov=0.0
+  child 13/48: stage=      scored eff%=98.501 feas=False nov=0.0691
+  child 14/48: stage=      scored eff%=28.81 feas=False nov=0.0819
+  child 15/48: stage=struct_reject eff%=None feas=False nov=0.0
+  child 16/48: stage=      scored eff%=98.47 feas=False nov=0.1
+  child 17/48: stage=      scored eff%=99.878 feas=False nov=0.1071
+  child 18/48: stage=      scored eff%=97.751 feas=False nov=0.1047
+  child 19/48: stage=      scored eff%=98.561 feas=False nov=0.0955
+  child 20/48: stage=      scored eff%=99.898 feas=False nov=0.0801
+  child 21/48: stage=      scored eff%=98.223 feas=False nov=0.1071
+  child 22/48: stage=      scored eff%=99.403 feas=False nov=0.0
+  child 23/48: stage=      scored eff%=98.327 feas=False nov=0.0
+  child 24/48: stage=      scored eff%=0.963 feas=False nov=0.0986
+  child 25/48: stage=      scored eff%=0.957 feas=False nov=0.1128
+  child 26/48: stage=      scored eff%=81.56 feas=False nov=0.0578
+  child 27/48: stage=      scored eff%=99.449 feas=False nov=0.0
+  child 28/48: stage=      scored eff%=98.327 feas=False nov=0.0
+  child 29/48: stage=      scored eff%=98.523 feas=False nov=0.0
+  child 30/48: stage=      scored eff%=97.761 feas=False nov=0.0
+  child 31/48: stage=      scored eff%=98.324 feas=False nov=0.0
+  child 32/48: stage=      scored eff%=36.751 feas=False nov=0.0
+  child 33/48: stage=      scored eff%=73.951 feas=False nov=0.0963
+  child 34/48: stage=      scored eff%=16.816 feas=False nov=0.0578
+  child 35/48: stage=      scored eff%=98.413 feas=False nov=0.0938
+  child 36/48: stage=      scored eff%=0.652 feas=False nov=0.1193
+  child 37/48: stage=      scored eff%=1.939 feas=False nov=0.0
+  child 38/48: stage=      scored eff%=0.755 feas=False nov=0.0742
+  child 39/48: stage=      scored eff%=98.193 feas=False nov=0.1049
+  child 40/48: stage=      scored eff%=98.312 feas=False nov=0.0871
+  child 41/48: stage=      scored eff%=0.743 feas=False nov=0.1047
+  child 42/48: stage=      scored eff%=0.611 feas=False nov=0.1049
+  child 43/48: stage=      scored eff%=98.194 feas=False nov=0.0667
+  child 44/48: stage=        dead eff%=None feas=False nov=0.0602
+  child 45/48: stage=      scored eff%=98.327 feas=False nov=0.0
+  child 46/48: stage=       error eff%=None feas=False nov=0.1109
+  child 47/48: stage=      scored eff%=0.288 feas=False nov=0.0871
+  child 48/48: stage=      scored eff%=0.555 feas=False nov=0.0714
+  [v6 plan] gen1: RACING targets=[] budget=2 params={'k': 4} :: High seed_uncertain_count (44) and many top-ranked candidates evaluated only at the nominal corner. The contested rank-0 / rank-1 band contains the lone feasibl
+  [race] k->2: 44 contested of 96 (44 in band), +44 sizings, median spread 1.6 eff%, 5 over 3
+  [race] k->4: 79 contested of 96 (79 in band), +193 sizings, median spread 2.8 eff%, 36 over 3
+
+  ===== V6 TRACE gen 1 =====
+  OBSERVED STATE: feasible 1/96 near-feasible 45 best 99.94 front-alive 1 hv 0.0 (d 0.0) uncertain 44 struct-fail 2 pressure 0.021 faulty-promising 0 dup 0.198 stall(best/front) 1/1 sims 69
+  RELEVANT HISTORY: g0 REPAIR -> 1 attempts, 1 structurally valid+simulated, 1 recovered, 0 improved; 3/3 survived selection, 0 on front0; g1 RACING -> +237 sizings; front0 confirmed 1, entered 0, left 0
+  CONTROLLER DECISION: RACING (High seed_uncertain_count (44) and many top-ranked candidates evaluated only at the nominal corner. The contested rank-0 / rank-1 band contains the lone feasible front0 and many near-front candidates )
+  TARGETS: []
+  EXISTING TOOL CALLED: run_outer_nsga_cv3.race_front  cost={'sizings': 237, 'llm_calls': 0, 'wall_s': 411.4}
+  RESULT: {'extra_sizings': 237, 'front0_entered': 0, 'front0_left': 0, 'front0_confirmed': 1}
+  STATE CHANGE: {'near_feasible_count': {'before': 45, 'after': 0}, 'seed_uncertain_count': {'before': 44, 'after': 0}}
+
+[outer] gen1 {'front0': 1, 'alive_in_front0': 1, 'best_gain': 99.371, 'max_novelty': 0.0}  (sizings so far: 306 [+237 adaptive], 19.3 min)
+
+[outer] === generation 2: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.048  accepted nov u=0.069  (delta=+0.021; delta<<0 would mean the gate is trading novelty for wireability)
+  child 1/48: stage=      scored eff%=69.529 feas=False nov=0.0
+  child 2/48: stage=      scored eff%=99.067 feas=False nov=0.1029
+  child 3/48: stage=      scored eff%=98.118 feas=False nov=0.1049
+  child 4/48: stage=      scored eff%=1.641 feas=False nov=0.0938
+  child 5/48: stage=      scored eff%=3.473 feas=False nov=0.1
+  child 6/48: stage=      scored eff%=0.539 feas=False nov=0.1136
+  child 7/48: stage=      scored eff%=99.796 feas=False nov=0.0
+  child 8/48: stage=      scored eff%=99.404 feas=False nov=0.0871
+  child 9/48: stage=      scored eff%=0.641 feas=False nov=0.0
+  child 10/48: stage=      scored eff%=0.755 feas=False nov=0.0714
+  child 11/48: stage=      scored eff%=0.539 feas=False nov=0.1249
+  child 12/48: stage=      scored eff%=70.006 feas=False nov=0.0
+  child 13/48: stage=      scored eff%=0.0 feas=False nov=0.1071
+  child 14/48: stage=      scored eff%=96.506 feas=False nov=0.0
+  child 15/48: stage=      scored eff%=28.802 feas=False nov=0.0986
+  child 16/48: stage=      scored eff%=98.327 feas=False nov=0.0
+  child 17/48: stage=      scored eff%=99.377 feas=False nov=0.1
+  child 18/48: stage=      scored eff%=98.89 feas=False nov=0.1056
+  child 19/48: stage=      scored eff%=98.601 feas=False nov=0.0
+  child 20/48: stage=      scored eff%=99.016 feas=False nov=0.0882
+  child 21/48: stage=      scored eff%=98.092 feas=False nov=0.0
+  child 22/48: stage=      scored eff%=97.973 feas=False nov=0.0714
+  child 23/48: stage=      scored eff%=99.947 feas=False nov=0.0
+  child 24/48: stage=      scored eff%=1.151 feas=False nov=0.0658
+  child 25/48: stage=      scored eff%=69.78 feas=False nov=0.1071
+  child 26/48: stage=      scored eff%=69.816 feas=False nov=0.0714
+  child 27/48: stage=      scored eff%=0.641 feas=False nov=0.075
+  child 28/48: stage=      scored eff%=99.253 feas=False nov=0.0
+  child 29/48: stage=      scored eff%=99.895 feas=False nov=0.1105
+  child 30/48: stage=      scored eff%=0.351 feas=False nov=0.0801
+  child 31/48: stage=      scored eff%=99.371 feas=True nov=0.1071
+  child 32/48: stage=      scored eff%=99.404 feas=False nov=0.0
+  child 33/48: stage=      scored eff%=0.601 feas=False nov=0.1029
+  child 34/48: stage=      scored eff%=99.393 feas=False nov=0.1333
+  child 35/48: stage=      scored eff%=0.945 feas=False nov=0.1105
+  child 36/48: stage=      scored eff%=0.013 feas=False nov=0.1471
+  child 37/48: stage=      scored eff%=0.348 feas=False nov=0.0955
+  child 38/48: stage=      scored eff%=98.327 feas=False nov=0.0
+  child 39/48: stage=      scored eff%=0.949 feas=False nov=0.0882
+  child 40/48: stage=      scored eff%=0.957 feas=False nov=0.1071
+  child 41/48: stage=      scored eff%=0.601 feas=False nov=0.1
+  child 42/48: stage=      scored eff%=99.012 feas=False nov=0.1047
+  child 43/48: stage=      scored eff%=0.393 feas=False nov=0.0979
+  child 44/48: stage=      scored eff%=98.56 feas=False nov=0.0598
+  child 45/48: stage=      scored eff%=99.371 feas=True nov=0.0
+  child 46/48: stage=      scored eff%=99.396 feas=False nov=0.1071
+  child 47/48: stage=      scored eff%=97.851 feas=False nov=0.0578
+  child 48/48: stage=      scored eff%=0.716 feas=False nov=0.0
+  [v6 plan] gen2: VERIFY targets=['c28a3435'] budget=1 params={'k': 4} :: The only Pareto front member (c28a3435) is seed_uncertain (k=1 / robust=null). Verify it across the full set of operating corners so a nominal-only winner does 
+
+  ===== V6 TRACE gen 2 =====
+  OBSERVED STATE: feasible 3/96 near-feasible 9 best 99.95 front-alive 1 hv 10.6 (d 10.6) uncertain 1 struct-fail 0 pressure 0.0 faulty-promising 0 dup 0.021 stall(best/front) 2/0 sims 352
+  RELEVANT HISTORY: g0 REPAIR -> 1 attempts, 1 structurally valid+simulated, 1 recovered, 0 improved; 3/3 survived selection, 0 on front0; g1 RACING -> +237 sizings; front0 confirmed 1, entered 0, left 0; g2 VERIFY -> 1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB
+  CONTROLLER DECISION: VERIFY (The only Pareto front member (c28a3435) is seed_uncertain (k=1 / robust=null). Verify it across the full set of operating corners so a nominal-only winner does not steer selection prematurely.)
+  TARGETS: ['c28a3435']
+  EXISTING TOOL CALLED: Evaluator.extend (extend_staged_fitness)  cost={'sizings': 3, 'llm_calls': 0, 'wall_s': 58.6}
+  RESULT: {'verified': 1, 'extra_sizings': 3, 'lost_feasibility': 0, 'gain_drop_over_3db': 0, 'per_target': [{'id': 'c28a3435', 'gain_before': 99.37, 'gain_after': 99.37, 'feasible_before': True, 'feasible_after': True, 'feasible_frac': 1.0, 'spread': 0.8}]}
+  STATE CHANGE: {'seed_uncertain_count': {'before': 1, 'after': 0}}
+
+  [discovered] +1 new front circuit(s); set now 2
+[outer] gen2 {'front0': 1, 'alive_in_front0': 1, 'best_gain': 99.371, 'max_novelty': 0.1071}  (sizings so far: 355 [+240 adaptive], 23.6 min)
+
+[outer] === generation 3: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.053  accepted nov u=0.077  (delta=+0.024; delta<<0 would mean the gate is trading novelty for wireability)
+  child 1/48: stage=      scored eff%=99.934 feas=False nov=0.0737
+  child 2/48: stage=      scored eff%=0.641 feas=False nov=0.0833
+  child 3/48: stage=       error eff%=None feas=False nov=0.1161
+  child 4/48: stage=      scored eff%=98.013 feas=False nov=0.0
+  child 5/48: stage=      scored eff%=99.887 feas=False nov=0.0955
+  child 6/48: stage=      scored eff%=99.958 feas=False nov=0.0932
+  child 7/48: stage=      scored eff%=99.371 feas=True nov=0.0
+  child 8/48: stage=      scored eff%=99.9 feas=False nov=0.1136
+  child 9/48: stage=      scored eff%=0.431 feas=False nov=0.0548
+  child 10/48: stage=      scored eff%=98.701 feas=False nov=0.0
+  child 11/48: stage=      scored eff%=99.895 feas=False nov=0.1047
+  child 12/48: stage=      scored eff%=99.934 feas=False nov=0.0737
+  child 13/48: stage=      scored eff%=99.371 feas=True nov=0.0
+  child 14/48: stage=      scored eff%=97.868 feas=False nov=0.0
+  child 15/48: stage=      scored eff%=0.94 feas=False nov=0.0769
+  child 16/48: stage=      scored eff%=0.211 feas=False nov=0.0
+  child 17/48: stage=      scored eff%=97.243 feas=False nov=0.1136
+  child 18/48: stage=      scored eff%=0.0 feas=False nov=0.0963
+  child 19/48: stage=      scored eff%=0.5 feas=False nov=0.0
+  child 20/48: stage=      scored eff%=99.964 feas=False nov=0.0704
+  child 21/48: stage=      scored eff%=28.802 feas=False nov=0.0963
+  child 22/48: stage=      scored eff%=0.411 feas=False nov=0.1071
+  child 23/48: stage=      scored eff%=0.0 feas=False nov=0.1407
+  child 24/48: stage=      scored eff%=0.0 feas=False nov=0.1286
+  child 25/48: stage=      scored eff%=98.498 feas=False nov=0.0
+  child 26/48: stage=      scored eff%=0.312 feas=False nov=0.0
+  child 27/48: stage=      scored eff%=1.005 feas=False nov=0.0
+  child 28/48: stage=      scored eff%=0.48 feas=False nov=0.0801
+  child 29/48: stage=      scored eff%=0.233 feas=False nov=0.0871
+  child 30/48: stage=      scored eff%=69.791 feas=False nov=0.1071
+  child 31/48: stage=      scored eff%=96.425 feas=False nov=0.0955
+  child 32/48: stage=      scored eff%=0.0 feas=False nov=0.1472
+  child 33/48: stage=      scored eff%=0.569 feas=False nov=0.15
+  child 34/48: stage=      scored eff%=99.012 feas=False nov=0.1071
+  child 35/48: stage=      scored eff%=0.53 feas=False nov=0.1071
+  child 36/48: stage=      scored eff%=69.628 feas=False nov=0.1029
+  child 37/48: stage=      scored eff%=97.879 feas=False nov=0.0823
+  child 38/48: stage=      scored eff%=0.0 feas=False nov=0.0714
+  child 39/48: stage=      scored eff%=57.714 feas=False nov=0.1049
+  child 40/48: stage=      scored eff%=6.193 feas=False nov=0.1029
+  child 41/48: stage=      scored eff%=0.034 feas=False nov=0.0667
+  child 42/48: stage=      scored eff%=98.69 feas=False nov=0.1071
+  child 43/48: stage=      scored eff%=99.404 feas=False nov=0.15
+  child 44/48: stage=      scored eff%=99.404 feas=False nov=0.0691
+  child 45/48: stage=      scored eff%=0.0 feas=False nov=0.0955
+  child 46/48: stage=      scored eff%=99.947 feas=False nov=0.1029
+  child 47/48: stage=      scored eff%=99.371 feas=True nov=0.0
+  child 48/48: stage=      scored eff%=98.697 feas=False nov=0.1136
+  [v6 plan] gen3: VERIFY targets=['1afd93c3'] budget=1 params={'k': 4} :: One front candidate (1afd93c3) is seed_uncertain (k=1) while its sibling c28a3435 was already multi-corner verified. Re-scoring this nominal front member at the
+
+  ===== V6 TRACE gen 3 =====
+  OBSERVED STATE: feasible 5/96 near-feasible 22 best 99.96 front-alive 2 hv 10.6 (d 0.0) uncertain 1 struct-fail 0 pressure 0.0 faulty-promising 0 dup 0.021 stall(best/front) 3/0 sims 400
+  RELEVANT HISTORY: g0 REPAIR -> 1 attempts, 1 structurally valid+simulated, 1 recovered, 0 improved; 3/3 survived selection, 0 on front0; g1 RACING -> +237 sizings; front0 confirmed 1, entered 0, left 0; g2 VERIFY -> 1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 1 on front0; g3 VERIFY -> 1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB
+  CONTROLLER DECISION: VERIFY (One front candidate (1afd93c3) is seed_uncertain (k=1) while its sibling c28a3435 was already multi-corner verified. Re-scoring this nominal front member at the full multi-corner budget (k=4) is cheap)
+  TARGETS: ['1afd93c3']
+  EXISTING TOOL CALLED: Evaluator.extend (extend_staged_fitness)  cost={'sizings': 3, 'llm_calls': 0, 'wall_s': 63.3}
+  RESULT: {'verified': 1, 'extra_sizings': 3, 'lost_feasibility': 0, 'gain_drop_over_3db': 0, 'per_target': [{'id': '1afd93c3', 'gain_before': 99.37, 'gain_after': 99.37, 'feasible_before': True, 'feasible_after': True, 'feasible_frac': 1.0, 'spread': 0.8}]}
+  STATE CHANGE: {'pareto_front_alive': {'before': 2, 'after': 1}, 'seed_uncertain_count': {'before': 1, 'after': 0}}
+
+[outer] gen3 {'front0': 1, 'alive_in_front0': 1, 'best_gain': 99.371, 'max_novelty': 0.1071}  (sizings so far: 403 [+243 adaptive], 26.6 min)
+
+[outer] === generation 4: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.048  accepted nov u=0.065  (delta=+0.018; delta<<0 would mean the gate is trading novelty for wireability)
+  child 1/48: stage=      scored eff%=97.75 feas=False nov=0.1136
+  child 2/48: stage=      scored eff%=99.371 feas=True nov=0.0
+  child 3/48: stage=      scored eff%=98.018 feas=False nov=0.0
+  child 4/48: stage=      scored eff%=95.687 feas=False nov=0.1105
+  child 5/48: stage=      scored eff%=97.009 feas=False nov=0.0898
+  child 6/48: stage=      scored eff%=99.381 feas=False nov=0.0
+  child 7/48: stage=       error eff%=None feas=False nov=0.1348
+  child 8/48: stage=      scored eff%=0.949 feas=False nov=0.0646
+  child 9/48: stage=      scored eff%=53.62 feas=False nov=0.1419
+  child 10/48: stage=      scored eff%=98.194 feas=False nov=0.1
+  child 11/48: stage=      scored eff%=98.324 feas=False nov=0.0833
+  child 12/48: stage=      scored eff%=98.692 feas=False nov=0.1047
+  child 13/48: stage=      scored eff%=28.802 feas=False nov=0.0963
+  child 14/48: stage=      scored eff%=97.741 feas=False nov=0.1136
+  child 15/48: stage=      scored eff%=99.881 feas=False nov=0.0
+  child 16/48: stage=      scored eff%=98.781 feas=False nov=0.0
+  child 17/48: stage=      scored eff%=98.697 feas=False nov=0.1136
+  child 18/48: stage=      scored eff%=97.823 feas=False nov=0.0
+  child 19/48: stage=      scored eff%=0.501 feas=False nov=0.0
+  child 20/48: stage=      scored eff%=0.024 feas=False nov=0.0
+  child 21/48: stage=      scored eff%=98.324 feas=False nov=0.0871
+  child 22/48: stage=      scored eff%=0.182 feas=False nov=0.0714
+  child 23/48: stage=      scored eff%=98.69 feas=False nov=0.1128
+  child 24/48: stage=      scored eff%=0.21 feas=False nov=0.0871
+  child 25/48: stage=      scored eff%=28.802 feas=False nov=0.0986
+  child 26/48: stage=      scored eff%=98.324 feas=False nov=0.0
+  child 27/48: stage=      scored eff%=97.044 feas=False nov=0.0
+  child 28/48: stage=      scored eff%=98.324 feas=False nov=0.098
+  child 29/48: stage=      scored eff%=98.701 feas=False nov=0.0
+  child 30/48: stage=      scored eff%=0.601 feas=False nov=0.0
+  child 31/48: stage=      scored eff%=98.479 feas=False nov=0.1229
+  child 32/48: stage=      scored eff%=98.56 feas=False nov=0.0598
+  child 33/48: stage=      scored eff%=98.56 feas=False nov=0.0598
+  child 34/48: stage=      scored eff%=99.901 feas=False nov=0.1047
+  child 35/48: stage=      scored eff%=97.851 feas=False nov=0.1374
+  child 36/48: stage=      scored eff%=69.529 feas=False nov=0.0
+  child 37/48: stage=      scored eff%=28.802 feas=False nov=0.0986
+  child 38/48: stage=      scored eff%=3.94 feas=False nov=0.1029
+  child 39/48: stage=      scored eff%=98.697 feas=False nov=0.0979
+  child 40/48: stage=      scored eff%=97.751 feas=False nov=0.1047
+  child 41/48: stage=      scored eff%=69.911 feas=False nov=0.0
+  child 42/48: stage=      scored eff%=0.5 feas=False nov=0.0
+  child 43/48: stage=      scored eff%=98.575 feas=False nov=0.0898
+  child 44/48: stage=      scored eff%=69.693 feas=False nov=0.0
+  child 45/48: stage=      scored eff%=98.518 feas=False nov=0.0882
+  child 46/48: stage=      scored eff%=0.185 feas=False nov=0.1
+  child 47/48: stage=      scored eff%=97.402 feas=False nov=0.0
+  child 48/48: stage=      scored eff%=0.569 feas=False nov=0.15
+  [v6 plan] gen4: RESCUE targets=['074e4db1', '11403b0e', '41d18042', '9ad7dc9c'] budget=4 params={'cv_max': 0.25} :: High near_feasible_count (46) while feasible_fraction is very low (4/95). Many near-feasible circuits cluster at cv ≈0.247; small topology/sizing edits could cl
+  [rescue] cv 0.2471 -> 0.0  ops=['swap_phase', 'rewire_pin']  FEASIBLE
+  [rescue] cv 0.2472 -> 0.0  ops=['swap_phase', 'rewire_pin']  FEASIBLE
+  [rescue] cv 0.2472 -> 0.49178482625337716  ops=['rewire_pin', 'add_two_terminal']  kept out
+  [rescue] cv 0.2472 -> 0.48947335779236517  ops=['rewire_pin']  kept out
+  [rescue] gen4: 4 attempted, 2 kept, 2 became FEASIBLE
+
+  ===== V6 TRACE gen 4 =====
+  OBSERVED STATE: feasible 4/96 near-feasible 46 best 99.96 front-alive 1 hv 10.6 (d 0.0) uncertain 0 struct-fail 0 pressure 0.0 faulty-promising 0 dup 0.094 stall(best/front) 4/1 sims 441
+  RELEVANT HISTORY: g0 REPAIR -> 1 attempts, 1 structurally valid+simulated, 1 recovered, 0 improved; 3/3 survived selection, 0 on front0; g1 RACING -> +237 sizings; front0 confirmed 1, entered 0, left 0; g2 VERIFY -> 1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 1 on front0; g3 VERIFY -> 1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 0 on front0; g4 RESCUE -> 4 attempted, 2 kept, 2 became feasible
+  CONTROLLER DECISION: RESCUE (High near_feasible_count (46) while feasible_fraction is very low (4/95). Many near-feasible circuits cluster at cv ≈0.247; small topology/sizing edits could close the remaining vout_error. RESCUE is )
+  TARGETS: ['074e4db1', '11403b0e', '41d18042', '9ad7dc9c']
+  EXISTING TOOL CALLED: run_outer_nsga_cv3.rescue_pass  cost={'sizings': 4, 'llm_calls': 4, 'wall_s': 249.5}
+  RESULT: {'attempted': 4, 'kept': 2, 'became_feasible': 2, 'near_feasible_offered': 4}
+  STATE CHANGE: {'feasible_count': {'before': 4, 'after': 6}, 'pareto_front_alive': {'before': 1, 'after': 2}, 'seed_uncertain_count': {'before': 0, 'after': 2}}
+
+  [discovered] +1 new front circuit(s); set now 3
+[outer] gen4 {'front0': 2, 'alive_in_front0': 2, 'best_gain': 99.371, 'max_novelty': 0.1071}  (sizings so far: 445 [+243 adaptive], 31.9 min)
+
+[outer] === generation 5: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.046  accepted nov u=0.071  (delta=+0.026; delta<<0 would mean the gate is trading novelty for wireability)
+  child 1/48: stage=      scored eff%=0.02 feas=False nov=0.0
+  child 2/48: stage=      scored eff%=36.437 feas=False nov=0.0
+  child 3/48: stage=      scored eff%=1.197 feas=False nov=0.0
+  child 4/48: stage=      scored eff%=98.327 feas=False nov=0.1513
+  child 5/48: stage=      scored eff%=0.836 feas=False nov=0.1128
+  child 6/48: stage=      scored eff%=98.576 feas=False nov=0.134
+  child 7/48: stage=      scored eff%=0.166 feas=False nov=0.0
+  child 8/48: stage=      scored eff%=98.092 feas=False nov=0.0
+  child 9/48: stage=      scored eff%=97.243 feas=False nov=0.1136
+  child 10/48: stage=      scored eff%=0.0 feas=False nov=0.1271
+  child 11/48: stage=      scored eff%=98.49 feas=False nov=0.0963
+  child 12/48: stage=      scored eff%=97.44 feas=False nov=0.1019
+  child 13/48: stage=       error eff%=None feas=False nov=0.1248
+  child 14/48: stage=      scored eff%=98.695 feas=False nov=0.0
+  child 15/48: stage=      scored eff%=98.701 feas=False nov=0.1229
+  child 16/48: stage=      scored eff%=99.371 feas=True nov=0.0
+  child 17/48: stage=      scored eff%=0.0 feas=False nov=0.1128
+  child 18/48: stage=      scored eff%=98.695 feas=False nov=0.1328
+  child 19/48: stage=       error eff%=None feas=False nov=0.0919
+  child 20/48: stage=      scored eff%=98.327 feas=False nov=0.1286
+  child 21/48: stage=      scored eff%=99.404 feas=False nov=0.0
+  child 22/48: stage=      scored eff%=98.697 feas=False nov=0.0979
+  child 23/48: stage=      scored eff%=0.0 feas=False nov=0.1457
+  child 24/48: stage=      scored eff%=0.0 feas=False nov=0.0898
+  child 25/48: stage=      scored eff%=97.868 feas=False nov=0.0
+  child 26/48: stage=      scored eff%=0.641 feas=False nov=0.0
+  child 27/48: stage=      scored eff%=98.701 feas=False nov=0.1128
+  child 28/48: stage=      scored eff%=0.226 feas=False nov=0.0871
+  child 29/48: stage=      scored eff%=97.822 feas=False nov=0.0
+  child 30/48: stage=      scored eff%=97.749 feas=False nov=0.1029
+  child 31/48: stage=      scored eff%=98.335 feas=False nov=0.0
+  child 32/48: stage=       error eff%=None feas=False nov=0.1229
+  child 33/48: stage=      scored eff%=98.697 feas=False nov=0.0
+  child 34/48: stage=      scored eff%=98.921 feas=False nov=0.0898
+  child 35/48: stage=      scored eff%=0.277 feas=False nov=0.0742
+  child 36/48: stage=      scored eff%=98.327 feas=False nov=0.1128
+  child 37/48: stage=      scored eff%=96.997 feas=False nov=0.1
+  child 38/48: stage=      scored eff%=97.243 feas=False nov=0.1136
+  child 39/48: stage=      scored eff%=99.257 feas=False nov=0.0
+  child 40/48: stage=      scored eff%=28.795 feas=False nov=0.0938
+  child 41/48: stage=      scored eff%=99.95 feas=False nov=0.1029
+  child 42/48: stage=      scored eff%=98.327 feas=False nov=0.1154
+  child 43/48: stage=      scored eff%=99.371 feas=True nov=0.0
+  child 44/48: stage=      scored eff%=97.822 feas=False nov=0.0683
+  child 45/48: stage=      scored eff%=98.695 feas=False nov=0.1429
+  child 46/48: stage=      scored eff%=0.246 feas=False nov=0.0
+  child 47/48: stage=      scored eff%=97.751 feas=False nov=0.1047
+  child 48/48: stage=      scored eff%=97.842 feas=False nov=0.0
+  [v6 plan] gen5: RACING targets=[] budget=2 params={'k': 4} :: There are 3 seed_uncertain front candidates (k=1) that can mislead selection. Adaptive racing will robustify the contested rank-0/1 band so selection uses multi
+  [race] k->2: 3 contested of 96 (4 in band), +3 sizings, median spread 0.6 eff%, 0 over 3
+  [race] k->4: 1 contested of 96 (2 in band), +2 sizings, median spread 0.8 eff%, 0 over 3
+
+  ===== V6 TRACE gen 5 =====
+  OBSERVED STATE: feasible 7/96 near-feasible 68 best 99.96 front-alive 3 hv 10.6 (d 0.0) uncertain 3 struct-fail 0 pressure 0.0 faulty-promising 0 dup 0.052 stall(best/front) 5/0 sims 484
+  RELEVANT HISTORY: g0 REPAIR -> 1 attempts, 1 structurally valid+simulated, 1 recovered, 0 improved; 3/3 survived selection, 0 on front0; g1 RACING -> +237 sizings; front0 confirmed 1, entered 0, left 0; g2 VERIFY -> 1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 1 on front0; g3 VERIFY -> 1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 0 on front0; g4 RESCUE -> 4 attempted, 2 kept, 2 became feasible; 6/6 survived selection, 1 on front0; g5 RACING -> +5 sizings; front0 confirmed 1, entered 0, left 2
+  CONTROLLER DECISION: RACING (There are 3 seed_uncertain front candidates (k=1) that can mislead selection. Adaptive racing will robustify the contested rank-0/1 band so selection uses multi-corner performance rather than nominal-)
+  TARGETS: []
+  EXISTING TOOL CALLED: run_outer_nsga_cv3.race_front  cost={'sizings': 5, 'llm_calls': 0, 'wall_s': 55.8}
+  RESULT: {'extra_sizings': 5, 'front0_entered': 0, 'front0_left': 2, 'front0_confirmed': 1}
+  STATE CHANGE: {'pareto_front_alive': {'before': 3, 'after': 1}, 'seed_uncertain_count': {'before': 3, 'after': 0}}
+
+[outer] gen5 {'front0': 1, 'alive_in_front0': 1, 'best_gain': 99.371, 'max_novelty': 0.1071}  (sizings so far: 489 [+248 adaptive], 33.9 min)
+
+[outer] === generation 6: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.061  accepted nov u=0.085  (delta=+0.024; delta<<0 would mean the gate is trading novelty for wireability)
+  child 1/48: stage=      scored eff%=41.499 feas=False nov=0.0
+  child 2/48: stage=      scored eff%=0.226 feas=False nov=0.0871
+  child 3/48: stage=      scored eff%=62.339 feas=False nov=0.0
+  child 4/48: stage=      scored eff%=99.894 feas=False nov=0.1136
+  child 5/48: stage=      scored eff%=98.324 feas=False nov=0.0
+  child 6/48: stage=      scored eff%=98.811 feas=False nov=0.1128
+  child 7/48: stage=      scored eff%=0.0 feas=False nov=0.1136
+  child 8/48: stage=      scored eff%=98.324 feas=False nov=0.1
+  child 9/48: stage=      scored eff%=69.899 feas=False nov=0.0
+  child 10/48: stage=      scored eff%=0.0 feas=False nov=0.1071
+  child 11/48: stage=      scored eff%=0.5 feas=False nov=0.0
+  child 12/48: stage=      scored eff%=98.324 feas=False nov=0.1248
+  child 13/48: stage=      scored eff%=98.697 feas=False nov=0.0979
+  child 14/48: stage=      scored eff%=0.0 feas=False nov=0.1029
+  child 15/48: stage=      scored eff%=99.902 feas=False nov=0.1
+  child 16/48: stage=      scored eff%=0.966 feas=False nov=0.1
+  child 17/48: stage=      scored eff%=0.0 feas=False nov=0.0905
+  child 18/48: stage=      scored eff%=0.836 feas=False nov=0.0
+  child 19/48: stage=      scored eff%=99.897 feas=False nov=0.1128
+  child 20/48: stage=      scored eff%=98.695 feas=False nov=0.1429
+  child 21/48: stage=      scored eff%=97.243 feas=False nov=0.1136
+  child 22/48: stage=      scored eff%=98.266 feas=False nov=0.0
+  child 23/48: stage=      scored eff%=98.327 feas=False nov=0.1056
+  child 24/48: stage=      scored eff%=0.0 feas=False nov=0.1208
+  child 25/48: stage=      scored eff%=97.879 feas=False nov=0.0919
+  child 26/48: stage=      scored eff%=98.421 feas=False nov=0.0882
+  child 27/48: stage=      scored eff%=98.324 feas=False nov=0.1029
+  child 28/48: stage=      scored eff%=99.248 feas=False nov=0.0
+  child 29/48: stage=      scored eff%=96.425 feas=False nov=0.0955
+  child 30/48: stage=      scored eff%=99.012 feas=False nov=0.1
+  child 31/48: stage=      scored eff%=97.983 feas=False nov=0.1029
+  child 32/48: stage=      scored eff%=0.247 feas=False nov=0.1105
+  child 33/48: stage=      scored eff%=97.482 feas=False nov=0.1126
+  child 34/48: stage=      scored eff%=98.724 feas=False nov=0.1115
+  child 35/48: stage=      scored eff%=98.695 feas=False nov=0.1429
+  child 36/48: stage=      scored eff%=0.002 feas=False nov=0.1128
+  child 37/48: stage=      scored eff%=98.322 feas=False nov=0.0
+  child 38/48: stage=      scored eff%=98.58 feas=False nov=0.098
+  child 39/48: stage=      scored eff%=98.676 feas=False nov=0.1071
+  child 40/48: stage=      scored eff%=98.695 feas=False nov=0.0
+  child 41/48: stage=      scored eff%=0.0 feas=False nov=0.1515
+  child 42/48: stage=      scored eff%=0.536 feas=False nov=0.0955
+  child 43/48: stage=      scored eff%=97.7 feas=False nov=0.1248
+  child 44/48: stage=      scored eff%=0.009 feas=False nov=0.125
+  child 45/48: stage=      scored eff%=98.257 feas=False nov=0.0
+  child 46/48: stage=      scored eff%=98.697 feas=False nov=0.1249
+  child 47/48: stage=      scored eff%=98.695 feas=False nov=0.1429
+  child 48/48: stage=      scored eff%=97.581 feas=False nov=0.1049
+  [v6 plan] gen6: RESCUE targets=['11403b0e', '1d74cf86', '9ad7dc9c'] budget=3 params={'cv_max': 0.25} :: High near_feasible count dominated by vout_error failures (82). Several high-gain, near-feasible candidates (gain ~95–97) have small structural deficits and hav
+  [rescue] cv 0.2471 -> 0.0  ops=['swap_phase', 'rewire_pin']  FEASIBLE
+  [rescue] cv 0.2472 -> 0.24723758127035902  ops=['rewire_pin', 'rewire_pin']  kept out
+  [rescue] cv 0.2472 -> 0.49178482625337716  ops=['add_two_terminal', 'rewire_pin']  kept out
+  [rescue] gen6: 3 attempted, 1 kept, 1 became FEASIBLE
+
+  ===== V6 TRACE gen 6 =====
+  OBSERVED STATE: feasible 6/96 near-feasible 72 best 99.9 front-alive 1 hv 10.6 (d 0.0) uncertain 0 struct-fail 0 pressure 0.0 faulty-promising 0 dup 0.073 stall(best/front) 6/1 sims 530
+  RELEVANT HISTORY: g0 REPAIR -> 1 attempts, 1 structurally valid+simulated, 1 recovered, 0 improved; 3/3 survived selection, 0 on front0; g1 RACING -> +237 sizings; front0 confirmed 1, entered 0, left 0; g2 VERIFY -> 1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 1 on front0; g3 VERIFY -> 1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 0 on front0; g4 RESCUE -> 4 attempted, 2 kept, 2 became feasible; 6/6 survived selection, 1 on front0; g5 RACING -> +5 sizings; front0 confirmed 1, entered 0, left 2; g6 RESCUE -> 3 attempted, 1 kept, 1 became feasible
+  CONTROLLER DECISION: RESCUE (High near_feasible count dominated by vout_error failures (82). Several high-gain, near-feasible candidates (gain ~95–97) have small structural deficits and have responded to prior RESCUE attempts; at)
+  TARGETS: ['11403b0e', '1d74cf86', '9ad7dc9c']
+  EXISTING TOOL CALLED: run_outer_nsga_cv3.rescue_pass  cost={'sizings': 1, 'llm_calls': 3, 'wall_s': 130.8}
+  RESULT: {'attempted': 3, 'kept': 1, 'became_feasible': 1, 'near_feasible_offered': 3}
+  STATE CHANGE: {'feasible_count': {'before': 6, 'after': 7}}
+
+[outer] gen6 {'front0': 1, 'alive_in_front0': 1, 'best_gain': 99.371, 'max_novelty': 0.1071}  (sizings so far: 531 [+248 adaptive], 37.4 min)
+
+[outer] === generation 7: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.054  accepted nov u=0.080  (delta=+0.026; delta<<0 would mean the gate is trading novelty for wireability)
+  child 1/48: stage=      scored eff%=98.903 feas=False nov=0.1296
+  child 2/48: stage=      scored eff%=28.792 feas=False nov=0.0
+  child 3/48: stage=      scored eff%=28.794 feas=False nov=0.0
+  child 4/48: stage=      scored eff%=99.371 feas=True nov=0.0
+  child 5/48: stage=      scored eff%=0.713 feas=False nov=0.1023
+  child 6/48: stage=      scored eff%=99.371 feas=True nov=0.1071
+  child 7/48: stage=      scored eff%=98.599 feas=False nov=0.0955
+  child 8/48: stage=      scored eff%=1.784 feas=False nov=0.1
+  child 9/48: stage=      scored eff%=97.424 feas=False nov=0.0
+  child 10/48: stage=      scored eff%=0.433 feas=False nov=0.1071
+  child 11/48: stage=      scored eff%=98.4 feas=False nov=0.0963
+  child 12/48: stage=      scored eff%=97.751 feas=False nov=0.0882
+  child 13/48: stage=      scored eff%=98.322 feas=False nov=0.0
+  child 14/48: stage=      scored eff%=98.781 feas=False nov=0.1229
+  child 15/48: stage=      scored eff%=99.37 feas=True nov=0.1071
+  child 16/48: stage=      scored eff%=28.797 feas=False nov=0.0
+  child 17/48: stage=      scored eff%=97.751 feas=False nov=0.1047
+  child 18/48: stage=      scored eff%=98.324 feas=False nov=0.0
+  child 19/48: stage=      scored eff%=98.695 feas=False nov=0.1
+  child 20/48: stage=      scored eff%=0.955 feas=False nov=0.125
+  child 21/48: stage=      scored eff%=28.799 feas=False nov=0.1049
+  child 22/48: stage=      scored eff%=0.0 feas=False nov=0.0293
+  child 23/48: stage=      scored eff%=0.141 feas=False nov=0.0801
+  child 24/48: stage=      scored eff%=99.9 feas=False nov=0.1071
+  child 25/48: stage=      scored eff%=99.888 feas=False nov=0.1056
+  child 26/48: stage=      scored eff%=97.879 feas=False nov=0.0919
+  child 27/48: stage=      scored eff%=99.891 feas=False nov=0.1136
+  child 28/48: stage=      scored eff%=98.327 feas=False nov=0.1407
+  child 29/48: stage=      scored eff%=97.879 feas=False nov=0.0963
+  child 30/48: stage=      scored eff%=98.327 feas=False nov=0.0
+  child 31/48: stage=      scored eff%=70.006 feas=False nov=0.1128
+  child 32/48: stage=      scored eff%=98.571 feas=False nov=0.1128
+  child 33/48: stage=      scored eff%=98.018 feas=False nov=0.0
+  child 34/48: stage=      scored eff%=0.607 feas=False nov=0.1071
+  child 35/48: stage=      scored eff%=98.806 feas=False nov=0.1248
+  child 36/48: stage=      scored eff%=0.035 feas=False nov=0.0
+  child 37/48: stage=      scored eff%=0.182 feas=False nov=0.1217
+  child 38/48: stage=      scored eff%=97.879 feas=False nov=0.0919
+  child 39/48: stage=      scored eff%=0.042 feas=False nov=0.0871
+  child 40/48: stage=       error eff%=None feas=False nov=0.0932
+  child 41/48: stage=      scored eff%=98.575 feas=False nov=0.1029
+  child 42/48: stage=      scored eff%=98.327 feas=False nov=0.1105
+  child 43/48: stage=      scored eff%=98.142 feas=False nov=0.1193
+  child 44/48: stage=      scored eff%=99.398 feas=False nov=0.1071
+  child 45/48: stage=      scored eff%=1.447 feas=False nov=0.0683
+  child 46/48: stage=      scored eff%=61.953 feas=False nov=0.1071
+  child 47/48: stage=      scored eff%=97.449 feas=False nov=0.0
+  child 48/48: stage=      scored eff%=98.324 feas=False nov=0.1296
+  [v6 plan] gen7: VERIFY targets=['da417ff3'] budget=1 params={'k': 4} :: The Pareto front has a single nominal-only winner (da417ff3, k=1) and seed_uncertain_count=1. Verifying this front candidate across multiple operating corners (
+
+  ===== V6 TRACE gen 7 =====
+  OBSERVED STATE: feasible 9/96 near-feasible 64 best 99.9 front-alive 1 hv 10.6 (d 0.0) uncertain 1 struct-fail 0 pressure 0.0 faulty-promising 0 dup 0.052 stall(best/front) 7/0 sims 573
+  RELEVANT HISTORY: g0 REPAIR -> 1 attempts, 1 structurally valid+simulated, 1 recovered, 0 improved; 3/3 survived selection, 0 on front0; g1 RACING -> +237 sizings; front0 confirmed 1, entered 0, left 0; g2 VERIFY -> 1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 1 on front0; g3 VERIFY -> 1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 0 on front0; g4 RESCUE -> 4 attempted, 2 kept, 2 became feasible; 6/6 survived selection, 1 on front0; g5 RACING -> +5 sizings; front0 confirmed 1, entered 0, left 2; g6 RESCUE -> 3 attempted, 1 kept, 1 became feasible; 3/4 survived selection, 0 on front0; g7 VERIFY -> 1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB
+  CONTROLLER DECISION: VERIFY (The Pareto front has a single nominal-only winner (da417ff3, k=1) and seed_uncertain_count=1. Verifying this front candidate across multiple operating corners (k=4) is the cheapest, highest-leverage i)
+  TARGETS: ['da417ff3']
+  EXISTING TOOL CALLED: Evaluator.extend (extend_staged_fitness)  cost={'sizings': 3, 'llm_calls': 0, 'wall_s': 58.8}
+  RESULT: {'verified': 1, 'extra_sizings': 3, 'lost_feasibility': 0, 'gain_drop_over_3db': 0, 'per_target': [{'id': 'da417ff3', 'gain_before': 99.37, 'gain_after': 99.37, 'feasible_before': True, 'feasible_after': True, 'feasible_frac': 1.0, 'spread': 0.8}]}
+  STATE CHANGE: {'pareto_front_alive': {'before': 1, 'after': 3}, 'seed_uncertain_count': {'before': 1, 'after': 0}}
+
+  [discovered] +1 new front circuit(s); set now 4
+[outer] gen7 {'front0': 2, 'alive_in_front0': 2, 'best_gain': 99.371, 'max_novelty': 0.1071}  (sizings so far: 576 [+251 adaptive], 39.4 min)
+
+[outer] === generation 8: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.051  accepted nov u=0.074  (delta=+0.022; delta<<0 would mean the gate is trading novelty for wireability)
+  child 1/48: stage=      scored eff%=0.182 feas=False nov=0.1217
+  child 2/48: stage=      scored eff%=99.005 feas=False nov=0.1128
+  child 3/48: stage=      scored eff%=97.831 feas=False nov=0.0963
+  child 4/48: stage=      scored eff%=99.887 feas=False nov=0.1206
+  child 5/48: stage=      scored eff%=0.386 feas=False nov=0.1
+  child 6/48: stage=      scored eff%=53.637 feas=False nov=0.0
+  child 7/48: stage=      scored eff%=98.646 feas=False nov=0.0
+  child 8/48: stage=      scored eff%=99.894 feas=False nov=0.1249
+  child 9/48: stage=      scored eff%=98.903 feas=False nov=0.1296
+  child 10/48: stage=      scored eff%=97.842 feas=False nov=0.0
+  child 11/48: stage=      scored eff%=96.546 feas=False nov=0.0986
+  child 12/48: stage=      scored eff%=97.741 feas=False nov=0.0
+  child 13/48: stage=      scored eff%=99.93 feas=False nov=0.1029
+  child 14/48: stage=      scored eff%=97.429 feas=False nov=0.0
+  child 15/48: stage=      scored eff%=97.089 feas=False nov=0.1105
+  child 16/48: stage=      scored eff%=0.0 feas=False nov=0.1457
+  child 17/48: stage=      scored eff%=98.475 feas=False nov=0.0898
+  child 18/48: stage=      scored eff%=99.6 feas=True nov=0.0801
+  child 19/48: stage=      scored eff%=0.018 feas=False nov=0.0
+  child 20/48: stage=      scored eff%=98.723 feas=False nov=0.0
+  child 21/48: stage=      scored eff%=0.0 feas=False nov=0.1393
+  child 22/48: stage=      scored eff%=98.582 feas=False nov=0.0801
+  child 23/48: stage=      scored eff%=0.422 feas=False nov=0.0801
+  child 24/48: stage=      scored eff%=0.0 feas=False nov=0.1071
+  child 25/48: stage=      scored eff%=0.606 feas=False nov=0.1
+  child 26/48: stage=      scored eff%=98.322 feas=False nov=0.0
+  child 27/48: stage=      scored eff%=44.705 feas=False nov=0.1427
+  child 28/48: stage=      scored eff%=0.5 feas=False nov=0.0
+  child 29/48: stage=      scored eff%=1.247 feas=False nov=0.0
+  child 30/48: stage=      scored eff%=0.0 feas=False nov=0.0963
+  child 31/48: stage=      scored eff%=99.371 feas=True nov=0.0
+  child 32/48: stage=      scored eff%=0.195 feas=False nov=0.0871
+  child 33/48: stage=      scored eff%=98.746 feas=False nov=0.1105
+  child 34/48: stage=      scored eff%=0.016 feas=False nov=0.0
+  child 35/48: stage=      scored eff%=0.226 feas=False nov=0.0871
+  child 36/48: stage=      scored eff%=98.575 feas=False nov=0.1049
+  child 37/48: stage=      scored eff%=69.673 feas=False nov=0.1071
+  child 38/48: stage=      scored eff%=97.429 feas=False nov=0.1056
+  child 39/48: stage=      scored eff%=98.688 feas=False nov=0.1154
+  child 40/48: stage=      scored eff%=99.9 feas=False nov=0.0859
+  child 41/48: stage=      scored eff%=0.0 feas=False nov=0.1107
+  child 42/48: stage=      scored eff%=98.324 feas=False nov=0.0
+  child 43/48: stage=      scored eff%=0.881 feas=False nov=0.0
+  child 44/48: stage=      scored eff%=62.443 feas=False nov=0.1071
+  child 45/48: stage=      scored eff%=0.494 feas=False nov=0.1105
+  child 46/48: stage=      scored eff%=0.577 feas=False nov=0.1126
+  child 47/48: stage=      scored eff%=0.951 feas=False nov=0.1128
+  child 48/48: stage=      scored eff%=88.396 feas=False nov=0.0
+  [v6 plan] gen8: RACING targets=[] budget=2 params={'k': 4} :: There are two seed-uncertain designs (aa335a27, ee1c531a) in the contested rank-0/rank-1 band and the front shows stalled progress. Use adaptive-k racing to eva
+  [race] k->2: 2 contested of 96 (5 in band), +2 sizings, median spread 0.6 eff%, 0 over 3
+  [race] k->4: 1 contested of 96 (4 in band), +2 sizings, median spread 0.4 eff%, 0 over 3
+
+  ===== V6 TRACE gen 8 =====
+  OBSERVED STATE: feasible 9/96 near-feasible 62 best 99.93 front-alive 3 hv 10.7 (d 0.1) uncertain 2 struct-fail 0 pressure 0.0 faulty-promising 0 dup 0.021 stall(best/front) 8/0 sims 621
+  RELEVANT HISTORY: g1 RACING -> +237 sizings; front0 confirmed 1, entered 0, left 0; g2 VERIFY -> 1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 1 on front0; g3 VERIFY -> 1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 0 on front0; g4 RESCUE -> 4 attempted, 2 kept, 2 became feasible; 6/6 survived selection, 1 on front0; g5 RACING -> +5 sizings; front0 confirmed 1, entered 0, left 2; g6 RESCUE -> 3 attempted, 1 kept, 1 became feasible; 3/4 survived selection, 0 on front0; g7 VERIFY -> 1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 1 on front0; g8 RACING -> +4 sizings; front0 confirmed 3, entered 0, left 0
+  CONTROLLER DECISION: RACING (There are two seed-uncertain designs (aa335a27, ee1c531a) in the contested rank-0/rank-1 band and the front shows stalled progress. Use adaptive-k racing to evaluate the contested band at additional o)
+  TARGETS: []
+  EXISTING TOOL CALLED: run_outer_nsga_cv3.race_front  cost={'sizings': 4, 'llm_calls': 0, 'wall_s': 59.3}
+  RESULT: {'extra_sizings': 4, 'front0_entered': 0, 'front0_left': 0, 'front0_confirmed': 3}
+  STATE CHANGE: {'seed_uncertain_count': {'before': 2, 'after': 0}}
+
+  [discovered] +1 new front circuit(s); set now 5
+[outer] gen8 {'front0': 3, 'alive_in_front0': 3, 'best_gain': 99.598, 'max_novelty': 0.1071}  (sizings so far: 625 [+255 adaptive], 41.6 min)
+
+[outer] === generation 9: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.052  accepted nov u=0.072  (delta=+0.021; delta<<0 would mean the gate is trading novelty for wireability)
+  child 1/48: stage=      scored eff%=98.324 feas=False nov=0.0833
+  child 2/48: stage=      scored eff%=3.049 feas=False nov=0.1128
+  child 3/48: stage=      scored eff%=97.408 feas=False nov=0.0625
+  child 4/48: stage=      scored eff%=97.845 feas=False nov=0.0919
+  child 5/48: stage=      scored eff%=98.695 feas=False nov=0.0979
+  child 6/48: stage=      scored eff%=0.067 feas=False nov=0.0
+  child 7/48: stage=      scored eff%=98.481 feas=False nov=0.0871
+  child 8/48: stage=      scored eff%=98.695 feas=False nov=0.1105
+  child 9/48: stage=      scored eff%=97.851 feas=False nov=0.125
+  child 10/48: stage=      scored eff%=97.429 feas=False nov=0.0646
+  child 11/48: stage=      scored eff%=98.475 feas=False nov=0.0898
+  child 12/48: stage=      scored eff%=99.012 feas=False nov=0.0
+  child 13/48: stage=      scored eff%=98.092 feas=False nov=0.1248
+  child 14/48: stage=      scored eff%=0.12 feas=False nov=0.0
+  child 15/48: stage=      scored eff%=98.695 feas=False nov=0.0938
+  child 16/48: stage=      scored eff%=2.038 feas=False nov=0.0
+  child 17/48: stage=      scored eff%=99.394 feas=False nov=0.1071
+  child 18/48: stage=      scored eff%=98.324 feas=False nov=0.0691
+  child 19/48: stage=      scored eff%=0.641 feas=False nov=0.0
+  child 20/48: stage=      scored eff%=0.032 feas=False nov=0.0742
+  child 21/48: stage=      scored eff%=0.479 feas=False nov=0.0871
+  child 22/48: stage=      scored eff%=98.692 feas=False nov=0.1296
+  child 23/48: stage=      scored eff%=97.53 feas=False nov=0.0
+  child 24/48: stage=      scored eff%=0.433 feas=False nov=0.1105
+  child 25/48: stage=      scored eff%=0.211 feas=False nov=0.0
+  child 26/48: stage=      scored eff%=99.934 feas=False nov=0.0737
+  child 27/48: stage=      scored eff%=62.335 feas=False nov=0.0
+  child 28/48: stage=      scored eff%=98.624 feas=False nov=0.1208
+  child 29/48: stage=      scored eff%=44.653 feas=False nov=0.1161
+  child 30/48: stage=      scored eff%=2.038 feas=False nov=0.1136
+  child 31/48: stage=      scored eff%=98.744 feas=False nov=0.1056
+  child 32/48: stage=      scored eff%=98.695 feas=False nov=0.1136
+  child 33/48: stage=      scored eff%=97.414 feas=False nov=0.0
+  child 34/48: stage=      scored eff%=28.8 feas=False nov=0.0
+  child 35/48: stage=      scored eff%=0.121 feas=False nov=0.0769
+  child 36/48: stage=      scored eff%=0.247 feas=False nov=0.0
+  child 37/48: stage=      scored eff%=0.5 feas=False nov=0.0
+  child 38/48: stage=      scored eff%=0.182 feas=False nov=0.1217
+  child 39/48: stage=      scored eff%=0.002 feas=False nov=0.0769
+  child 40/48: stage=      scored eff%=97.419 feas=False nov=0.0522
+  child 41/48: stage=      scored eff%=98.324 feas=False nov=0.1419
+  child 42/48: stage=      scored eff%=98.806 feas=False nov=0.1219
+  child 43/48: stage=      scored eff%=97.297 feas=False nov=0.1105
+  child 44/48: stage=      scored eff%=98.69 feas=False nov=0.1128
+  child 45/48: stage=      scored eff%=0.0 feas=False nov=0.1457
+  child 46/48: stage=      scored eff%=0.413 feas=False nov=0.0801
+  child 47/48: stage=      scored eff%=97.845 feas=False nov=0.0
+  child 48/48: stage=      scored eff%=97.822 feas=False nov=0.0646
+  [v6 plan] gen9: RESCUE targets=['9440b074', 'c4d38396', '9f05c51b'] budget=3 params={'cv_max': 0.25} :: High near_feasible count (67) and stagnating front (no improvement 9 gens). Many candidates are close (min_cv=0.154 and several ~0.247). RESCUE is the cheapest 
+  [rescue] cv 0.1540 -> 0.15400860082936568  ops=['swap_phase']  kept out
+  [rescue] cv 0.2472 -> 0.24728925297233412  ops=['rewire_pin', 'add_two_terminal']  kept out
+  [rescue] cv 0.2472 -> 0.24723758127035902  ops=['swap_phase', 'swap_phase']  kept out
+  [rescue] gen9: 3 attempted, 0 kept, 0 became FEASIBLE
+
+  ===== V6 TRACE gen 9 =====
+  OBSERVED STATE: feasible 9/96 near-feasible 67 best 99.93 front-alive 3 hv 10.7 (d -0.0) uncertain 0 struct-fail 0 pressure 0.0 faulty-promising 0 dup 0.031 stall(best/front) 9/1 sims 670
+  RELEVANT HISTORY: g2 VERIFY -> 1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 1 on front0; g3 VERIFY -> 1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 0 on front0; g4 RESCUE -> 4 attempted, 2 kept, 2 became feasible; 6/6 survived selection, 1 on front0; g5 RACING -> +5 sizings; front0 confirmed 1, entered 0, left 2; g6 RESCUE -> 3 attempted, 1 kept, 1 became feasible; 3/4 survived selection, 0 on front0; g7 VERIFY -> 1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 1 on front0; g8 RACING -> +4 sizings; front0 confirmed 3, entered 0, left 0; g9 RESCUE -> 3 attempted, 0 kept, 0 became feasible
+  CONTROLLER DECISION: RESCUE (High near_feasible count (67) and stagnating front (no improvement 9 gens). Many candidates are close (min_cv=0.154 and several ~0.247). RESCUE is the cheapest targeted intervention to fix small struc)
+  TARGETS: ['9440b074', 'c4d38396', '9f05c51b']
+  EXISTING TOOL CALLED: run_outer_nsga_cv3.rescue_pass  cost={'sizings': 3, 'llm_calls': 3, 'wall_s': 177.7}
+  RESULT: {'attempted': 3, 'kept': 0, 'became_feasible': 0, 'near_feasible_offered': 3}
+  STATE CHANGE: none
+
+[outer] gen9 {'front0': 3, 'alive_in_front0': 3, 'best_gain': 99.598, 'max_novelty': 0.1071}  (sizings so far: 673 [+255 adaptive], 45.8 min)
+
+[outer] === generation 10: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.057  accepted nov u=0.080  (delta=+0.023; delta<<0 would mean the gate is trading novelty for wireability)
+  child 1/48: stage=      scored eff%=0.503 feas=False nov=0.1229
+  child 2/48: stage=      scored eff%=97.415 feas=False nov=0.0
+  child 3/48: stage=      scored eff%=98.142 feas=False nov=0.1193
+  child 4/48: stage=      scored eff%=98.266 feas=False nov=0.0979
+  child 5/48: stage=      scored eff%=28.717 feas=False nov=0.0871
+  child 6/48: stage=      scored eff%=69.674 feas=False nov=0.0
+  child 7/48: stage=      scored eff%=0.305 feas=False nov=0.125
+  child 8/48: stage=      scored eff%=96.179 feas=False nov=0.1056
+  child 9/48: stage=      scored eff%=2.038 feas=False nov=0.1136
+  child 10/48: stage=      scored eff%=28.799 feas=False nov=0.0
+  child 11/48: stage=      scored eff%=97.751 feas=False nov=0.1333
+  child 12/48: stage=      scored eff%=0.0 feas=False nov=0.1429
+  child 13/48: stage=      scored eff%=0.42 feas=False nov=0.0
+  child 14/48: stage=      scored eff%=98.017 feas=False nov=0.0
+  child 15/48: stage=      scored eff%=98.324 feas=False nov=0.1333
+  child 16/48: stage=      scored eff%=98.902 feas=False nov=0.0742
+  child 17/48: stage=      scored eff%=28.802 feas=False nov=0.0
+  child 18/48: stage=      scored eff%=69.911 feas=False nov=0.0
+  child 19/48: stage=      scored eff%=98.644 feas=False nov=0.0
+  child 20/48: stage=      scored eff%=98.808 feas=False nov=0.1638
+  child 21/48: stage=      scored eff%=28.783 feas=False nov=0.1176
+  child 22/48: stage=      scored eff%=96.463 feas=False nov=0.0
+  child 23/48: stage=      scored eff%=16.829 feas=False nov=0.1314
+  child 24/48: stage=      scored eff%=44.483 feas=False nov=0.1105
+  child 25/48: stage=      scored eff%=99.365 feas=True nov=0.1
+  child 26/48: stage=      scored eff%=98.324 feas=False nov=0.092
+  child 27/48: stage=      scored eff%=0.002 feas=False nov=0.0
+  child 28/48: stage=      scored eff%=0.0 feas=False nov=0.1428
+  child 29/48: stage=      scored eff%=0.537 feas=False nov=0.1126
+  child 30/48: stage=      scored eff%=0.755 feas=False nov=0.0742
+  child 31/48: stage=      scored eff%=98.334 feas=False nov=0.1105
+  child 32/48: stage=      scored eff%=98.327 feas=False nov=0.1374
+  child 33/48: stage=      scored eff%=0.246 feas=False nov=0.1059
+  child 34/48: stage=      scored eff%=99.884 feas=False nov=0.0
+  child 35/48: stage=      scored eff%=70.253 feas=False nov=0.1128
+  child 36/48: stage=      scored eff%=0.836 feas=False nov=0.0
+  child 37/48: stage=      scored eff%=99.448 feas=False nov=0.1136
+  child 38/48: stage=      scored eff%=99.893 feas=False nov=0.0
+  child 39/48: stage=      scored eff%=0.305 feas=False nov=0.125
+  child 40/48: stage=      scored eff%=52.389 feas=False nov=0.1126
+  child 41/48: stage=      scored eff%=98.718 feas=False nov=0.0
+  child 42/48: stage=      scored eff%=0.73 feas=False nov=0.0742
+  child 43/48: stage=      scored eff%=95.683 feas=False nov=0.1029
+  child 44/48: stage=      scored eff%=97.845 feas=False nov=0.0866
+  child 45/48: stage=      scored eff%=1.939 feas=False nov=0.0
+  child 46/48: stage=      scored eff%=99.893 feas=False nov=0.1136
+  child 47/48: stage=      scored eff%=0.0 feas=False nov=0.1457
+  child 48/48: stage=      scored eff%=0.0 feas=False nov=0.1846
+  [v6 plan] gen10: VERIFY targets=['b7516c6d'] budget=1 params={'k': 4} :: One front member (b7516c6d) is seed-uncertain (k=1) while the other front members are robust (k=4). seed_uncertain_count=1 — a cheap multi-corner re-score (k=4)
+
+  ===== V6 TRACE gen 10 =====
+  OBSERVED STATE: feasible 10/96 near-feasible 55 best 99.89 front-alive 3 hv 10.6 (d -0.1) uncertain 1 struct-fail 0 pressure 0.0 faulty-promising 0 dup 0.01 stall(best/front) 10/0 sims 719
+  RELEVANT HISTORY: g3 VERIFY -> 1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 0 on front0; g4 RESCUE -> 4 attempted, 2 kept, 2 became feasible; 6/6 survived selection, 1 on front0; g5 RACING -> +5 sizings; front0 confirmed 1, entered 0, left 2; g6 RESCUE -> 3 attempted, 1 kept, 1 became feasible; 3/4 survived selection, 0 on front0; g7 VERIFY -> 1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 1 on front0; g8 RACING -> +4 sizings; front0 confirmed 3, entered 0, left 0; g9 RESCUE -> 3 attempted, 0 kept, 0 became feasible; 3/3 survived selection, 0 on front0; g10 VERIFY -> 1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB
+  CONTROLLER DECISION: VERIFY (One front member (b7516c6d) is seed-uncertain (k=1) while the other front members are robust (k=4). seed_uncertain_count=1 — a cheap multi-corner re-score (k=4) will resolve whether this nominal winne)
+  TARGETS: ['b7516c6d']
+  EXISTING TOOL CALLED: Evaluator.extend (extend_staged_fitness)  cost={'sizings': 3, 'llm_calls': 0, 'wall_s': 60.6}
+  RESULT: {'verified': 1, 'extra_sizings': 3, 'lost_feasibility': 0, 'gain_drop_over_3db': 0, 'per_target': [{'id': 'b7516c6d', 'gain_before': 99.36, 'gain_after': 99.37, 'feasible_before': True, 'feasible_after': True, 'feasible_frac': 1.0, 'spread': 0.8}]}
+  STATE CHANGE: {'hypervolume': {'before': 10.6, 'after': 10.7}, 'seed_uncertain_count': {'before': 1, 'after': 0}}
+
+[outer] gen10 {'front0': 3, 'alive_in_front0': 3, 'best_gain': 99.598, 'max_novelty': 0.1071}  (sizings so far: 722 [+258 adaptive], 49.9 min)
+
+[outer] === generation 11: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.052  accepted nov u=0.080  (delta=+0.028; delta<<0 would mean the gate is trading novelty for wireability)
+  child 1/48: stage=      scored eff%=98.482 feas=False nov=0.1071
+  child 2/48: stage=      scored eff%=0.814 feas=False nov=0.0801
+  child 3/48: stage=      scored eff%=99.307 feas=False nov=0.0
+  child 4/48: stage=      scored eff%=0.0 feas=False nov=0.0769
+  child 5/48: stage=      scored eff%=97.755 feas=False nov=0.125
+  child 6/48: stage=      scored eff%=98.748 feas=False nov=0.1136
+  child 7/48: stage=      scored eff%=28.791 feas=False nov=0.1049
+  child 8/48: stage=      scored eff%=54.004 feas=False nov=0.1047
+  child 9/48: stage=      scored eff%=1.024 feas=False nov=0.0755
+  child 10/48: stage=      scored eff%=97.986 feas=False nov=0.0
+  child 11/48: stage=      scored eff%=98.324 feas=False nov=0.0833
+  child 12/48: stage=      scored eff%=0.0 feas=False nov=0.0833
+  child 13/48: stage=      scored eff%=98.324 feas=False nov=0.1419
+  child 14/48: stage=      scored eff%=0.208 feas=False nov=0.0742
+  child 15/48: stage=      scored eff%=98.903 feas=False nov=0.1155
+  child 16/48: stage=      scored eff%=97.33 feas=False nov=0.0955
+  child 17/48: stage=      scored eff%=97.973 feas=False nov=0.1128
+  child 18/48: stage=      scored eff%=99.265 feas=False nov=0.0919
+  child 19/48: stage=      scored eff%=0.0 feas=False nov=0.1457
+  child 20/48: stage=      scored eff%=0.182 feas=False nov=0.1217
+  child 21/48: stage=      scored eff%=99.37 feas=True nov=0.1071
+  child 22/48: stage=      scored eff%=99.084 feas=True nov=0.0
+  child 23/48: stage=      scored eff%=98.695 feas=False nov=0.0938
+  child 24/48: stage=      scored eff%=99.371 feas=True nov=0.0
+  child 25/48: stage=      scored eff%=99.012 feas=False nov=0.1071
+  child 26/48: stage=      scored eff%=97.284 feas=False nov=0.1056
+  child 27/48: stage=      scored eff%=98.697 feas=False nov=0.0
+  child 28/48: stage=        dead eff%=None feas=False nov=0.1071
+  child 29/48: stage=      scored eff%=2.038 feas=False nov=0.1071
+  child 30/48: stage=      scored eff%=98.324 feas=False nov=0.1248
+  child 31/48: stage=      scored eff%=98.324 feas=False nov=0.1296
+  child 32/48: stage=      scored eff%=53.609 feas=False nov=0.0986
+  child 33/48: stage=      scored eff%=0.247 feas=False nov=0.0
+  child 34/48: stage=      scored eff%=54.288 feas=False nov=0.1193
+  child 35/48: stage=      scored eff%=99.084 feas=True nov=0.0
+  child 36/48: stage=      scored eff%=98.232 feas=False nov=0.1105
+  child 37/48: stage=      scored eff%=99.937 feas=False nov=0.1208
+  child 38/48: stage=      scored eff%=99.365 feas=True nov=0.0
+  child 39/48: stage=      scored eff%=99.8 feas=False nov=0.1136
+  child 40/48: stage=      scored eff%=98.023 feas=False nov=0.0
+  child 41/48: stage=      scored eff%=88.39 feas=False nov=0.0
+  child 42/48: stage=      scored eff%=98.876 feas=False nov=0.0986
+  child 43/48: stage=      scored eff%=99.084 feas=True nov=0.0
+  child 44/48: stage=      scored eff%=0.0 feas=False nov=0.1128
+  child 45/48: stage=      scored eff%=69.486 feas=False nov=0.1071
+  child 46/48: stage=      scored eff%=99.887 feas=False nov=0.1206
+  child 47/48: stage=      scored eff%=0.5 feas=False nov=0.0
+  child 48/48: stage=      scored eff%=0.204 feas=False nov=0.0801
+  [v6 plan] gen11: VERIFY targets=['f6c1c68a', '399ab60a'] budget=2 params={'k': 4} :: There are 2 seed-uncertain candidates (front-leading and closely competing). The front has stalled (11 gens since improvement) and could be a nominal-only winne
+
+  ===== V6 TRACE gen 11 =====
+  OBSERVED STATE: feasible 16/96 near-feasible 62 best 99.94 front-alive 1 hv 10.6 (d -0.1) uncertain 2 struct-fail 0 pressure 0.0 faulty-promising 0 dup 0.094 stall(best/front) 11/0 sims 760
+  RELEVANT HISTORY: g4 RESCUE -> 4 attempted, 2 kept, 2 became feasible; 6/6 survived selection, 1 on front0; g5 RACING -> +5 sizings; front0 confirmed 1, entered 0, left 2; g6 RESCUE -> 3 attempted, 1 kept, 1 became feasible; 3/4 survived selection, 0 on front0; g7 VERIFY -> 1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 1 on front0; g8 RACING -> +4 sizings; front0 confirmed 3, entered 0, left 0; g9 RESCUE -> 3 attempted, 0 kept, 0 became feasible; 3/3 survived selection, 0 on front0; g10 VERIFY -> 1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 0 on front0; g11 VERIFY -> 2 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB
+  CONTROLLER DECISION: VERIFY (There are 2 seed-uncertain candidates (front-leading and closely competing). The front has stalled (11 gens since improvement) and could be a nominal-only winner. VERIFYing both across the full multi-)
+  TARGETS: ['f6c1c68a', '399ab60a']
+  EXISTING TOOL CALLED: Evaluator.extend (extend_staged_fitness)  cost={'sizings': 6, 'llm_calls': 0, 'wall_s': 121.0}
+  RESULT: {'verified': 2, 'extra_sizings': 6, 'lost_feasibility': 0, 'gain_drop_over_3db': 0, 'per_target': [{'id': 'f6c1c68a', 'gain_before': 99.37, 'gain_after': 99.37, 'feasible_before': True, 'feasible_after': True, 'feasible_frac': 1.0, 'spread': 0.8}, {'id': '399ab60a', 'gain_before': 99.36, 'gain_after': 99.37, 'feasible_before': True, 'feasible_after': True, 'feasible_frac': 1.0, 'spread': 0.8}]}
+  STATE CHANGE: {'pareto_front_alive': {'before': 1, 'after': 4}, 'hypervolume': {'before': 10.6, 'after': 10.7}, 'seed_uncertain_count': {'before': 2, 'after': 0}}
+
+  [discovered] +1 new front circuit(s); set now 6
+[outer] gen11 {'front0': 4, 'alive_in_front0': 4, 'best_gain': 99.598, 'max_novelty': 0.1071}  (sizings so far: 766 [+264 adaptive], 60.9 min)
+
+[outer] === generation 12: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.054  accepted nov u=0.068  (delta=+0.014; delta<<0 would mean the gate is trading novelty for wireability)
+  child 1/48: stage=      scored eff%=98.582 feas=False nov=0.0801
+  child 2/48: stage=      scored eff%=28.792 feas=False nov=0.1429
+  child 3/48: stage=      scored eff%=0.182 feas=False nov=0.1217
+  child 4/48: stage=      scored eff%=98.811 feas=False nov=0.1248
+  child 5/48: stage=      scored eff%=99.887 feas=False nov=0.1206
+  child 6/48: stage=      scored eff%=0.182 feas=False nov=0.1217
+  child 7/48: stage=      scored eff%=1.285 feas=False nov=0.0
+  child 8/48: stage=      scored eff%=99.084 feas=True nov=0.0
+  child 9/48: stage=      scored eff%=98.701 feas=False nov=0.1128
+  child 10/48: stage=      scored eff%=97.378 feas=False nov=0.1049
+  child 11/48: stage=      scored eff%=69.521 feas=False nov=0.1333
+  child 12/48: stage=      scored eff%=98.711 feas=False nov=0.1105
+  child 13/48: stage=      scored eff%=62.245 feas=False nov=0.1105
+  child 14/48: stage=      scored eff%=0.001 feas=False nov=0.0
+  child 15/48: stage=      scored eff%=28.805 feas=False nov=0.0
+  child 16/48: stage=      scored eff%=97.419 feas=False nov=0.0
+  child 17/48: stage=      scored eff%=0.028 feas=False nov=0.0691
+  child 18/48: stage=      scored eff%=97.845 feas=False nov=0.0
+  child 19/48: stage=      scored eff%=99.371 feas=True nov=0.0
+  child 20/48: stage=      scored eff%=2.638 feas=False nov=0.0
+  child 21/48: stage=      scored eff%=99.879 feas=False nov=0.0742
+  child 22/48: stage=      scored eff%=98.475 feas=False nov=0.0
+  child 23/48: stage=      scored eff%=69.899 feas=False nov=0.0
+  child 24/48: stage=      scored eff%=98.61 feas=False nov=0.1128
+  child 25/48: stage=      scored eff%=99.887 feas=False nov=0.0955
+  child 26/48: stage=      scored eff%=99.144 feas=False nov=0.0
+  child 27/48: stage=      scored eff%=99.084 feas=True nov=0.0
+  child 28/48: stage=      scored eff%=0.407 feas=False nov=0.113
+  child 29/48: stage=      scored eff%=98.409 feas=False nov=0.1047
+  child 30/48: stage=      scored eff%=0.487 feas=False nov=0.0871
+  child 31/48: stage=      scored eff%=97.75 feas=False nov=0.0
+  child 32/48: stage=      scored eff%=95.934 feas=False nov=0.0819
+  child 33/48: stage=      scored eff%=0.498 feas=False nov=0.0
+  child 34/48: stage=      scored eff%=98.324 feas=False nov=0.1296
+  child 35/48: stage=      scored eff%=0.711 feas=False nov=0.0
+  child 36/48: stage=      scored eff%=0.776 feas=False nov=0.0
+  child 37/48: stage=      scored eff%=98.327 feas=False nov=0.1328
+  child 38/48: stage=      scored eff%=0.0 feas=False nov=0.1
+  child 39/48: stage=      scored eff%=99.013 feas=False nov=0.1233
+  child 40/48: stage=      scored eff%=97.975 feas=False nov=0.0
+  child 41/48: stage=      scored eff%=0.788 feas=False nov=0.0955
+  child 42/48: stage=      scored eff%=53.633 feas=False nov=0.1419
+  child 43/48: stage=      scored eff%=0.05 feas=False nov=0.0986
+  child 44/48: stage=      scored eff%=69.486 feas=False nov=0.1071
+  child 45/48: stage=      scored eff%=0.0 feas=False nov=0.1128
+  child 46/48: stage=      scored eff%=0.963 feas=False nov=0.061
+  child 47/48: stage=      scored eff%=98.322 feas=False nov=0.0
+  child 48/48: stage=      scored eff%=99.887 feas=False nov=0.1206
+  [v6 plan] gen12: RESCUE targets=['059e3e90', 'c4d38396', '11403b0e', '59f0950b'] budget=4 params={'cv_max': 0.3} :: High near_feasible_count (59) with many small violations (near_feasible_min_cv=0.154) and low feasible_fraction (0.156). RESCUE is the cheapest targeted interve
+  [rescue] cv 0.1542 -> 0.14533179819970693  ops=['swap_phase']  closer
+  [rescue] cv 0.2471 -> 0.49233160445612256  ops=['add_two_terminal']  kept out
+  [rescue] cv 0.2472 -> 0.24722175918208592  ops=['swap_phase', 'add_two_terminal']  kept out
+  [rescue] cv 0.2472 -> 0.49178482625337716  ops=['add_two_terminal', 'rewire_pin']  kept out
+  [rescue] gen12: 4 attempted, 1 kept, 0 became FEASIBLE
+
+  ===== V6 TRACE gen 12 =====
+  OBSERVED STATE: feasible 15/96 near-feasible 59 best 99.89 front-alive 4 hv 10.7 (d -0.0) uncertain 0 struct-fail 0 pressure 0.0 faulty-promising 0 dup 0.094 stall(best/front) 12/1 sims 805
+  RELEVANT HISTORY: g5 RACING -> +5 sizings; front0 confirmed 1, entered 0, left 2; g6 RESCUE -> 3 attempted, 1 kept, 1 became feasible; 3/4 survived selection, 0 on front0; g7 VERIFY -> 1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 1 on front0; g8 RACING -> +4 sizings; front0 confirmed 3, entered 0, left 0; g9 RESCUE -> 3 attempted, 0 kept, 0 became feasible; 3/3 survived selection, 0 on front0; g10 VERIFY -> 1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 0 on front0; g11 VERIFY -> 2 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 1 on front0; g12 RESCUE -> 4 attempted, 1 kept, 0 became feasible
+  CONTROLLER DECISION: RESCUE (High near_feasible_count (59) with many small violations (near_feasible_min_cv=0.154) and low feasible_fraction (0.156). RESCUE is the cheapest targeted intervention to turn near-feasible designs into)
+  TARGETS: ['059e3e90', 'c4d38396', '11403b0e', '59f0950b']
+  EXISTING TOOL CALLED: run_outer_nsga_cv3.rescue_pass  cost={'sizings': 3, 'llm_calls': 4, 'wall_s': 206.7}
+  RESULT: {'attempted': 4, 'kept': 1, 'became_feasible': 0, 'near_feasible_offered': 4}
+  STATE CHANGE: {'near_feasible_count': {'before': 59, 'after': 60}}
+
+[outer] gen12 {'front0': 4, 'alive_in_front0': 4, 'best_gain': 99.598, 'max_novelty': 0.1071}  (sizings so far: 808 [+264 adaptive], 65.6 min)
+
+[outer] === generation 13: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.058  accepted nov u=0.077  (delta=+0.019; delta<<0 would mean the gate is trading novelty for wireability)
+  child 1/48: stage=      scored eff%=98.081 feas=False nov=0.0714
+  child 2/48: stage=      scored eff%=38.095 feas=False nov=0.0
+  child 3/48: stage=      scored eff%=1.576 feas=False nov=0.1071
+  child 4/48: stage=      scored eff%=97.823 feas=False nov=0.0833
+  child 5/48: stage=      scored eff%=97.833 feas=False nov=0.092
+  child 6/48: stage=      scored eff%=97.414 feas=False nov=0.0
+  child 7/48: stage=      scored eff%=99.393 feas=False nov=0.1071
+  child 8/48: stage=      scored eff%=0.159 feas=False nov=0.1071
+  child 9/48: stage=      scored eff%=97.452 feas=False nov=0.0979
+  child 10/48: stage=      scored eff%=98.324 feas=False nov=0.1128
+  child 11/48: stage=      scored eff%=99.893 feas=False nov=0.1136
+  child 12/48: stage=      scored eff%=98.319 feas=False nov=0.1105
+  child 13/48: stage=      scored eff%=98.951 feas=True nov=0.1105
+  child 14/48: stage=      scored eff%=0.0 feas=False nov=0.0769
+  child 15/48: stage=      scored eff%=98.34 feas=False nov=0.1419
+  child 16/48: stage=      scored eff%=0.0 feas=False nov=0.125
+  child 17/48: stage=      scored eff%=97.851 feas=False nov=0.1374
+  child 18/48: stage=      scored eff%=0.253 feas=False nov=0.0
+  child 19/48: stage=      scored eff%=98.808 feas=False nov=0.1428
+  child 20/48: stage=      scored eff%=70.05 feas=False nov=0.0
+  child 21/48: stage=      scored eff%=98.094 feas=False nov=0.1
+  child 22/48: stage=      scored eff%=0.425 feas=False nov=0.0898
+  child 23/48: stage=      scored eff%=99.881 feas=False nov=0.0
+  child 24/48: stage=      scored eff%=0.305 feas=False nov=0.125
+  child 25/48: stage=      scored eff%=0.405 feas=False nov=0.0714
+  child 26/48: stage=      scored eff%=69.666 feas=False nov=0.0
+  child 27/48: stage=      scored eff%=0.849 feas=False nov=0.1136
+  child 28/48: stage=      scored eff%=98.604 feas=False nov=0.1105
+  child 29/48: stage=      scored eff%=0.0 feas=False nov=0.1548
+  child 30/48: stage=      scored eff%=97.842 feas=False nov=0.1071
+  child 31/48: stage=      scored eff%=99.371 feas=True nov=0.0
+  child 32/48: stage=      scored eff%=41.403 feas=False nov=0.0
+  child 33/48: stage=      scored eff%=97.289 feas=False nov=0.1
+  child 34/48: stage=      scored eff%=62.339 feas=False nov=0.0
+  child 35/48: stage=      scored eff%=98.327 feas=False nov=0.1513
+  child 36/48: stage=      scored eff%=97.419 feas=False nov=0.0
+  child 37/48: stage=      scored eff%=98.017 feas=False nov=0.0
+  child 38/48: stage=      scored eff%=81.505 feas=False nov=0.1071
+  child 39/48: stage=      scored eff%=98.324 feas=False nov=0.0919
+  child 40/48: stage=      scored eff%=96.467 feas=False nov=0.0
+  child 41/48: stage=      scored eff%=98.319 feas=False nov=0.0
+  child 42/48: stage=      scored eff%=0.005 feas=False nov=0.0
+  child 43/48: stage=      scored eff%=0.626 feas=False nov=0.1286
+  child 44/48: stage=      scored eff%=97.779 feas=False nov=0.098
+  child 45/48: stage=      scored eff%=0.639 feas=False nov=0.0691
+  child 46/48: stage=      scored eff%=98.697 feas=False nov=0.1128
+  child 47/48: stage=      scored eff%=99.366 feas=True nov=0.1
+  child 48/48: stage=      scored eff%=98.591 feas=False nov=0.1229
+  [v6 plan] gen13: VERIFY targets=['99d06f7f', '0f685bd8'] budget=2 params={'k': 4} :: Two rank-0 front members are marked seed_uncertain. The front has stalled (no gain improvement for 13 gens) and these nominal-feasible winners have only k=1 sco
+
+  ===== V6 TRACE gen 13 =====
+  OBSERVED STATE: feasible 15/96 near-feasible 62 best 99.89 front-alive 2 hv 11.0 (d 0.3) uncertain 2 struct-fail 0 pressure 0.0 faulty-promising 0 dup 0.031 stall(best/front) 13/0 sims 850
+  RELEVANT HISTORY: g6 RESCUE -> 3 attempted, 1 kept, 1 became feasible; 3/4 survived selection, 0 on front0; g7 VERIFY -> 1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 1 on front0; g8 RACING -> +4 sizings; front0 confirmed 3, entered 0, left 0; g9 RESCUE -> 3 attempted, 0 kept, 0 became feasible; 3/3 survived selection, 0 on front0; g10 VERIFY -> 1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 0 on front0; g11 VERIFY -> 2 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 1 on front0; g12 RESCUE -> 4 attempted, 1 kept, 0 became feasible; 5/5 survived selection, 0 on front0; g13 VERIFY -> 2 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB
+  CONTROLLER DECISION: VERIFY (Two rank-0 front members are marked seed_uncertain. The front has stalled (no gain improvement for 13 gens) and these nominal-feasible winners have only k=1 scoring. Verify them across the full multi-)
+  TARGETS: ['99d06f7f', '0f685bd8']
+  EXISTING TOOL CALLED: Evaluator.extend (extend_staged_fitness)  cost={'sizings': 6, 'llm_calls': 0, 'wall_s': 118.0}
+  RESULT: {'verified': 2, 'extra_sizings': 6, 'lost_feasibility': 0, 'gain_drop_over_3db': 0, 'per_target': [{'id': '99d06f7f', 'gain_before': 99.37, 'gain_after': 99.37, 'feasible_before': True, 'feasible_after': True, 'feasible_frac': 1.0, 'spread': 0.8}, {'id': '0f685bd8', 'gain_before': 98.95, 'gain_after': 98.96, 'feasible_before': True, 'feasible_after': True, 'feasible_frac': 1.0, 'spread': 1.4}]}
+  STATE CHANGE: {'pareto_front_alive': {'before': 2, 'after': 5}, 'seed_uncertain_count': {'before': 2, 'after': 0}}
+
+  [discovered] +1 new front circuit(s); set now 7
+[outer] gen13 {'front0': 5, 'alive_in_front0': 5, 'best_gain': 99.598, 'max_novelty': 0.1105}  (sizings so far: 856 [+270 adaptive], 74.4 min)
+
+[outer] === generation 14: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.051  accepted nov u=0.063  (delta=+0.012; delta<<0 would mean the gate is trading novelty for wireability)
+  child 1/48: stage=      scored eff%=0.626 feas=False nov=0.1286
+  child 2/48: stage=      scored eff%=97.452 feas=False nov=0.1049
+  child 3/48: stage=      scored eff%=97.745 feas=False nov=0.0
+  child 4/48: stage=      scored eff%=99.361 feas=True nov=0.0
+  child 5/48: stage=      scored eff%=98.697 feas=False nov=0.1389
+  child 6/48: stage=      scored eff%=99.9 feas=False nov=0.1154
+  child 7/48: stage=      scored eff%=0.05 feas=False nov=0.1049
+  child 8/48: stage=      scored eff%=97.414 feas=False nov=0.0
+  child 9/48: stage=      scored eff%=98.958 feas=True nov=0.1105
+  child 10/48: stage=      scored eff%=28.8 feas=False nov=0.0
+  child 11/48: stage=      scored eff%=69.549 feas=False nov=0.1071
+  child 12/48: stage=      scored eff%=97.879 feas=False nov=0.0
+  child 13/48: stage=      scored eff%=99.371 feas=True nov=0.0
+  child 14/48: stage=      scored eff%=0.5 feas=False nov=0.0
+  child 15/48: stage=      scored eff%=99.084 feas=True nov=0.0
+  child 16/48: stage=      scored eff%=0.53 feas=False nov=0.125
+  child 17/48: stage=      scored eff%=0.0 feas=False nov=0.1071
+  child 18/48: stage=      scored eff%=0.0 feas=False nov=0.0979
+  child 19/48: stage=      scored eff%=0.246 feas=False nov=0.0646
+  child 20/48: stage=      scored eff%=4.9 feas=False nov=0.0
+  child 21/48: stage=      scored eff%=97.822 feas=False nov=0.1105
+  child 22/48: stage=      scored eff%=98.019 feas=False nov=0.0
+  child 23/48: stage=      scored eff%=3.828 feas=False nov=0.1047
+  child 24/48: stage=      scored eff%=41.499 feas=False nov=0.0
+  child 25/48: stage=      scored eff%=99.887 feas=False nov=0.1206
+  child 26/48: stage=      scored eff%=99.069 feas=True nov=0.1071
+  child 27/48: stage=      scored eff%=0.5 feas=False nov=0.0
+  child 28/48: stage=      scored eff%=98.341 feas=False nov=0.1193
+  child 29/48: stage=      scored eff%=98.808 feas=False nov=0.1428
+  child 30/48: stage=      scored eff%=99.084 feas=True nov=0.0
+  child 31/48: stage=      scored eff%=99.9 feas=False nov=0.1328
+  child 32/48: stage=      scored eff%=0.5 feas=False nov=0.0
+  child 33/48: stage=      scored eff%=95.393 feas=False nov=0.1047
+  child 34/48: stage=      scored eff%=0.391 feas=False nov=0.0
+  child 35/48: stage=      scored eff%=0.0 feas=False nov=0.1139
+  child 36/48: stage=      scored eff%=88.39 feas=False nov=0.0
+  child 37/48: stage=      scored eff%=1.197 feas=False nov=0.0
+  child 38/48: stage=      scored eff%=97.813 feas=False nov=0.0803
+  child 39/48: stage=      scored eff%=99.937 feas=False nov=0.1219
+  child 40/48: stage=      scored eff%=98.738 feas=False nov=0.0
+  child 41/48: stage=      scored eff%=98.322 feas=False nov=0.0
+  child 42/48: stage=      scored eff%=0.278 feas=False nov=0.1154
+  child 43/48: stage=      scored eff%=0.626 feas=False nov=0.1286
+  child 44/48: stage=      scored eff%=0.246 feas=False nov=0.1056
+  child 45/48: stage=      scored eff%=0.083 feas=False nov=0.0986
+  child 46/48: stage=      scored eff%=98.697 feas=False nov=0.1128
+  child 47/48: stage=      scored eff%=96.474 feas=False nov=0.0
+  child 48/48: stage=      scored eff%=0.107 feas=False nov=0.0
+  [v6 plan] gen14: RACING targets=[] budget=2 params={'k': 4} :: Two current front0 members (dea3190a, 07cc9327) are seed-uncertain (k=1) while other front members already have multi-corner scores. The front has stalled (no c
+  [race] k->2: 2 contested of 96 (8 in band), +2 sizings, median spread 0.6 eff%, 0 over 3
+  [race] k->4: 1 contested of 96 (8 in band), +2 sizings, median spread 0.7 eff%, 0 over 3
+
+  ===== V6 TRACE gen 14 =====
+  OBSERVED STATE: feasible 20/96 near-feasible 57 best 99.94 front-alive 5 hv 11.0 (d -0.0) uncertain 2 struct-fail 0 pressure 0.0 faulty-promising 0 dup 0.125 stall(best/front) 14/0 sims 891
+  RELEVANT HISTORY: g7 VERIFY -> 1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 1 on front0; g8 RACING -> +4 sizings; front0 confirmed 3, entered 0, left 0; g9 RESCUE -> 3 attempted, 0 kept, 0 became feasible; 3/3 survived selection, 0 on front0; g10 VERIFY -> 1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 0 on front0; g11 VERIFY -> 2 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 1 on front0; g12 RESCUE -> 4 attempted, 1 kept, 0 became feasible; 5/5 survived selection, 0 on front0; g13 VERIFY -> 2 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 1 on front0; g14 RACING -> +4 sizings; front0 confirmed 2, entered 3, left 2
+  CONTROLLER DECISION: RACING (Two current front0 members (dea3190a, 07cc9327) are seed-uncertain (k=1) while other front members already have multi-corner scores. The front has stalled (no change for 14 gens) and median gain sprea)
+  TARGETS: []
+  EXISTING TOOL CALLED: run_outer_nsga_cv3.race_front  cost={'sizings': 4, 'llm_calls': 0, 'wall_s': 56.4}
+  RESULT: {'extra_sizings': 4, 'front0_entered': 3, 'front0_left': 2, 'front0_confirmed': 2}
+  STATE CHANGE: {'pareto_front_alive': {'before': 5, 'after': 6}, 'seed_uncertain_count': {'before': 2, 'after': 0}}
+
+[outer] gen14 {'front0': 5, 'alive_in_front0': 5, 'best_gain': 99.598, 'max_novelty': 0.1105}  (sizings so far: 895 [+274 adaptive], 76.4 min)
+
+[outer] === generation 15: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.052  accepted nov u=0.066  (delta=+0.013; delta<<0 would mean the gate is trading novelty for wireability)
+  child 1/48: stage=      scored eff%=0.639 feas=False nov=0.0
+  child 2/48: stage=      scored eff%=0.041 feas=False nov=0.1029
+  child 3/48: stage=      scored eff%=98.718 feas=False nov=0.1105
+  child 4/48: stage=      scored eff%=2.85 feas=False nov=0.1105
+  child 5/48: stage=      scored eff%=99.37 feas=True nov=0.0583
+  child 6/48: stage=      scored eff%=99.371 feas=True nov=0.0
+  child 7/48: stage=      scored eff%=28.813 feas=False nov=0.0
+  child 8/48: stage=      scored eff%=1.005 feas=False nov=0.0963
+  child 9/48: stage=      scored eff%=97.415 feas=False nov=0.0
+  child 10/48: stage=      scored eff%=2.604 feas=False nov=0.0
+  child 11/48: stage=      scored eff%=99.598 feas=True nov=0.0801
+  child 12/48: stage=      scored eff%=98.319 feas=False nov=0.0
+  child 13/48: stage=      scored eff%=99.371 feas=True nov=0.0
+  child 14/48: stage=      scored eff%=95.317 feas=False nov=0.1071
+  child 15/48: stage=      scored eff%=0.0 feas=False nov=0.1429
+  child 16/48: stage=      scored eff%=98.695 feas=False nov=0.1219
+  child 17/48: stage=      scored eff%=98.503 feas=False nov=0.1154
+  child 18/48: stage=      scored eff%=99.371 feas=True nov=0.0
+  child 19/48: stage=      scored eff%=0.067 feas=False nov=0.0
+  child 20/48: stage=      scored eff%=36.526 feas=False nov=0.0
+  child 21/48: stage=      scored eff%=96.516 feas=False nov=0.0
+  child 22/48: stage=      scored eff%=1.966 feas=False nov=0.1154
+  child 23/48: stage=      scored eff%=98.335 feas=False nov=0.0
+  child 24/48: stage=      scored eff%=88.396 feas=False nov=0.0
+  child 25/48: stage=      scored eff%=64.966 feas=False nov=0.1105
+  child 26/48: stage=      scored eff%=99.887 feas=False nov=0.1206
+  child 27/48: stage=      scored eff%=69.538 feas=False nov=0.0
+  child 28/48: stage=      scored eff%=0.05 feas=False nov=0.1071
+  child 29/48: stage=      scored eff%=97.823 feas=False nov=0.0
+  child 30/48: stage=      scored eff%=99.6 feas=True nov=0.1472
+  child 31/48: stage=      scored eff%=98.912 feas=False nov=0.1333
+  child 32/48: stage=      scored eff%=97.845 feas=False nov=0.0
+  child 33/48: stage=      scored eff%=98.194 feas=False nov=0.0
+  child 34/48: stage=      scored eff%=0.0 feas=False nov=0.1286
+  child 35/48: stage=      scored eff%=0.577 feas=False nov=0.0871
+  child 36/48: stage=      scored eff%=0.501 feas=False nov=0.0
+  child 37/48: stage=      scored eff%=0.641 feas=False nov=0.0955
+  child 38/48: stage=      scored eff%=98.695 feas=False nov=0.1128
+  child 39/48: stage=      scored eff%=98.697 feas=False nov=0.1255
+  child 40/48: stage=      scored eff%=99.093 feas=True nov=0.1071
+  child 41/48: stage=      scored eff%=99.931 feas=False nov=0.1193
+  child 42/48: stage=      scored eff%=44.699 feas=False nov=0.0762
+  child 43/48: stage=      scored eff%=97.782 feas=False nov=0.1105
+  child 44/48: stage=      scored eff%=98.481 feas=False nov=0.0871
+  child 45/48: stage=      scored eff%=0.626 feas=False nov=0.1286
+  child 46/48: stage=      scored eff%=98.319 feas=False nov=0.0
+  child 47/48: stage=      scored eff%=0.97 feas=False nov=0.0871
+  child 48/48: stage=      scored eff%=0.248 feas=False nov=0.1105
+  [v6 plan] gen15: VERIFY targets=['73252e29', '96526225', 'f31a5a21', '014dfedc'] budget=4 params={'k': 4} :: There are 4 seed-uncertain, high-gain candidates (including the lone front0 member). The run shows no improvement for 15 gens and a single small front—risk of a
+
+  ===== V6 TRACE gen 15 =====
+  OBSERVED STATE: feasible 23/96 near-feasible 52 best 99.93 front-alive 1 hv 14.7 (d 3.7) uncertain 4 struct-fail 0 pressure 0.0 faulty-promising 0 dup 0.073 stall(best/front) 15/0 sims 936
+  RELEVANT HISTORY: g8 RACING -> +4 sizings; front0 confirmed 3, entered 0, left 0; g9 RESCUE -> 3 attempted, 0 kept, 0 became feasible; 3/3 survived selection, 0 on front0; g10 VERIFY -> 1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 0 on front0; g11 VERIFY -> 2 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 1 on front0; g12 RESCUE -> 4 attempted, 1 kept, 0 became feasible; 5/5 survived selection, 0 on front0; g13 VERIFY -> 2 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 1 on front0; g14 RACING -> +4 sizings; front0 confirmed 2, entered 3, left 2; g15 VERIFY -> 4 verified (+12 sizings), 0 lost feasibility, 0 dropped >3 dB
+  CONTROLLER DECISION: VERIFY (There are 4 seed-uncertain, high-gain candidates (including the lone front0 member). The run shows no improvement for 15 gens and a single small front—risk of a brittle nominal winner steering search.)
+  TARGETS: ['73252e29', '96526225', 'f31a5a21', '014dfedc']
+  EXISTING TOOL CALLED: Evaluator.extend (extend_staged_fitness)  cost={'sizings': 12, 'llm_calls': 0, 'wall_s': 239.4}
+  RESULT: {'verified': 4, 'extra_sizings': 12, 'lost_feasibility': 0, 'gain_drop_over_3db': 0, 'per_target': [{'id': '73252e29', 'gain_before': 99.6, 'gain_after': 99.6, 'feasible_before': True, 'feasible_after': True, 'feasible_frac': 1.0, 'spread': 0.5}, {'id': '96526225', 'gain_before': 99.37, 'gain_after': 99.37, 'feasible_before': True, 'feasible_after': True, 'feasible_frac': 1.0, 'spread': 0.8}, {'id': 'f31a5a21', 'gain_before': 99.37, 'gain_after': 99.37, 'feasible_before': True, 'feasible_after': True, 'feasible_frac': 1.0, 'spread': 0.8}, {'id': '014dfedc', 'gain_before': 99.09, 'gain_after': 99.02, 'feasible_before': True, 'feasible_after': True, 'feasible_frac': 1.0, 'spread': 1.2}]}
+  STATE CHANGE: {'seed_uncertain_count': {'before': 4, 'after': 0}}
+
+  [discovered] +1 new front circuit(s); set now 8
+[outer] gen15 {'front0': 1, 'alive_in_front0': 1, 'best_gain': 99.598, 'max_novelty': 0.1472}  (sizings so far: 948 [+286 adaptive], 81.4 min)
+
+[outer] === generation 16: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.057  accepted nov u=0.076  (delta=+0.019; delta<<0 would mean the gate is trading novelty for wireability)
+  child 1/48: stage=      scored eff%=3.839 feas=False nov=0.1071
+  child 2/48: stage=      scored eff%=98.324 feas=False nov=0.1105
+  child 3/48: stage=      scored eff%=98.568 feas=False nov=0.0
+  child 4/48: stage=      scored eff%=96.925 feas=False nov=0.0
+  child 5/48: stage=      scored eff%=2.34 feas=False nov=0.0
+  child 6/48: stage=       error eff%=None feas=False nov=0.1239
+  child 7/48: stage=      scored eff%=1.004 feas=False nov=0.0898
+  child 8/48: stage=      scored eff%=1.618 feas=False nov=0.1049
+  child 9/48: stage=      scored eff%=0.626 feas=False nov=0.1286
+  child 10/48: stage=      scored eff%=0.0 feas=False nov=0.0833
+  child 11/48: stage=      scored eff%=97.86 feas=False nov=0.1071
+  child 12/48: stage=      scored eff%=69.693 feas=False nov=0.1128
+  child 13/48: stage=      scored eff%=98.585 feas=False nov=0.1248
+  child 14/48: stage=      scored eff%=61.953 feas=False nov=0.1071
+  child 15/48: stage=      scored eff%=97.084 feas=False nov=0.098
+  child 16/48: stage=      scored eff%=0.026 feas=False nov=0.0742
+  child 17/48: stage=      scored eff%=97.424 feas=False nov=0.0
+  child 18/48: stage=      scored eff%=97.424 feas=False nov=0.0
+  child 19/48: stage=      scored eff%=88.396 feas=False nov=0.0
+  child 20/48: stage=      scored eff%=0.0 feas=False nov=0.1105
+  child 21/48: stage=      scored eff%=96.597 feas=False nov=0.0
+  child 22/48: stage=      scored eff%=54.283 feas=False nov=0.0
+  child 23/48: stage=      scored eff%=98.252 feas=False nov=0.0871
+  child 24/48: stage=      scored eff%=98.895 feas=True nov=0.1029
+  child 25/48: stage=      scored eff%=0.535 feas=False nov=0.1229
+  child 26/48: stage=      scored eff%=98.327 feas=False nov=0.0588
+  child 27/48: stage=      scored eff%=98.327 feas=False nov=0.1513
+  child 28/48: stage=      scored eff%=69.401 feas=False nov=0.1071
+  child 29/48: stage=      scored eff%=97.354 feas=False nov=0.0
+  child 30/48: stage=      scored eff%=2.607 feas=False nov=0.0
+  child 31/48: stage=      scored eff%=0.0 feas=False nov=0.1333
+  child 32/48: stage=      scored eff%=98.327 feas=False nov=0.1217
+  child 33/48: stage=      scored eff%=99.084 feas=True nov=0.0
+  child 34/48: stage=      scored eff%=99.198 feas=False nov=0.0
+  child 35/48: stage=      scored eff%=0.021 feas=False nov=0.1071
+  child 36/48: stage=      scored eff%=0.881 feas=False nov=0.0755
+  child 37/48: stage=      scored eff%=98.479 feas=False nov=0.1229
+  child 38/48: stage=      scored eff%=99.366 feas=True nov=0.1071
+  child 39/48: stage=      scored eff%=0.577 feas=False nov=0.1126
+  child 40/48: stage=      scored eff%=98.69 feas=False nov=0.1019
+  child 41/48: stage=      scored eff%=99.371 feas=True nov=0.0
+  child 42/48: stage=      scored eff%=98.944 feas=True nov=0.1071
+  child 43/48: stage=      scored eff%=0.0 feas=False nov=0.1154
+  child 44/48: stage=      scored eff%=98.697 feas=False nov=0.1029
+  child 45/48: stage=       error eff%=None feas=False nov=0.1056
+  child 46/48: stage=      scored eff%=99.371 feas=True nov=0.0
+  child 47/48: stage=      scored eff%=0.903 feas=False nov=0.1105
+  child 48/48: stage=      scored eff%=70.114 feas=False nov=0.1071
+  [v6 plan] gen16: VERIFY targets=['0ab278e1', '53c59df4'] budget=2 params={'k': 4} :: Two seed-uncertain candidates (k=1) are near the front. Verify both at the full multi-corner k=4 now so the Pareto front is driven by robust scores rather than 
+
+  ===== V6 TRACE gen 16 =====
+  OBSERVED STATE: feasible 26/96 near-feasible 48 best 99.89 front-alive 2 hv 14.7 (d -0.0) uncertain 2 struct-fail 0 pressure 0.0 faulty-promising 0 dup 0.052 stall(best/front) 16/0 sims 988
+  RELEVANT HISTORY: g9 RESCUE -> 3 attempted, 0 kept, 0 became feasible; 3/3 survived selection, 0 on front0; g10 VERIFY -> 1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 0 on front0; g11 VERIFY -> 2 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 1 on front0; g12 RESCUE -> 4 attempted, 1 kept, 0 became feasible; 5/5 survived selection, 0 on front0; g13 VERIFY -> 2 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 1 on front0; g14 RACING -> +4 sizings; front0 confirmed 2, entered 3, left 2; g15 VERIFY -> 4 verified (+12 sizings), 0 lost feasibility, 0 dropped >3 dB; 4/4 survived selection, 1 on front0; g16 VERIFY -> 2 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB
+  CONTROLLER DECISION: VERIFY (Two seed-uncertain candidates (k=1) are near the front. Verify both at the full multi-corner k=4 now so the Pareto front is driven by robust scores rather than nominal-only results. This is a cheap, t)
+  TARGETS: ['0ab278e1', '53c59df4']
+  EXISTING TOOL CALLED: Evaluator.extend (extend_staged_fitness)  cost={'sizings': 6, 'llm_calls': 0, 'wall_s': 122.5}
+  RESULT: {'verified': 2, 'extra_sizings': 6, 'lost_feasibility': 0, 'gain_drop_over_3db': 0, 'per_target': [{'id': '0ab278e1', 'gain_before': 99.37, 'gain_after': 99.37, 'feasible_before': True, 'feasible_after': True, 'feasible_frac': 1.0, 'spread': 0.8}, {'id': '53c59df4', 'gain_before': 98.89, 'gain_after': 98.9, 'feasible_before': True, 'feasible_after': True, 'feasible_frac': 1.0, 'spread': 1.5}]}
+  STATE CHANGE: {'pareto_front_alive': {'before': 2, 'after': 1}, 'seed_uncertain_count': {'before': 2, 'after': 0}}
+
+[outer] gen16 {'front0': 1, 'alive_in_front0': 1, 'best_gain': 99.598, 'max_novelty': 0.1472}  (sizings so far: 994 [+292 adaptive], 84.6 min)
+
+[outer] === generation 17: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.058  accepted nov u=0.075  (delta=+0.017; delta<<0 would mean the gate is trading novelty for wireability)
+  child 1/48: stage=      scored eff%=97.823 feas=False nov=0.0
+  child 2/48: stage=      scored eff%=0.503 feas=False nov=0.1071
+  child 3/48: stage=      scored eff%=0.002 feas=False nov=0.0
+  child 4/48: stage=      scored eff%=0.503 feas=False nov=0.1427
+  child 5/48: stage=      scored eff%=0.041 feas=False nov=0.0
+  child 6/48: stage=      scored eff%=98.473 feas=False nov=0.1047
+  child 7/48: stage=      scored eff%=0.0 feas=False nov=0.1105
+  child 8/48: stage=      scored eff%=0.0 feas=False nov=0.1286
+  child 9/48: stage=      scored eff%=98.327 feas=False nov=0.1217
+  child 10/48: stage=      scored eff%=99.598 feas=True nov=0.1472
+  child 11/48: stage=      scored eff%=98.327 feas=False nov=0.0919
+  child 12/48: stage=      scored eff%=62.443 feas=False nov=0.1286
+  child 13/48: stage=      scored eff%=99.371 feas=True nov=0.0
+  child 14/48: stage=      scored eff%=99.6 feas=True nov=0.1437
+  child 15/48: stage=      scored eff%=99.32 feas=True nov=0.0
+  child 16/48: stage=      scored eff%=98.212 feas=False nov=0.0
+  child 17/48: stage=      scored eff%=0.0 feas=False nov=0.1348
+  child 18/48: stage=      scored eff%=97.84 feas=False nov=0.0
+  child 19/48: stage=      scored eff%=0.0 feas=False nov=0.125
+  child 20/48: stage=      scored eff%=99.371 feas=True nov=0.0
+  child 21/48: stage=      scored eff%=28.762 feas=False nov=0.0938
+  child 22/48: stage=      scored eff%=54.004 feas=False nov=0.1047
+  child 23/48: stage=      scored eff%=99.403 feas=False nov=0.0714
+  child 24/48: stage=      scored eff%=98.891 feas=False nov=0.0
+  child 25/48: stage=      scored eff%=99.371 feas=True nov=0.1071
+  child 26/48: stage=      scored eff%=97.424 feas=False nov=0.0
+  child 27/48: stage=      scored eff%=99.404 feas=False nov=0.0871
+  child 28/48: stage=      scored eff%=97.449 feas=False nov=0.1049
+  child 29/48: stage=      scored eff%=97.444 feas=False nov=0.1128
+  child 30/48: stage=      scored eff%=0.121 feas=False nov=0.0769
+  child 31/48: stage=      scored eff%=0.002 feas=False nov=0.0769
+  child 32/48: stage=      scored eff%=98.475 feas=False nov=0.1374
+  child 33/48: stage=      scored eff%=97.75 feas=False nov=0.1225
+  child 34/48: stage=      scored eff%=99.896 feas=False nov=0.1154
+  child 35/48: stage=      scored eff%=0.0 feas=False nov=0.1071
+  child 36/48: stage=      scored eff%=98.694 feas=False nov=0.0986
+  child 37/48: stage=      scored eff%=99.887 feas=False nov=0.1256
+  child 38/48: stage=      scored eff%=2.636 feas=False nov=0.1
+  child 39/48: stage=      scored eff%=99.35 feas=True nov=0.0
+  child 40/48: stage=      scored eff%=99.323 feas=True nov=0.1071
+  child 41/48: stage=      scored eff%=98.327 feas=False nov=0.0
+  child 42/48: stage=      scored eff%=69.524 feas=False nov=0.0
+  child 43/48: stage=      scored eff%=43.541 feas=False nov=0.1719
+  child 44/48: stage=      scored eff%=99.084 feas=True nov=0.0
+  child 45/48: stage=      scored eff%=0.195 feas=False nov=0.1219
+  child 46/48: stage=      scored eff%=99.598 feas=True nov=0.0801
+  child 47/48: stage=      scored eff%=99.084 feas=True nov=0.0
+  child 48/48: stage=      scored eff%=0.016 feas=False nov=0.0
+  [v6 plan] gen17: VERIFY targets=['471b128d', '15c2d005'] budget=2 params={'k': 4} :: Two seed-uncertain candidates near the front (471b128d is on front0 with k=1; 15c2d005 is also seed-uncertain). front_median_gain_spread is large (0.5) and gens
+
+  ===== V6 TRACE gen 17 =====
+  OBSERVED STATE: feasible 33/96 near-feasible 41 best 99.9 front-alive 3 hv 14.7 (d -0.0) uncertain 2 struct-fail 0 pressure 0.0 faulty-promising 0 dup 0.062 stall(best/front) 17/0 sims 1036
+  RELEVANT HISTORY: g10 VERIFY -> 1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 0 on front0; g11 VERIFY -> 2 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 1 on front0; g12 RESCUE -> 4 attempted, 1 kept, 0 became feasible; 5/5 survived selection, 0 on front0; g13 VERIFY -> 2 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 1 on front0; g14 RACING -> +4 sizings; front0 confirmed 2, entered 3, left 2; g15 VERIFY -> 4 verified (+12 sizings), 0 lost feasibility, 0 dropped >3 dB; 4/4 survived selection, 1 on front0; g16 VERIFY -> 2 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 0 on front0; g17 VERIFY -> 2 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB
+  CONTROLLER DECISION: VERIFY (Two seed-uncertain candidates near the front (471b128d is on front0 with k=1; 15c2d005 is also seed-uncertain). front_median_gain_spread is large (0.5) and gens_since_best_improved=17, so we should re)
+  TARGETS: ['471b128d', '15c2d005']
+  EXISTING TOOL CALLED: Evaluator.extend (extend_staged_fitness)  cost={'sizings': 6, 'llm_calls': 0, 'wall_s': 122.1}
+  RESULT: {'verified': 2, 'extra_sizings': 6, 'lost_feasibility': 0, 'gain_drop_over_3db': 0, 'per_target': [{'id': '471b128d', 'gain_before': 99.6, 'gain_after': 99.6, 'feasible_before': True, 'feasible_after': True, 'feasible_frac': 1.0, 'spread': 0.4}, {'id': '15c2d005', 'gain_before': 99.37, 'gain_after': 99.37, 'feasible_before': True, 'feasible_after': True, 'feasible_frac': 1.0, 'spread': 0.8}]}
+  STATE CHANGE: {'pareto_front_alive': {'before': 3, 'after': 4}, 'seed_uncertain_count': {'before': 2, 'after': 3}}
+
+  [discovered] +2 new front circuit(s); set now 10
+[outer] gen17 {'front0': 3, 'alive_in_front0': 3, 'best_gain': 99.598, 'max_novelty': 0.1472}  (sizings so far: 1042 [+298 adaptive], 93.5 min)
+
+[outer] === generation 18: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.067  accepted nov u=0.087  (delta=+0.020; delta<<0 would mean the gate is trading novelty for wireability)
+  child 1/48: stage=      scored eff%=0.0 feas=False nov=0.1425
+  child 2/48: stage=      scored eff%=0.001 feas=False nov=0.0919
+  child 3/48: stage=      scored eff%=97.837 feas=False nov=0.1105
+  child 4/48: stage=      scored eff%=0.002 feas=False nov=0.1128
+  child 5/48: stage=      scored eff%=62.349 feas=False nov=0.0
+  child 6/48: stage=      scored eff%=0.887 feas=False nov=0.1105
+  child 7/48: stage=      scored eff%=0.263 feas=False nov=0.1105
+  child 8/48: stage=      scored eff%=0.261 feas=False nov=0.125
+  child 9/48: stage=      scored eff%=98.67 feas=False nov=0.0925
+  child 10/48: stage=      scored eff%=0.181 feas=False nov=0.1128
+  child 11/48: stage=      scored eff%=0.0 feas=False nov=0.0833
+  child 12/48: stage=      scored eff%=0.003 feas=False nov=0.0639
+  child 13/48: stage=      scored eff%=99.598 feas=True nov=0.0801
+  child 14/48: stage=      scored eff%=69.529 feas=False nov=0.1105
+  child 15/48: stage=      scored eff%=0.009 feas=False nov=0.1049
+  child 16/48: stage=      scored eff%=0.5 feas=False nov=0.0
+  child 17/48: stage=      scored eff%=0.0 feas=False nov=0.1376
+  child 18/48: stage=      scored eff%=99.396 feas=False nov=0.0
+  child 19/48: stage=      scored eff%=99.598 feas=True nov=0.1472
+  child 20/48: stage=      scored eff%=98.912 feas=False nov=0.1071
+  child 21/48: stage=      scored eff%=0.532 feas=False nov=0.1304
+  child 22/48: stage=      scored eff%=28.794 feas=False nov=0.1128
+  child 23/48: stage=      scored eff%=0.811 feas=False nov=0.1229
+  child 24/48: stage=      scored eff%=98.697 feas=False nov=0.1249
+  child 25/48: stage=      scored eff%=0.211 feas=False nov=0.0
+  child 26/48: stage=      scored eff%=99.895 feas=False nov=0.0938
+  child 27/48: stage=      scored eff%=99.27 feas=True nov=0.0
+  child 28/48: stage=      scored eff%=0.107 feas=False nov=0.0
+  child 29/48: stage=      scored eff%=99.366 feas=True nov=0.1029
+  child 30/48: stage=      scored eff%=1.008 feas=False nov=0.0801
+  child 31/48: stage=      scored eff%=0.506 feas=False nov=0.0925
+  child 32/48: stage=      scored eff%=99.887 feas=False nov=0.0955
+  child 33/48: stage=      scored eff%=0.433 feas=False nov=0.1071
+  child 34/48: stage=      scored eff%=1.176 feas=False nov=0.0
+  child 35/48: stage=      scored eff%=0.811 feas=False nov=0.1229
+  child 36/48: stage=      scored eff%=0.988 feas=False nov=0.125
+  child 37/48: stage=      scored eff%=98.018 feas=False nov=0.1333
+  child 38/48: stage=      scored eff%=69.801 feas=False nov=0.1105
+  child 39/48: stage=      scored eff%=99.364 feas=True nov=0.1128
+  child 40/48: stage=      scored eff%=97.77 feas=False nov=0.1217
+  child 41/48: stage=      scored eff%=44.989 feas=False nov=0.0963
+  child 42/48: stage=      scored eff%=0.001 feas=False nov=0.0
+  child 43/48: stage=      scored eff%=99.894 feas=False nov=0.1304
+  child 44/48: stage=      scored eff%=99.361 feas=True nov=0.1029
+  child 45/48: stage=      scored eff%=0.377 feas=False nov=0.1051
+  child 46/48: stage=      scored eff%=99.084 feas=True nov=0.0
+  child 47/48: stage=      scored eff%=99.084 feas=True nov=0.0
+  child 48/48: stage=      scored eff%=54.185 feas=False nov=0.1056
+  [v6 plan] gen18: RACING targets=[] budget=2 params={'k': 4} :: There are 5 seed-uncertain designs in the rank-0/1 band (many front members still have only k=1 evaluations). Robustness uncertainty at the front can unfairly s
+  [race] k->2: 5 contested of 96 (8 in band), +5 sizings, median spread 0.6 eff%, 0 over 3
+  [race] k->4: 2 contested of 96 (5 in band), +6 sizings, median spread 0.9 eff%, 0 over 3
+
+  ===== V6 TRACE gen 18 =====
+  OBSERVED STATE: feasible 36/96 near-feasible 27 best 99.89 front-alive 5 hv 14.7 (d -0.0) uncertain 5 struct-fail 0 pressure 0.0 faulty-promising 0 dup 0.042 stall(best/front) 18/0 sims 1085
+  RELEVANT HISTORY: g11 VERIFY -> 2 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 1 on front0; g12 RESCUE -> 4 attempted, 1 kept, 0 became feasible; 5/5 survived selection, 0 on front0; g13 VERIFY -> 2 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 1 on front0; g14 RACING -> +4 sizings; front0 confirmed 2, entered 3, left 2; g15 VERIFY -> 4 verified (+12 sizings), 0 lost feasibility, 0 dropped >3 dB; 4/4 survived selection, 1 on front0; g16 VERIFY -> 2 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 0 on front0; g17 VERIFY -> 2 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 0 on front0; g18 RACING -> +11 sizings; front0 confirmed 1, entered 0, left 3
+  CONTROLLER DECISION: RACING (There are 5 seed-uncertain designs in the rank-0/1 band (many front members still have only k=1 evaluations). Robustness uncertainty at the front can unfairly steer selection while progress is stalled)
+  TARGETS: []
+  EXISTING TOOL CALLED: run_outer_nsga_cv3.race_front  cost={'sizings': 11, 'llm_calls': 0, 'wall_s': 77.9}
+  RESULT: {'extra_sizings': 11, 'front0_entered': 0, 'front0_left': 3, 'front0_confirmed': 1}
+  STATE CHANGE: {'pareto_front_alive': {'before': 5, 'after': 2}, 'seed_uncertain_count': {'before': 5, 'after': 0}}
+
+[outer] gen18 {'front0': 1, 'alive_in_front0': 1, 'best_gain': 99.598, 'max_novelty': 0.1472}  (sizings so far: 1096 [+309 adaptive], 102.4 min)
+
+[outer] === generation 19: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.068  accepted nov u=0.081  (delta=+0.013; delta<<0 would mean the gate is trading novelty for wireability)
+  child 1/48: stage=      scored eff%=0.0 feas=False nov=0.111
+  child 2/48: stage=      scored eff%=0.015 feas=False nov=0.1193
+  child 3/48: stage=      scored eff%=96.814 feas=False nov=0.125
+  child 4/48: stage=      scored eff%=0.0 feas=False nov=0.1128
+  child 5/48: stage=      scored eff%=99.37 feas=True nov=0.0
+  child 6/48: stage=      scored eff%=97.716 feas=False nov=0.0
+  child 7/48: stage=      scored eff%=0.818 feas=False nov=0.0
+  child 8/48: stage=      scored eff%=98.701 feas=False nov=0.0
+  child 9/48: stage=      scored eff%=44.716 feas=False nov=0.1333
+  child 10/48: stage=      scored eff%=0.569 feas=False nov=0.1427
+  child 11/48: stage=      scored eff%=97.777 feas=False nov=0.0
+  child 12/48: stage=      scored eff%=99.598 feas=True nov=0.1437
+  child 13/48: stage=      scored eff%=0.001 feas=False nov=0.1
+  child 14/48: stage=      scored eff%=0.248 feas=False nov=0.1029
+  child 15/48: stage=      scored eff%=0.002 feas=False nov=0.1128
+  child 16/48: stage=      scored eff%=0.211 feas=False nov=0.0938
+  child 17/48: stage=      scored eff%=0.0 feas=False nov=0.0833
+  child 18/48: stage=      scored eff%=98.808 feas=False nov=0.1638
+  child 19/48: stage=      scored eff%=98.324 feas=False nov=0.0
+  child 20/48: stage=      scored eff%=0.89 feas=False nov=0.1333
+  child 21/48: stage=      scored eff%=99.08 feas=True nov=0.0
+  child 22/48: stage=      scored eff%=97.418 feas=False nov=0.1105
+  child 23/48: stage=      scored eff%=97.842 feas=False nov=0.1126
+  child 24/48: stage=      scored eff%=122.014 feas=False nov=0.1105
+  child 25/48: stage=      scored eff%=98.324 feas=False nov=0.1029
+  child 26/48: stage=      scored eff%=99.616 feas=False nov=0.1176
+  child 27/48: stage=      scored eff%=0.0 feas=False nov=0.1393
+  child 28/48: stage=      scored eff%=0.498 feas=False nov=0.1128
+  child 29/48: stage=      scored eff%=99.598 feas=True nov=0.1472
+  child 30/48: stage=      scored eff%=96.879 feas=False nov=0.1128
+  child 31/48: stage=      scored eff%=97.67 feas=False nov=0.0823
+  child 32/48: stage=      scored eff%=99.887 feas=False nov=0.0955
+  child 33/48: stage=      scored eff%=98.951 feas=True nov=0.0
+  child 34/48: stage=      scored eff%=1.978 feas=False nov=0.0
+  child 35/48: stage=      scored eff%=0.811 feas=False nov=0.0
+  child 36/48: stage=      scored eff%=70.11 feas=False nov=0.1047
+  child 37/48: stage=      scored eff%=1.037 feas=False nov=0.0938
+  child 38/48: stage=      scored eff%=56.768 feas=False nov=0.1029
+  child 39/48: stage=      scored eff%=97.424 feas=False nov=0.0
+  child 40/48: stage=      scored eff%=0.0 feas=False nov=0.1023
+  child 41/48: stage=      scored eff%=99.371 feas=True nov=0.0
+  child 42/48: stage=      scored eff%=97.429 feas=False nov=0.0
+  child 43/48: stage=      scored eff%=0.0 feas=False nov=0.1126
+  child 44/48: stage=      scored eff%=99.27 feas=True nov=0.0
+  child 45/48: stage=      scored eff%=0.5 feas=False nov=0.1
+  child 46/48: stage=      scored eff%=98.324 feas=False nov=0.1128
+  child 47/48: stage=      scored eff%=0.928 feas=False nov=0.1333
+  child 48/48: stage=      scored eff%=0.05 feas=False nov=0.1128
+  [v6 plan] gen19: VERIFY targets=['22697eb4'] budget=1 params={'k': 4} :: There is one seed-uncertain front member (22697eb4) evaluated at k=1. Confirming its multi-corner robustness (k=4) is cheap (budget 1) and important: if it hold
+
+  ===== V6 TRACE gen 19 =====
+  OBSERVED STATE: feasible 39/96 near-feasible 36 best 122.01 front-alive 3 hv 14.7 (d -0.0) uncertain 1 struct-fail 0 pressure 0.0 faulty-promising 0 dup 0.062 stall(best/front) 0/0 sims 1138
+  RELEVANT HISTORY: g12 RESCUE -> 4 attempted, 1 kept, 0 became feasible; 5/5 survived selection, 0 on front0; g13 VERIFY -> 2 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 1 on front0; g14 RACING -> +4 sizings; front0 confirmed 2, entered 3, left 2; g15 VERIFY -> 4 verified (+12 sizings), 0 lost feasibility, 0 dropped >3 dB; 4/4 survived selection, 1 on front0; g16 VERIFY -> 2 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 0 on front0; g17 VERIFY -> 2 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 0 on front0; g18 RACING -> +11 sizings; front0 confirmed 1, entered 0, left 3; g19 VERIFY -> 1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB
+  CONTROLLER DECISION: VERIFY (There is one seed-uncertain front member (22697eb4) evaluated at k=1. Confirming its multi-corner robustness (k=4) is cheap (budget 1) and important: if it holds, the front is truly competitive; if it)
+  TARGETS: ['22697eb4']
+  EXISTING TOOL CALLED: Evaluator.extend (extend_staged_fitness)  cost={'sizings': 3, 'llm_calls': 0, 'wall_s': 57.8}
+  RESULT: {'verified': 1, 'extra_sizings': 3, 'lost_feasibility': 0, 'gain_drop_over_3db': 0, 'per_target': [{'id': '22697eb4', 'gain_before': 99.37, 'gain_after': 99.37, 'feasible_before': True, 'feasible_after': True, 'feasible_frac': 1.0, 'spread': 0.8}]}
+  STATE CHANGE: {'pareto_front_alive': {'before': 3, 'after': 2}, 'seed_uncertain_count': {'before': 1, 'after': 0}}
+
+[outer] gen19 {'front0': 1, 'alive_in_front0': 1, 'best_gain': 99.598, 'max_novelty': 0.1472}  (sizings so far: 1141 [+312 adaptive], 104.4 min)
+
+[outer] === generation 20: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.047  accepted nov u=0.065  (delta=+0.018; delta<<0 would mean the gate is trading novelty for wireability)
+  child 1/48: stage=      scored eff%=0.175 feas=False nov=0.1047
+  child 2/48: stage=      scored eff%=99.453 feas=False nov=0.1136
+  child 3/48: stage=      scored eff%=99.257 feas=False nov=0.1071
+  child 4/48: stage=      scored eff%=99.371 feas=True nov=0.0
+  child 5/48: stage=      scored eff%=99.371 feas=True nov=0.0
+  child 6/48: stage=      scored eff%=97.376 feas=False nov=0.0
+  child 7/48: stage=      scored eff%=0.626 feas=False nov=0.0905
+  child 8/48: stage=      scored eff%=0.278 feas=False nov=0.1136
+  child 9/48: stage=      scored eff%=0.0 feas=False nov=0.1071
+  child 10/48: stage=      scored eff%=0.19 feas=False nov=0.1304
+  child 11/48: stage=      scored eff%=0.0 feas=False nov=0.0
+  child 12/48: stage=      scored eff%=1.247 feas=False nov=0.0
+  child 13/48: stage=      scored eff%=2.02 feas=False nov=0.1019
+  child 14/48: stage=      scored eff%=69.808 feas=False nov=0.1128
+  child 15/48: stage=      scored eff%=96.898 feas=False nov=0.0
+  child 16/48: stage=      scored eff%=97.989 feas=False nov=0.0814
+  child 17/48: stage=      scored eff%=0.014 feas=False nov=0.1128
+  child 18/48: stage=      scored eff%=96.506 feas=False nov=0.0
+  child 19/48: stage=      scored eff%=0.002 feas=False nov=0.0814
+  child 20/48: stage=      scored eff%=97.746 feas=False nov=0.1128
+  child 21/48: stage=      scored eff%=98.152 feas=False nov=0.1128
+  child 22/48: stage=      scored eff%=0.329 feas=False nov=0.0
+  child 23/48: stage=      scored eff%=93.139 feas=True nov=0.0
+  child 24/48: stage=      scored eff%=98.409 feas=False nov=0.1047
+  child 25/48: stage=      scored eff%=28.694 feas=False nov=0.1056
+  child 26/48: stage=      scored eff%=0.0 feas=False nov=0.0474
+  child 27/48: stage=      scored eff%=98.317 feas=False nov=0.0
+  child 28/48: stage=      scored eff%=99.27 feas=True nov=0.0
+  child 29/48: stage=      scored eff%=29.545 feas=False nov=0.1105
+  child 30/48: stage=      scored eff%=99.371 feas=True nov=0.0
+  child 31/48: stage=      scored eff%=0.899 feas=False nov=0.111
+  child 32/48: stage=      scored eff%=62.01 feas=False nov=0.1029
+  child 33/48: stage=      scored eff%=96.506 feas=False nov=0.0
+  child 34/48: stage=      scored eff%=99.371 feas=True nov=0.0
+  child 35/48: stage=      scored eff%=99.366 feas=True nov=0.1071
+  child 36/48: stage=      scored eff%=0.0 feas=False nov=0.125
+  child 37/48: stage=      scored eff%=99.386 feas=True nov=0.0
+  child 38/48: stage=      scored eff%=59.127 feas=False nov=0.1071
+  child 39/48: stage=      scored eff%=96.752 feas=False nov=0.0979
+  child 40/48: stage=      scored eff%=81.387 feas=False nov=0.1
+  child 41/48: stage=      scored eff%=99.888 feas=False nov=0.0
+  child 42/48: stage=      scored eff%=0.5 feas=False nov=0.1071
+  child 43/48: stage=      scored eff%=0.5 feas=False nov=0.0
+  child 44/48: stage=      scored eff%=0.003 feas=False nov=0.1217
+  child 45/48: stage=      scored eff%=1.197 feas=False nov=0.0
+  child 46/48: stage=      scored eff%=0.348 feas=False nov=0.0691
+  child 47/48: stage=      scored eff%=0.796 feas=False nov=0.1071
+  child 48/48: stage=      scored eff%=88.14 feas=False nov=0.1
+  [v6 plan] gen20: VERIFY targets=['6782d3e8', 'e6906251'] budget=2 params={'k': 4} :: Two front-ranked candidates are seed_uncertain (k=1); their nominal scores could mislead selection next generation. A multi-corner re-score (k=4) will reveal tr
+
+  ===== V6 TRACE gen 20 =====
+  OBSERVED STATE: feasible 42/96 near-feasible 29 best 122.01 front-alive 3 hv 14.7 (d -0.0) uncertain 2 struct-fail 0 pressure 0.0 faulty-promising 0 dup 0.052 stall(best/front) 1/0 sims 1183
+  RELEVANT HISTORY: g13 VERIFY -> 2 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 1 on front0; g14 RACING -> +4 sizings; front0 confirmed 2, entered 3, left 2; g15 VERIFY -> 4 verified (+12 sizings), 0 lost feasibility, 0 dropped >3 dB; 4/4 survived selection, 1 on front0; g16 VERIFY -> 2 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 0 on front0; g17 VERIFY -> 2 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 0 on front0; g18 RACING -> +11 sizings; front0 confirmed 1, entered 0, left 3; g19 VERIFY -> 1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 0 on front0; g20 VERIFY -> 2 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB
+  CONTROLLER DECISION: VERIFY (Two front-ranked candidates are seed_uncertain (k=1); their nominal scores could mislead selection next generation. A multi-corner re-score (k=4) will reveal true robustness and gain_spread so the fro)
+  TARGETS: ['6782d3e8', 'e6906251']
+  EXISTING TOOL CALLED: Evaluator.extend (extend_staged_fitness)  cost={'sizings': 6, 'llm_calls': 0, 'wall_s': 117.4}
+  RESULT: {'verified': 2, 'extra_sizings': 6, 'lost_feasibility': 0, 'gain_drop_over_3db': 0, 'per_target': [{'id': '6782d3e8', 'gain_before': 99.39, 'gain_after': 99.39, 'feasible_before': True, 'feasible_after': True, 'feasible_frac': 1.0, 'spread': 0.8}, {'id': 'e6906251', 'gain_before': 99.37, 'gain_after': 99.37, 'feasible_before': True, 'feasible_after': True, 'feasible_frac': 1.0, 'spread': 0.8}]}
+  STATE CHANGE: {'pareto_front_alive': {'before': 3, 'after': 1}, 'seed_uncertain_count': {'before': 2, 'after': 0}}
+
+[outer] gen20 {'front0': 1, 'alive_in_front0': 1, 'best_gain': 99.598, 'max_novelty': 0.1472}  (sizings so far: 1189 [+318 adaptive], 107.5 min)
+
+[outer] FINAL alive Pareto front: 1 topologies
+[outer] robust re-score (k=4 corners) of the final front ...
+   nov=0.147 nn_sim=0.853  robust={'median_gain': 99.598, 'gain_spread': 0.45, 'feasible_frac': 1.0, 'feasible': True}
+
+[outer] DISCOVERED SET: 10 distinct circuits ever on a front (5 already re-scored, 5 to go at k=4)
+
+[conv audit] final repair audit of 10 survivor(s) at k=4 (LLM calls left: 159)
+[conv audit] 0 of 10 needed repair, 0 repaired and re-scored from scratch
+[conv audit] cost 0 sizings (READOUT, not search)
+[outer] discovered set: 10 circuits, 10 robust-feasible (final front alone: 1/1); re-score cost 4 sizings (READOUT, not search) -> runs/conv_g20_v6_s0/discovered.json
+[outer] LLM rescue usage: 14 calls, 13546 in / 52462 out tokens, 25 edits accepted, 0 rejected (model=gpt-5-mini, enabled=True)
+[outer] V6 action sequence:
+Gen 0 -> REPAIR targets=['6b7e9524', 'af48068c']
+       1 attempts, 1 structurally valid+simulated, 1 recovered, 0 improved; 3/3 survived selection, 0 on front0
+Gen 1 -> RACING
+       +237 sizings; front0 confirmed 1, entered 0, left 0
+Gen 2 -> VERIFY targets=['c28a3435']
+       1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 1 on front0
+Gen 3 -> VERIFY targets=['1afd93c3']
+       1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 0 on front0
+Gen 4 -> RESCUE targets=['074e4db1', '11403b0e', '41d18042', '9ad7dc9c']
+       4 attempted, 2 kept, 2 became feasible; 6/6 survived selection, 1 on front0
+Gen 5 -> RACING
+       +5 sizings; front0 confirmed 1, entered 0, left 2
+Gen 6 -> RESCUE targets=['11403b0e', '1d74cf86', '9ad7dc9c']
+       3 attempted, 1 kept, 1 became feasible; 3/4 survived selection, 0 on front0
+Gen 7 -> VERIFY targets=['da417ff3']
+       1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 1 on front0
+Gen 8 -> RACING
+       +4 sizings; front0 confirmed 3, entered 0, left 0
+Gen 9 -> RESCUE targets=['9440b074', 'c4d38396', '9f05c51b']
+       3 attempted, 0 kept, 0 became feasible; 3/3 survived selection, 0 on front0
+Gen 10 -> VERIFY targets=['b7516c6d']
+       1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 0 on front0
+Gen 11 -> VERIFY targets=['f6c1c68a', '399ab60a']
+       2 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 1 on front0
+Gen 12 -> RESCUE targets=['059e3e90', 'c4d38396', '11403b0e', '59f0950b']
+       4 attempted, 1 kept, 0 became feasible; 5/5 survived selection, 0 on front0
+Gen 13 -> VERIFY targets=['99d06f7f', '0f685bd8']
+       2 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 1 on front0
+Gen 14 -> RACING
+       +4 sizings; front0 confirmed 2, entered 3, left 2
+Gen 15 -> VERIFY targets=['73252e29', '96526225', 'f31a5a21', '014dfedc']
+       4 verified (+12 sizings), 0 lost feasibility, 0 dropped >3 dB; 4/4 survived selection, 1 on front0
+Gen 16 -> VERIFY targets=['0ab278e1', '53c59df4']
+       2 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 0 on front0
+Gen 17 -> VERIFY targets=['471b128d', '15c2d005']
+       2 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 0 on front0
+Gen 18 -> RACING
+       +11 sizings; front0 confirmed 1, entered 0, left 3
+Gen 19 -> VERIFY targets=['22697eb4']
+       1 verified (+3 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 0 on front0
+Gen 20 -> VERIFY targets=['6782d3e8', 'e6906251']
+       2 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 0 on front0
+
+[outer] V6 controller: 21 calls, 0 failures/fallbacks -> runs/conv_g20_v6_s0/v6_trajectory.json
+[outer] V5 repair usage: 1 LLM calls, 1 attempts, 1 successes, 1 recovered, 1 sizings spent on repair -> runs/conv_g20_v6_s0/v5_monitor.json
+
+[outer] done. 1193 corner evaluations (322 of them adaptive/robust re-score), 108.2 min. Front -> runs/conv_g20_v6_s0/pareto_front.json
+[outer] top-by-efficiency on front: eff%=99.598 novelty=0.1472 (robust={'median_gain': 99.598, 'gain_spread': 0.45, 'feasible_frac': 1.0, 'feasible': True})

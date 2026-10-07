@@ -1,0 +1,257 @@
+{
+ "child": {
+  "desc": "(a) as discovered: L0 -> n8, branch Sa1 || C1 to OUT",
+  "netlist": "Sb0 0 n7; Sa0 IN n7; C0 IN 0; L0 n7 n8; Sa1 OUT n8; C1 OUT n8",
+  "ndev": 6,
+  "corners": [
+   {
+    "corner": "nominal",
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5052,
+    "vout": 49.99957,
+    "eff": 98.95115925232817,
+    "ripple": 63.5600000000025,
+    "n_sims": 6
+   },
+   {
+    "corner": "heavy_load",
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5102,
+    "vout": 49.99837,
+    "eff": 97.98577154112239,
+    "ripple": 63.67000000000189,
+    "n_sims": 6
+   },
+   {
+    "corner": "light_load",
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5026,
+    "vout": 49.99989,
+    "eff": 99.41942798604462,
+    "ripple": 63.51999999999691,
+    "n_sims": 6
+   },
+   {
+    "corner": "low_line_tol",
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5612,
+    "vout": 49.99677,
+    "eff": 98.96502897376476,
+    "ripple": 87.72000000000446,
+    "n_sims": 6
+   }
+  ],
+  "feasible_corners": 4,
+  "eff_median": 98.95809411304646,
+  "eff_worst": 97.98577154112239,
+  "ripple_max_mV": 87.72000000000446
+ },
+ "short_branch": {
+  "desc": "CONTROL: Sa1 || C1 branch replaced by a wire (n8 == OUT)",
+  "netlist": "Sb0 0 n7; Sa0 IN n7; C0 IN 0; L0 n7 OUT",
+  "ndev": 4,
+  "corners": [
+   {
+    "corner": "nominal",
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5029,
+    "vout": 50.0,
+    "eff": 99.37023134776415,
+    "ripple": 63.38999999999828,
+    "n_sims": 6
+   },
+   {
+    "corner": "heavy_load",
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5059,
+    "vout": 50.0,
+    "eff": 98.79773041853683,
+    "ripple": 63.349999999999795,
+    "n_sims": 6
+   },
+   {
+    "corner": "light_load",
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5014,
+    "vout": 50.0,
+    "eff": 99.63386547116656,
+    "ripple": 63.4200000000007,
+    "n_sims": 6
+   },
+   {
+    "corner": "low_line_tol",
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5588,
+    "vout": 50.0,
+    "eff": 99.37084369191156,
+    "ripple": 87.49000000000251,
+    "n_sims": 6
+   }
+  ],
+  "feasible_corners": 4,
+  "eff_median": 99.37053751983785,
+  "eff_worst": 98.79773041853683,
+  "ripple_max_mV": 87.49000000000251
+ },
+ "parent": {
+  "desc": "parent #10271: C1 deleted, Sa1 alone in series",
+  "netlist": "Sb0 0 n7; Sa0 IN n7; C0 IN 0; L0 n7 n8; Sa1 OUT n8",
+  "ndev": 5,
+  "corners": [
+   {
+    "corner": "nominal",
+    "feasible": false,
+    "reason": "Vout 28.8 misses 50.0",
+    "duty": 0.9,
+    "vout": 28.79521,
+    "eff": 28.793365177914275,
+    "ripple": 195.5399999999976,
+    "n_sims": 5
+   },
+   {
+    "corner": "heavy_load",
+    "feasible": false,
+    "reason": "Vout 16.8 misses 50.0",
+    "duty": 0.9,
+    "vout": 16.81954,
+    "eff": 16.81909738344527,
+    "ripple": 228.21999999999676,
+    "n_sims": 5
+   },
+   {
+    "corner": "light_load",
+    "feasible": false,
+    "reason": "Vout 44.7 misses 50.0",
+    "duty": 0.9,
+    "vout": 44.71348,
+    "eff": 44.70803882737881,
+    "ripple": 151.9000000000048,
+    "n_sims": 5
+   },
+   {
+    "corner": "low_line_tol",
+    "feasible": false,
+    "reason": "Vout 30.2 misses 50.0",
+    "duty": 0.9,
+    "vout": 30.21159,
+    "eff": 33.566427137193756,
+    "ripple": 250.60000000000215,
+    "n_sims": 5
+   }
+  ],
+  "feasible_corners": 0,
+  "eff_median": null,
+  "eff_worst": null,
+  "ripple_max_mV": null
+ },
+ "c1_only": {
+  "desc": "Sa1 deleted, C1 alone in series",
+  "netlist": "Sb0 0 n7; Sa0 IN n7; C0 IN 0; L0 n7 n8; C1 OUT n8",
+  "ndev": 5,
+  "corners": [
+   {
+    "corner": "nominal",
+    "feasible": false,
+    "reason": "passthrough: output ignores duty",
+    "duty": 0.5,
+    "vout": 3.185543e-08,
+    "eff": 0.06161621578448936,
+    "ripple": 63.429559999999995,
+    "n_sims": 5
+   },
+   {
+    "corner": "heavy_load",
+    "feasible": false,
+    "reason": "passthrough: output ignores duty",
+    "duty": 0.5,
+    "vout": 1.964996e-11,
+    "eff": 0.12304079606302849,
+    "ripple": 63.38994,
+    "n_sims": 5
+   },
+   {
+    "corner": "light_load",
+    "feasible": false,
+    "reason": "passthrough: output ignores duty",
+    "duty": 0.5,
+    "vout": 0.001219529,
+    "eff": 0.029448858692905432,
+    "ripple": 63.62906,
+    "n_sims": 5
+   },
+   {
+    "corner": "low_line_tol",
+    "feasible": false,
+    "reason": "passthrough: output ignores duty",
+    "duty": 0.5,
+    "vout": -2.433183e-09,
+    "eff": 0.11969192379835938,
+    "ripple": 88.78817,
+    "n_sims": 5
+   }
+  ],
+  "feasible_corners": 0,
+  "eff_median": null,
+  "eff_worst": null,
+  "ripple_max_mV": null
+ },
+ "buck_ref": {
+  "desc": "textbook buck (discovered.json s0 #02, corpus circuit)",
+  "netlist": "Sa0 n3 IN; Sb0 n3 0; L0 OUT n3; C0 0 IN",
+  "ndev": 4,
+  "corners": [
+   {
+    "corner": "nominal",
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5029,
+    "vout": 50.0,
+    "eff": 99.37023134776415,
+    "ripple": 63.38999999999828,
+    "n_sims": 6
+   },
+   {
+    "corner": "heavy_load",
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5059,
+    "vout": 50.0,
+    "eff": 98.79773041853683,
+    "ripple": 63.349999999999795,
+    "n_sims": 6
+   },
+   {
+    "corner": "light_load",
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5014,
+    "vout": 50.0,
+    "eff": 99.63386547116656,
+    "ripple": 63.4200000000007,
+    "n_sims": 6
+   },
+   {
+    "corner": "low_line_tol",
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5588,
+    "vout": 50.0,
+    "eff": 99.37084369191156,
+    "ripple": 87.49000000000251,
+    "n_sims": 6
+   }
+  ],
+  "feasible_corners": 4,
+  "eff_median": 99.37053751983785,
+  "eff_worst": 98.79773041853683,
+  "ripple_max_mV": 87.49000000000251
+ }
+}

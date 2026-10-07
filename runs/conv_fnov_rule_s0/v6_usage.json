@@ -1,0 +1,834 @@
+{
+  "model": "policy:rule",
+  "policy": "rule",
+  "controller_calls": 0,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "controller_failures": 0,
+  "v7": {
+    "verify_k": 2
+  },
+  "lineage": {
+    "rescued": {
+      "entered_feasible": 4,
+      "verified": 4,
+      "still_feasible": 4,
+      "sizings": 4
+    },
+    "repaired": {
+      "entered_feasible": 0,
+      "verified": 0,
+      "still_feasible": 0,
+      "sizings": 0
+    },
+    "front_entry": {
+      "entered_feasible": 43,
+      "verified": 43,
+      "still_feasible": 43,
+      "sizings": 43
+    },
+    "struct": {
+      "entered_feasible": 0,
+      "verified": 0,
+      "still_feasible": 0,
+      "sizings": 0
+    }
+  },
+  "v8": {
+    "memory_lambda": 64.0,
+    "default_lambda": 8.0,
+    "observed": 1569,
+    "invalid": 1070,
+    "patterns": {
+      "edge": 10,
+      "pair": 14,
+      "motif": 3,
+      "miss": 0
+    },
+    "gen_stats": [
+      {
+        "gen": 0,
+        "generated": 48,
+        "distinct": 19,
+        "faulty_fraction": 0.368,
+        "invalid_fraction": 0.105,
+        "padded_fraction": 0.263,
+        "cosmetic_fraction": 0.0,
+        "remembered_pattern_hit_fraction": 0.947,
+        "mean_hit_penalty": 2.637,
+        "evaluated": 17,
+        "redundant_device_rate": null,
+        "novel_success": 0,
+        "novel_perf_hurt": 9,
+        "fault_kinds": {
+          "IDEAL_SRC_CAP": 2,
+          "SERIES": 2,
+          "INVALID": 2,
+          "ANTIPHASE": 1,
+          "DEAD": 1
+        },
+        "memory_lambda": 8.0,
+        "patterns": {
+          "edge": 10,
+          "pair": 5,
+          "motif": 0,
+          "miss": 0
+        },
+        "n_obs_total": 19
+      },
+      {
+        "gen": 1,
+        "generated": 234,
+        "distinct": 139,
+        "faulty_fraction": 0.525,
+        "invalid_fraction": 0.122,
+        "padded_fraction": 0.403,
+        "cosmetic_fraction": 0.043,
+        "remembered_pattern_hit_fraction": 1.0,
+        "mean_hit_penalty": 2.785,
+        "evaluated": 42,
+        "redundant_device_rate": null,
+        "novel_success": 0,
+        "novel_perf_hurt": 22,
+        "fault_kinds": {
+          "IDEAL_SRC_CAP": 28,
+          "SERIES": 18,
+          "PARALLEL": 17,
+          "INVALID": 17,
+          "COSMETIC": 6,
+          "ANTIPHASE": 6
+        },
+        "memory_lambda": 8.0,
+        "patterns": {
+          "edge": 10,
+          "pair": 5,
+          "motif": 3,
+          "miss": 0
+        },
+        "n_obs_total": 158
+      },
+      {
+        "gen": 2,
+        "generated": 232,
+        "distinct": 135,
+        "faulty_fraction": 0.659,
+        "invalid_fraction": 0.17,
+        "padded_fraction": 0.489,
+        "cosmetic_fraction": 0.037,
+        "remembered_pattern_hit_fraction": 1.0,
+        "mean_hit_penalty": 2.877,
+        "evaluated": 38,
+        "redundant_device_rate": null,
+        "novel_success": 0,
+        "novel_perf_hurt": 27,
+        "fault_kinds": {
+          "IDEAL_SRC_CAP": 27,
+          "INVALID": 23,
+          "PARALLEL": 20,
+          "SERIES": 19,
+          "ANTIPHASE": 9,
+          "COSMETIC": 5
+        },
+        "memory_lambda": 8.0,
+        "patterns": {
+          "edge": 10,
+          "pair": 5,
+          "motif": 3,
+          "miss": 0
+        },
+        "n_obs_total": 293
+      },
+      {
+        "gen": 3,
+        "generated": 238,
+        "distinct": 120,
+        "faulty_fraction": 0.667,
+        "invalid_fraction": 0.183,
+        "padded_fraction": 0.483,
+        "cosmetic_fraction": 0.167,
+        "remembered_pattern_hit_fraction": 1.0,
+        "mean_hit_penalty": 2.96,
+        "evaluated": 37,
+        "redundant_device_rate": null,
+        "novel_success": 0,
+        "novel_perf_hurt": 28,
+        "fault_kinds": {
+          "IDEAL_SRC_CAP": 28,
+          "INVALID": 22,
+          "COSMETIC": 20,
+          "SERIES": 19,
+          "PARALLEL": 15,
+          "ANTIPHASE": 10
+        },
+        "memory_lambda": 8.0,
+        "patterns": {
+          "edge": 10,
+          "pair": 5,
+          "motif": 2,
+          "miss": 0
+        },
+        "n_obs_total": 413
+      },
+      {
+        "gen": 4,
+        "generated": 238,
+        "distinct": 129,
+        "faulty_fraction": 0.721,
+        "invalid_fraction": 0.209,
+        "padded_fraction": 0.512,
+        "cosmetic_fraction": 0.163,
+        "remembered_pattern_hit_fraction": 1.0,
+        "mean_hit_penalty": 3.147,
+        "evaluated": 43,
+        "redundant_device_rate": null,
+        "novel_success": 0,
+        "novel_perf_hurt": 31,
+        "fault_kinds": {
+          "INVALID": 27,
+          "SERIES": 27,
+          "IDEAL_SRC_CAP": 24,
+          "COSMETIC": 21,
+          "PARALLEL": 16,
+          "ANTIPHASE": 15
+        },
+        "memory_lambda": 8.0,
+        "patterns": {
+          "edge": 8,
+          "pair": 5,
+          "motif": 2,
+          "miss": 0
+        },
+        "n_obs_total": 542
+      },
+      {
+        "gen": 5,
+        "generated": 212,
+        "distinct": 95,
+        "faulty_fraction": 0.642,
+        "invalid_fraction": 0.211,
+        "padded_fraction": 0.432,
+        "cosmetic_fraction": 0.105,
+        "remembered_pattern_hit_fraction": 1.0,
+        "mean_hit_penalty": 3.18,
+        "evaluated": 39,
+        "redundant_device_rate": 0.2,
+        "novel_success": 1,
+        "novel_perf_hurt": 24,
+        "fault_kinds": {
+          "INVALID": 20,
+          "IDEAL_SRC_CAP": 16,
+          "PARALLEL": 14,
+          "SERIES": 13,
+          "COSMETIC": 10,
+          "ANTIPHASE": 8
+        },
+        "memory_lambda": 8.0,
+        "patterns": {
+          "edge": 7,
+          "pair": 5,
+          "motif": 3,
+          "miss": 0
+        },
+        "n_obs_total": 637
+      },
+      {
+        "gen": 6,
+        "generated": 207,
+        "distinct": 95,
+        "faulty_fraction": 0.747,
+        "invalid_fraction": 0.253,
+        "padded_fraction": 0.495,
+        "cosmetic_fraction": 0.158,
+        "remembered_pattern_hit_fraction": 1.0,
+        "mean_hit_penalty": 3.051,
+        "evaluated": 34,
+        "redundant_device_rate": 0.348,
+        "novel_success": 0,
+        "novel_perf_hurt": 26,
+        "fault_kinds": {
+          "INVALID": 24,
+          "SERIES": 18,
+          "COSMETIC": 15,
+          "IDEAL_SRC_CAP": 14,
+          "PARALLEL": 12,
+          "ANTIPHASE": 11
+        },
+        "memory_lambda": 8.0,
+        "patterns": {
+          "edge": 9,
+          "pair": 12,
+          "motif": 3,
+          "miss": 0
+        },
+        "n_obs_total": 732
+      },
+      {
+        "gen": 7,
+        "generated": 210,
+        "distinct": 103,
+        "faulty_fraction": 0.699,
+        "invalid_fraction": 0.223,
+        "padded_fraction": 0.476,
+        "cosmetic_fraction": 0.165,
+        "remembered_pattern_hit_fraction": 1.0,
+        "mean_hit_penalty": 3.084,
+        "evaluated": 39,
+        "redundant_device_rate": 0.36,
+        "novel_success": 1,
+        "novel_perf_hurt": 32,
+        "fault_kinds": {
+          "INVALID": 23,
+          "IDEAL_SRC_CAP": 21,
+          "SERIES": 18,
+          "COSMETIC": 17,
+          "PARALLEL": 7,
+          "ANTIPHASE": 7
+        },
+        "memory_lambda": 8.0,
+        "patterns": {
+          "edge": 9,
+          "pair": 12,
+          "motif": 3,
+          "miss": 0
+        },
+        "n_obs_total": 835
+      },
+      {
+        "gen": 8,
+        "generated": 209,
+        "distinct": 78,
+        "faulty_fraction": 0.795,
+        "invalid_fraction": 0.359,
+        "padded_fraction": 0.436,
+        "cosmetic_fraction": 0.141,
+        "remembered_pattern_hit_fraction": 1.0,
+        "mean_hit_penalty": 3.221,
+        "evaluated": 29,
+        "redundant_device_rate": 0.525,
+        "novel_success": 0,
+        "novel_perf_hurt": 16,
+        "fault_kinds": {
+          "INVALID": 28,
+          "SERIES": 14,
+          "IDEAL_SRC_CAP": 12,
+          "COSMETIC": 11,
+          "DEAD": 9,
+          "ANTIPHASE": 6
+        },
+        "memory_lambda": 8.0,
+        "patterns": {
+          "edge": 10,
+          "pair": 8,
+          "motif": 3,
+          "miss": 0
+        },
+        "n_obs_total": 913
+      },
+      {
+        "gen": 9,
+        "generated": 180,
+        "distinct": 58,
+        "faulty_fraction": 0.672,
+        "invalid_fraction": 0.241,
+        "padded_fraction": 0.431,
+        "cosmetic_fraction": 0.103,
+        "remembered_pattern_hit_fraction": 1.0,
+        "mean_hit_penalty": 3.113,
+        "evaluated": 30,
+        "redundant_device_rate": 0.388,
+        "novel_success": 2,
+        "novel_perf_hurt": 16,
+        "fault_kinds": {
+          "INVALID": 14,
+          "SERIES": 11,
+          "IDEAL_SRC_CAP": 9,
+          "COSMETIC": 6,
+          "PARALLEL": 3,
+          "ANTIPHASE": 3
+        },
+        "memory_lambda": 12.0,
+        "patterns": {
+          "edge": 10,
+          "pair": 8,
+          "motif": 3,
+          "miss": 0
+        },
+        "n_obs_total": 971
+      },
+      {
+        "gen": 10,
+        "generated": 160,
+        "distinct": 66,
+        "faulty_fraction": 0.742,
+        "invalid_fraction": 0.273,
+        "padded_fraction": 0.47,
+        "cosmetic_fraction": 0.152,
+        "remembered_pattern_hit_fraction": 1.0,
+        "mean_hit_penalty": 3.186,
+        "evaluated": 33,
+        "redundant_device_rate": 0.449,
+        "novel_success": 0,
+        "novel_perf_hurt": 17,
+        "fault_kinds": {
+          "INVALID": 18,
+          "SERIES": 17,
+          "COSMETIC": 10,
+          "IDEAL_SRC_CAP": 8,
+          "ANTIPHASE": 5,
+          "DEAD": 5
+        },
+        "memory_lambda": 18.0,
+        "patterns": {
+          "edge": 11,
+          "pair": 12,
+          "motif": 3,
+          "miss": 0
+        },
+        "n_obs_total": 1037
+      },
+      {
+        "gen": 11,
+        "generated": 160,
+        "distinct": 56,
+        "faulty_fraction": 0.839,
+        "invalid_fraction": 0.393,
+        "padded_fraction": 0.446,
+        "cosmetic_fraction": 0.107,
+        "remembered_pattern_hit_fraction": 1.0,
+        "mean_hit_penalty": 3.324,
+        "evaluated": 28,
+        "redundant_device_rate": 0.366,
+        "novel_success": 2,
+        "novel_perf_hurt": 14,
+        "fault_kinds": {
+          "INVALID": 22,
+          "SERIES": 13,
+          "IDEAL_SRC_CAP": 9,
+          "COSMETIC": 6,
+          "ANTIPHASE": 3,
+          "PARALLEL": 3
+        },
+        "memory_lambda": 27.0,
+        "patterns": {
+          "edge": 11,
+          "pair": 12,
+          "motif": 3,
+          "miss": 0
+        },
+        "n_obs_total": 1093
+      },
+      {
+        "gen": 12,
+        "generated": 156,
+        "distinct": 47,
+        "faulty_fraction": 0.681,
+        "invalid_fraction": 0.383,
+        "padded_fraction": 0.298,
+        "cosmetic_fraction": 0.043,
+        "remembered_pattern_hit_fraction": 1.0,
+        "mean_hit_penalty": 2.637,
+        "evaluated": 25,
+        "redundant_device_rate": 0.351,
+        "novel_success": 3,
+        "novel_perf_hurt": 14,
+        "fault_kinds": {
+          "INVALID": 18,
+          "SERIES": 8,
+          "IDEAL_SRC_CAP": 4,
+          "PARALLEL": 3,
+          "COSMETIC": 2,
+          "DEAD": 2
+        },
+        "memory_lambda": 40.5,
+        "patterns": {
+          "edge": 10,
+          "pair": 9,
+          "motif": 3,
+          "miss": 0
+        },
+        "n_obs_total": 1140
+      },
+      {
+        "gen": 13,
+        "generated": 155,
+        "distinct": 44,
+        "faulty_fraction": 0.727,
+        "invalid_fraction": 0.205,
+        "padded_fraction": 0.523,
+        "cosmetic_fraction": 0.091,
+        "remembered_pattern_hit_fraction": 1.0,
+        "mean_hit_penalty": 2.531,
+        "evaluated": 24,
+        "redundant_device_rate": 0.351,
+        "novel_success": 2,
+        "novel_perf_hurt": 12,
+        "fault_kinds": {
+          "IDEAL_SRC_CAP": 10,
+          "INVALID": 9,
+          "SERIES": 9,
+          "PARALLEL": 6,
+          "COSMETIC": 4,
+          "DEAD": 4
+        },
+        "memory_lambda": 60.75,
+        "patterns": {
+          "edge": 10,
+          "pair": 9,
+          "motif": 3,
+          "miss": 0
+        },
+        "n_obs_total": 1184
+      },
+      {
+        "gen": 14,
+        "generated": 160,
+        "distinct": 40,
+        "faulty_fraction": 0.8,
+        "invalid_fraction": 0.25,
+        "padded_fraction": 0.55,
+        "cosmetic_fraction": 0.1,
+        "remembered_pattern_hit_fraction": 1.0,
+        "mean_hit_penalty": 2.507,
+        "evaluated": 25,
+        "redundant_device_rate": 0.283,
+        "novel_success": 3,
+        "novel_perf_hurt": 16,
+        "fault_kinds": {
+          "PARALLEL": 11,
+          "INVALID": 10,
+          "SERIES": 8,
+          "IDEAL_SRC_CAP": 5,
+          "COSMETIC": 4,
+          "ALWAYS_ON": 1
+        },
+        "memory_lambda": 60.75,
+        "patterns": {
+          "edge": 10,
+          "pair": 9,
+          "motif": 3,
+          "miss": 0
+        },
+        "n_obs_total": 1224
+      },
+      {
+        "gen": 15,
+        "generated": 159,
+        "distinct": 52,
+        "faulty_fraction": 0.808,
+        "invalid_fraction": 0.346,
+        "padded_fraction": 0.462,
+        "cosmetic_fraction": 0.135,
+        "remembered_pattern_hit_fraction": 1.0,
+        "mean_hit_penalty": 2.434,
+        "evaluated": 25,
+        "redundant_device_rate": 0.341,
+        "novel_success": 3,
+        "novel_perf_hurt": 15,
+        "fault_kinds": {
+          "INVALID": 18,
+          "SERIES": 12,
+          "IDEAL_SRC_CAP": 8,
+          "COSMETIC": 7,
+          "PARALLEL": 4,
+          "DEAD": 3
+        },
+        "memory_lambda": 64.0,
+        "patterns": {
+          "edge": 10,
+          "pair": 12,
+          "motif": 3,
+          "miss": 0
+        },
+        "n_obs_total": 1276
+      },
+      {
+        "gen": 16,
+        "generated": 157,
+        "distinct": 50,
+        "faulty_fraction": 0.6,
+        "invalid_fraction": 0.28,
+        "padded_fraction": 0.32,
+        "cosmetic_fraction": 0.04,
+        "remembered_pattern_hit_fraction": 1.0,
+        "mean_hit_penalty": 2.47,
+        "evaluated": 24,
+        "redundant_device_rate": 0.42,
+        "novel_success": 3,
+        "novel_perf_hurt": 14,
+        "fault_kinds": {
+          "INVALID": 14,
+          "PARALLEL": 7,
+          "SERIES": 5,
+          "IDEAL_SRC_CAP": 4,
+          "COSMETIC": 2,
+          "ALWAYS_ON": 1
+        },
+        "memory_lambda": 64.0,
+        "patterns": {
+          "edge": 10,
+          "pair": 14,
+          "motif": 3,
+          "miss": 0
+        },
+        "n_obs_total": 1326
+      },
+      {
+        "gen": 17,
+        "generated": 166,
+        "distinct": 33,
+        "faulty_fraction": 0.576,
+        "invalid_fraction": 0.182,
+        "padded_fraction": 0.394,
+        "cosmetic_fraction": 0.061,
+        "remembered_pattern_hit_fraction": 1.0,
+        "mean_hit_penalty": 2.658,
+        "evaluated": 25,
+        "redundant_device_rate": 0.407,
+        "novel_success": 4,
+        "novel_perf_hurt": 12,
+        "fault_kinds": {
+          "INVALID": 6,
+          "SERIES": 4,
+          "IDEAL_SRC_CAP": 4,
+          "PARALLEL": 4,
+          "COSMETIC": 2,
+          "ANTIPHASE": 2
+        },
+        "memory_lambda": 64.0,
+        "patterns": {
+          "edge": 10,
+          "pair": 12,
+          "motif": 3,
+          "miss": 0
+        },
+        "n_obs_total": 1359
+      },
+      {
+        "gen": 18,
+        "generated": 143,
+        "distinct": 20,
+        "faulty_fraction": 0.8,
+        "invalid_fraction": 0.35,
+        "padded_fraction": 0.45,
+        "cosmetic_fraction": 0.0,
+        "remembered_pattern_hit_fraction": 1.0,
+        "mean_hit_penalty": 2.438,
+        "evaluated": 13,
+        "redundant_device_rate": 0.556,
+        "novel_success": 0,
+        "novel_perf_hurt": 12,
+        "fault_kinds": {
+          "INVALID": 7,
+          "PARALLEL": 5,
+          "IDEAL_SRC_CAP": 2,
+          "SERIES": 2
+        },
+        "memory_lambda": 64.0,
+        "patterns": {
+          "edge": 10,
+          "pair": 12,
+          "motif": 3,
+          "miss": 0
+        },
+        "n_obs_total": 1379
+      },
+      {
+        "gen": 19,
+        "generated": 160,
+        "distinct": 37,
+        "faulty_fraction": 0.73,
+        "invalid_fraction": 0.243,
+        "padded_fraction": 0.486,
+        "cosmetic_fraction": 0.081,
+        "remembered_pattern_hit_fraction": 1.0,
+        "mean_hit_penalty": 2.241,
+        "evaluated": 24,
+        "redundant_device_rate": 0.324,
+        "novel_success": 2,
+        "novel_perf_hurt": 13,
+        "fault_kinds": {
+          "INVALID": 9,
+          "PARALLEL": 7,
+          "SERIES": 6,
+          "IDEAL_SRC_CAP": 6,
+          "COSMETIC": 3,
+          "ANTIPHASE": 1
+        },
+        "memory_lambda": 64.0,
+        "patterns": {
+          "edge": 10,
+          "pair": 12,
+          "motif": 3,
+          "miss": 0
+        },
+        "n_obs_total": 1416
+      },
+      {
+        "gen": 20,
+        "generated": 154,
+        "distinct": 25,
+        "faulty_fraction": 0.6,
+        "invalid_fraction": 0.28,
+        "padded_fraction": 0.32,
+        "cosmetic_fraction": 0.08,
+        "remembered_pattern_hit_fraction": 1.0,
+        "mean_hit_penalty": 2.179,
+        "evaluated": 18,
+        "redundant_device_rate": 0.48,
+        "novel_success": 0,
+        "novel_perf_hurt": 8,
+        "fault_kinds": {
+          "INVALID": 7,
+          "IDEAL_SRC_CAP": 3,
+          "PARALLEL": 3,
+          "COSMETIC": 2,
+          "SERIES": 2
+        },
+        "memory_lambda": 64.0,
+        "patterns": {
+          "edge": 10,
+          "pair": 14,
+          "motif": 3,
+          "miss": 0
+        },
+        "n_obs_total": 1441
+      },
+      {
+        "gen": 21,
+        "generated": 149,
+        "distinct": 25,
+        "faulty_fraction": 0.8,
+        "invalid_fraction": 0.28,
+        "padded_fraction": 0.52,
+        "cosmetic_fraction": 0.04,
+        "remembered_pattern_hit_fraction": 1.0,
+        "mean_hit_penalty": 2.697,
+        "evaluated": 19,
+        "redundant_device_rate": 0.269,
+        "novel_success": 5,
+        "novel_perf_hurt": 11,
+        "fault_kinds": {
+          "INVALID": 7,
+          "IDEAL_SRC_CAP": 6,
+          "SERIES": 4,
+          "PARALLEL": 3,
+          "COSMETIC": 1,
+          "ANTIPHASE": 1
+        },
+        "memory_lambda": 64.0,
+        "patterns": {
+          "edge": 10,
+          "pair": 14,
+          "motif": 3,
+          "miss": 0
+        },
+        "n_obs_total": 1466
+      },
+      {
+        "gen": 22,
+        "generated": 165,
+        "distinct": 36,
+        "faulty_fraction": 0.528,
+        "invalid_fraction": 0.278,
+        "padded_fraction": 0.25,
+        "cosmetic_fraction": 0.028,
+        "remembered_pattern_hit_fraction": 1.0,
+        "mean_hit_penalty": 2.579,
+        "evaluated": 24,
+        "redundant_device_rate": 0.353,
+        "novel_success": 5,
+        "novel_perf_hurt": 13,
+        "fault_kinds": {
+          "INVALID": 10,
+          "IDEAL_SRC_CAP": 6,
+          "SERIES": 3,
+          "ANTIPHASE": 1,
+          "PARALLEL": 1,
+          "COSMETIC": 1
+        },
+        "memory_lambda": 64.0,
+        "patterns": {
+          "edge": 10,
+          "pair": 12,
+          "motif": 3,
+          "miss": 0
+        },
+        "n_obs_total": 1502
+      },
+      {
+        "gen": 23,
+        "generated": 160,
+        "distinct": 23,
+        "faulty_fraction": 0.435,
+        "invalid_fraction": 0.043,
+        "padded_fraction": 0.391,
+        "cosmetic_fraction": 0.043,
+        "remembered_pattern_hit_fraction": 1.0,
+        "mean_hit_penalty": 3.0,
+        "evaluated": 19,
+        "redundant_device_rate": 0.346,
+        "novel_success": 5,
+        "novel_perf_hurt": 11,
+        "fault_kinds": {
+          "SERIES": 3,
+          "PARALLEL": 3,
+          "IDEAL_SRC_CAP": 2,
+          "COSMETIC": 1,
+          "ANTIPHASE": 1,
+          "DEAD": 1
+        },
+        "memory_lambda": 64.0,
+        "patterns": {
+          "edge": 10,
+          "pair": 12,
+          "motif": 3,
+          "miss": 0
+        },
+        "n_obs_total": 1525
+      },
+      {
+        "gen": 24,
+        "generated": 162,
+        "distinct": 44,
+        "faulty_fraction": 0.75,
+        "invalid_fraction": 0.386,
+        "padded_fraction": 0.364,
+        "cosmetic_fraction": 0.068,
+        "remembered_pattern_hit_fraction": 1.0,
+        "mean_hit_penalty": 2.608,
+        "evaluated": 26,
+        "redundant_device_rate": 0.304,
+        "novel_success": 6,
+        "novel_perf_hurt": 13,
+        "fault_kinds": {
+          "INVALID": 17,
+          "SERIES": 8,
+          "PARALLEL": 8,
+          "COSMETIC": 3,
+          "IDEAL_SRC_CAP": 2,
+          "ANTIPHASE": 1
+        },
+        "memory_lambda": 64.0,
+        "patterns": {
+          "edge": 10,
+          "pair": 14,
+          "motif": 3,
+          "miss": 0
+        },
+        "n_obs_total": 1569
+      }
+    ]
+  },
+  "fnov": {
+    "struct_frac": 0.6
+  },
+  "actions": {
+    "CONTINUE": 0,
+    "RESCUE": 6,
+    "RACING": 1,
+    "REPAIR": 0,
+    "VERIFY": 6,
+    "STEER": 12,
+    "STRUCT": 0
+  }
+}

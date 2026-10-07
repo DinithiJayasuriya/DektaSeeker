@@ -1,0 +1,1796 @@
+[outer] torch seeded from --seed 0: gen-0 sampling and SDEdit draws are PAIRED across arms
+[conv] DOMAIN = power converters. bench point: VIN=100.0 ROUT=50.0 FSW=100000 L=0.0005 C=1e-05 COUT=1e-05 RON=0.05 DCR=0.25 ESR=0.03; corners=['nominal', 'heavy_load', 'light_load', 'low_line_tol']
+[conv] spec sheet: {'target_vout': 50.0, 'tol': 0.05, 'ripple_frac': 0.05, 'eff_floor': 0.9, 'refine_steps': 2}
+[outer] loading converter novelty reference (LaMAGIC train split, distinct graphs) ...
+[outer] 37514 distinct training graphs (of 176738) for novelty reference
+[conv] lamagic model loaded: last-v1.ckpt T=500 n_label_classes=5 Xdim=16 Edim=10 (all 306 tensors matched)
+[outer] T=500  t*=150 (frac 0.3)  pop=48 gens=40 k=1  family=converter
+[outer] generation steering: duty label 0.5 (class 2), CFG scale 0.0
+[outer] FRONT DIVERSITY: dedup_front=True, struct_crowd weight=0.75
+[outer] persistent eval pool: 18 worker processes (parallel ngspice for gen-0 AND every generation)
+[fnov index] loaded /ssd_4TB/dinithi/mnt_ssd1_dinithi/steergense_agent/converter/conv_fnov_index.pkl: 37496 training topologies (15950 distinct after reduction) in 0s
+[outer] FUNCTIONAL NOVELTY ON: novelty = device edit distance of the reduced+ablated circuit to the 15950 distinct REDUCED training topologies (0..4), minus 0.5/redundant device; WL novelty kept as novelty_wl. Audit <= 12/call at corner 0; STRUCT cap 12; initial struct_frac 0.25
+  [v8 conv memory] corpus prior: 37496 training topologies (weight 0.1) for dead/collapse
+[outer] VERSION 8 ON (converter pattern memory): outcomes invalid/dead/collapse/cosmetic/redundant/perf_hurt/success; tilt lambda=8.0 (max 64.0, per_sample=True, schedule split); patterns at start {'edge': 10, 'pair': 5, 'motif': 0, 'miss': 0}
+[outer] RESCUE ON: up to 4/gen, violation <= 0.3. Genome edits only, strict-gated before SPICE.
+  [conv rescue] ON, model=gpt-5-mini, max 128 calls, <= 2 edits each
+  [conv repair] LLM ON, model=gpt-5-mini, max 160 calls
+[outer] VERSION 5 REPAIR ON (converter checker): <= 4 attempts/gen, 128 in-loop LLM calls + 32 for the final audit; raw+repaired netlists -> runs/conv_fnov_rule_s0/v5_repairs/
+  [v6 controller] NON-LLM POLICY 'rule' (seed 0)
+[outer] VERSION 6 CONTROLLER ON (converter prompt, policy=rule): tools=['RACING', 'REPAIR', 'RESCUE', 'STEER', 'STRUCT', 'VERIFY'] limits={'RESCUE': 4, 'RACING': 2, 'RACING_k': 4, 'REPAIR': 4, 'VERIFY': 4, 'STEER': 1, 'CONTINUE': 0, 'STRUCT': 12}. Automatic rescue/racing/v5-repair are OFF; the controller decides each generation.
+[outer] VERSION 7 ON: feasible@k=1 is PROVISIONAL (cv=0.01); RESCUE/REPAIR outputs and provisional front entrants (<= 6/gen) are extended to k=2 corners.
+[outer] FEASIBILITY IN SELECTION: feasible always dominates infeasible; infeasible ordered by distance to the spec in 4 band(s). The final front admits ONLY feasible circuits.
+[outer] ADAPTIVE k: contested candidates refined to k<=4 corners over 2 round(s); ranking score lambda=1.0; sizing_budget=2500
+
+[outer] === generation 0: initial population ===
+[outer] 48 VALIDITY-GUIDED SMC samples (ess=0.5 beta=2.0 start_frac=0.4 every=25 clone_cap=4 freeze_below=50); health = converter validity gate
+  smc 1/48: stage=     pending gain=None nov=0.0
+  smc 2/48: stage=     pending gain=None nov=0.0
+  smc 3/48: stage=     pending gain=None nov=0.0
+  smc 4/48: stage=     pending gain=None nov=0.0
+  smc 5/48: stage=     pending gain=None nov=0.0
+  smc 6/48: stage=     pending gain=None nov=0.0
+  smc 7/48: stage=     pending gain=None nov=0.0
+  smc 8/48: stage=     pending gain=None nov=0.0
+  smc 9/48: stage=     pending gain=None nov=0.0
+  smc 10/48: stage=     pending gain=None nov=0.0
+  smc 11/48: stage=     pending gain=None nov=0.0
+  smc 12/48: stage=     pending gain=None nov=0.0
+  smc 13/48: stage=     pending gain=None nov=0.0
+  smc 14/48: stage=     pending gain=None nov=0.0
+  smc 15/48: stage=     pending gain=None nov=0.0
+  smc 16/48: stage=     pending gain=None nov=0.0
+  smc 17/48: stage=     pending gain=None nov=0.0
+  smc 18/48: stage=     pending gain=None nov=0.0
+  smc 19/48: stage=     pending gain=None nov=0.0
+  smc 20/48: stage=     pending gain=None nov=0.0
+  smc 21/48: stage=     pending gain=None nov=0.0
+  smc 22/48: stage=     pending gain=None nov=0.0
+  smc 23/48: stage=     pending gain=None nov=0.0
+  smc 24/48: stage=     pending gain=None nov=0.0
+  smc 25/48: stage=     pending gain=None nov=0.0
+  smc 26/48: stage=     pending gain=None nov=0.0
+  smc 27/48: stage=     pending gain=None nov=0.0
+  smc 28/48: stage=     pending gain=None nov=0.0
+  smc 29/48: stage=     pending gain=None nov=0.0
+  smc 30/48: stage=     pending gain=None nov=0.0
+  smc 31/48: stage=     pending gain=None nov=0.0
+  smc 32/48: stage=     pending gain=None nov=0.0
+  smc 33/48: stage=     pending gain=None nov=0.0
+  smc 34/48: stage=     pending gain=None nov=0.0
+  smc 35/48: stage=     pending gain=None nov=0.0
+  smc 36/48: stage=     pending gain=None nov=0.0
+  smc 37/48: stage=     pending gain=None nov=0.0
+  smc 38/48: stage=     pending gain=None nov=0.0
+  smc 39/48: stage=     pending gain=None nov=0.0
+  smc 40/48: stage=     pending gain=None nov=0.0
+  smc 41/48: stage=     pending gain=None nov=0.0
+  smc 42/48: stage=     pending gain=None nov=0.0
+  smc 43/48: stage=     pending gain=None nov=0.0
+  smc 44/48: stage=     pending gain=None nov=0.0
+  smc 45/48: stage=     pending gain=None nov=0.0
+  smc 46/48: stage=     pending gain=None nov=0.0
+  smc 47/48: stage=     pending gain=None nov=0.0
+  smc 48/48: stage=     pending gain=None nov=0.0
+  [smc] 2 resample events (start<=s_int=200, every 25)
+  [v8 conv memory] gen0: observed 48 (19 new), invalid 0.105, padded 0.263, cosmetic 0.0, redundant-device rate None, novel success 0 / hurt 9, patterns {'edge': 10, 'pair': 5, 'motif': 3, 'miss': 0}, tilt lambda=8.0
+  init 1/48: stage=      scored eff%=98.324 feas=False nov=0.0112  Vout 98.3 misses 50.0
+  init 2/48: stage=      scored eff%=16.821 feas=False nov=0.4558  Vout 16.8 misses 50.0
+  init 3/48: stage=      scored eff%=16.821 feas=False nov=0.4558  Vout 16.8 misses 50.0
+  init 4/48: stage=      scored eff%=21.003 feas=False nov=0.2299  Vout 24.7 misses 50.0
+  init 5/48: stage=      scored eff%=98.324 feas=False nov=0.0376  Vout 98.3 misses 50.0
+  init 6/48: stage=      scored eff%=98.324 feas=False nov=0.0376  Vout 98.3 misses 50.0
+  init 7/48: stage=      scored eff%=0.246 feas=False nov=0.2348  passthrough: output ignores duty
+  init 8/48: stage=      scored eff%=98.324 feas=False nov=0.0112  Vout 98.3 misses 50.0
+  init 9/48: stage=      scored eff%=98.324 feas=False nov=0.0112  Vout 98.3 misses 50.0
+  init 10/48: stage=      scored eff%=0.197 feas=False nov=0.2337  Vout 39.8 misses 50.0
+  init 11/48: stage=      scored eff%=98.324 feas=False nov=0.0112  Vout 98.3 misses 50.0
+  init 12/48: stage=      scored eff%=0.246 feas=False nov=0.2348  passthrough: output ignores duty
+  init 13/48: stage=      scored eff%=16.821 feas=False nov=0.4558  Vout 16.8 misses 50.0
+  init 14/48: stage=      scored eff%=37.469 feas=False nov=0.0  Vout 43.2 misses 50.0
+  init 15/48: stage=      scored eff%=98.324 feas=False nov=0.0112  Vout 98.3 misses 50.0
+  init 16/48: stage=      scored eff%=0.246 feas=False nov=0.2348  passthrough: output ignores duty
+  init 17/48: stage=      scored eff%=98.324 feas=False nov=0.0112  Vout 98.3 misses 50.0
+  init 18/48: stage=      scored eff%=98.324 feas=False nov=0.0112  Vout 98.3 misses 50.0
+  init 19/48: stage=      scored eff%=16.821 feas=False nov=0.4558  Vout 16.8 misses 50.0
+  init 20/48: stage=      scored eff%=98.324 feas=False nov=0.0112  Vout 98.3 misses 50.0
+  init 21/48: stage=      scored eff%=98.324 feas=False nov=0.0112  Vout 98.3 misses 50.0
+  init 22/48: stage=      scored eff%=62.478 feas=False nov=0.24  Vout 62.5 misses 50.0
+  init 23/48: stage=      scored eff%=98.582 feas=False nov=0.0  Vout 98.6 misses 50.0
+  init 24/48: stage=      scored eff%=0.164 feas=False nov=0.4555  passthrough: output ignores duty
+  init 25/48: stage=      scored eff%=0.164 feas=False nov=0.4555  passthrough: output ignores duty
+  init 26/48: stage=      scored eff%=98.324 feas=False nov=0.0112  Vout 98.3 misses 50.0
+  init 27/48: stage=      scored eff%=97.012 feas=False nov=0.009  Vout 97.0 misses 50.0
+  init 28/48: stage=      scored eff%=0.02 feas=False nov=0.2333  passthrough: output ignores duty
+  init 29/48: stage=       error eff%=None feas=False nov=0.0  
+  init 30/48: stage=      scored eff%=16.821 feas=False nov=0.4558  Vout 16.8 misses 50.0
+  init 31/48: stage=      scored eff%=98.582 feas=False nov=0.0  Vout 98.6 misses 50.0
+  init 32/48: stage=      scored eff%=98.324 feas=False nov=0.0112  Vout 98.3 misses 50.0
+  init 33/48: stage=      scored eff%=69.899 feas=False nov=0.0  Vout 98.2 misses 50.0
+  init 34/48: stage=      scored eff%=16.821 feas=False nov=0.4558  Vout 16.8 misses 50.0
+  init 35/48: stage=      scored eff%=0.164 feas=False nov=0.4555  passthrough: output ignores duty
+  init 36/48: stage=      scored eff%=0.164 feas=False nov=0.4555  passthrough: output ignores duty
+  init 37/48: stage=      scored eff%=37.469 feas=False nov=0.0  Vout 43.2 misses 50.0
+  init 38/48: stage=      scored eff%=16.821 feas=False nov=0.4558  Vout 16.8 misses 50.0
+  init 39/48: stage=      scored eff%=98.582 feas=False nov=0.0  Vout 98.6 misses 50.0
+  init 40/48: stage=      scored eff%=0.02 feas=False nov=0.2301  passthrough: output ignores duty
+  init 41/48: stage=      scored eff%=0.478 feas=False nov=0.2318  efficiency 0.005 below floor 0.9
+  init 42/48: stage=      scored eff%=97.012 feas=False nov=0.009  Vout 97.0 misses 50.0
+  init 43/48: stage=      scored eff%=97.012 feas=False nov=0.009  Vout 97.0 misses 50.0
+  init 44/48: stage=      scored eff%=98.327 feas=False nov=0.0  Vout 98.3 misses 50.0
+  init 45/48: stage=      scored eff%=0.164 feas=False nov=0.4555  passthrough: output ignores duty
+  init 46/48: stage=struct_reject eff%=None feas=False nov=0.2383  ['shoot_through']
+  init 47/48: stage=      scored eff%=98.324 feas=False nov=0.0112  Vout 98.3 misses 50.0
+  init 48/48: stage=      scored eff%=16.821 feas=False nov=0.4558  Vout 16.8 misses 50.0
+  [gen0] 48 evaluated in 0.8 min; 46 scored, 0 feasible
+  [v6 plan] gen0: RESCUE targets=['126064a1', '444d5e72', 'c4dc45fc'] budget=4 params={'cv_max': 0.3} :: policy:rule: distant but infeasible circuits
+  [rescue] cv 0.2472 -> 0.6043448277582271  ops=['rewire_pin']  kept out
+  [rescue] gen0: 1 attempted, 0 kept, 0 became FEASIBLE
+
+  ===== V6 TRACE gen 0 =====
+  OBSERVED STATE: feasible 0/48 near-feasible 22 best 98.58 front-alive 0 hv 0.0 (d None) uncertain 39 struct-fail 2 pressure 0.021 faulty-promising 0 dup 0.604 stall(best/front) 0/1 sims 17
+  RELEVANT HISTORY: g0 RESCUE -> 1 attempted, 0 kept, 0 became feasible
+  VIOLATION MEMORY: patterns {'edge': 10, 'pair': 5, 'motif': 3, 'miss': 0} last-gen faulty 0.368 tilt lambda 8.0
+  CONTROLLER DECISION: RESCUE (policy:rule: distant but infeasible circuits)
+  TARGETS: ['126064a1', '444d5e72', 'c4dc45fc']
+  EXISTING TOOL CALLED: run_outer_nsga_cv3.rescue_pass  cost={'sizings': 1, 'llm_calls': 3, 'wall_s': 207.9}
+  RESULT: {'attempted': 1, 'kept': 0, 'became_feasible': 0, 'near_feasible_offered': 3, 'provisional_feasible': 0, 'verify_k': 2, 'still_feasible_at_k': 0, 'verify_sizings': 0}
+  STATE CHANGE: none
+
+[outer] gen0 {'front0': 22, 'alive_in_front0': 0, 'best_gain': None, 'max_novelty': None}
+  [fnov] gen0: run-to-date feasible functional distance best 0, >=1: 0, >=2: 0; stall 0; audit sizings 0
+
+[outer] === generation 1: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.086  accepted nov u=0.123  (delta=+0.037; delta<<0 would mean the gate is trading novelty for wireability)
+  [struct] gen1 (struct_frac): 12 structural children from 12 parent(s) ops={'cell_graft': 5, 'insert_series': 3, 'sc_branch': 2, 'lc_path': 2}; scored 12, feasible 0, reduced distance {4: 4, 3: 1, 2: 5, 1: 1, 0: 1}
+  child 1/48: stage=      scored eff%=98.324 feas=False nov=0.0112
+  child 2/48: stage=      scored eff%=97.397 feas=False nov=0.0
+  child 3/48: stage=      scored eff%=0.002 feas=False nov=0.4554
+  child 4/48: stage=      scored eff%=98.582 feas=False nov=0.0
+  child 5/48: stage=      scored eff%=98.081 feas=False nov=0.0
+  child 6/48: stage=      scored eff%=96.922 feas=False nov=0.0
+  child 7/48: stage=      scored eff%=28.8 feas=False nov=0.0122
+  child 8/48: stage=      scored eff%=16.818 feas=False nov=0.0
+  child 9/48: stage=      scored eff%=97.424 feas=False nov=0.0141
+  child 10/48: stage=      scored eff%=98.327 feas=False nov=0.0376
+  child 11/48: stage=      scored eff%=98.013 feas=False nov=0.2313
+  child 12/48: stage=      scored eff%=98.582 feas=False nov=0.0
+  child 13/48: stage=      scored eff%=99.9 feas=False nov=0.2352
+  child 14/48: stage=      scored eff%=0.006 feas=False nov=0.2317
+  child 15/48: stage=      scored eff%=16.821 feas=False nov=0.4558
+  child 16/48: stage=      scored eff%=99.919 feas=False nov=0.4629
+  child 17/48: stage=      scored eff%=98.324 feas=False nov=0.0376
+  child 18/48: stage=      scored eff%=0.243 feas=False nov=0.4596
+  child 19/48: stage=      scored eff%=2.038 feas=False nov=0.2341
+  child 20/48: stage=      scored eff%=98.327 feas=False nov=0.0
+  child 21/48: stage=      scored eff%=98.69 feas=False nov=0.0209
+  child 22/48: stage=      scored eff%=98.582 feas=False nov=0.0
+  child 23/48: stage=      scored eff%=98.582 feas=False nov=0.0
+  child 24/48: stage=      scored eff%=97.822 feas=False nov=0.0
+  child 25/48: stage=      scored eff%=0.005 feas=False nov=0.0397
+  child 26/48: stage=      scored eff%=99.881 feas=False nov=0.225
+  child 27/48: stage=      scored eff%=97.679 feas=False nov=0.0376
+  child 28/48: stage=      scored eff%=0.641 feas=False nov=0.234
+  child 29/48: stage=      scored eff%=97.825 feas=False nov=0.0087
+  child 30/48: stage=      scored eff%=97.424 feas=False nov=0.0114
+  child 31/48: stage=      scored eff%=0.639 feas=False nov=0.0209
+  child 32/48: stage=      scored eff%=69.354 feas=False nov=0.0
+  child 33/48: stage=      scored eff%=0.957 feas=False nov=0.4594
+  child 34/48: stage=      scored eff%=96.509 feas=False nov=0.0116
+  child 35/48: stage=      scored eff%=50.645 feas=False nov=0.0133
+  child 36/48: stage=      scored eff%=0.0 feas=False nov=0.4633
+  child 37/48: stage=      scored eff%=0.632 feas=False nov=0.9132
+  child 38/48: stage=      scored eff%=0.426 feas=False nov=0.6851
+  child 39/48: stage=      scored eff%=96.879 feas=False nov=0.4596
+  child 40/48: stage=      scored eff%=97.22 feas=False nov=0.4601
+  child 41/48: stage=      scored eff%=98.324 feas=False nov=0.2366
+  child 42/48: stage=      scored eff%=37.469 feas=False nov=0.459
+  child 43/48: stage=      scored eff%=97.492 feas=False nov=0.9104
+  child 44/48: stage=      scored eff%=98.294 feas=False nov=0.4577
+  child 45/48: stage=      scored eff%=37.647 feas=False nov=0.907
+  child 46/48: stage=      scored eff%=99.007 feas=False nov=0.4596
+  child 47/48: stage=      scored eff%=13.621 feas=False nov=0.0081
+  child 48/48: stage=      scored eff%=81.898 feas=False nov=0.9102
+  [v6 plan] gen1: RESCUE targets=['330b8066', '3c7e83a3', 'f7694157', '392c0049'] budget=4 params={'cv_max': 0.3} :: policy:rule: distant but infeasible circuits
+  [rescue] cv 0.2468 -> 0.48582976962538593  ops=['rewire_pin', 'rewire_pin']  kept out
+  [rescue] cv 0.2472 -> 0.01  ops=['swap_phase', 'rewire_pin']  FEASIBLE
+  [rescue] cv 0.2472 -> 0.24723758127035902  ops=['rewire_pin', 'add_two_terminal']  kept out
+  [rescue] gen1: 4 attempted, 1 kept, 1 became FEASIBLE
+  [v7 rescued] 1 feasible at k=1 -> 1 still feasible at k=2 (+1 sizings)
+
+  ===== V6 TRACE gen 1 =====
+  OBSERVED STATE: feasible 0/96 near-feasible 49 best 99.92 front-alive 0 hv 0.0 (d 0.0) uncertain 82 struct-fail 0 pressure 0.0 faulty-promising 0 dup 0.375 stall(best/front) 0/2 sims 59
+  RELEVANT HISTORY: g0 RESCUE -> 1 attempted, 0 kept, 0 became feasible; 3/3 survived selection, 3 on front0; g1 RESCUE -> 4 attempted, 1 kept, 1 became feasible; 1/1 still feasible at k=2
+  VIOLATION MEMORY: patterns {'edge': 10, 'pair': 5, 'motif': 3, 'miss': 0} last-gen faulty 0.368 tilt lambda 8.0
+  CONTROLLER DECISION: RESCUE (policy:rule: distant but infeasible circuits)
+  TARGETS: ['330b8066', '3c7e83a3', 'f7694157', '392c0049']
+  EXISTING TOOL CALLED: run_outer_nsga_cv3.rescue_pass  cost={'sizings': 4, 'llm_calls': 4, 'wall_s': 325.1}
+  RESULT: {'attempted': 4, 'kept': 1, 'became_feasible': 1, 'near_feasible_offered': 4, 'provisional_feasible': 1, 'verify_k': 2, 'still_feasible_at_k': 1, 'verify_sizings': 1}
+  STATE CHANGE: {'feasible_count': {'before': 0, 'after': 1}, 'pareto_front_alive': {'before': 0, 'after': 1}, 'seed_uncertain_count': {'before': 82, 'after': 49}}
+
+  [v8 conv memory] gen1: observed 234 (139 new), invalid 0.122, padded 0.403, cosmetic 0.043, redundant-device rate None, novel success 0 / hurt 22, patterns {'edge': 10, 'pair': 5, 'motif': 3, 'miss': 0}, tilt lambda=8.0
+  [fnov] gen1: run-to-date feasible functional distance best 0, >=1: 0, >=2: 0; stall 1; audit sizings 0
+  [discovered] +1 new front circuit(s); set now 1
+[outer] gen1 {'front0': 1, 'alive_in_front0': 1, 'best_gain': 99.014, 'max_novelty': 0.0}  (sizings so far: 63 [+1 adaptive], 13.1 min)
+
+[outer] === generation 2: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.096  accepted nov u=0.195  (delta=+0.099; delta<<0 would mean the gate is trading novelty for wireability)
+  [struct] gen2 (struct_frac): 11 structural children from 12 parent(s) ops={'insert_series': 2, 'sc_branch': 3, 'lc_path': 4, 'cell_graft': 2}; scored 11, feasible 1, reduced distance {2: 4, 0: 2, 4: 3, 3: 2}
+  child 1/47: stage=      scored eff%=98.69 feas=False nov=0.0209
+  child 2/47: stage=      scored eff%=0.0 feas=False nov=0.0397
+  child 3/47: stage=      scored eff%=0.0 feas=False nov=0.2372
+  child 4/47: stage=      scored eff%=98.324 feas=False nov=0.4618
+  child 5/47: stage=      scored eff%=0.948 feas=False nov=0.2404
+  child 6/47: stage=      scored eff%=0.85 feas=False nov=0.0
+  child 7/47: stage=      scored eff%=97.679 feas=False nov=0.0376
+  child 8/47: stage=struct_reject eff%=None feas=False nov=0.9
+  child 9/47: stage=      scored eff%=98.744 feas=False nov=0.0
+  child 10/47: stage=      scored eff%=99.888 feas=False nov=0.0139
+  child 11/47: stage=      scored eff%=0.0 feas=False nov=0.6827
+  child 12/47: stage=      scored eff%=98.69 feas=False nov=0.0209
+  child 13/47: stage=      scored eff%=99.01 feas=False nov=0.2464
+  child 14/47: stage=      scored eff%=98.524 feas=False nov=0.2344
+  child 15/47: stage=struct_reject eff%=None feas=False nov=0.0151
+  child 16/47: stage=      scored eff%=0.024 feas=False nov=0.2335
+  child 17/47: stage=      scored eff%=99.01 feas=False nov=0.2386
+  child 18/47: stage=      scored eff%=99.622 feas=False nov=0.2319
+  child 19/47: stage=      scored eff%=0.024 feas=False nov=0.2348
+  child 20/47: stage=      scored eff%=28.805 feas=False nov=0.235
+  child 21/47: stage=      scored eff%=98.69 feas=False nov=0.0209
+  child 22/47: stage=      scored eff%=28.805 feas=False nov=0.0133
+  child 23/47: stage=        dead eff%=None feas=False nov=0.4632
+  child 24/47: stage=      scored eff%=0.259 feas=False nov=0.232
+  child 25/47: stage=      scored eff%=98.327 feas=False nov=0.0376
+  child 26/47: stage=      scored eff%=99.919 feas=False nov=0.2327
+  child 27/47: stage=      scored eff%=53.089 feas=False nov=0.2343
+  child 28/47: stage=      scored eff%=98.69 feas=False nov=0.0209
+  child 29/47: stage=      scored eff%=0.0 feas=False nov=0.0
+  child 30/47: stage=      scored eff%=98.259 feas=False nov=0.0161
+  child 31/47: stage=      scored eff%=98.524 feas=False nov=0.4596
+  child 32/47: stage=      scored eff%=28.8 feas=False nov=0.0175
+  child 33/47: stage=      scored eff%=99.88 feas=False nov=0.2361
+  child 34/47: stage=      scored eff%=98.359 feas=False nov=0.2364
+  child 35/47: stage=      scored eff%=97.822 feas=False nov=0.0
+  child 36/47: stage=      scored eff%=98.096 feas=False nov=0.4585
+  child 37/47: stage=      scored eff%=97.823 feas=False nov=0.4577
+  child 38/47: stage=      scored eff%=97.741 feas=False nov=0.0
+  child 39/47: stage=      scored eff%=37.47 feas=False nov=0.9099
+  child 40/47: stage=      scored eff%=0.19 feas=False nov=0.4629
+  child 41/47: stage=      scored eff%=17.031 feas=False nov=0.6856
+  child 42/47: stage=      scored eff%=34.401 feas=False nov=0.912
+  child 43/47: stage=      scored eff%=0.422 feas=False nov=0.9129
+  child 44/47: stage=      scored eff%=99.325 feas=True nov=0.0
+  child 45/47: stage=      scored eff%=50.897 feas=False nov=0.4618
+  child 46/47: stage=      scored eff%=97.331 feas=False nov=0.4592
+  child 47/47: stage=      scored eff%=0.957 feas=False nov=0.6853
+  [v6 plan] gen2: RESCUE targets=['e58f5082', '330b8066', 'e90d6cc7', '3e01ecd0'] budget=4 params={'cv_max': 0.3} :: policy:rule: distant but infeasible circuits
+  [rescue] cv 0.2438 -> 0.4953596640185246  ops=['add_two_terminal', 'rewire_pin']  kept out
+  [rescue] cv 0.2456 -> 0.48323541349856003  ops=['rewire_pin']  kept out
+  [rescue] cv 0.2466 -> 0.49339784626891625  ops=['rewire_pin']  kept out
+  [rescue] gen2: 3 attempted, 0 kept, 0 became FEASIBLE
+
+  ===== V6 TRACE gen 2 =====
+  OBSERVED STATE: feasible 2/95 near-feasible 48 best 99.92 front-alive 1 hv 0.0 (d 0.0) uncertain 2 struct-fail 4 pressure 0.043 faulty-promising 1 dup 0.063 stall(best/front) 1/1 sims 102
+  RELEVANT HISTORY: g0 RESCUE -> 1 attempted, 0 kept, 0 became feasible; 3/3 survived selection, 3 on front0; g1 RESCUE -> 4 attempted, 1 kept, 1 became feasible; 1/1 still feasible at k=2; 5/5 survived selection, 1 on front0; g2 RESCUE -> 3 attempted, 0 kept, 0 became feasible
+  VIOLATION MEMORY: patterns {'edge': 10, 'pair': 5, 'motif': 3, 'miss': 0} last-gen faulty 0.525 tilt lambda 8.0
+  CONTROLLER DECISION: RESCUE (policy:rule: distant but infeasible circuits)
+  TARGETS: ['e58f5082', '330b8066', 'e90d6cc7', '3e01ecd0']
+  EXISTING TOOL CALLED: run_outer_nsga_cv3.rescue_pass  cost={'sizings': 3, 'llm_calls': 4, 'wall_s': 305.5}
+  RESULT: {'attempted': 3, 'kept': 0, 'became_feasible': 0, 'near_feasible_offered': 4, 'provisional_feasible': 0, 'verify_k': 2, 'still_feasible_at_k': 0, 'verify_sizings': 0}
+  STATE CHANGE: none
+
+  [v8 conv memory] gen2: observed 232 (135 new), invalid 0.17, padded 0.489, cosmetic 0.037, redundant-device rate None, novel success 0 / hurt 27, patterns {'edge': 10, 'pair': 5, 'motif': 2, 'miss': 0}, tilt lambda=8.0
+  [v7 front-entry] gen2: 1 provisional front entrant(s), 1 verified at k=2 (+1 sizings), 1 still feasible, 0 left provisional (cap 6)
+  [fnov] gen2: run-to-date feasible functional distance best 0, >=1: 0, >=2: 0; stall 2; audit sizings 0
+  [discovered] +1 new front circuit(s); set now 2
+[outer] gen2 {'front0': 2, 'alive_in_front0': 2, 'best_gain': 99.014, 'max_novelty': 0.0}  (sizings so far: 106 [+2 adaptive], 27.7 min)
+
+[outer] === generation 3: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.133  accepted nov u=0.267  (delta=+0.134; delta<<0 would mean the gate is trading novelty for wireability)
+  [struct] gen3 (struct_frac): 11 structural children from 12 parent(s) ops={'insert_series': 2, 'lc_path': 3, 'sc_branch': 2, 'cell_graft': 2, 'transfer_L': 2}; scored 11, feasible 0, reduced distance {1: 2, 2: 4, 4: 4, 3: 1}
+  child 1/47: stage=      scored eff%=97.354 feas=False nov=0.2342
+  child 2/47: stage=      scored eff%=99.891 feas=False nov=0.2343
+  child 3/47: stage=      scored eff%=0.0 feas=False nov=0.225
+  child 4/47: stage=      scored eff%=98.14 feas=False nov=0.2389
+  child 5/47: stage=      scored eff%=97.728 feas=False nov=0.6827
+  child 6/47: stage=      scored eff%=98.324 feas=False nov=0.0376
+  child 7/47: stage=      scored eff%=0.0 feas=False nov=0.4574
+  child 8/47: stage=struct_reject eff%=None feas=False nov=0.0
+  child 9/47: stage=      scored eff%=0.0 feas=False nov=0.6831
+  child 10/47: stage=      scored eff%=99.269 feas=False nov=0.2361
+  child 11/47: stage=      scored eff%=97.755 feas=False nov=0.0239
+  child 12/47: stage=      scored eff%=0.0 feas=False nov=0.4564
+  child 13/47: stage=      scored eff%=98.324 feas=False nov=0.459
+  child 14/47: stage=      scored eff%=98.319 feas=False nov=0.0112
+  child 15/47: stage=      scored eff%=98.215 feas=False nov=0.0
+  child 16/47: stage=      scored eff%=77.097 feas=False nov=0.457
+  child 17/47: stage=      scored eff%=98.575 feas=False nov=0.0209
+  child 18/47: stage=      scored eff%=0.0 feas=False nov=0.2383
+  child 19/47: stage=struct_reject eff%=None feas=False nov=0.9
+  child 20/47: stage=struct_reject eff%=None feas=False nov=0.9
+  child 21/47: stage=      scored eff%=99.9 feas=False nov=0.2393
+  child 22/47: stage=      scored eff%=97.987 feas=False nov=0.4556
+  child 23/47: stage=      scored eff%=0.0 feas=False nov=0.2341
+  child 24/47: stage=      scored eff%=0.0 feas=False nov=0.2328
+  child 25/47: stage=      scored eff%=44.714 feas=False nov=0.0175
+  child 26/47: stage=struct_reject eff%=None feas=False nov=0.0
+  child 27/47: stage=      scored eff%=98.322 feas=False nov=0.0376
+  child 28/47: stage=struct_reject eff%=None feas=False nov=0.0
+  child 29/47: stage=        dead eff%=None feas=False nov=0.4657
+  child 30/47: stage=      scored eff%=20.997 feas=False nov=0.4572
+  child 31/47: stage=struct_reject eff%=None feas=False nov=0.9
+  child 32/47: stage=struct_reject eff%=None feas=False nov=0.0
+  child 33/47: stage=struct_reject eff%=None feas=False nov=0.0
+  child 34/47: stage=struct_reject eff%=None feas=False nov=0.0104
+  child 35/47: stage=      scored eff%=98.324 feas=False nov=0.0376
+  child 36/47: stage=      scored eff%=98.327 feas=False nov=0.0376
+  child 37/47: stage=      scored eff%=96.447 feas=False nov=0.2357
+  child 38/47: stage=      scored eff%=98.744 feas=False nov=0.459
+  child 39/47: stage=      scored eff%=32.23 feas=False nov=0.4596
+  child 40/47: stage=      scored eff%=97.968 feas=False nov=0.4606
+  child 41/47: stage=      scored eff%=97.911 feas=False nov=0.9096
+  child 42/47: stage=      scored eff%=98.327 feas=False nov=0.46
+  child 43/47: stage=      scored eff%=91.584 feas=False nov=0.911
+  child 44/47: stage=      scored eff%=97.331 feas=False nov=0.6853
+  child 45/47: stage=      scored eff%=0.702 feas=False nov=0.9133
+  child 46/47: stage=      scored eff%=97.332 feas=False nov=0.9081
+  child 47/47: stage=      scored eff%=0.562 feas=False nov=0.2355
+  [v6 plan] gen3: RESCUE targets=['e58f5082', '330b8066', 'e90d6cc7', '3e01ecd0'] budget=4 params={'cv_max': 0.3} :: policy:rule: distant but infeasible circuits
+  [rescue] cv 0.2456 -> 0.4814564272621278  ops=['rewire_pin', 'rewire_pin']  kept out
+  [rescue] cv 0.2466 -> 0.6196485805860806  ops=['rewire_pin']  kept out
+  [rescue] gen3: 2 attempted, 0 kept, 0 became FEASIBLE
+
+  ===== V6 TRACE gen 3 =====
+  OBSERVED STATE: feasible 2/95 near-feasible 64 best 99.92 front-alive 2 hv 0.0 (d 0.0) uncertain 64 struct-fail 18 pressure 0.191 faulty-promising 3 dup 0.0 stall(best/front) 2/0 sims 144
+  RELEVANT HISTORY: g0 RESCUE -> 1 attempted, 0 kept, 0 became feasible; 3/3 survived selection, 3 on front0; g1 RESCUE -> 4 attempted, 1 kept, 1 became feasible; 1/1 still feasible at k=2; 5/5 survived selection, 1 on front0; g2 RESCUE -> 3 attempted, 0 kept, 0 became feasible; 4/4 survived selection, 0 on front0; g3 RESCUE -> 2 attempted, 0 kept, 0 became feasible
+  VIOLATION MEMORY: patterns {'edge': 10, 'pair': 5, 'motif': 2, 'miss': 0} last-gen faulty 0.659 tilt lambda 8.0
+  CONTROLLER DECISION: RESCUE (policy:rule: distant but infeasible circuits)
+  TARGETS: ['e58f5082', '330b8066', 'e90d6cc7', '3e01ecd0']
+  EXISTING TOOL CALLED: run_outer_nsga_cv3.rescue_pass  cost={'sizings': 2, 'llm_calls': 4, 'wall_s': 312.5}
+  RESULT: {'attempted': 2, 'kept': 0, 'became_feasible': 0, 'near_feasible_offered': 4, 'provisional_feasible': 0, 'verify_k': 2, 'still_feasible_at_k': 0, 'verify_sizings': 0}
+  STATE CHANGE: none
+
+  [v8 conv memory] gen3: observed 238 (120 new), invalid 0.183, padded 0.483, cosmetic 0.167, redundant-device rate None, novel success 0 / hurt 28, patterns {'edge': 8, 'pair': 5, 'motif': 2, 'miss': 0}, tilt lambda=8.0
+  [fnov] gen3: run-to-date feasible functional distance best 0, >=1: 0, >=2: 0; stall 3; audit sizings 0
+[outer] gen3 {'front0': 2, 'alive_in_front0': 2, 'best_gain': 99.014, 'max_novelty': 0.0}  (sizings so far: 146 [+2 adaptive], 42.3 min)
+
+[outer] === generation 4: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.144  accepted nov u=0.245  (delta=+0.101; delta<<0 would mean the gate is trading novelty for wireability)
+  [struct] gen4 (struct_frac): 11 structural children from 12 parent(s) ops={'sc_branch': 2, 'cell_graft': 3, 'switch_path': 1, 'insert_series': 1, 'transfer_L': 3, 'lc_path': 1}; scored 11, feasible 0, reduced distance {2: 5, 4: 4, 3: 2}
+  child 1/47: stage=      scored eff%=99.404 feas=False nov=0.0381
+  child 2/47: stage=      scored eff%=97.166 feas=False nov=0.4588
+  child 3/47: stage=struct_reject eff%=None feas=False nov=0.2361
+  child 4/47: stage=      scored eff%=0.957 feas=False nov=0.2318
+  child 5/47: stage=      scored eff%=99.404 feas=False nov=0.0381
+  child 6/47: stage=      scored eff%=99.946 feas=False nov=0.027
+  child 7/47: stage=      scored eff%=99.37 feas=True nov=0.0
+  child 8/47: stage=      scored eff%=28.807 feas=False nov=0.0175
+  child 9/47: stage=      scored eff%=16.818 feas=False nov=0.0
+  child 10/47: stage=      scored eff%=0.0 feas=False nov=0.6868
+  child 11/47: stage=      scored eff%=28.295 feas=False nov=0.4554
+  child 12/47: stage=      scored eff%=98.204 feas=False nov=0.6802
+  child 13/47: stage=      scored eff%=96.879 feas=False nov=0.2417
+  child 14/47: stage=struct_reject eff%=None feas=False nov=0.0
+  child 15/47: stage=      scored eff%=0.0 feas=False nov=0.46
+  child 16/47: stage=      scored eff%=98.322 feas=False nov=0.0376
+  child 17/47: stage=      scored eff%=62.287 feas=False nov=0.2321
+  child 18/47: stage=      scored eff%=98.153 feas=False nov=0.4577
+  child 19/47: stage=      scored eff%=28.8 feas=False nov=0.0175
+  child 20/47: stage=      scored eff%=16.817 feas=False nov=0.453
+  child 21/47: stage=      scored eff%=98.324 feas=False nov=0.4588
+  child 22/47: stage=      scored eff%=98.321 feas=False nov=0.0376
+  child 23/47: stage=      scored eff%=57.221 feas=False nov=0.684
+  child 24/47: stage=      scored eff%=98.445 feas=False nov=0.4607
+  child 25/47: stage=      scored eff%=98.685 feas=False nov=0.0239
+  child 26/47: stage=struct_reject eff%=None feas=False nov=0.0
+  child 27/47: stage=      scored eff%=0.337 feas=False nov=0.2383
+  child 28/47: stage=      scored eff%=99.898 feas=False nov=0.2364
+  child 29/47: stage=      scored eff%=98.324 feas=False nov=0.0376
+  child 30/47: stage=      scored eff%=99.404 feas=False nov=0.2379
+  child 31/47: stage=      scored eff%=69.547 feas=False nov=0.459
+  child 32/47: stage=      scored eff%=6.964 feas=False nov=0.6819
+  child 33/47: stage=      scored eff%=98.575 feas=False nov=0.0209
+  child 34/47: stage=      scored eff%=16.83 feas=False nov=0.0112
+  child 35/47: stage=      scored eff%=99.809 feas=False nov=0.2386
+  child 36/47: stage=      scored eff%=0.0 feas=False nov=0.233
+  child 37/47: stage=      scored eff%=96.958 feas=False nov=0.46
+  child 38/47: stage=      scored eff%=0.629 feas=False nov=0.4631
+  child 39/47: stage=      scored eff%=0.523 feas=False nov=0.9139
+  child 40/47: stage=      scored eff%=0.0 feas=False nov=0.6885
+  child 41/47: stage=      scored eff%=99.117 feas=False nov=0.9077
+  child 42/47: stage=      scored eff%=0.463 feas=False nov=0.4633
+  child 43/47: stage=      scored eff%=98.864 feas=False nov=0.6877
+  child 44/47: stage=      scored eff%=97.362 feas=False nov=0.9114
+  child 45/47: stage=      scored eff%=98.341 feas=False nov=0.4577
+  child 46/47: stage=      scored eff%=34.4 feas=False nov=0.9125
+  child 47/47: stage=      scored eff%=47.466 feas=False nov=0.4593
+  [v6 plan] gen4: STEER targets=[] budget=1 params={'t_frac': 0.45, 'birth_m': 4, 'struct_frac': 0.4} :: policy:rule: cosmetic novelty / stall / repeats: raise struct_frac
+
+  ===== V6 TRACE gen 4 =====
+  OBSERVED STATE: feasible 3/95 near-feasible 66 best 99.95 front-alive 2 hv 0.0 (d 0.0) uncertain 3 struct-fail 6 pressure 0.064 faulty-promising 0 dup 0.011 stall(best/front) 3/1 sims 189
+  RELEVANT HISTORY: g0 RESCUE -> 1 attempted, 0 kept, 0 became feasible; 3/3 survived selection, 3 on front0; g1 RESCUE -> 4 attempted, 1 kept, 1 became feasible; 1/1 still feasible at k=2; 5/5 survived selection, 1 on front0; g2 RESCUE -> 3 attempted, 0 kept, 0 became feasible; 4/4 survived selection, 0 on front0; g3 RESCUE -> 2 attempted, 0 kept, 0 became feasible; 4/4 survived selection, 0 on front0; g4 STEER -> pending (measured next generation)
+  VIOLATION MEMORY: patterns {'edge': 8, 'pair': 5, 'motif': 2, 'miss': 0} last-gen faulty 0.667 tilt lambda 8.0
+  CONTROLLER DECISION: STEER (policy:rule: cosmetic novelty / stall / repeats: raise struct_frac)
+  TARGETS: []
+  EXISTING TOOL CALLED: make_offspring(t_star, birth_m) for the next generation  cost={'sizings': 0, 'llm_calls': 0, 'wall_s': 0.0}
+  RESULT: {'t_frac': 0.45, 'birth_m': 4, 'set_at_gen': 4, 'struct_frac': 0.4}
+  STATE CHANGE: none
+
+  [v8 conv memory] gen4: observed 238 (129 new), invalid 0.209, padded 0.512, cosmetic 0.163, redundant-device rate None, novel success 0 / hurt 31, patterns {'edge': 7, 'pair': 5, 'motif': 3, 'miss': 0}, tilt lambda=8.0
+  [v7 front-entry] gen4: 1 provisional front entrant(s), 1 verified at k=2 (+1 sizings), 1 still feasible, 0 left provisional (cap 6)
+  [fnov] gen4: run-to-date feasible functional distance best 0, >=1: 0, >=2: 0; stall 4; audit sizings 0
+  [discovered] +1 new front circuit(s); set now 3
+[outer] gen4 {'front0': 1, 'alive_in_front0': 1, 'best_gain': 99.084, 'max_novelty': 0.0}  (sizings so far: 190 [+3 adaptive], 48.1 min)
+
+[outer] === generation 5: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.070  accepted nov u=0.118  (delta=+0.048; delta<<0 would mean the gate is trading novelty for wireability)
+  [struct] gen5 (struct_frac): 18 structural children from 19 parent(s) ops={'rewire': 2, 'sc_branch': 7, 'cell_graft': 2, 'lc_path': 3, 'insert_series': 1, 'transfer_L': 3}; scored 18, feasible 2, reduced distance {4: 9, 1: 3, 3: 3, 2: 2, 0: 1}
+  [fnov audit] gen5: 2 feasible circuit(s) with reduced distance >= 1 ablated (leave-one-out + greedy core, corners [0]), +18 sizings
+  child 1/47: stage=struct_reject eff%=None feas=False nov=0.6862
+  child 2/47: stage=      scored eff%=0.0 feas=False nov=0.2357
+  child 3/47: stage=struct_reject eff%=None feas=False nov=0.0
+  child 4/47: stage=      scored eff%=98.327 feas=False nov=0.0106
+  child 5/47: stage=      scored eff%=97.482 feas=False nov=0.0
+  child 6/47: stage=      scored eff%=28.785 feas=False nov=0.0175
+  child 7/47: stage=      scored eff%=98.327 feas=False nov=0.0
+  child 8/47: stage=      scored eff%=8.966 feas=False nov=0.0065
+  child 9/47: stage=      scored eff%=28.64 feas=False nov=0.4556
+  child 10/47: stage=struct_reject eff%=None feas=False nov=0.0
+  child 11/47: stage=struct_reject eff%=None feas=False nov=0.0
+  child 12/47: stage=struct_reject eff%=None feas=False nov=0.0
+  child 13/47: stage=      scored eff%=1.25 feas=False nov=0.2319
+  child 14/47: stage=      scored eff%=58.198 feas=False nov=0.0
+  child 15/47: stage=      scored eff%=28.791 feas=False nov=0.0161
+  child 16/47: stage=      scored eff%=0.495 feas=False nov=0.2335
+  child 17/47: stage=      scored eff%=0.129 feas=False nov=0.235
+  child 18/47: stage=      scored eff%=97.422 feas=False nov=0.0376
+  child 19/47: stage=struct_reject eff%=None feas=False nov=0.0
+  child 20/47: stage=      scored eff%=0.554 feas=False nov=0.2375
+  child 21/47: stage=      scored eff%=98.324 feas=False nov=0.0087
+  child 22/47: stage=      scored eff%=99.888 feas=False nov=0.0146
+  child 23/47: stage=      scored eff%=2.087 feas=False nov=0.4594
+  child 24/47: stage=      scored eff%=0.0 feas=False nov=0.4588
+  child 25/47: stage=struct_reject eff%=None feas=False nov=0.0175
+  child 26/47: stage=struct_reject eff%=None feas=False nov=0.0175
+  child 27/47: stage=struct_reject eff%=None feas=False nov=0.0
+  child 28/47: stage=struct_reject eff%=None feas=False nov=0.0
+  child 29/47: stage=      scored eff%=98.322 feas=False nov=0.0376
+  child 30/47: stage=      scored eff%=99.643 feas=True nov=0.8032
+  child 31/47: stage=      scored eff%=0.19 feas=False nov=0.9129
+  child 32/47: stage=      scored eff%=98.306 feas=False nov=0.9099
+  child 33/47: stage=      scored eff%=2.436 feas=False nov=0.2348
+  child 34/47: stage=      scored eff%=96.408 feas=False nov=0.687
+  child 35/47: stage=      scored eff%=99.32 feas=True nov=0.0
+  child 36/47: stage=      scored eff%=0.008 feas=False nov=0.6846
+  child 37/47: stage=      scored eff%=97.961 feas=False nov=0.9124
+  child 38/47: stage=      scored eff%=98.744 feas=False nov=0.459
+  child 39/47: stage=      scored eff%=0.223 feas=False nov=0.2389
+  child 40/47: stage=      scored eff%=99.651 feas=False nov=0.0
+  child 41/47: stage=      scored eff%=96.886 feas=False nov=0.9109
+  child 42/47: stage=      scored eff%=99.267 feas=False nov=0.689
+  child 43/47: stage=      scored eff%=65.834 feas=False nov=0.2327
+  child 44/47: stage=      scored eff%=99.341 feas=False nov=0.9077
+  child 45/47: stage=      scored eff%=98.052 feas=False nov=0.9121
+  child 46/47: stage=      scored eff%=0.696 feas=False nov=0.9108
+  child 47/47: stage=      scored eff%=97.288 feas=False nov=0.9118
+  [v6 plan] gen5: RESCUE targets=['994c5359', '33943728', '8d4c55a2', 'e58f5082'] budget=4 params={'cv_max': 0.3} :: policy:rule: feasible_fraction < 0.1 and near_feasible_count >= 8
+  [rescue] cv 0.2401 -> 0.1548380343344372  ops=['rewire_pin']  closer
+  [rescue] cv 0.2424 -> 0.2472225123153804  ops=['rewire_pin', 'add_two_terminal']  kept out
+  [rescue] cv 0.2426 -> 0.01  ops=['rewire_pin']  FEASIBLE
+  [rescue] gen5: 3 attempted, 2 kept, 1 became FEASIBLE
+  [v7 rescued] 1 feasible at k=1 -> 1 still feasible at k=2 (+1 sizings)
+
+  ===== V6 TRACE gen 5 =====
+  OBSERVED STATE: feasible 5/95 near-feasible 64 best 99.89 front-alive 1 hv 0.0 (d 0.0) uncertain 3 struct-fail 19 pressure 0.191 faulty-promising 1 dup 0.0 stall(best/front) 4/0 sims 245
+  RELEVANT HISTORY: g0 RESCUE -> 1 attempted, 0 kept, 0 became feasible; 3/3 survived selection, 3 on front0; g1 RESCUE -> 4 attempted, 1 kept, 1 became feasible; 1/1 still feasible at k=2; 5/5 survived selection, 1 on front0; g2 RESCUE -> 3 attempted, 0 kept, 0 became feasible; 4/4 survived selection, 0 on front0; g3 RESCUE -> 2 attempted, 0 kept, 0 became feasible; 4/4 survived selection, 0 on front0; g4 STEER -> next-gen child novelty 0.344 -> 0.314, duplicate rate 0.011 -> 0.0, generated faulty fraction 0.667 -> 0.721 (memory lambda 8.0), feasible fd>=2 0 -> 1, cosmetic children 0.231 -> 0.3; g5 RESCUE -> 3 attempted, 2 kept, 1 became feasible; 1/1 still feasible at k=2
+  VIOLATION MEMORY: patterns {'edge': 7, 'pair': 5, 'motif': 3, 'miss': 0} last-gen faulty 0.721 tilt lambda 8.0
+  CONTROLLER DECISION: RESCUE (policy:rule: feasible_fraction < 0.1 and near_feasible_count >= 8)
+  TARGETS: ['994c5359', '33943728', '8d4c55a2', 'e58f5082']
+  EXISTING TOOL CALLED: run_outer_nsga_cv3.rescue_pass  cost={'sizings': 4, 'llm_calls': 4, 'wall_s': 274.8}
+  RESULT: {'attempted': 3, 'kept': 2, 'became_feasible': 1, 'near_feasible_offered': 4, 'provisional_feasible': 1, 'verify_k': 2, 'still_feasible_at_k': 1, 'verify_sizings': 1}
+  STATE CHANGE: {'feasible_count': {'before': 5, 'after': 6}, 'near_feasible_count': {'before': 64, 'after': 65}, 'seed_uncertain_count': {'before': 3, 'after': 2}}
+
+  [v8 conv memory] gen5: observed 212 (95 new), invalid 0.211, padded 0.432, cosmetic 0.105, redundant-device rate 0.2, novel success 1 / hurt 24, patterns {'edge': 9, 'pair': 12, 'motif': 3, 'miss': 0}, tilt lambda=8.0
+  [v7 front-entry] gen5: 1 provisional front entrant(s), 1 verified at k=2 (+1 sizings), 1 still feasible, 0 left provisional (cap 6)
+  [fnov] gen5: run-to-date feasible functional distance best 4, >=1: 1, >=2: 1; stall 0; audit sizings 18
+  [discovered] +1 new front circuit(s); set now 4
+[outer] gen5 {'front0': 1, 'alive_in_front0': 1, 'best_gain': 99.529, 'max_novelty': 0.8032}  (sizings so far: 250 [+23 adaptive], 55.2 min)
+
+[outer] === generation 6: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.127  accepted nov u=0.227  (delta=+0.101; delta<<0 would mean the gate is trading novelty for wireability)
+  [struct] gen6 (struct_frac): 16 structural children from 19 parent(s) ops={'rewire': 3, 'lc_path': 3, 'cell_graft': 3, 'insert_series': 1, 'sc_branch': 3, 'transfer_L': 3}; scored 16, feasible 1, reduced distance {4: 9, 2: 3, 3: 3, 1: 1}
+  [fnov audit] gen6: 1 feasible circuit(s) with reduced distance >= 1 ablated (leave-one-out + greedy core, corners [0]), +10 sizings
+  child 1/45: stage=struct_reject eff%=None feas=False nov=0.9
+  child 2/45: stage=      scored eff%=0.255 feas=False nov=0.4599
+  child 3/45: stage=      scored eff%=0.0 feas=False nov=0.4579
+  child 4/45: stage=struct_reject eff%=None feas=False nov=0.0
+  child 5/45: stage=      scored eff%=0.0 feas=False nov=0.2379
+  child 6/45: stage=struct_reject eff%=None feas=False nov=0.9
+  child 7/45: stage=struct_reject eff%=None feas=False nov=0.0
+  child 8/45: stage=struct_reject eff%=None feas=False nov=0.0
+  child 9/45: stage=      scored eff%=0.005 feas=False nov=0.0397
+  child 10/45: stage=      scored eff%=98.322 feas=False nov=0.0376
+  child 11/45: stage=      scored eff%=0.0 feas=False nov=0.2353
+  child 12/45: stage=struct_reject eff%=None feas=False nov=0.0
+  child 13/45: stage=      scored eff%=98.327 feas=False nov=0.6868
+  child 14/45: stage=      scored eff%=0.0 feas=False nov=0.2333
+  child 15/45: stage=      scored eff%=0.1 feas=False nov=0.4557
+  child 16/45: stage=struct_reject eff%=None feas=False nov=0.0376
+  child 17/45: stage=struct_reject eff%=None feas=False nov=0.0
+  child 18/45: stage=      scored eff%=28.81 feas=False nov=0.0
+  child 19/45: stage=struct_reject eff%=None feas=False nov=0.0
+  child 20/45: stage=      scored eff%=98.701 feas=False nov=0.016
+  child 21/45: stage=      scored eff%=70.103 feas=False nov=0.2357
+  child 22/45: stage=struct_reject eff%=None feas=False nov=0.0151
+  child 23/45: stage=      scored eff%=56.747 feas=False nov=0.4585
+  child 24/45: stage=        dead eff%=None feas=False nov=0.4582
+  child 25/45: stage=      scored eff%=98.322 feas=False nov=0.0376
+  child 26/45: stage=      scored eff%=50.645 feas=False nov=0.0133
+  child 27/45: stage=      scored eff%=46.785 feas=False nov=0.0
+  child 28/45: stage=      scored eff%=0.368 feas=False nov=0.6792
+  child 29/45: stage=struct_reject eff%=None feas=False nov=0.0
+  child 30/45: stage=      scored eff%=0.466 feas=False nov=0.9156
+  child 31/45: stage=      scored eff%=51.103 feas=False nov=0.4625
+  child 32/45: stage=      scored eff%=0.153 feas=False nov=0.9154
+  child 33/45: stage=      scored eff%=97.987 feas=False nov=0.4604
+  child 34/45: stage=      scored eff%=96.879 feas=False nov=0.6883
+  child 35/45: stage=      scored eff%=0.419 feas=False nov=0.6877
+  child 36/45: stage=      scored eff%=99.361 feas=True nov=0.0
+  child 37/45: stage=      scored eff%=96.77 feas=False nov=0.2338
+  child 38/45: stage=      scored eff%=97.741 feas=False nov=0.9087
+  child 39/45: stage=      scored eff%=0.602 feas=False nov=0.9122
+  child 40/45: stage=      scored eff%=0.339 feas=False nov=0.9135
+  child 41/45: stage=      scored eff%=99.358 feas=False nov=0.9099
+  child 42/45: stage=      scored eff%=88.517 feas=False nov=0.9133
+  child 43/45: stage=      scored eff%=0.676 feas=False nov=0.9139
+  child 44/45: stage=      scored eff%=0.467 feas=False nov=0.4655
+  child 45/45: stage=      scored eff%=99.235 feas=False nov=0.9147
+  [v6 plan] gen6: RESCUE targets=['a1fb6b6c', 'e5c7b1e0', '994c5359', '33943728'] budget=4 params={'cv_max': 0.3} :: policy:rule: feasible_fraction < 0.1 and near_feasible_count >= 8
+  [rescue] cv 0.1493 -> 0.01  ops=['rewire_pin']  FEASIBLE
+  [rescue] cv 0.1548 -> 0.01  ops=['rewire_pin']  FEASIBLE
+  [rescue] cv 0.2401 -> 0.22774493919917388  ops=['rewire_pin']  closer
+  [rescue] cv 0.2424 -> 0.2472225123153804  ops=['rewire_pin', 'add_two_terminal']  kept out
+  [rescue] gen6: 4 attempted, 3 kept, 2 became FEASIBLE
+  [v7 rescued] 2 feasible at k=1 -> 2 still feasible at k=2 (+2 sizings)
+
+  ===== V6 TRACE gen 6 =====
+  OBSERVED STATE: feasible 7/93 near-feasible 60 best 99.53 front-alive 1 hv 79.9 (d 79.9) uncertain 2 struct-fail 22 pressure 0.244 faulty-promising 2 dup 0.022 stall(best/front) 5/0 sims 292
+  RELEVANT HISTORY: g0 RESCUE -> 1 attempted, 0 kept, 0 became feasible; 3/3 survived selection, 3 on front0; g1 RESCUE -> 4 attempted, 1 kept, 1 became feasible; 1/1 still feasible at k=2; 5/5 survived selection, 1 on front0; g2 RESCUE -> 3 attempted, 0 kept, 0 became feasible; 4/4 survived selection, 0 on front0; g3 RESCUE -> 2 attempted, 0 kept, 0 became feasible; 4/4 survived selection, 0 on front0; g4 STEER -> next-gen child novelty 0.344 -> 0.314, duplicate rate 0.011 -> 0.0, generated faulty fraction 0.667 -> 0.721 (memory lambda 8.0), feasible fd>=2 0 -> 1, cosmetic children 0.231 -> 0.3; g5 RESCUE -> 3 attempted, 2 kept, 1 became feasible; 1/1 still feasible at k=2; 6/6 survived selection, 0 on front0; g6 RESCUE -> 4 attempted, 3 kept, 2 became feasible; 2/2 still feasible at k=2
+  VIOLATION MEMORY: patterns {'edge': 9, 'pair': 12, 'motif': 3, 'miss': 0} last-gen faulty 0.642 tilt lambda 8.0
+  CONTROLLER DECISION: RESCUE (policy:rule: feasible_fraction < 0.1 and near_feasible_count >= 8)
+  TARGETS: ['a1fb6b6c', 'e5c7b1e0', '994c5359', '33943728']
+  EXISTING TOOL CALLED: run_outer_nsga_cv3.rescue_pass  cost={'sizings': 6, 'llm_calls': 4, 'wall_s': 297.1}
+  RESULT: {'attempted': 4, 'kept': 3, 'became_feasible': 2, 'near_feasible_offered': 4, 'provisional_feasible': 2, 'verify_k': 2, 'still_feasible_at_k': 2, 'verify_sizings': 2}
+  STATE CHANGE: {'feasible_count': {'before': 7, 'after': 9}, 'near_feasible_count': {'before': 60, 'after': 61}, 'pareto_front_alive': {'before': 1, 'after': 2}, 'hypervolume': {'before': 79.9, 'after': 90.7}, 'seed_uncertain_count': {'before': 2, 'after': 3}}
+
+  [fnov audit] gen6: 2 feasible circuit(s) with reduced distance >= 1 ablated (leave-one-out + greedy core, corners [0]), +20 sizings
+  [v8 conv memory] gen6: observed 207 (95 new), invalid 0.253, padded 0.495, cosmetic 0.158, redundant-device rate 0.348, novel success 0 / hurt 26, patterns {'edge': 9, 'pair': 12, 'motif': 3, 'miss': 0}, tilt lambda=8.0
+  [v7 front-entry] gen6: 0 provisional front entrant(s), 0 verified at k=2 (+0 sizings), 0 still feasible, 0 left provisional (cap 6)
+  [fnov] gen6: run-to-date feasible functional distance best 4, >=1: 1, >=2: 1; stall 1; audit sizings 48
+[outer] gen6 {'front0': 1, 'alive_in_front0': 1, 'best_gain': 99.529, 'max_novelty': 0.8032}  (sizings so far: 318 [+55 adaptive], 77.6 min)
+
+[outer] === generation 7: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.166  accepted nov u=0.320  (delta=+0.154; delta<<0 would mean the gate is trading novelty for wireability)
+  [struct] gen7 (struct_frac): 19 structural children from 19 parent(s) ops={'lc_path': 5, 'cell_graft': 2, 'transfer_L': 6, 'insert_series': 3, 'sc_branch': 1, 'rewire': 2}; scored 19, feasible 3, reduced distance {4: 11, 3: 4, 0: 1, 2: 3}
+  [fnov audit] gen7: 3 feasible circuit(s) with reduced distance >= 1 ablated (leave-one-out + greedy core, corners [0]), +32 sizings
+  child 1/48: stage=      scored eff%=0.0 feas=False nov=0.2363
+  child 2/48: stage=      scored eff%=96.951 feas=False nov=0.0161
+  child 3/48: stage=      scored eff%=28.796 feas=False nov=0.6878
+  child 4/48: stage=      scored eff%=0.0 feas=False nov=0.2428
+  child 5/48: stage=      scored eff%=98.324 feas=False nov=0.0376
+  child 6/48: stage=struct_reject eff%=None feas=False nov=0.0151
+  child 7/48: stage=struct_reject eff%=None feas=False nov=0.0
+  child 8/48: stage=struct_reject eff%=None feas=False nov=0.9
+  child 9/48: stage=      scored eff%=0.0 feas=False nov=0.4574
+  child 10/48: stage=      scored eff%=97.402 feas=False nov=0.6796
+  child 11/48: stage=      scored eff%=28.29 feas=False nov=0.6812
+  child 12/48: stage=      scored eff%=97.795 feas=False nov=0.2348
+  child 13/48: stage=      scored eff%=16.819 feas=False nov=0.0
+  child 14/48: stage=      scored eff%=58.198 feas=False nov=0.0
+  child 15/48: stage=      scored eff%=28.788 feas=False nov=0.6826
+  child 16/48: stage=      scored eff%=0.247 feas=False nov=0.2375
+  child 17/48: stage=      scored eff%=0.0 feas=False nov=0.2356
+  child 18/48: stage=      scored eff%=56.247 feas=False nov=0.2338
+  child 19/48: stage=struct_reject eff%=None feas=False nov=0.0381
+  child 20/48: stage=struct_reject eff%=None feas=False nov=0.0
+  child 21/48: stage=struct_reject eff%=None feas=False nov=0.9
+  child 22/48: stage=      scored eff%=16.816 feas=False nov=0.6796
+  child 23/48: stage=      scored eff%=14.298 feas=False nov=0.4539
+  child 24/48: stage=      scored eff%=0.928 feas=False nov=0.2355
+  child 25/48: stage=      scored eff%=0.0 feas=False nov=0.4574
+  child 26/48: stage=      scored eff%=79.674 feas=False nov=0.6831
+  child 27/48: stage=      scored eff%=28.805 feas=False nov=0.0175
+  child 28/48: stage=struct_reject eff%=None feas=False nov=0.0
+  child 29/48: stage=      scored eff%=0.0 feas=False nov=0.2385
+  child 30/48: stage=      scored eff%=0.19 feas=False nov=0.9129
+  child 31/48: stage=      scored eff%=0.19 feas=False nov=0.9127
+  child 32/48: stage=      scored eff%=97.353 feas=False nov=0.9129
+  child 33/48: stage=      scored eff%=0.505 feas=False nov=0.9092
+  child 34/48: stage=      scored eff%=0.478 feas=False nov=0.6846
+  child 35/48: stage=      scored eff%=51.984 feas=False nov=0.6877
+  child 36/48: stage=      scored eff%=0.377 feas=False nov=0.0
+  child 37/48: stage=      scored eff%=0.297 feas=False nov=0.4591
+  child 38/48: stage=      scored eff%=15.02 feas=False nov=0.9113
+  child 39/48: stage=      scored eff%=99.436 feas=True nov=0.684
+  child 40/48: stage=      scored eff%=97.964 feas=False nov=0.9087
+  child 41/48: stage=      scored eff%=58.912 feas=False nov=0.4596
+  child 42/48: stage=      scored eff%=0.478 feas=False nov=0.6845
+  child 43/48: stage=      scored eff%=4.313 feas=False nov=0.6868
+  child 44/48: stage=      scored eff%=11.381 feas=False nov=0.4616
+  child 45/48: stage=      scored eff%=0.481 feas=False nov=0.9124
+  child 46/48: stage=      scored eff%=99.544 feas=True nov=0.0
+  child 47/48: stage=      scored eff%=98.851 feas=True nov=0.0
+  child 48/48: stage=      scored eff%=0.481 feas=False nov=0.9128
+  [v6 plan] gen7: STEER targets=[] budget=1 params={'t_frac': 0.45, 'birth_m': 4} :: policy:rule: best gain stalled >= 6 gens, duplicate_rate >= 0.07 or generated faulty_fraction >= 0.85
+
+  ===== V6 TRACE gen 7 =====
+  OBSERVED STATE: feasible 12/96 near-feasible 58 best 99.54 front-alive 1 hv 79.9 (d -10.8) uncertain 2 struct-fail 14 pressure 0.146 faulty-promising 2 dup 0.021 stall(best/front) 6/0 sims 389
+  RELEVANT HISTORY: g0 RESCUE -> 1 attempted, 0 kept, 0 became feasible; 3/3 survived selection, 3 on front0; g1 RESCUE -> 4 attempted, 1 kept, 1 became feasible; 1/1 still feasible at k=2; 5/5 survived selection, 1 on front0; g2 RESCUE -> 3 attempted, 0 kept, 0 became feasible; 4/4 survived selection, 0 on front0; g3 RESCUE -> 2 attempted, 0 kept, 0 became feasible; 4/4 survived selection, 0 on front0; g4 STEER -> next-gen child novelty 0.344 -> 0.314, duplicate rate 0.011 -> 0.0, generated faulty fraction 0.667 -> 0.721 (memory lambda 8.0), feasible fd>=2 0 -> 1, cosmetic children 0.231 -> 0.3; g5 RESCUE -> 3 attempted, 2 kept, 1 became feasible; 1/1 still feasible at k=2; 6/6 survived selection, 0 on front0; g6 RESCUE -> 4 attempted, 3 kept, 2 became feasible; 2/2 still feasible at k=2; 7/7 survived selection, 0 on front0; g7 STEER -> pending (measured next generation)
+  VIOLATION MEMORY: patterns {'edge': 9, 'pair': 12, 'motif': 3, 'miss': 0} last-gen faulty 0.747 tilt lambda 8.0
+  CONTROLLER DECISION: STEER (policy:rule: best gain stalled >= 6 gens, duplicate_rate >= 0.07 or generated faulty_fraction >= 0.85)
+  TARGETS: []
+  EXISTING TOOL CALLED: make_offspring(t_star, birth_m) for the next generation  cost={'sizings': 0, 'llm_calls': 0, 'wall_s': 0.0}
+  RESULT: {'t_frac': 0.45, 'birth_m': 4, 'set_at_gen': 7}
+  STATE CHANGE: none
+
+  [v8 conv memory] gen7: observed 210 (103 new), invalid 0.223, padded 0.476, cosmetic 0.165, redundant-device rate 0.36, novel success 1 / hurt 32, patterns {'edge': 10, 'pair': 8, 'motif': 3, 'miss': 0}, tilt lambda=8.0
+  [v7 front-entry] gen7: 2 provisional front entrant(s), 2 verified at k=2 (+2 sizings), 2 still feasible, 0 left provisional (cap 6)
+  [fnov] gen7: run-to-date feasible functional distance best 4, >=1: 2, >=2: 2; stall 0; audit sizings 80
+[outer] gen7 {'front0': 1, 'alive_in_front0': 1, 'best_gain': 99.529, 'max_novelty': 0.8032}  (sizings so far: 391 [+89 adaptive], 85.3 min)
+
+[outer] === generation 8: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.107  accepted nov u=0.157  (delta=+0.050; delta<<0 would mean the gate is trading novelty for wireability)
+  [struct] gen8 (struct_frac): 18 structural children from 19 parent(s) ops={'rewire': 3, 'insert_series': 2, 'transfer_L': 6, 'lc_path': 2, 'cell_graft': 3, 'sc_branch': 2}; scored 18, feasible 6, reduced distance {3: 6, 4: 9, 2: 2, 0: 1}
+  [fnov audit] gen8: 5 feasible circuit(s) with reduced distance >= 1 ablated (leave-one-out + greedy core, corners [0]), +55 sizings
+  child 1/47: stage=      scored eff%=0.0 feas=False nov=0.2318
+  child 2/47: stage=      scored eff%=98.322 feas=False nov=0.0376
+  child 3/47: stage=struct_reject eff%=None feas=False nov=0.0111
+  child 4/47: stage=struct_reject eff%=None feas=False nov=0.0
+  child 5/47: stage=struct_reject eff%=None feas=False nov=0.0151
+  child 6/47: stage=      scored eff%=0.01 feas=False nov=0.0
+  child 7/47: stage=      scored eff%=0.005 feas=False nov=0.0235
+  child 8/47: stage=struct_reject eff%=None feas=False nov=0.0376
+  child 9/47: stage=struct_reject eff%=None feas=False nov=0.0
+  child 10/47: stage=      scored eff%=98.322 feas=False nov=0.0376
+  child 11/47: stage=struct_reject eff%=None feas=False nov=0.0
+  child 12/47: stage=      scored eff%=98.329 feas=False nov=0.4582
+  child 13/47: stage=struct_reject eff%=None feas=False nov=0.2354
+  child 14/47: stage=struct_reject eff%=None feas=False nov=0.0
+  child 15/47: stage=struct_reject eff%=None feas=False nov=0.9
+  child 16/47: stage=struct_reject eff%=None feas=False nov=0.2372
+  child 17/47: stage=      scored eff%=99.005 feas=False nov=0.2333
+  child 18/47: stage=        dead eff%=None feas=False nov=0.0232
+  child 19/47: stage=      scored eff%=98.322 feas=False nov=0.0
+  child 20/47: stage=struct_reject eff%=None feas=False nov=0.0
+  child 21/47: stage=struct_reject eff%=None feas=False nov=0.9
+  child 22/47: stage=      scored eff%=98.324 feas=False nov=0.234
+  child 23/47: stage=struct_reject eff%=None feas=False nov=0.0
+  child 24/47: stage=struct_reject eff%=None feas=False nov=0.0151
+  child 25/47: stage=       error eff%=None feas=False nov=0.0
+  child 26/47: stage=      scored eff%=97.424 feas=False nov=0.0116
+  child 27/47: stage=      scored eff%=99.893 feas=False nov=0.015
+  child 28/47: stage=struct_reject eff%=None feas=False nov=0.0
+  child 29/47: stage=      scored eff%=0.0 feas=False nov=0.9034
+  child 30/47: stage=      scored eff%=2.57 feas=False nov=0.6861
+  child 31/47: stage=      scored eff%=99.32 feas=True nov=0.0
+  child 32/47: stage=      scored eff%=98.004 feas=False nov=0.9099
+  child 33/47: stage=      scored eff%=99.362 feas=True nov=0.0
+  child 34/47: stage=      scored eff%=57.442 feas=False nov=0.4635
+  child 35/47: stage=      scored eff%=0.19 feas=False nov=0.9116
+  child 36/47: stage=      scored eff%=98.851 feas=True nov=0.0
+  child 37/47: stage=      scored eff%=18.226 feas=False nov=0.6875
+  child 38/47: stage=      scored eff%=0.847 feas=False nov=0.9125
+  child 39/47: stage=      scored eff%=0.432 feas=False nov=0.684
+  child 40/47: stage=      scored eff%=99.544 feas=True nov=0.0
+  child 41/47: stage=      scored eff%=52.908 feas=False nov=0.914
+  child 42/47: stage=      scored eff%=0.007 feas=False nov=0.9127
+  child 43/47: stage=      scored eff%=0.442 feas=False nov=0.6842
+  child 44/47: stage=      scored eff%=0.287 feas=False nov=0.463
+  child 45/47: stage=      scored eff%=99.32 feas=True nov=0.0
+  child 46/47: stage=      scored eff%=0.19 feas=False nov=0.9127
+  child 47/47: stage=      scored eff%=99.32 feas=True nov=0.0
+  [v6 plan] gen8: STEER targets=[] budget=1 params={'t_frac': 0.45, 'birth_m': 4, 'memory_lambda': 12.0, 'struct_frac': 0.55} :: policy:rule: cosmetic novelty / stall / repeats: raise struct_frac
+
+  ===== V6 TRACE gen 8 =====
+  OBSERVED STATE: feasible 18/95 near-feasible 49 best 99.89 front-alive 1 hv 79.9 (d 0.0) uncertain 4 struct-fail 28 pressure 0.277 faulty-promising 2 dup 0.011 stall(best/front) 7/1 sims 476
+  RELEVANT HISTORY: g1 RESCUE -> 4 attempted, 1 kept, 1 became feasible; 1/1 still feasible at k=2; 5/5 survived selection, 1 on front0; g2 RESCUE -> 3 attempted, 0 kept, 0 became feasible; 4/4 survived selection, 0 on front0; g3 RESCUE -> 2 attempted, 0 kept, 0 became feasible; 4/4 survived selection, 0 on front0; g4 STEER -> next-gen child novelty 0.344 -> 0.314, duplicate rate 0.011 -> 0.0, generated faulty fraction 0.667 -> 0.721 (memory lambda 8.0), feasible fd>=2 0 -> 1, cosmetic children 0.231 -> 0.3; g5 RESCUE -> 3 attempted, 2 kept, 1 became feasible; 1/1 still feasible at k=2; 6/6 survived selection, 0 on front0; g6 RESCUE -> 4 attempted, 3 kept, 2 became feasible; 2/2 still feasible at k=2; 7/7 survived selection, 0 on front0; g7 STEER -> next-gen child novelty 0.445 -> 0.292, duplicate rate 0.021 -> 0.011, generated faulty fraction 0.747 -> 0.699 (memory lambda 8.0), feasible fd>=2 2 -> 2, cosmetic children 0.25 -> 0.44; g8 STEER -> pending (measured next generation)
+  VIOLATION MEMORY: patterns {'edge': 10, 'pair': 8, 'motif': 3, 'miss': 0} last-gen faulty 0.699 tilt lambda 12.0
+  CONTROLLER DECISION: STEER (policy:rule: cosmetic novelty / stall / repeats: raise struct_frac)
+  TARGETS: []
+  EXISTING TOOL CALLED: make_offspring(t_star, birth_m) for the next generation; MemoryGuidance.lam  cost={'sizings': 0, 'llm_calls': 0, 'wall_s': 0.0}
+  RESULT: {'t_frac': 0.45, 'birth_m': 4, 'set_at_gen': 8, 'memory_lambda': 12.0, 'struct_frac': 0.55}
+  STATE CHANGE: none
+
+  [v8 conv memory] gen8: observed 209 (78 new), invalid 0.359, padded 0.436, cosmetic 0.141, redundant-device rate 0.525, novel success 0 / hurt 16, patterns {'edge': 10, 'pair': 8, 'motif': 3, 'miss': 0}, tilt lambda=8.0
+  [v7 front-entry] gen8: 1 provisional front entrant(s), 1 verified at k=2 (+1 sizings), 1 still feasible, 0 left provisional (cap 6)
+  [fnov] gen8: run-to-date feasible functional distance best 4, >=1: 2, >=2: 2; stall 1; audit sizings 135
+[outer] gen8 {'front0': 1, 'alive_in_front0': 1, 'best_gain': 99.529, 'max_novelty': 0.8032}  (sizings so far: 477 [+145 adaptive], 104.3 min)
+
+[outer] === generation 9: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.105  accepted nov u=0.166  (delta=+0.061; delta<<0 would mean the gate is trading novelty for wireability)
+  [struct] gen9 (struct_frac): 24 structural children from 26 parent(s) ops={'lc_path': 7, 'sc_branch': 1, 'cell_graft': 3, 'transfer_L': 9, 'rewire': 1, 'insert_series': 2, 'switch_path': 1}; scored 24, feasible 12, reduced distance {4: 14, 2: 4, 0: 1, 3: 2, 1: 3}
+  [fnov audit] gen9: 12 feasible circuit(s) with reduced distance >= 1 ablated (leave-one-out + greedy core, corners [0]), +127 sizings
+  child 1/46: stage=struct_reject eff%=None feas=False nov=0.0
+  child 2/46: stage=struct_reject eff%=None feas=False nov=0.0126
+  child 3/46: stage=struct_reject eff%=None feas=False nov=0.0
+  child 4/46: stage=struct_reject eff%=None feas=False nov=0.0
+  child 5/46: stage=struct_reject eff%=None feas=False nov=0.0
+  child 6/46: stage=      scored eff%=0.342 feas=False nov=0.0031
+  child 7/46: stage=      scored eff%=0.0 feas=False nov=0.4607
+  child 8/46: stage=      scored eff%=98.592 feas=False nov=0.2354
+  child 9/46: stage=struct_reject eff%=None feas=False nov=0.0
+  child 10/46: stage=struct_reject eff%=None feas=False nov=0.0
+  child 11/46: stage=      scored eff%=0.727 feas=False nov=0.2335
+  child 12/46: stage=struct_reject eff%=None feas=False nov=0.9
+  child 13/46: stage=      scored eff%=0.002 feas=False nov=0.45
+  child 14/46: stage=struct_reject eff%=None feas=False nov=0.0
+  child 15/46: stage=struct_reject eff%=None feas=False nov=0.0
+  child 16/46: stage=struct_reject eff%=None feas=False nov=0.0
+  child 17/46: stage=struct_reject eff%=None feas=False nov=0.0
+  child 18/46: stage=struct_reject eff%=None feas=False nov=0.0
+  child 19/46: stage=struct_reject eff%=None feas=False nov=0.9
+  child 20/46: stage=struct_reject eff%=None feas=False nov=0.0
+  child 21/46: stage=struct_reject eff%=None feas=False nov=0.0
+  child 22/46: stage=      scored eff%=97.419 feas=False nov=0.4558
+  child 23/46: stage=      scored eff%=99.702 feas=True nov=0.0
+  child 24/46: stage=      scored eff%=99.325 feas=True nov=0.0
+  child 25/46: stage=      scored eff%=0.904 feas=False nov=0.9116
+  child 26/46: stage=      scored eff%=34.401 feas=False nov=0.9125
+  child 27/46: stage=      scored eff%=47.563 feas=False nov=0.4601
+  child 28/46: stage=      scored eff%=55.023 feas=False nov=0.9142
+  child 29/46: stage=      scored eff%=41.216 feas=False nov=0.9133
+  child 30/46: stage=      scored eff%=0.641 feas=False nov=0.0209
+  child 31/46: stage=      scored eff%=47.332 feas=False nov=0.6824
+  child 32/46: stage=      scored eff%=98.851 feas=True nov=0.0
+  child 33/46: stage=      scored eff%=99.348 feas=True nov=0.0
+  child 34/46: stage=      scored eff%=99.462 feas=True nov=0.0
+  child 35/46: stage=      scored eff%=99.362 feas=True nov=0.0
+  child 36/46: stage=      scored eff%=88.354 feas=False nov=0.907
+  child 37/46: stage=      scored eff%=99.701 feas=True nov=0.0
+  child 38/46: stage=      scored eff%=2.783 feas=False nov=0.2357
+  child 39/46: stage=      scored eff%=99.252 feas=True nov=0.0069
+  child 40/46: stage=      scored eff%=41.967 feas=False nov=0.9151
+  child 41/46: stage=      scored eff%=99.544 feas=True nov=0.0
+  child 42/46: stage=      scored eff%=99.364 feas=True nov=0.0
+  child 43/46: stage=      scored eff%=0.42 feas=False nov=0.2357
+  child 44/46: stage=      scored eff%=99.047 feas=True nov=0.0
+  child 45/46: stage=      scored eff%=0.377 feas=False nov=0.2346
+  child 46/46: stage=      scored eff%=99.326 feas=True nov=0.3463
+  [v6 plan] gen9: STEER targets=[] budget=1 params={'t_frac': 0.45, 'birth_m': 4, 'memory_lambda': 18.0, 'struct_frac': 0.6} :: policy:rule: cosmetic novelty / stall / repeats: raise struct_frac
+
+  ===== V6 TRACE gen 9 =====
+  OBSERVED STATE: feasible 30/94 near-feasible 37 best 99.7 front-alive 1 hv 79.9 (d 0.0) uncertain 5 struct-fail 32 pressure 0.348 faulty-promising 2 dup 0.0 stall(best/front) 8/2 sims 634
+  RELEVANT HISTORY: g2 RESCUE -> 3 attempted, 0 kept, 0 became feasible; 4/4 survived selection, 0 on front0; g3 RESCUE -> 2 attempted, 0 kept, 0 became feasible; 4/4 survived selection, 0 on front0; g4 STEER -> next-gen child novelty 0.344 -> 0.314, duplicate rate 0.011 -> 0.0, generated faulty fraction 0.667 -> 0.721 (memory lambda 8.0), feasible fd>=2 0 -> 1, cosmetic children 0.231 -> 0.3; g5 RESCUE -> 3 attempted, 2 kept, 1 became feasible; 1/1 still feasible at k=2; 6/6 survived selection, 0 on front0; g6 RESCUE -> 4 attempted, 3 kept, 2 became feasible; 2/2 still feasible at k=2; 7/7 survived selection, 0 on front0; g7 STEER -> next-gen child novelty 0.445 -> 0.292, duplicate rate 0.021 -> 0.011, generated faulty fraction 0.747 -> 0.699 (memory lambda 8.0), feasible fd>=2 2 -> 2, cosmetic children 0.25 -> 0.44; g8 STEER -> next-gen child novelty 0.292 -> 0.247, duplicate rate 0.011 -> 0.0, generated faulty fraction 0.699 -> 0.795 (memory lambda 12.0), feasible fd>=2 2 -> 3, cosmetic children 0.44 -> 0.5; g9 STEER -> pending (measured next generation)
+  VIOLATION MEMORY: patterns {'edge': 10, 'pair': 8, 'motif': 3, 'miss': 0} last-gen faulty 0.795 tilt lambda 18.0
+  CONTROLLER DECISION: STEER (policy:rule: cosmetic novelty / stall / repeats: raise struct_frac)
+  TARGETS: []
+  EXISTING TOOL CALLED: make_offspring(t_star, birth_m) for the next generation; MemoryGuidance.lam  cost={'sizings': 0, 'llm_calls': 0, 'wall_s': 0.0}
+  RESULT: {'t_frac': 0.45, 'birth_m': 4, 'set_at_gen': 9, 'memory_lambda': 18.0, 'struct_frac': 0.6}
+  STATE CHANGE: none
+
+  [v8 conv memory] gen9: observed 180 (58 new), invalid 0.241, padded 0.431, cosmetic 0.103, redundant-device rate 0.388, novel success 2 / hurt 16, patterns {'edge': 11, 'pair': 12, 'motif': 3, 'miss': 0}, tilt lambda=12.0
+  [v7 front-entry] gen9: 1 provisional front entrant(s), 1 verified at k=2 (+1 sizings), 1 still feasible, 0 left provisional (cap 6)
+  [fnov] gen9: run-to-date feasible functional distance best 4, >=1: 4, >=2: 3; stall 0; audit sizings 262
+[outer] gen9 {'front0': 1, 'alive_in_front0': 1, 'best_gain': 99.529, 'max_novelty': 0.8032}  (sizings so far: 635 [+273 adaptive], 114.9 min)
+
+[outer] === generation 10: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.141  accepted nov u=0.257  (delta=+0.115; delta<<0 would mean the gate is trading novelty for wireability)
+  [struct] gen10 (struct_frac): 23 structural children from 29 parent(s) ops={'sc_branch': 7, 'transfer_L': 8, 'lc_path': 1, 'rewire': 3, 'insert_series': 2, 'cell_graft': 2}; scored 23, feasible 10, reduced distance {3: 2, 1: 1, 4: 14, 2: 2, 0: 4}
+  [fnov audit] gen10: 9 feasible circuit(s) with reduced distance >= 1 ablated (leave-one-out + greedy core, corners [0]), +104 sizings
+  child 1/42: stage=      scored eff%=0.0 feas=False nov=0.2342
+  child 2/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 3/42: stage=      scored eff%=99.007 feas=False nov=0.2406
+  child 4/42: stage=      scored eff%=98.322 feas=False nov=0.6814
+  child 5/42: stage=struct_reject eff%=None feas=False nov=0.9
+  child 6/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 7/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 8/42: stage=      scored eff%=16.817 feas=False nov=0.453
+  child 9/42: stage=      scored eff%=99.89 feas=False nov=0.2375
+  child 10/42: stage=      scored eff%=99.01 feas=False nov=0.0
+  child 11/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 12/42: stage=      scored eff%=16.827 feas=False nov=0.0175
+  child 13/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 14/42: stage=struct_reject eff%=None feas=False nov=0.9
+  child 15/42: stage=      scored eff%=98.319 feas=False nov=0.0376
+  child 16/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 17/42: stage=struct_reject eff%=None feas=False nov=0.0381
+  child 18/42: stage=      scored eff%=99.253 feas=False nov=0.4559
+  child 19/42: stage=      scored eff%=0.363 feas=False nov=0.6857
+  child 20/42: stage=      scored eff%=0.479 feas=False nov=0.6869
+  child 21/42: stage=      scored eff%=0.223 feas=False nov=0.2356
+  child 22/42: stage=      scored eff%=0.863 feas=False nov=0.909
+  child 23/42: stage=      scored eff%=99.32 feas=True nov=0.0
+  child 24/42: stage=      scored eff%=0.223 feas=False nov=0.9144
+  child 25/42: stage=      scored eff%=99.549 feas=True nov=0.0
+  child 26/42: stage=      scored eff%=99.504 feas=True nov=0.0
+  child 27/42: stage=      scored eff%=55.945 feas=False nov=0.4573
+  child 28/42: stage=      scored eff%=97.823 feas=False nov=0.0
+  child 29/42: stage=      scored eff%=99.325 feas=True nov=0.0
+  child 30/42: stage=      scored eff%=99.324 feas=True nov=0.0
+  child 31/42: stage=      scored eff%=99.316 feas=True nov=0.0
+  child 32/42: stage=      scored eff%=3.046 feas=False nov=0.6862
+  child 33/42: stage=      scored eff%=0.0 feas=False nov=0.9137
+  child 34/42: stage=      scored eff%=99.321 feas=True nov=0.0
+  child 35/42: stage=      scored eff%=0.294 feas=False nov=0.0
+  child 36/42: stage=      scored eff%=97.512 feas=True nov=0.0
+  child 37/42: stage=      scored eff%=99.535 feas=True nov=0.0
+  child 38/42: stage=      scored eff%=0.283 feas=False nov=0.9116
+  child 39/42: stage=      scored eff%=99.542 feas=True nov=0.0
+  child 40/42: stage=      scored eff%=57.226 feas=False nov=0.913
+  child 41/42: stage=      scored eff%=88.315 feas=False nov=0.9072
+  child 42/42: stage=      scored eff%=0.069 feas=False nov=0.0
+  [v6 plan] gen10: STEER targets=[] budget=1 params={'t_frac': 0.45, 'birth_m': 4, 'memory_lambda': 27.0, 'struct_frac': 0.6} :: policy:rule: best gain stalled >= 6 gens, duplicate_rate >= 0.07 or generated faulty_fraction >= 0.85
+
+  ===== V6 TRACE gen 10 =====
+  OBSERVED STATE: feasible 40/90 near-feasible 29 best 99.89 front-alive 1 hv 79.9 (d 0.0) uncertain 5 struct-fail 18 pressure 0.214 faulty-promising 2 dup 0.0 stall(best/front) 9/3 sims 772
+  RELEVANT HISTORY: g3 RESCUE -> 2 attempted, 0 kept, 0 became feasible; 4/4 survived selection, 0 on front0; g4 STEER -> next-gen child novelty 0.344 -> 0.314, duplicate rate 0.011 -> 0.0, generated faulty fraction 0.667 -> 0.721 (memory lambda 8.0), feasible fd>=2 0 -> 1, cosmetic children 0.231 -> 0.3; g5 RESCUE -> 3 attempted, 2 kept, 1 became feasible; 1/1 still feasible at k=2; 6/6 survived selection, 0 on front0; g6 RESCUE -> 4 attempted, 3 kept, 2 became feasible; 2/2 still feasible at k=2; 7/7 survived selection, 0 on front0; g7 STEER -> next-gen child novelty 0.445 -> 0.292, duplicate rate 0.021 -> 0.011, generated faulty fraction 0.747 -> 0.699 (memory lambda 8.0), feasible fd>=2 2 -> 2, cosmetic children 0.25 -> 0.44; g8 STEER -> next-gen child novelty 0.292 -> 0.247, duplicate rate 0.011 -> 0.0, generated faulty fraction 0.699 -> 0.795 (memory lambda 12.0), feasible fd>=2 2 -> 3, cosmetic children 0.44 -> 0.5; g9 STEER -> next-gen child novelty 0.247 -> 0.296, duplicate rate 0.0 -> 0.0, generated faulty fraction 0.795 -> 0.672 (memory lambda 18.0), feasible fd>=2 3 -> 3, cosmetic children 0.5 -> 0.556; g10 STEER -> pending (measured next generation)
+  VIOLATION MEMORY: patterns {'edge': 11, 'pair': 12, 'motif': 3, 'miss': 0} last-gen faulty 0.672 tilt lambda 27.0
+  CONTROLLER DECISION: STEER (policy:rule: best gain stalled >= 6 gens, duplicate_rate >= 0.07 or generated faulty_fraction >= 0.85)
+  TARGETS: []
+  EXISTING TOOL CALLED: make_offspring(t_star, birth_m) for the next generation; MemoryGuidance.lam  cost={'sizings': 0, 'llm_calls': 0, 'wall_s': 0.0}
+  RESULT: {'t_frac': 0.45, 'birth_m': 4, 'set_at_gen': 10, 'memory_lambda': 27.0, 'struct_frac': 0.6}
+  STATE CHANGE: none
+
+  [v8 conv memory] gen10: observed 160 (66 new), invalid 0.273, padded 0.47, cosmetic 0.152, redundant-device rate 0.449, novel success 0 / hurt 17, patterns {'edge': 11, 'pair': 12, 'motif': 3, 'miss': 0}, tilt lambda=18.0
+  [v7 front-entry] gen10: 1 provisional front entrant(s), 1 verified at k=2 (+1 sizings), 1 still feasible, 0 left provisional (cap 6)
+  [fnov] gen10: run-to-date feasible functional distance best 4, >=1: 4, >=2: 3; stall 1; audit sizings 366
+[outer] gen10 {'front0': 1, 'alive_in_front0': 1, 'best_gain': 99.529, 'max_novelty': 0.8032}  (sizings so far: 773 [+378 adaptive], 119.7 min)
+
+[outer] === generation 11: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.138  accepted nov u=0.205  (delta=+0.067; delta<<0 would mean the gate is trading novelty for wireability)
+  [struct] gen11 (struct_frac): 23 structural children from 29 parent(s) ops={'lc_path': 7, 'transfer_L': 4, 'sc_branch': 1, 'rewire': 7, 'cell_graft': 3, 'insert_series': 1}; scored 23, feasible 12, reduced distance {4: 15, 2: 4, 3: 1, 0: 1, 1: 2}
+  [fnov audit] gen11: 12 feasible circuit(s) with reduced distance >= 1 ablated (leave-one-out + greedy core, corners [0]), +131 sizings
+  child 1/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 2/42: stage=struct_reject eff%=None feas=False nov=0.0151
+  child 3/42: stage=        dead eff%=None feas=False nov=0.46
+  child 4/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 5/42: stage=      scored eff%=16.825 feas=False nov=0.6804
+  child 6/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 7/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 8/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 9/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 10/42: stage=      scored eff%=8.966 feas=False nov=0.0
+  child 11/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 12/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 13/42: stage=      scored eff%=0.0 feas=False nov=0.4583
+  child 14/42: stage=      scored eff%=98.327 feas=False nov=0.6807
+  child 15/42: stage=struct_reject eff%=None feas=False nov=0.2342
+  child 16/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 17/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 18/42: stage=struct_reject eff%=None feas=False nov=0.9
+  child 19/42: stage=      scored eff%=44.73 feas=False nov=0.459
+  child 20/42: stage=      scored eff%=99.32 feas=True nov=0.0
+  child 21/42: stage=      scored eff%=1.339 feas=False nov=0.9114
+  child 22/42: stage=      scored eff%=99.995 feas=True nov=0.4606
+  child 23/42: stage=      scored eff%=99.111 feas=True nov=0.0
+  child 24/42: stage=      scored eff%=99.537 feas=True nov=0.0
+  child 25/42: stage=      scored eff%=99.474 feas=True nov=0.0
+  child 26/42: stage=      scored eff%=99.52 feas=False nov=0.4601
+  child 27/42: stage=      scored eff%=57.287 feas=False nov=0.9122
+  child 28/42: stage=      scored eff%=0.162 feas=False nov=0.6864
+  child 29/42: stage=      scored eff%=0.0 feas=False nov=0.9153
+  child 30/42: stage=      scored eff%=0.0 feas=False nov=0.913
+  child 31/42: stage=      scored eff%=99.324 feas=True nov=0.0
+  child 32/42: stage=      scored eff%=99.726 feas=True nov=0.7947
+  child 33/42: stage=      scored eff%=93.317 feas=True nov=0.0
+  child 34/42: stage=      scored eff%=57.252 feas=False nov=0.0
+  child 35/42: stage=      scored eff%=98.805 feas=True nov=0.0
+  child 36/42: stage=      scored eff%=0.14 feas=False nov=0.2357
+  child 37/42: stage=      scored eff%=99.702 feas=True nov=0.0
+  child 38/42: stage=      scored eff%=99.702 feas=True nov=0.0
+  child 39/42: stage=      scored eff%=0.248 feas=False nov=0.9161
+  child 40/42: stage=      scored eff%=85.332 feas=False nov=0.9128
+  child 41/42: stage=      scored eff%=99.314 feas=True nov=0.0
+  child 42/42: stage=      scored eff%=0.863 feas=False nov=0.2318
+  [v6 plan] gen11: STEER targets=[] budget=1 params={'t_frac': 0.45, 'birth_m': 4, 'memory_lambda': 40.5, 'struct_frac': 0.6} :: policy:rule: best gain stalled >= 6 gens, duplicate_rate >= 0.07 or generated faulty_fraction >= 0.85
+
+  ===== V6 TRACE gen 11 =====
+  OBSERVED STATE: feasible 52/90 near-feasible 18 best 100.0 front-alive 1 hv 79.9 (d 0.0) uncertain 5 struct-fail 26 pressure 0.31 faulty-promising 1 dup 0.0 stall(best/front) 10/4 sims 933
+  RELEVANT HISTORY: g4 STEER -> next-gen child novelty 0.344 -> 0.314, duplicate rate 0.011 -> 0.0, generated faulty fraction 0.667 -> 0.721 (memory lambda 8.0), feasible fd>=2 0 -> 1, cosmetic children 0.231 -> 0.3; g5 RESCUE -> 3 attempted, 2 kept, 1 became feasible; 1/1 still feasible at k=2; 6/6 survived selection, 0 on front0; g6 RESCUE -> 4 attempted, 3 kept, 2 became feasible; 2/2 still feasible at k=2; 7/7 survived selection, 0 on front0; g7 STEER -> next-gen child novelty 0.445 -> 0.292, duplicate rate 0.021 -> 0.011, generated faulty fraction 0.747 -> 0.699 (memory lambda 8.0), feasible fd>=2 2 -> 2, cosmetic children 0.25 -> 0.44; g8 STEER -> next-gen child novelty 0.292 -> 0.247, duplicate rate 0.011 -> 0.0, generated faulty fraction 0.699 -> 0.795 (memory lambda 12.0), feasible fd>=2 2 -> 3, cosmetic children 0.44 -> 0.5; g9 STEER -> next-gen child novelty 0.247 -> 0.296, duplicate rate 0.0 -> 0.0, generated faulty fraction 0.795 -> 0.672 (memory lambda 18.0), feasible fd>=2 3 -> 3, cosmetic children 0.5 -> 0.556; g10 STEER -> next-gen child novelty 0.296 -> 0.291, duplicate rate 0.0 -> 0.0, generated faulty fraction 0.672 -> 0.742 (memory lambda 27.0), feasible fd>=2 3 -> 5, cosmetic children 0.556 -> 0.481; g11 STEER -> pending (measured next generation)
+  VIOLATION MEMORY: patterns {'edge': 11, 'pair': 12, 'motif': 3, 'miss': 0} last-gen faulty 0.742 tilt lambda 40.5
+  CONTROLLER DECISION: STEER (policy:rule: best gain stalled >= 6 gens, duplicate_rate >= 0.07 or generated faulty_fraction >= 0.85)
+  TARGETS: []
+  EXISTING TOOL CALLED: make_offspring(t_star, birth_m) for the next generation; MemoryGuidance.lam  cost={'sizings': 0, 'llm_calls': 0, 'wall_s': 0.0}
+  RESULT: {'t_frac': 0.45, 'birth_m': 4, 'set_at_gen': 11, 'memory_lambda': 40.5, 'struct_frac': 0.6}
+  STATE CHANGE: none
+
+  [v8 conv memory] gen11: observed 160 (56 new), invalid 0.393, padded 0.446, cosmetic 0.107, redundant-device rate 0.366, novel success 2 / hurt 14, patterns {'edge': 10, 'pair': 9, 'motif': 3, 'miss': 0}, tilt lambda=27.0
+  [v7 front-entry] gen11: 2 provisional front entrant(s), 2 verified at k=2 (+2 sizings), 2 still feasible, 0 left provisional (cap 6)
+  [fnov] gen11: run-to-date feasible functional distance best 4, >=1: 6, >=2: 5; stall 0; audit sizings 497
+[outer] gen11 {'front0': 1, 'alive_in_front0': 1, 'best_gain': 99.529, 'max_novelty': 0.8032}  (sizings so far: 935 [+511 adaptive], 138.6 min)
+
+[outer] === generation 12: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.112  accepted nov u=0.238  (delta=+0.125; delta<<0 would mean the gate is trading novelty for wireability)
+  [struct] gen12 (struct_frac): 21 structural children from 29 parent(s) ops={'sc_branch': 3, 'lc_path': 1, 'transfer_L': 5, 'cell_graft': 5, 'insert_series': 2, 'rewire': 3, 'switch_path': 2}; scored 21, feasible 9, reduced distance {1: 2, 4: 16, 2: 1, 3: 2}
+  [fnov audit] gen12: 9 feasible circuit(s) with reduced distance >= 1 ablated (leave-one-out + greedy core, corners [0]), +100 sizings
+  child 1/40: stage=struct_reject eff%=None feas=False nov=0.9
+  child 2/40: stage=struct_reject eff%=None feas=False nov=0.9
+  child 3/40: stage=      scored eff%=97.426 feas=False nov=0.0
+  child 4/40: stage=struct_reject eff%=None feas=False nov=0.0
+  child 5/40: stage=struct_reject eff%=None feas=False nov=0.9
+  child 6/40: stage=      scored eff%=0.0 feas=False nov=0.459
+  child 7/40: stage=struct_reject eff%=None feas=False nov=0.0
+  child 8/40: stage=      scored eff%=97.044 feas=False nov=0.0
+  child 9/40: stage=struct_reject eff%=None feas=False nov=0.0
+  child 10/40: stage=struct_reject eff%=None feas=False nov=0.0
+  child 11/40: stage=struct_reject eff%=None feas=False nov=0.0
+  child 12/40: stage=struct_reject eff%=None feas=False nov=0.0
+  child 13/40: stage=struct_reject eff%=None feas=False nov=0.0
+  child 14/40: stage=      scored eff%=0.035 feas=False nov=0.457
+  child 15/40: stage=struct_reject eff%=None feas=False nov=0.0
+  child 16/40: stage=struct_reject eff%=None feas=False nov=0.0
+  child 17/40: stage=struct_reject eff%=None feas=False nov=0.0
+  child 18/40: stage=struct_reject eff%=None feas=False nov=0.0
+  child 19/40: stage=struct_reject eff%=None feas=False nov=0.9
+  child 20/40: stage=      scored eff%=99.361 feas=True nov=0.2337
+  child 21/40: stage=      scored eff%=99.547 feas=False nov=0.9132
+  child 22/40: stage=      scored eff%=0.249 feas=False nov=0.9133
+  child 23/40: stage=      scored eff%=99.321 feas=True nov=0.0
+  child 24/40: stage=      scored eff%=99.257 feas=True nov=0.2319
+  child 25/40: stage=      scored eff%=0.069 feas=False nov=0.4555
+  child 26/40: stage=      scored eff%=0.0 feas=False nov=0.9151
+  child 27/40: stage=      scored eff%=99.538 feas=True nov=0.0
+  child 28/40: stage=      scored eff%=99.605 feas=True nov=0.9092
+  child 29/40: stage=      scored eff%=1.513 feas=False nov=0.9116
+  child 30/40: stage=      scored eff%=0.912 feas=False nov=0.9108
+  child 31/40: stage=      scored eff%=99.362 feas=True nov=0.0
+  child 32/40: stage=      scored eff%=98.988 feas=True nov=0.0
+  child 33/40: stage=      scored eff%=99.692 feas=True nov=0.0
+  child 34/40: stage=      scored eff%=0.125 feas=False nov=0.9118
+  child 35/40: stage=      scored eff%=1.237 feas=False nov=0.9143
+  child 36/40: stage=      scored eff%=99.32 feas=True nov=0.0
+  child 37/40: stage=      scored eff%=0.542 feas=False nov=0.9114
+  child 38/40: stage=      scored eff%=0.277 feas=False nov=0.9111
+  child 39/40: stage=      scored eff%=0.505 feas=False nov=0.9114
+  child 40/40: stage=      scored eff%=0.564 feas=False nov=0.6854
+  [v6 plan] gen12: STEER targets=[] budget=1 params={'t_frac': 0.45, 'birth_m': 4, 'memory_lambda': 60.75, 'struct_frac': 0.6} :: policy:rule: best gain stalled >= 6 gens, duplicate_rate >= 0.07 or generated faulty_fraction >= 0.85
+
+  ===== V6 TRACE gen 12 =====
+  OBSERVED STATE: feasible 57/88 near-feasible 11 best 99.7 front-alive 1 hv 79.9 (d 0.0) uncertain 6 struct-fail 30 pressure 0.375 faulty-promising 4 dup 0.0 stall(best/front) 11/5 sims 1060
+  RELEVANT HISTORY: g5 RESCUE -> 3 attempted, 2 kept, 1 became feasible; 1/1 still feasible at k=2; 6/6 survived selection, 0 on front0; g6 RESCUE -> 4 attempted, 3 kept, 2 became feasible; 2/2 still feasible at k=2; 7/7 survived selection, 0 on front0; g7 STEER -> next-gen child novelty 0.445 -> 0.292, duplicate rate 0.021 -> 0.011, generated faulty fraction 0.747 -> 0.699 (memory lambda 8.0), feasible fd>=2 2 -> 2, cosmetic children 0.25 -> 0.44; g8 STEER -> next-gen child novelty 0.292 -> 0.247, duplicate rate 0.011 -> 0.0, generated faulty fraction 0.699 -> 0.795 (memory lambda 12.0), feasible fd>=2 2 -> 3, cosmetic children 0.44 -> 0.5; g9 STEER -> next-gen child novelty 0.247 -> 0.296, duplicate rate 0.0 -> 0.0, generated faulty fraction 0.795 -> 0.672 (memory lambda 18.0), feasible fd>=2 3 -> 3, cosmetic children 0.5 -> 0.556; g10 STEER -> next-gen child novelty 0.296 -> 0.291, duplicate rate 0.0 -> 0.0, generated faulty fraction 0.672 -> 0.742 (memory lambda 27.0), feasible fd>=2 3 -> 5, cosmetic children 0.556 -> 0.481; g11 STEER -> next-gen child novelty 0.291 -> 0.404, duplicate rate 0.0 -> 0.0, generated faulty fraction 0.742 -> 0.839 (memory lambda 40.5), feasible fd>=2 5 -> 6, cosmetic children 0.481 -> 0.333; g12 STEER -> pending (measured next generation)
+  VIOLATION MEMORY: patterns {'edge': 10, 'pair': 9, 'motif': 3, 'miss': 0} last-gen faulty 0.839 tilt lambda 60.75
+  CONTROLLER DECISION: STEER (policy:rule: best gain stalled >= 6 gens, duplicate_rate >= 0.07 or generated faulty_fraction >= 0.85)
+  TARGETS: []
+  EXISTING TOOL CALLED: make_offspring(t_star, birth_m) for the next generation; MemoryGuidance.lam  cost={'sizings': 0, 'llm_calls': 0, 'wall_s': 0.0}
+  RESULT: {'t_frac': 0.45, 'birth_m': 4, 'set_at_gen': 12, 'memory_lambda': 60.75, 'struct_frac': 0.6}
+  STATE CHANGE: none
+
+  [v8 conv memory] gen12: observed 156 (47 new), invalid 0.383, padded 0.298, cosmetic 0.043, redundant-device rate 0.351, novel success 3 / hurt 14, patterns {'edge': 10, 'pair': 9, 'motif': 3, 'miss': 0}, tilt lambda=40.5
+  [v7 front-entry] gen12: 3 provisional front entrant(s), 3 verified at k=2 (+3 sizings), 3 still feasible, 0 left provisional (cap 6)
+  [fnov] gen12: run-to-date feasible functional distance best 4, >=1: 9, >=2: 6; stall 0; audit sizings 597
+  [discovered] +1 new front circuit(s); set now 5
+[outer] gen12 {'front0': 2, 'alive_in_front0': 2, 'best_gain': 99.529, 'max_novelty': 0.9092}  (sizings so far: 1063 [+614 adaptive], 150.0 min)
+
+[outer] === generation 13: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.097  accepted nov u=0.168  (delta=+0.071; delta<<0 would mean the gate is trading novelty for wireability)
+  [struct] gen13 (struct_frac): 21 structural children from 29 parent(s) ops={'lc_path': 3, 'transfer_L': 6, 'sc_branch': 2, 'insert_series': 4, 'rewire': 5, 'switch_path': 1}; scored 21, feasible 13, reduced distance {4: 16, 2: 2, 3: 2, 0: 1}
+  [fnov audit] gen13: 11 feasible circuit(s) with reduced distance >= 1 ablated (leave-one-out + greedy core, corners [0]), +121 sizings
+  child 1/40: stage=struct_reject eff%=None feas=False nov=0.0
+  child 2/40: stage=struct_reject eff%=None feas=False nov=0.0
+  child 3/40: stage=struct_reject eff%=None feas=False nov=0.0
+  child 4/40: stage=struct_reject eff%=None feas=False nov=0.0
+  child 5/40: stage=struct_reject eff%=None feas=False nov=0.0
+  child 6/40: stage=struct_reject eff%=None feas=False nov=0.0
+  child 7/40: stage=struct_reject eff%=None feas=False nov=0.0
+  child 8/40: stage=struct_reject eff%=None feas=False nov=0.0
+  child 9/40: stage=struct_reject eff%=None feas=False nov=0.0
+  child 10/40: stage=      scored eff%=29.059 feas=False nov=0.4571
+  child 11/40: stage=struct_reject eff%=None feas=False nov=0.0
+  child 12/40: stage=      scored eff%=2.698 feas=False nov=0.0
+  child 13/40: stage=struct_reject eff%=None feas=False nov=0.9
+  child 14/40: stage=      scored eff%=0.0 feas=False nov=0.4554
+  child 15/40: stage=struct_reject eff%=None feas=False nov=0.0175
+  child 16/40: stage=struct_reject eff%=None feas=False nov=0.0
+  child 17/40: stage=        dead eff%=None feas=False nov=0.4633
+  child 18/40: stage=struct_reject eff%=None feas=False nov=0.9
+  child 19/40: stage=      scored eff%=96.95 feas=False nov=0.0
+  child 20/40: stage=      scored eff%=99.348 feas=True nov=0.0
+  child 21/40: stage=      scored eff%=99.37 feas=True nov=0.4571
+  child 22/40: stage=      scored eff%=93.135 feas=True nov=0.121
+  child 23/40: stage=      scored eff%=99.534 feas=True nov=0.0
+  child 24/40: stage=      scored eff%=58.658 feas=False nov=0.9082
+  child 25/40: stage=      scored eff%=95.486 feas=True nov=0.7965
+  child 26/40: stage=      scored eff%=99.986 feas=True nov=0.2356
+  child 27/40: stage=      scored eff%=0.863 feas=False nov=0.9099
+  child 28/40: stage=      scored eff%=99.246 feas=True nov=0.0
+  child 29/40: stage=      scored eff%=98.851 feas=True nov=0.0
+  child 30/40: stage=      scored eff%=0.758 feas=False nov=0.6868
+  child 31/40: stage=      scored eff%=99.939 feas=True nov=0.0
+  child 32/40: stage=      scored eff%=0.806 feas=False nov=0.9137
+  child 33/40: stage=      scored eff%=0.226 feas=False nov=0.9136
+  child 34/40: stage=      scored eff%=41.844 feas=False nov=0.9095
+  child 35/40: stage=      scored eff%=41.888 feas=False nov=0.9097
+  child 36/40: stage=      scored eff%=88.54 feas=False nov=0.4587
+  child 37/40: stage=      scored eff%=99.32 feas=True nov=0.0
+  child 38/40: stage=      scored eff%=99.298 feas=True nov=0.0
+  child 39/40: stage=      scored eff%=99.941 feas=True nov=0.0
+  child 40/40: stage=      scored eff%=98.856 feas=True nov=0.0
+  [v6 plan] gen13: RACING targets=[] budget=2 params={'k': 4} :: policy:rule: seed_uncertain_count >= 7
+  [race] k->4: 7 contested of 88 (7 in band), +14 sizings, median spread 0.5 eff%, 0 over 3
+
+  ===== V6 TRACE gen 13 =====
+  OBSERVED STATE: feasible 61/88 near-feasible 6 best 99.99 front-alive 2 hv 90.5 (d 10.6) uncertain 7 struct-fail 26 pressure 0.3 faulty-promising 2 dup 0.011 stall(best/front) 12/0 sims 1209
+  RELEVANT HISTORY: g6 RESCUE -> 4 attempted, 3 kept, 2 became feasible; 2/2 still feasible at k=2; 7/7 survived selection, 0 on front0; g7 STEER -> next-gen child novelty 0.445 -> 0.292, duplicate rate 0.021 -> 0.011, generated faulty fraction 0.747 -> 0.699 (memory lambda 8.0), feasible fd>=2 2 -> 2, cosmetic children 0.25 -> 0.44; g8 STEER -> next-gen child novelty 0.292 -> 0.247, duplicate rate 0.011 -> 0.0, generated faulty fraction 0.699 -> 0.795 (memory lambda 12.0), feasible fd>=2 2 -> 3, cosmetic children 0.44 -> 0.5; g9 STEER -> next-gen child novelty 0.247 -> 0.296, duplicate rate 0.0 -> 0.0, generated faulty fraction 0.795 -> 0.672 (memory lambda 18.0), feasible fd>=2 3 -> 3, cosmetic children 0.5 -> 0.556; g10 STEER -> next-gen child novelty 0.296 -> 0.291, duplicate rate 0.0 -> 0.0, generated faulty fraction 0.672 -> 0.742 (memory lambda 27.0), feasible fd>=2 3 -> 5, cosmetic children 0.556 -> 0.481; g11 STEER -> next-gen child novelty 0.291 -> 0.404, duplicate rate 0.0 -> 0.0, generated faulty fraction 0.742 -> 0.839 (memory lambda 40.5), feasible fd>=2 5 -> 6, cosmetic children 0.481 -> 0.333; g12 STEER -> next-gen child novelty 0.404 -> 0.285, duplicate rate 0.0 -> 0.011, generated faulty fraction 0.839 -> 0.681 (memory lambda 60.75), feasible fd>=2 6 -> 10, cosmetic children 0.333 -> 0.391; g13 RACING -> +14 sizings; front0 confirmed 2, entered 0, left 0
+  VIOLATION MEMORY: patterns {'edge': 10, 'pair': 9, 'motif': 3, 'miss': 0} last-gen faulty 0.681 tilt lambda 60.75
+  CONTROLLER DECISION: RACING (policy:rule: seed_uncertain_count >= 7)
+  TARGETS: []
+  EXISTING TOOL CALLED: run_outer_nsga_cv3.race_front  cost={'sizings': 14, 'llm_calls': 0, 'wall_s': 47.0}
+  RESULT: {'extra_sizings': 14, 'front0_entered': 0, 'front0_left': 0, 'front0_confirmed': 2}
+  STATE CHANGE: {'hypervolume': {'before': 90.5, 'after': 90.6}, 'seed_uncertain_count': {'before': 7, 'after': 0}}
+
+  [v8 conv memory] gen13: observed 155 (44 new), invalid 0.205, padded 0.523, cosmetic 0.091, redundant-device rate 0.351, novel success 2 / hurt 12, patterns {'edge': 10, 'pair': 9, 'motif': 3, 'miss': 0}, tilt lambda=60.75
+  [v7 front-entry] gen13: 1 provisional front entrant(s), 1 verified at k=2 (+1 sizings), 1 still feasible, 0 left provisional (cap 6)
+  [fnov] gen13: run-to-date feasible functional distance best 4, >=1: 13, >=2: 10; stall 0; audit sizings 718
+[outer] gen13 {'front0': 2, 'alive_in_front0': 2, 'best_gain': 99.636, 'max_novelty': 0.9092}  (sizings so far: 1224 [+750 adaptive], 161.8 min)
+
+[outer] === generation 14: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.038  accepted nov u=0.075  (delta=+0.037; delta<<0 would mean the gate is trading novelty for wireability)
+  [struct] gen14 (struct_frac): 23 structural children from 29 parent(s) ops={'transfer_L': 10, 'lc_path': 3, 'rewire': 7, 'insert_series': 1, 'switch_path': 1, 'cell_graft': 1}; scored 23, feasible 9, reduced distance {1: 1, 4: 19, 0: 1, 3: 1, 2: 1}
+  [fnov audit] gen14: 7 feasible circuit(s) with reduced distance >= 1 ablated (leave-one-out + greedy core, corners [0]), +74 sizings
+  child 1/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 2/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 3/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 4/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 5/42: stage=      scored eff%=97.044 feas=False nov=0.0161
+  child 6/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 7/42: stage=      scored eff%=0.002 feas=False nov=0.2353
+  child 8/42: stage=      scored eff%=0.0 feas=False nov=0.0
+  child 9/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 10/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 11/42: stage=struct_reject eff%=None feas=False nov=0.0151
+  child 12/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 13/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 14/42: stage=      scored eff%=0.382 feas=False nov=0.238
+  child 15/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 16/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 17/42: stage=struct_reject eff%=None feas=False nov=0.02
+  child 18/42: stage=struct_reject eff%=None feas=False nov=0.9
+  child 19/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 20/42: stage=      scored eff%=99.469 feas=True nov=0.2348
+  child 21/42: stage=      scored eff%=94.072 feas=True nov=0.0
+  child 22/42: stage=      scored eff%=99.544 feas=True nov=0.0
+  child 23/42: stage=      scored eff%=99.347 feas=True nov=0.0
+  child 24/42: stage=      scored eff%=0.387 feas=False nov=0.0
+  child 25/42: stage=      scored eff%=0.42 feas=False nov=0.6843
+  child 26/42: stage=      scored eff%=0.42 feas=False nov=0.9115
+  child 27/42: stage=      scored eff%=100.046 feas=False nov=0.9164
+  child 28/42: stage=      scored eff%=99.324 feas=True nov=0.0
+  child 29/42: stage=      scored eff%=0.904 feas=False nov=0.9107
+  child 30/42: stage=      scored eff%=0.423 feas=False nov=0.9134
+  child 31/42: stage=      scored eff%=1.122 feas=False nov=0.9151
+  child 32/42: stage=      scored eff%=1.123 feas=False nov=0.9121
+  child 33/42: stage=      scored eff%=0.7 feas=False nov=0.9111
+  child 34/42: stage=      scored eff%=88.514 feas=False nov=0.909
+  child 35/42: stage=      scored eff%=0.47 feas=False nov=0.9164
+  child 36/42: stage=      scored eff%=99.32 feas=True nov=0.0
+  child 37/42: stage=      scored eff%=0.784 feas=False nov=0.9131
+  child 38/42: stage=      scored eff%=79.446 feas=False nov=0.9122
+  child 39/42: stage=      scored eff%=0.287 feas=False nov=0.9129
+  child 40/42: stage=      scored eff%=99.57 feas=True nov=0.6907
+  child 41/42: stage=      scored eff%=99.583 feas=True nov=0.5717
+  child 42/42: stage=      scored eff%=95.399 feas=True nov=0.7996
+  [v6 plan] gen14: STEER targets=[] budget=1 params={'t_frac': 0.45, 'birth_m': 4, 'memory_lambda': 64.0, 'struct_frac': 0.6} :: policy:rule: best gain stalled >= 6 gens, duplicate_rate >= 0.07 or generated faulty_fraction >= 0.85
+
+  ===== V6 TRACE gen 14 =====
+  OBSERVED STATE: feasible 57/90 near-feasible 11 best 100.05 front-alive 2 hv 90.6 (d -0.0) uncertain 0 struct-fail 30 pressure 0.357 faulty-promising 1 dup 0.0 stall(best/front) 13/1 sims 1323
+  RELEVANT HISTORY: g7 STEER -> next-gen child novelty 0.445 -> 0.292, duplicate rate 0.021 -> 0.011, generated faulty fraction 0.747 -> 0.699 (memory lambda 8.0), feasible fd>=2 2 -> 2, cosmetic children 0.25 -> 0.44; g8 STEER -> next-gen child novelty 0.292 -> 0.247, duplicate rate 0.011 -> 0.0, generated faulty fraction 0.699 -> 0.795 (memory lambda 12.0), feasible fd>=2 2 -> 3, cosmetic children 0.44 -> 0.5; g9 STEER -> next-gen child novelty 0.247 -> 0.296, duplicate rate 0.0 -> 0.0, generated faulty fraction 0.795 -> 0.672 (memory lambda 18.0), feasible fd>=2 3 -> 3, cosmetic children 0.5 -> 0.556; g10 STEER -> next-gen child novelty 0.296 -> 0.291, duplicate rate 0.0 -> 0.0, generated faulty fraction 0.672 -> 0.742 (memory lambda 27.0), feasible fd>=2 3 -> 5, cosmetic children 0.556 -> 0.481; g11 STEER -> next-gen child novelty 0.291 -> 0.404, duplicate rate 0.0 -> 0.0, generated faulty fraction 0.742 -> 0.839 (memory lambda 40.5), feasible fd>=2 5 -> 6, cosmetic children 0.481 -> 0.333; g12 STEER -> next-gen child novelty 0.404 -> 0.285, duplicate rate 0.0 -> 0.011, generated faulty fraction 0.839 -> 0.681 (memory lambda 60.75), feasible fd>=2 6 -> 10, cosmetic children 0.333 -> 0.391; g13 RACING -> +14 sizings; front0 confirmed 2, entered 0, left 0; g14 STEER -> pending (measured next generation)
+  VIOLATION MEMORY: patterns {'edge': 10, 'pair': 9, 'motif': 3, 'miss': 0} last-gen faulty 0.727 tilt lambda 64.0
+  CONTROLLER DECISION: STEER (policy:rule: best gain stalled >= 6 gens, duplicate_rate >= 0.07 or generated faulty_fraction >= 0.85)
+  TARGETS: []
+  EXISTING TOOL CALLED: make_offspring(t_star, birth_m) for the next generation; MemoryGuidance.lam  cost={'sizings': 0, 'llm_calls': 0, 'wall_s': 0.0}
+  RESULT: {'t_frac': 0.45, 'birth_m': 4, 'set_at_gen': 14, 'memory_lambda': 64.0, 'struct_frac': 0.6}
+  STATE CHANGE: none
+
+  [v8 conv memory] gen14: observed 160 (40 new), invalid 0.25, padded 0.55, cosmetic 0.1, redundant-device rate 0.283, novel success 3 / hurt 16, patterns {'edge': 10, 'pair': 12, 'motif': 3, 'miss': 0}, tilt lambda=60.75
+  [v7 front-entry] gen14: 3 provisional front entrant(s), 3 verified at k=2 (+3 sizings), 3 still feasible, 0 left provisional (cap 6)
+  [fnov] gen14: run-to-date feasible functional distance best 4, >=1: 17, >=2: 13; stall 0; audit sizings 792
+[outer] gen14 {'front0': 2, 'alive_in_front0': 2, 'best_gain': 99.636, 'max_novelty': 0.9092}  (sizings so far: 1326 [+827 adaptive], 167.2 min)
+
+[outer] === generation 15: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.105  accepted nov u=0.292  (delta=+0.187; delta<<0 would mean the gate is trading novelty for wireability)
+  [struct] gen15 (struct_frac): 23 structural children from 29 parent(s) ops={'transfer_L': 9, 'sc_branch': 2, 'lc_path': 2, 'insert_series': 2, 'rewire': 6, 'cell_graft': 1, 'switch_path': 1}; scored 23, feasible 11, reduced distance {4: 15, 2: 5, 3: 3}
+  [fnov audit] gen15: 10 feasible circuit(s) with reduced distance >= 1 ablated (leave-one-out + greedy core, corners [0]), +111 sizings
+  child 1/42: stage=        dead eff%=None feas=False nov=0.2332
+  child 2/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 3/42: stage=struct_reject eff%=None feas=False nov=0.0175
+  child 4/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 5/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 6/42: stage=struct_reject eff%=None feas=False nov=0.9
+  child 7/42: stage=      scored eff%=0.0 feas=False nov=0.2327
+  child 8/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 9/42: stage=struct_reject eff%=None feas=False nov=0.9
+  child 10/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 11/42: stage=struct_reject eff%=None feas=False nov=0.2631
+  child 12/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 13/42: stage=        dead eff%=None feas=False nov=0.6849
+  child 14/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 15/42: stage=struct_reject eff%=None feas=False nov=0.0175
+  child 16/42: stage=      scored eff%=98.322 feas=False nov=0.0376
+  child 17/42: stage=struct_reject eff%=None feas=False nov=0.9
+  child 18/42: stage=struct_reject eff%=None feas=False nov=0.9
+  child 19/42: stage=      scored eff%=98.322 feas=False nov=0.4564
+  child 20/42: stage=      scored eff%=99.592 feas=False nov=0.9083
+  child 21/42: stage=      scored eff%=99.694 feas=True nov=0.0
+  child 22/42: stage=      scored eff%=96.096 feas=True nov=0.0059
+  child 23/42: stage=      scored eff%=99.31 feas=True nov=0.3432
+  child 24/42: stage=      scored eff%=52.728 feas=False nov=0.4557
+  child 25/42: stage=      scored eff%=99.702 feas=True nov=0.0
+  child 26/42: stage=      scored eff%=99.32 feas=True nov=0.0
+  child 27/42: stage=      scored eff%=0.715 feas=False nov=0.6854
+  child 28/42: stage=      scored eff%=93.209 feas=True nov=0.0
+  child 29/42: stage=      scored eff%=99.325 feas=True nov=0.0
+  child 30/42: stage=      scored eff%=99.544 feas=True nov=0.0
+  child 31/42: stage=      scored eff%=0.433 feas=False nov=0.683
+  child 32/42: stage=      scored eff%=62.347 feas=False nov=0.9099
+  child 33/42: stage=      scored eff%=99.94 feas=False nov=0.9112
+  child 34/42: stage=      scored eff%=1.837 feas=False nov=0.91
+  child 35/42: stage=      scored eff%=0.0 feas=False nov=0.913
+  child 36/42: stage=      scored eff%=99.258 feas=True nov=0.0
+  child 37/42: stage=      scored eff%=99.505 feas=True nov=0.3507
+  child 38/42: stage=      scored eff%=99.468 feas=True nov=0.0069
+  child 39/42: stage=      scored eff%=76.282 feas=False nov=0.9111
+  child 40/42: stage=      scored eff%=0.609 feas=False nov=0.4622
+  child 41/42: stage=      scored eff%=1.092 feas=False nov=0.9123
+  child 42/42: stage=      scored eff%=0.513 feas=False nov=0.9175
+  [v6 plan] gen15: STEER targets=[] budget=1 params={'t_frac': 0.45, 'birth_m': 4, 'memory_lambda': 64.0, 'struct_frac': 0.6} :: policy:rule: best gain stalled >= 6 gens, duplicate_rate >= 0.07 or generated faulty_fraction >= 0.85
+
+  ===== V6 TRACE gen 15 =====
+  OBSERVED STATE: feasible 59/90 near-feasible 10 best 99.94 front-alive 2 hv 90.6 (d -0.0) uncertain 3 struct-fail 28 pressure 0.333 faulty-promising 4 dup 0.011 stall(best/front) 14/2 sims 1464
+  RELEVANT HISTORY: g8 STEER -> next-gen child novelty 0.292 -> 0.247, duplicate rate 0.011 -> 0.0, generated faulty fraction 0.699 -> 0.795 (memory lambda 12.0), feasible fd>=2 2 -> 3, cosmetic children 0.44 -> 0.5; g9 STEER -> next-gen child novelty 0.247 -> 0.296, duplicate rate 0.0 -> 0.0, generated faulty fraction 0.795 -> 0.672 (memory lambda 18.0), feasible fd>=2 3 -> 3, cosmetic children 0.5 -> 0.556; g10 STEER -> next-gen child novelty 0.296 -> 0.291, duplicate rate 0.0 -> 0.0, generated faulty fraction 0.672 -> 0.742 (memory lambda 27.0), feasible fd>=2 3 -> 5, cosmetic children 0.556 -> 0.481; g11 STEER -> next-gen child novelty 0.291 -> 0.404, duplicate rate 0.0 -> 0.0, generated faulty fraction 0.742 -> 0.839 (memory lambda 40.5), feasible fd>=2 5 -> 6, cosmetic children 0.481 -> 0.333; g12 STEER -> next-gen child novelty 0.404 -> 0.285, duplicate rate 0.0 -> 0.011, generated faulty fraction 0.839 -> 0.681 (memory lambda 60.75), feasible fd>=2 6 -> 10, cosmetic children 0.333 -> 0.391; g13 RACING -> +14 sizings; front0 confirmed 2, entered 0, left 0; g14 STEER -> next-gen child novelty 0.366 -> 0.377, duplicate rate 0.0 -> 0.011, generated faulty fraction 0.727 -> 0.8 (memory lambda 64.0), feasible fd>=2 13 -> 15, cosmetic children 0.333 -> 0.407; g15 STEER -> pending (measured next generation)
+  VIOLATION MEMORY: patterns {'edge': 10, 'pair': 12, 'motif': 3, 'miss': 0} last-gen faulty 0.8 tilt lambda 64.0
+  CONTROLLER DECISION: STEER (policy:rule: best gain stalled >= 6 gens, duplicate_rate >= 0.07 or generated faulty_fraction >= 0.85)
+  TARGETS: []
+  EXISTING TOOL CALLED: make_offspring(t_star, birth_m) for the next generation; MemoryGuidance.lam  cost={'sizings': 0, 'llm_calls': 0, 'wall_s': 0.0}
+  RESULT: {'t_frac': 0.45, 'birth_m': 4, 'set_at_gen': 15, 'memory_lambda': 64.0, 'struct_frac': 0.6}
+  STATE CHANGE: none
+
+  [v8 conv memory] gen15: observed 159 (52 new), invalid 0.346, padded 0.462, cosmetic 0.135, redundant-device rate 0.341, novel success 3 / hurt 15, patterns {'edge': 10, 'pair': 14, 'motif': 3, 'miss': 0}, tilt lambda=64.0
+  [v7 front-entry] gen15: 2 provisional front entrant(s), 2 verified at k=2 (+2 sizings), 2 still feasible, 0 left provisional (cap 6)
+  [fnov] gen15: run-to-date feasible functional distance best 4, >=1: 21, >=2: 15; stall 0; audit sizings 903
+[outer] gen15 {'front0': 2, 'alive_in_front0': 2, 'best_gain': 99.636, 'max_novelty': 0.9092}  (sizings so far: 1466 [+940 adaptive], 181.4 min)
+
+[outer] === generation 16: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.118  accepted nov u=0.228  (delta=+0.111; delta<<0 would mean the gate is trading novelty for wireability)
+  [struct] gen16 (struct_frac): 22 structural children from 29 parent(s) ops={'lc_path': 2, 'sc_branch': 2, 'rewire': 8, 'transfer_L': 7, 'cell_graft': 1, 'insert_series': 1, 'switch_path': 1}; scored 22, feasible 11, reduced distance {4: 17, 3: 3, 1: 1, 0: 1}
+  [fnov audit] gen16: 9 feasible circuit(s) with reduced distance >= 1 ablated (leave-one-out + greedy core, corners [0]), +100 sizings
+  child 1/41: stage=struct_reject eff%=None feas=False nov=0.0
+  child 2/41: stage=struct_reject eff%=None feas=False nov=0.0
+  child 3/41: stage=struct_reject eff%=None feas=False nov=0.9
+  child 4/41: stage=      scored eff%=0.288 feas=False nov=0.2324
+  child 5/41: stage=struct_reject eff%=None feas=False nov=0.0
+  child 6/41: stage=struct_reject eff%=None feas=False nov=0.0151
+  child 7/41: stage=struct_reject eff%=None feas=False nov=0.0
+  child 8/41: stage=struct_reject eff%=None feas=False nov=0.0
+  child 9/41: stage=struct_reject eff%=None feas=False nov=0.0
+  child 10/41: stage=      scored eff%=0.53 feas=False nov=0.2401
+  child 11/41: stage=struct_reject eff%=None feas=False nov=0.0151
+  child 12/41: stage=struct_reject eff%=None feas=False nov=0.0
+  child 13/41: stage=struct_reject eff%=None feas=False nov=0.9
+  child 14/41: stage=struct_reject eff%=None feas=False nov=0.0
+  child 15/41: stage=struct_reject eff%=None feas=False nov=0.0
+  child 16/41: stage=      scored eff%=96.933 feas=False nov=0.0
+  child 17/41: stage=        dead eff%=None feas=False nov=0.6809
+  child 18/41: stage=      scored eff%=35.007 feas=False nov=0.4574
+  child 19/41: stage=struct_reject eff%=None feas=False nov=0.9
+  child 20/41: stage=      scored eff%=99.439 feas=True nov=0.0
+  child 21/41: stage=      scored eff%=99.544 feas=True nov=0.0
+  child 22/41: stage=      scored eff%=0.508 feas=False nov=0.9123
+  child 23/41: stage=      scored eff%=99.58 feas=True nov=0.3467
+  child 24/41: stage=      scored eff%=99.312 feas=True nov=0.0
+  child 25/41: stage=      scored eff%=0.594 feas=False nov=0.6877
+  child 26/41: stage=      scored eff%=0.125 feas=False nov=0.9135
+  child 27/41: stage=      scored eff%=0.633 feas=False nov=0.9113
+  child 28/41: stage=      scored eff%=0.226 feas=False nov=0.2363
+  child 29/41: stage=      scored eff%=32.861 feas=False nov=0.9111
+  child 30/41: stage=      scored eff%=99.971 feas=False nov=0.6895
+  child 31/41: stage=      scored eff%=0.505 feas=False nov=0.9123
+  child 32/41: stage=      scored eff%=99.775 feas=False nov=0.9132
+  child 33/41: stage=      scored eff%=95.399 feas=True nov=0.7996
+  child 34/41: stage=      scored eff%=99.979 feas=True nov=0.6833
+  child 35/41: stage=      scored eff%=66.65 feas=False nov=0.0
+  child 36/41: stage=      scored eff%=99.702 feas=True nov=0.0
+  child 37/41: stage=      scored eff%=99.997 feas=True nov=0.5745
+  child 38/41: stage=      scored eff%=93.708 feas=True nov=0.684
+  child 39/41: stage=      scored eff%=99.535 feas=True nov=0.0
+  child 40/41: stage=      scored eff%=0.331 feas=False nov=0.9141
+  child 41/41: stage=      scored eff%=99.319 feas=True nov=0.0
+  [v6 plan] gen16: STEER targets=[] budget=1 params={'t_frac': 0.45, 'birth_m': 4, 'memory_lambda': 64.0, 'struct_frac': 0.6} :: policy:rule: best gain stalled >= 6 gens, duplicate_rate >= 0.07 or generated faulty_fraction >= 0.85
+
+  ===== V6 TRACE gen 16 =====
+  OBSERVED STATE: feasible 59/89 near-feasible 10 best 100.0 front-alive 2 hv 90.6 (d -0.0) uncertain 3 struct-fail 28 pressure 0.341 faulty-promising 3 dup 0.011 stall(best/front) 15/3 sims 1591
+  RELEVANT HISTORY: g9 STEER -> next-gen child novelty 0.247 -> 0.296, duplicate rate 0.0 -> 0.0, generated faulty fraction 0.795 -> 0.672 (memory lambda 18.0), feasible fd>=2 3 -> 3, cosmetic children 0.5 -> 0.556; g10 STEER -> next-gen child novelty 0.296 -> 0.291, duplicate rate 0.0 -> 0.0, generated faulty fraction 0.672 -> 0.742 (memory lambda 27.0), feasible fd>=2 3 -> 5, cosmetic children 0.556 -> 0.481; g11 STEER -> next-gen child novelty 0.291 -> 0.404, duplicate rate 0.0 -> 0.0, generated faulty fraction 0.742 -> 0.839 (memory lambda 40.5), feasible fd>=2 5 -> 6, cosmetic children 0.481 -> 0.333; g12 STEER -> next-gen child novelty 0.404 -> 0.285, duplicate rate 0.0 -> 0.011, generated faulty fraction 0.839 -> 0.681 (memory lambda 60.75), feasible fd>=2 6 -> 10, cosmetic children 0.333 -> 0.391; g13 RACING -> +14 sizings; front0 confirmed 2, entered 0, left 0; g14 STEER -> next-gen child novelty 0.366 -> 0.377, duplicate rate 0.0 -> 0.011, generated faulty fraction 0.727 -> 0.8 (memory lambda 64.0), feasible fd>=2 13 -> 15, cosmetic children 0.333 -> 0.407; g15 STEER -> next-gen child novelty 0.377 -> 0.376, duplicate rate 0.011 -> 0.011, generated faulty fraction 0.8 -> 0.808 (memory lambda 64.0), feasible fd>=2 15 -> 20, cosmetic children 0.407 -> 0.273; g16 STEER -> pending (measured next generation)
+  VIOLATION MEMORY: patterns {'edge': 10, 'pair': 14, 'motif': 3, 'miss': 0} last-gen faulty 0.808 tilt lambda 64.0
+  CONTROLLER DECISION: STEER (policy:rule: best gain stalled >= 6 gens, duplicate_rate >= 0.07 or generated faulty_fraction >= 0.85)
+  TARGETS: []
+  EXISTING TOOL CALLED: make_offspring(t_star, birth_m) for the next generation; MemoryGuidance.lam  cost={'sizings': 0, 'llm_calls': 0, 'wall_s': 0.0}
+  RESULT: {'t_frac': 0.45, 'birth_m': 4, 'set_at_gen': 16, 'memory_lambda': 64.0, 'struct_frac': 0.6}
+  STATE CHANGE: none
+
+  [v8 conv memory] gen16: observed 157 (50 new), invalid 0.28, padded 0.32, cosmetic 0.04, redundant-device rate 0.42, novel success 3 / hurt 14, patterns {'edge': 10, 'pair': 12, 'motif': 3, 'miss': 0}, tilt lambda=64.0
+  [v7 front-entry] gen16: 2 provisional front entrant(s), 2 verified at k=2 (+2 sizings), 2 still feasible, 0 left provisional (cap 6)
+  [fnov] gen16: run-to-date feasible functional distance best 4, >=1: 25, >=2: 19; stall 0; audit sizings 1003
+[outer] gen16 {'front0': 2, 'alive_in_front0': 2, 'best_gain': 99.636, 'max_novelty': 0.9092}  (sizings so far: 1593 [+1042 adaptive], 206.8 min)
+
+[outer] === generation 17: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.045  accepted nov u=0.038  (delta=-0.008; delta<<0 would mean the gate is trading novelty for wireability)
+  [struct] gen17 (struct_frac): 26 structural children from 29 parent(s) ops={'rewire': 10, 'cell_graft': 2, 'lc_path': 4, 'transfer_L': 5, 'switch_path': 4, 'insert_series': 1}; scored 26, feasible 14, reduced distance {4: 20, 3: 5, 2: 1}
+  [fnov audit] gen17: 12 feasible circuit(s) with reduced distance >= 1 ablated (leave-one-out + greedy core, corners [0]), +143 sizings
+  child 1/45: stage=struct_reject eff%=None feas=False nov=0.0
+  child 2/45: stage=struct_reject eff%=None feas=False nov=0.0
+  child 3/45: stage=struct_reject eff%=None feas=False nov=0.0
+  child 4/45: stage=struct_reject eff%=None feas=False nov=0.0
+  child 5/45: stage=struct_reject eff%=None feas=False nov=0.0
+  child 6/45: stage=struct_reject eff%=None feas=False nov=0.0
+  child 7/45: stage=struct_reject eff%=None feas=False nov=0.0
+  child 8/45: stage=struct_reject eff%=None feas=False nov=0.0
+  child 9/45: stage=struct_reject eff%=None feas=False nov=0.0
+  child 10/45: stage=struct_reject eff%=None feas=False nov=0.0
+  child 11/45: stage=struct_reject eff%=None feas=False nov=0.0077
+  child 12/45: stage=struct_reject eff%=None feas=False nov=0.0
+  child 13/45: stage=struct_reject eff%=None feas=False nov=0.0
+  child 14/45: stage=struct_reject eff%=None feas=False nov=0.0
+  child 15/45: stage=      scored eff%=98.695 feas=False nov=0.0239
+  child 16/45: stage=struct_reject eff%=None feas=False nov=0.0
+  child 17/45: stage=struct_reject eff%=None feas=False nov=0.0
+  child 18/45: stage=      scored eff%=28.791 feas=False nov=0.4568
+  child 19/45: stage=struct_reject eff%=None feas=False nov=0.2304
+  child 20/45: stage=      scored eff%=99.326 feas=True nov=0.0
+  child 21/45: stage=      scored eff%=0.597 feas=False nov=0.9129
+  child 22/45: stage=      scored eff%=99.603 feas=True nov=0.0067
+  child 23/45: stage=      scored eff%=99.348 feas=True nov=0.0
+  child 24/45: stage=      scored eff%=99.285 feas=True nov=0.0
+  child 25/45: stage=      scored eff%=88.38 feas=False nov=0.9144
+  child 26/45: stage=      scored eff%=88.517 feas=False nov=0.9115
+  child 27/45: stage=      scored eff%=0.42 feas=False nov=0.6843
+  child 28/45: stage=      scored eff%=99.573 feas=True nov=0.3467
+  child 29/45: stage=      scored eff%=99.896 feas=False nov=0.9128
+  child 30/45: stage=      scored eff%=99.702 feas=True nov=0.0
+  child 31/45: stage=      scored eff%=99.362 feas=True nov=0.0
+  child 32/45: stage=      scored eff%=99.497 feas=True nov=0.0
+  child 33/45: stage=      scored eff%=99.337 feas=True nov=0.0
+  child 34/45: stage=      scored eff%=0.66 feas=False nov=0.9143
+  child 35/45: stage=      scored eff%=42.9 feas=False nov=0.9105
+  child 36/45: stage=      scored eff%=0.422 feas=False nov=0.9118
+  child 37/45: stage=      scored eff%=0.54 feas=False nov=0.6847
+  child 38/45: stage=      scored eff%=93.62 feas=True nov=0.0
+  child 39/45: stage=      scored eff%=1.055 feas=False nov=0.6853
+  child 40/45: stage=      scored eff%=1.083 feas=False nov=0.4595
+  child 41/45: stage=      scored eff%=99.439 feas=True nov=0.0
+  child 42/45: stage=      scored eff%=0.508 feas=False nov=0.9127
+  child 43/45: stage=      scored eff%=99.326 feas=True nov=0.0
+  child 44/45: stage=      scored eff%=99.454 feas=True nov=0.91
+  child 45/45: stage=      scored eff%=98.915 feas=True nov=0.4581
+  [v6 plan] gen17: STEER targets=[] budget=1 params={'t_frac': 0.45, 'birth_m': 4, 'memory_lambda': 64.0, 'struct_frac': 0.6} :: policy:rule: best gain stalled >= 6 gens, duplicate_rate >= 0.07 or generated faulty_fraction >= 0.85
+
+  ===== V6 TRACE gen 17 =====
+  OBSERVED STATE: feasible 62/93 near-feasible 10 best 99.9 front-alive 2 hv 90.6 (d -0.0) uncertain 2 struct-fail 33 pressure 0.356 faulty-promising 0 dup 0.0 stall(best/front) 16/4 sims 1761
+  RELEVANT HISTORY: g10 STEER -> next-gen child novelty 0.296 -> 0.291, duplicate rate 0.0 -> 0.0, generated faulty fraction 0.672 -> 0.742 (memory lambda 27.0), feasible fd>=2 3 -> 5, cosmetic children 0.556 -> 0.481; g11 STEER -> next-gen child novelty 0.291 -> 0.404, duplicate rate 0.0 -> 0.0, generated faulty fraction 0.742 -> 0.839 (memory lambda 40.5), feasible fd>=2 5 -> 6, cosmetic children 0.481 -> 0.333; g12 STEER -> next-gen child novelty 0.404 -> 0.285, duplicate rate 0.0 -> 0.011, generated faulty fraction 0.839 -> 0.681 (memory lambda 60.75), feasible fd>=2 6 -> 10, cosmetic children 0.333 -> 0.391; g13 RACING -> +14 sizings; front0 confirmed 2, entered 0, left 0; g14 STEER -> next-gen child novelty 0.366 -> 0.377, duplicate rate 0.0 -> 0.011, generated faulty fraction 0.727 -> 0.8 (memory lambda 64.0), feasible fd>=2 13 -> 15, cosmetic children 0.333 -> 0.407; g15 STEER -> next-gen child novelty 0.377 -> 0.376, duplicate rate 0.011 -> 0.011, generated faulty fraction 0.8 -> 0.808 (memory lambda 64.0), feasible fd>=2 15 -> 20, cosmetic children 0.407 -> 0.273; g16 STEER -> next-gen child novelty 0.376 -> 0.272, duplicate rate 0.011 -> 0.0, generated faulty fraction 0.808 -> 0.6 (memory lambda 64.0), feasible fd>=2 20 -> 21, cosmetic children 0.273 -> 0.385; g17 STEER -> pending (measured next generation)
+  VIOLATION MEMORY: patterns {'edge': 10, 'pair': 12, 'motif': 3, 'miss': 0} last-gen faulty 0.6 tilt lambda 64.0
+  CONTROLLER DECISION: STEER (policy:rule: best gain stalled >= 6 gens, duplicate_rate >= 0.07 or generated faulty_fraction >= 0.85)
+  TARGETS: []
+  EXISTING TOOL CALLED: make_offspring(t_star, birth_m) for the next generation; MemoryGuidance.lam  cost={'sizings': 0, 'llm_calls': 0, 'wall_s': 0.0}
+  RESULT: {'t_frac': 0.45, 'birth_m': 4, 'set_at_gen': 17, 'memory_lambda': 64.0, 'struct_frac': 0.6}
+  STATE CHANGE: none
+
+  [v8 conv memory] gen17: observed 166 (33 new), invalid 0.182, padded 0.394, cosmetic 0.061, redundant-device rate 0.407, novel success 4 / hurt 12, patterns {'edge': 10, 'pair': 12, 'motif': 3, 'miss': 0}, tilt lambda=64.0
+  [v7 front-entry] gen17: 5 provisional front entrant(s), 5 verified at k=2 (+5 sizings), 5 still feasible, 0 left provisional (cap 6)
+  [fnov] gen17: run-to-date feasible functional distance best 4, >=1: 29, >=2: 22; stall 0; audit sizings 1146
+  [discovered] +1 new front circuit(s); set now 6
+[outer] gen17 {'front0': 3, 'alive_in_front0': 3, 'best_gain': 99.636, 'max_novelty': 0.91}  (sizings so far: 1766 [+1190 adaptive], 221.2 min)
+
+[outer] === generation 18: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.048  accepted nov u=0.051  (delta=+0.003; delta<<0 would mean the gate is trading novelty for wireability)
+  [struct] gen18 (struct_frac): 15 structural children from 29 parent(s) ops={'insert_series': 2, 'rewire': 6, 'transfer_L': 2, 'cell_graft': 1, 'lc_path': 3, 'switch_path': 1}; scored 15, feasible 3, reduced distance {2: 2, 4: 11, 3: 2}
+  [fnov audit] gen18: 1 feasible circuit(s) with reduced distance >= 1 ablated (leave-one-out + greedy core, corners [0]), +12 sizings
+  child 1/34: stage=struct_reject eff%=None feas=False nov=0.0
+  child 2/34: stage=struct_reject eff%=None feas=False nov=0.0
+  child 3/34: stage=struct_reject eff%=None feas=False nov=0.9
+  child 4/34: stage=struct_reject eff%=None feas=False nov=0.0
+  child 5/34: stage=struct_reject eff%=None feas=False nov=0.0
+  child 6/34: stage=struct_reject eff%=None feas=False nov=0.0
+  child 7/34: stage=struct_reject eff%=None feas=False nov=0.0
+  child 8/34: stage=struct_reject eff%=None feas=False nov=0.0151
+  child 9/34: stage=struct_reject eff%=None feas=False nov=0.0
+  child 10/34: stage=struct_reject eff%=None feas=False nov=0.0
+  child 11/34: stage=struct_reject eff%=None feas=False nov=0.0
+  child 12/34: stage=struct_reject eff%=None feas=False nov=0.0175
+  child 13/34: stage=struct_reject eff%=None feas=False nov=0.0
+  child 14/34: stage=struct_reject eff%=None feas=False nov=0.0
+  child 15/34: stage=struct_reject eff%=None feas=False nov=0.0
+  child 16/34: stage=struct_reject eff%=None feas=False nov=0.0
+  child 17/34: stage=struct_reject eff%=None feas=False nov=0.0
+  child 18/34: stage=struct_reject eff%=None feas=False nov=0.0
+  child 19/34: stage=struct_reject eff%=None feas=False nov=0.0381
+  child 20/34: stage=      scored eff%=57.206 feas=False nov=0.4581
+  child 21/34: stage=      scored eff%=0.778 feas=False nov=0.9117
+  child 22/34: stage=      scored eff%=1.037 feas=False nov=0.9109
+  child 23/34: stage=      scored eff%=0.224 feas=False nov=0.6883
+  child 24/34: stage=      scored eff%=88.242 feas=False nov=0.9143
+  child 25/34: stage=      scored eff%=0.184 feas=False nov=0.9092
+  child 26/34: stage=      scored eff%=99.439 feas=True nov=0.0
+  child 27/34: stage=      scored eff%=99.544 feas=True nov=0.0
+  child 28/34: stage=      scored eff%=0.787 feas=False nov=0.912
+  child 29/34: stage=      scored eff%=100.49 feas=False nov=0.9125
+  child 30/34: stage=      scored eff%=79.325 feas=False nov=0.9109
+  child 31/34: stage=      scored eff%=99.94 feas=False nov=0.9127
+  child 32/34: stage=      scored eff%=0.155 feas=False nov=0.9161
+  child 33/34: stage=      scored eff%=99.544 feas=True nov=0.0
+  child 34/34: stage=      scored eff%=0.492 feas=False nov=0.6888
+  [v6 plan] gen18: VERIFY targets=['c1eedd4e', 'd9268f85', '06d5484d'] budget=3 params={'k': 4} :: policy:rule: front/uncertain candidates below final_k seeds
+
+  ===== V6 TRACE gen 18 =====
+  OBSERVED STATE: feasible 51/82 near-feasible 8 best 100.49 front-alive 3 hv 90.6 (d 0.0) uncertain 3 struct-fail 38 pressure 0.559 faulty-promising 1 dup 0.012 stall(best/front) 0/0 sims 1791
+  RELEVANT HISTORY: g11 STEER -> next-gen child novelty 0.291 -> 0.404, duplicate rate 0.0 -> 0.0, generated faulty fraction 0.742 -> 0.839 (memory lambda 40.5), feasible fd>=2 5 -> 6, cosmetic children 0.481 -> 0.333; g12 STEER -> next-gen child novelty 0.404 -> 0.285, duplicate rate 0.0 -> 0.011, generated faulty fraction 0.839 -> 0.681 (memory lambda 60.75), feasible fd>=2 6 -> 10, cosmetic children 0.333 -> 0.391; g13 RACING -> +14 sizings; front0 confirmed 2, entered 0, left 0; g14 STEER -> next-gen child novelty 0.366 -> 0.377, duplicate rate 0.0 -> 0.011, generated faulty fraction 0.727 -> 0.8 (memory lambda 64.0), feasible fd>=2 13 -> 15, cosmetic children 0.333 -> 0.407; g15 STEER -> next-gen child novelty 0.377 -> 0.376, duplicate rate 0.011 -> 0.011, generated faulty fraction 0.8 -> 0.808 (memory lambda 64.0), feasible fd>=2 15 -> 20, cosmetic children 0.407 -> 0.273; g16 STEER -> next-gen child novelty 0.376 -> 0.272, duplicate rate 0.011 -> 0.0, generated faulty fraction 0.808 -> 0.6 (memory lambda 64.0), feasible fd>=2 20 -> 21, cosmetic children 0.273 -> 0.385; g17 STEER -> next-gen child novelty 0.272 -> 0.324, duplicate rate 0.0 -> 0.012, generated faulty fraction 0.6 -> 0.576 (memory lambda 64.0), feasible fd>=2 21 -> 21, cosmetic children 0.385 -> 0.2; g18 VERIFY -> 3 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB
+  VIOLATION MEMORY: patterns {'edge': 10, 'pair': 12, 'motif': 3, 'miss': 0} last-gen faulty 0.576 tilt lambda 64.0
+  CONTROLLER DECISION: VERIFY (policy:rule: front/uncertain candidates below final_k seeds)
+  TARGETS: ['c1eedd4e', 'd9268f85', '06d5484d']
+  EXISTING TOOL CALLED: Evaluator.extend (extend_staged_fitness)  cost={'sizings': 6, 'llm_calls': 0, 'wall_s': 159.2}
+  RESULT: {'verified': 3, 'extra_sizings': 6, 'lost_feasibility': 0, 'gain_drop_over_3db': 0, 'per_target': [{'id': 'c1eedd4e', 'gain_before': 99.69, 'gain_after': 99.47, 'feasible_before': True, 'feasible_after': True, 'feasible_frac': 0.75, 'spread': 0.8}, {'id': 'd9268f85', 'gain_before': 99.4, 'gain_after': 99.56, 'feasible_before': True, 'feasible_after': True, 'feasible_frac': 1.0, 'spread': 0.5}, {'id': '06d5484d', 'gain_before': 99.15, 'gain_after': 99.42, 'feasible_before': True, 'feasible_after': True, 'feasible_frac': 1.0, 'spread': 1.0}]}
+  STATE CHANGE: none
+
+  [v8 conv memory] gen18: observed 143 (20 new), invalid 0.35, padded 0.45, cosmetic 0.0, redundant-device rate 0.556, novel success 0 / hurt 12, patterns {'edge': 10, 'pair': 12, 'motif': 3, 'miss': 0}, tilt lambda=64.0
+  [v7 front-entry] gen18: 2 provisional front entrant(s), 2 verified at k=2 (+2 sizings), 2 still feasible, 0 left provisional (cap 6)
+  [fnov] gen18: run-to-date feasible functional distance best 4, >=1: 29, >=2: 22; stall 1; audit sizings 1158
+[outer] gen18 {'front0': 3, 'alive_in_front0': 3, 'best_gain': 99.636, 'max_novelty': 0.91}  (sizings so far: 1799 [+1210 adaptive], 226.8 min)
+
+[outer] === generation 19: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.041  accepted nov u=0.085  (delta=+0.044; delta<<0 would mean the gate is trading novelty for wireability)
+  [struct] gen19 (struct_frac): 23 structural children from 29 parent(s) ops={'transfer_L': 5, 'insert_series': 4, 'rewire': 10, 'switch_path': 1, 'lc_path': 1, 'cell_graft': 2}; scored 23, feasible 8, reduced distance {2: 2, 4: 19, 3: 2}
+  [fnov audit] gen19: 8 feasible circuit(s) with reduced distance >= 1 ablated (leave-one-out + greedy core, corners [0]), +92 sizings
+  child 1/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 2/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 3/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 4/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 5/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 6/42: stage=      scored eff%=99.361 feas=True nov=0.0
+  child 7/42: stage=      scored eff%=98.322 feas=False nov=0.0376
+  child 8/42: stage=      scored eff%=0.025 feas=False nov=0.0
+  child 9/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 10/42: stage=struct_reject eff%=None feas=False nov=0.6812
+  child 11/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 12/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 13/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 14/42: stage=struct_reject eff%=None feas=False nov=0.9
+  child 15/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 16/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 17/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 18/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 19/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 20/42: stage=      scored eff%=0.331 feas=False nov=0.4603
+  child 21/42: stage=      scored eff%=57.73 feas=False nov=0.9109
+  child 22/42: stage=      scored eff%=57.254 feas=False nov=0.6843
+  child 23/42: stage=      scored eff%=99.002 feas=True nov=0.0
+  child 24/42: stage=      scored eff%=0.974 feas=False nov=0.9085
+  child 25/42: stage=      scored eff%=0.787 feas=False nov=0.912
+  child 26/42: stage=      scored eff%=99.923 feas=False nov=0.9123
+  child 27/42: stage=      scored eff%=67.588 feas=False nov=0.9111
+  child 28/42: stage=      scored eff%=0.98 feas=False nov=0.9135
+  child 29/42: stage=      scored eff%=99.702 feas=True nov=0.0
+  child 30/42: stage=      scored eff%=99.842 feas=True nov=0.9099
+  child 31/42: stage=      scored eff%=84.901 feas=False nov=0.9118
+  child 32/42: stage=      scored eff%=99.54 feas=True nov=0.9146
+  child 33/42: stage=      scored eff%=99.703 feas=True nov=0.0
+  child 34/42: stage=      scored eff%=0.0 feas=False nov=0.9137
+  child 35/42: stage=      scored eff%=99.544 feas=True nov=0.0
+  child 36/42: stage=      scored eff%=99.31 feas=True nov=0.0
+  child 37/42: stage=      scored eff%=0.175 feas=False nov=0.6845
+  child 38/42: stage=      scored eff%=0.715 feas=False nov=0.9111
+  child 39/42: stage=      scored eff%=99.374 feas=True nov=0.0
+  child 40/42: stage=      scored eff%=0.389 feas=False nov=0.9111
+  child 41/42: stage=      scored eff%=0.696 feas=False nov=0.9134
+  child 42/42: stage=      scored eff%=0.393 feas=False nov=0.4657
+  [v6 plan] gen19: VERIFY targets=['49a9850d', '45003d93'] budget=2 params={'k': 4} :: policy:rule: front/uncertain candidates below final_k seeds
+
+  ===== V6 TRACE gen 19 =====
+  OBSERVED STATE: feasible 57/90 near-feasible 12 best 99.92 front-alive 3 hv 90.6 (d 0.0) uncertain 3 struct-fail 31 pressure 0.357 faulty-promising 1 dup 0.0 stall(best/front) 1/1 sims 1915
+  RELEVANT HISTORY: g12 STEER -> next-gen child novelty 0.404 -> 0.285, duplicate rate 0.0 -> 0.011, generated faulty fraction 0.839 -> 0.681 (memory lambda 60.75), feasible fd>=2 6 -> 10, cosmetic children 0.333 -> 0.391; g13 RACING -> +14 sizings; front0 confirmed 2, entered 0, left 0; g14 STEER -> next-gen child novelty 0.366 -> 0.377, duplicate rate 0.0 -> 0.011, generated faulty fraction 0.727 -> 0.8 (memory lambda 64.0), feasible fd>=2 13 -> 15, cosmetic children 0.333 -> 0.407; g15 STEER -> next-gen child novelty 0.377 -> 0.376, duplicate rate 0.011 -> 0.011, generated faulty fraction 0.8 -> 0.808 (memory lambda 64.0), feasible fd>=2 15 -> 20, cosmetic children 0.407 -> 0.273; g16 STEER -> next-gen child novelty 0.376 -> 0.272, duplicate rate 0.011 -> 0.0, generated faulty fraction 0.808 -> 0.6 (memory lambda 64.0), feasible fd>=2 20 -> 21, cosmetic children 0.273 -> 0.385; g17 STEER -> next-gen child novelty 0.272 -> 0.324, duplicate rate 0.0 -> 0.012, generated faulty fraction 0.6 -> 0.576 (memory lambda 64.0), feasible fd>=2 21 -> 21, cosmetic children 0.385 -> 0.2; g18 VERIFY -> 3 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB; 3/3 survived selection, 1 on front0; g19 VERIFY -> 2 verified (+4 sizings), 0 lost feasibility, 0 dropped >3 dB
+  VIOLATION MEMORY: patterns {'edge': 10, 'pair': 12, 'motif': 3, 'miss': 0} last-gen faulty 0.8 tilt lambda 64.0
+  CONTROLLER DECISION: VERIFY (policy:rule: front/uncertain candidates below final_k seeds)
+  TARGETS: ['49a9850d', '45003d93']
+  EXISTING TOOL CALLED: Evaluator.extend (extend_staged_fitness)  cost={'sizings': 4, 'llm_calls': 0, 'wall_s': 95.2}
+  RESULT: {'verified': 2, 'extra_sizings': 4, 'lost_feasibility': 0, 'gain_drop_over_3db': 0, 'per_target': [{'id': '49a9850d', 'gain_before': 99.66, 'gain_after': 99.45, 'feasible_before': True, 'feasible_after': True, 'feasible_frac': 0.75, 'spread': 1.1}, {'id': '45003d93', 'gain_before': 99.47, 'gain_after': 99.58, 'feasible_before': True, 'feasible_after': True, 'feasible_frac': 1.0, 'spread': 0.3}]}
+  STATE CHANGE: {'seed_uncertain_count': {'before': 3, 'after': 2}}
+
+  [v8 conv memory] gen19: observed 160 (37 new), invalid 0.243, padded 0.486, cosmetic 0.081, redundant-device rate 0.324, novel success 2 / hurt 13, patterns {'edge': 10, 'pair': 14, 'motif': 3, 'miss': 0}, tilt lambda=64.0
+  [v7 front-entry] gen19: 2 provisional front entrant(s), 2 verified at k=2 (+2 sizings), 2 still feasible, 0 left provisional (cap 6)
+  [fnov] gen19: run-to-date feasible functional distance best 4, >=1: 31, >=2: 24; stall 0; audit sizings 1250
+  [discovered] +1 new front circuit(s); set now 7
+[outer] gen19 {'front0': 2, 'alive_in_front0': 2, 'best_gain': 99.636, 'max_novelty': 0.9146}  (sizings so far: 1921 [+1308 adaptive], 239.9 min)
+
+[outer] === generation 20: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.060  accepted nov u=0.062  (delta=+0.002; delta<<0 would mean the gate is trading novelty for wireability)
+  [struct] gen20 (struct_frac): 20 structural children from 29 parent(s) ops={'transfer_L': 6, 'rewire': 9, 'cell_graft': 1, 'lc_path': 1, 'switch_path': 2, 'sc_branch': 1}; scored 20, feasible 11, reduced distance {0: 1, 4: 18, 1: 1}
+  [fnov audit] gen20: 11 feasible circuit(s) with reduced distance >= 1 ablated (leave-one-out + greedy core, corners [0]), +133 sizings
+  child 1/39: stage=struct_reject eff%=None feas=False nov=0.0
+  child 2/39: stage=struct_reject eff%=None feas=False nov=0.0
+  child 3/39: stage=struct_reject eff%=None feas=False nov=0.0
+  child 4/39: stage=struct_reject eff%=None feas=False nov=0.0
+  child 5/39: stage=struct_reject eff%=None feas=False nov=0.0
+  child 6/39: stage=struct_reject eff%=None feas=False nov=0.0
+  child 7/39: stage=struct_reject eff%=None feas=False nov=0.9
+  child 8/39: stage=struct_reject eff%=None feas=False nov=0.0
+  child 9/39: stage=struct_reject eff%=None feas=False nov=0.0
+  child 10/39: stage=struct_reject eff%=None feas=False nov=0.0151
+  child 11/39: stage=      scored eff%=78.809 feas=False nov=0.2337
+  child 12/39: stage=struct_reject eff%=None feas=False nov=0.0
+  child 13/39: stage=struct_reject eff%=None feas=False nov=0.0
+  child 14/39: stage=struct_reject eff%=None feas=False nov=0.0
+  child 15/39: stage=struct_reject eff%=None feas=False nov=0.0
+  child 16/39: stage=struct_reject eff%=None feas=False nov=0.0
+  child 17/39: stage=struct_reject eff%=None feas=False nov=0.0381
+  child 18/39: stage=struct_reject eff%=None feas=False nov=0.0
+  child 19/39: stage=struct_reject eff%=None feas=False nov=0.0
+  child 20/39: stage=      scored eff%=66.65 feas=False nov=0.0
+  child 21/39: stage=      scored eff%=99.361 feas=True nov=0.0
+  child 22/39: stage=      scored eff%=99.327 feas=True nov=0.0
+  child 23/39: stage=      scored eff%=0.25 feas=False nov=0.9134
+  child 24/39: stage=      scored eff%=98.83 feas=True nov=0.0
+  child 25/39: stage=      scored eff%=99.36 feas=True nov=0.0
+  child 26/39: stage=      scored eff%=88.38 feas=False nov=0.9144
+  child 27/39: stage=      scored eff%=94.407 feas=True nov=0.2328
+  child 28/39: stage=      scored eff%=0.249 feas=False nov=0.9118
+  child 29/39: stage=      scored eff%=99.651 feas=True nov=0.0
+  child 30/39: stage=      scored eff%=98.875 feas=True nov=0.0
+  child 31/39: stage=      scored eff%=1.559 feas=False nov=0.9118
+  child 32/39: stage=      scored eff%=98.657 feas=True nov=0.0
+  child 33/39: stage=      scored eff%=0.233 feas=False nov=0.2317
+  child 34/39: stage=      scored eff%=0.479 feas=False nov=0.9164
+  child 35/39: stage=      scored eff%=99.429 feas=True nov=0.0
+  child 36/39: stage=      scored eff%=5.206 feas=False nov=0.9145
+  child 37/39: stage=      scored eff%=99.544 feas=True nov=0.0
+  child 38/39: stage=      scored eff%=99.36 feas=True nov=0.0
+  child 39/39: stage=      scored eff%=0.696 feas=False nov=0.9134
+  [v6 plan] gen20: VERIFY targets=['07cc4f36', 'aec86f77', 'ce03019c', '64a92ff9'] budget=4 params={'k': 4} :: policy:rule: front/uncertain candidates below final_k seeds
+
+  ===== V6 TRACE gen 20 =====
+  OBSERVED STATE: feasible 59/87 near-feasible 7 best 99.7 front-alive 2 hv 91.1 (d 0.5) uncertain 4 struct-fail 36 pressure 0.462 faulty-promising 1 dup 0.0 stall(best/front) 2/0 sims 2072
+  RELEVANT HISTORY: g13 RACING -> +14 sizings; front0 confirmed 2, entered 0, left 0; g14 STEER -> next-gen child novelty 0.366 -> 0.377, duplicate rate 0.0 -> 0.011, generated faulty fraction 0.727 -> 0.8 (memory lambda 64.0), feasible fd>=2 13 -> 15, cosmetic children 0.333 -> 0.407; g15 STEER -> next-gen child novelty 0.377 -> 0.376, duplicate rate 0.011 -> 0.011, generated faulty fraction 0.8 -> 0.808 (memory lambda 64.0), feasible fd>=2 15 -> 20, cosmetic children 0.407 -> 0.273; g16 STEER -> next-gen child novelty 0.376 -> 0.272, duplicate rate 0.011 -> 0.0, generated faulty fraction 0.808 -> 0.6 (memory lambda 64.0), feasible fd>=2 20 -> 21, cosmetic children 0.273 -> 0.385; g17 STEER -> next-gen child novelty 0.272 -> 0.324, duplicate rate 0.0 -> 0.012, generated faulty fraction 0.6 -> 0.576 (memory lambda 64.0), feasible fd>=2 21 -> 21, cosmetic children 0.385 -> 0.2; g18 VERIFY -> 3 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB; 3/3 survived selection, 1 on front0; g19 VERIFY -> 2 verified (+4 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 0 on front0; g20 VERIFY -> 4 verified (+8 sizings), 0 lost feasibility, 0 dropped >3 dB
+  VIOLATION MEMORY: patterns {'edge': 10, 'pair': 14, 'motif': 3, 'miss': 0} last-gen faulty 0.73 tilt lambda 64.0
+  CONTROLLER DECISION: VERIFY (policy:rule: front/uncertain candidates below final_k seeds)
+  TARGETS: ['07cc4f36', 'aec86f77', 'ce03019c', '64a92ff9']
+  EXISTING TOOL CALLED: Evaluator.extend (extend_staged_fitness)  cost={'sizings': 8, 'llm_calls': 0, 'wall_s': 179.7}
+  RESULT: {'verified': 4, 'extra_sizings': 8, 'lost_feasibility': 0, 'gain_drop_over_3db': 0, 'per_target': [{'id': '07cc4f36', 'gain_before': 99.66, 'gain_after': 99.45, 'feasible_before': True, 'feasible_after': True, 'feasible_frac': 0.75, 'spread': 1.1}, {'id': 'aec86f77', 'gain_before': 99.45, 'gain_after': 99.45, 'feasible_before': True, 'feasible_after': True, 'feasible_frac': 0.75, 'spread': 97.7}, {'id': 'ce03019c', 'gain_before': 99.42, 'gain_after': 99.42, 'feasible_before': True, 'feasible_after': True, 'feasible_frac': 0.75, 'spread': 98.6}, {'id': '64a92ff9', 'gain_before': 99.4, 'gain_after': 99.11, 'feasible_before': True, 'feasible_after': True, 'feasible_frac': 0.75, 'spread': 15.3}]}
+  STATE CHANGE: {'pareto_front_alive': {'before': 2, 'after': 4}, 'seed_uncertain_count': {'before': 4, 'after': 2}}
+
+  [v8 conv memory] gen20: observed 154 (25 new), invalid 0.28, padded 0.32, cosmetic 0.08, redundant-device rate 0.48, novel success 0 / hurt 8, patterns {'edge': 10, 'pair': 14, 'motif': 3, 'miss': 0}, tilt lambda=64.0
+  [v7 front-entry] gen20: 2 provisional front entrant(s), 2 verified at k=2 (+2 sizings), 2 still feasible, 0 left provisional (cap 6)
+  [fnov] gen20: run-to-date feasible functional distance best 4, >=1: 32, >=2: 25; stall 0; audit sizings 1383
+[outer] gen20 {'front0': 4, 'alive_in_front0': 4, 'best_gain': 99.636, 'max_novelty': 0.9146}  (sizings so far: 2082 [+1451 adaptive], 255.1 min)
+
+[outer] === generation 21: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.043  accepted nov u=0.026  (delta=-0.017; delta<<0 would mean the gate is trading novelty for wireability)
+  [struct] gen21 (struct_frac): 18 structural children from 29 parent(s) ops={'insert_series': 2, 'rewire': 8, 'lc_path': 2, 'transfer_L': 5, 'switch_path': 1}; scored 18, feasible 11, reduced distance {4: 18}
+  [fnov audit] gen21: 10 feasible circuit(s) with reduced distance >= 1 ablated (leave-one-out + greedy core, corners [0]), +115 sizings
+  child 1/37: stage=struct_reject eff%=None feas=False nov=0.0
+  child 2/37: stage=      scored eff%=0.614 feas=False nov=0.4537
+  child 3/37: stage=struct_reject eff%=None feas=False nov=0.0
+  child 4/37: stage=struct_reject eff%=None feas=False nov=0.0
+  child 5/37: stage=struct_reject eff%=None feas=False nov=0.0
+  child 6/37: stage=struct_reject eff%=None feas=False nov=0.0
+  child 7/37: stage=struct_reject eff%=None feas=False nov=0.0
+  child 8/37: stage=struct_reject eff%=None feas=False nov=0.0
+  child 9/37: stage=struct_reject eff%=None feas=False nov=0.0
+  child 10/37: stage=      scored eff%=16.816 feas=False nov=0.0112
+  child 11/37: stage=struct_reject eff%=None feas=False nov=0.0
+  child 12/37: stage=struct_reject eff%=None feas=False nov=0.0
+  child 13/37: stage=struct_reject eff%=None feas=False nov=0.0
+  child 14/37: stage=struct_reject eff%=None feas=False nov=0.0151
+  child 15/37: stage=struct_reject eff%=None feas=False nov=0.0151
+  child 16/37: stage=struct_reject eff%=None feas=False nov=0.0
+  child 17/37: stage=struct_reject eff%=None feas=False nov=0.0
+  child 18/37: stage=struct_reject eff%=None feas=False nov=0.0
+  child 19/37: stage=struct_reject eff%=None feas=False nov=0.0
+  child 20/37: stage=      scored eff%=93.459 feas=True nov=0.5724
+  child 21/37: stage=      scored eff%=99.531 feas=True nov=0.8026
+  child 22/37: stage=      scored eff%=99.464 feas=True nov=0.0098
+  child 23/37: stage=      scored eff%=99.662 feas=True nov=0.687
+  child 24/37: stage=      scored eff%=0.0 feas=False nov=0.9094
+  child 25/37: stage=      scored eff%=98.454 feas=True nov=0.0
+  child 26/37: stage=      scored eff%=0.476 feas=False nov=0.9135
+  child 27/37: stage=      scored eff%=0.14 feas=False nov=0.9143
+  child 28/37: stage=      scored eff%=0.0 feas=False nov=0.9137
+  child 29/37: stage=      scored eff%=99.432 feas=True nov=0.9114
+  child 30/37: stage=      scored eff%=93.682 feas=True nov=0.121
+  child 31/37: stage=      scored eff%=0.248 feas=False nov=0.9161
+  child 32/37: stage=      scored eff%=99.328 feas=True nov=0.0
+  child 33/37: stage=      scored eff%=99.542 feas=False nov=0.9091
+  child 34/37: stage=      scored eff%=99.453 feas=True nov=0.0
+  child 35/37: stage=      scored eff%=43.458 feas=False nov=0.912
+  child 36/37: stage=      scored eff%=99.488 feas=True nov=0.0074
+  child 37/37: stage=      scored eff%=93.656 feas=True nov=0.121
+  [v6 plan] gen21: VERIFY targets=['0622da7a', '8e349d3c'] budget=2 params={'k': 4} :: policy:rule: front/uncertain candidates below final_k seeds
+
+  ===== V6 TRACE gen 21 =====
+  OBSERVED STATE: feasible 59/85 near-feasible 3 best 99.66 front-alive 4 hv 91.1 (d 0.0) uncertain 2 struct-fail 34 pressure 0.459 faulty-promising 0 dup 0.012 stall(best/front) 3/1 sims 2216
+  RELEVANT HISTORY: g14 STEER -> next-gen child novelty 0.366 -> 0.377, duplicate rate 0.0 -> 0.011, generated faulty fraction 0.727 -> 0.8 (memory lambda 64.0), feasible fd>=2 13 -> 15, cosmetic children 0.333 -> 0.407; g15 STEER -> next-gen child novelty 0.377 -> 0.376, duplicate rate 0.011 -> 0.011, generated faulty fraction 0.8 -> 0.808 (memory lambda 64.0), feasible fd>=2 15 -> 20, cosmetic children 0.407 -> 0.273; g16 STEER -> next-gen child novelty 0.376 -> 0.272, duplicate rate 0.011 -> 0.0, generated faulty fraction 0.808 -> 0.6 (memory lambda 64.0), feasible fd>=2 20 -> 21, cosmetic children 0.273 -> 0.385; g17 STEER -> next-gen child novelty 0.272 -> 0.324, duplicate rate 0.0 -> 0.012, generated faulty fraction 0.6 -> 0.576 (memory lambda 64.0), feasible fd>=2 21 -> 21, cosmetic children 0.385 -> 0.2; g18 VERIFY -> 3 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB; 3/3 survived selection, 1 on front0; g19 VERIFY -> 2 verified (+4 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 0 on front0; g20 VERIFY -> 4 verified (+8 sizings), 0 lost feasibility, 0 dropped >3 dB; 4/4 survived selection, 1 on front0; g21 VERIFY -> 2 verified (+4 sizings), 0 lost feasibility, 0 dropped >3 dB
+  VIOLATION MEMORY: patterns {'edge': 10, 'pair': 14, 'motif': 3, 'miss': 0} last-gen faulty 0.6 tilt lambda 64.0
+  CONTROLLER DECISION: VERIFY (policy:rule: front/uncertain candidates below final_k seeds)
+  TARGETS: ['0622da7a', '8e349d3c']
+  EXISTING TOOL CALLED: Evaluator.extend (extend_staged_fitness)  cost={'sizings': 4, 'llm_calls': 0, 'wall_s': 85.8}
+  RESULT: {'verified': 2, 'extra_sizings': 4, 'lost_feasibility': 0, 'gain_drop_over_3db': 0, 'per_target': [{'id': '0622da7a', 'gain_before': 99.45, 'gain_after': 99.45, 'feasible_before': True, 'feasible_after': True, 'feasible_frac': 0.75, 'spread': 97.7}, {'id': '8e349d3c', 'gain_before': 99.4, 'gain_after': 99.38, 'feasible_before': True, 'feasible_after': True, 'feasible_frac': 0.75, 'spread': 98.6}]}
+  STATE CHANGE: {'seed_uncertain_count': {'before': 2, 'after': 1}}
+
+  [v8 conv memory] gen21: observed 149 (25 new), invalid 0.28, padded 0.52, cosmetic 0.04, redundant-device rate 0.269, novel success 5 / hurt 11, patterns {'edge': 10, 'pair': 12, 'motif': 3, 'miss': 0}, tilt lambda=64.0
+  [v7 front-entry] gen21: 3 provisional front entrant(s), 3 verified at k=2 (+3 sizings), 3 still feasible, 0 left provisional (cap 6)
+  [fnov] gen21: run-to-date feasible functional distance best 4, >=1: 40, >=2: 31; stall 0; audit sizings 1498
+  [discovered] +1 new front circuit(s); set now 8
+[outer] gen21 {'front0': 5, 'alive_in_front0': 5, 'best_gain': 99.636, 'max_novelty': 0.9146}  (sizings so far: 2223 [+1573 adaptive], 262.1 min)
+
+[outer] === generation 22: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.055  accepted nov u=0.048  (delta=-0.007; delta<<0 would mean the gate is trading novelty for wireability)
+  [struct] gen22 (struct_frac): 26 structural children from 29 parent(s) ops={'rewire': 15, 'switch_path': 3, 'transfer_L': 3, 'insert_series': 4, 'sc_branch': 1}; scored 26, feasible 11, reduced distance {4: 19, 3: 4, 2: 2, 0: 1}
+  [fnov audit] gen22: 9 feasible circuit(s) with reduced distance >= 1 ablated (leave-one-out + greedy core, corners [0]), +104 sizings
+  child 1/45: stage=struct_reject eff%=None feas=False nov=0.0
+  child 2/45: stage=struct_reject eff%=None feas=False nov=0.6814
+  child 3/45: stage=struct_reject eff%=None feas=False nov=0.0
+  child 4/45: stage=struct_reject eff%=None feas=False nov=0.0
+  child 5/45: stage=struct_reject eff%=None feas=False nov=0.0
+  child 6/45: stage=struct_reject eff%=None feas=False nov=0.0
+  child 7/45: stage=struct_reject eff%=None feas=False nov=0.0
+  child 8/45: stage=struct_reject eff%=None feas=False nov=0.0
+  child 9/45: stage=struct_reject eff%=None feas=False nov=0.0
+  child 10/45: stage=struct_reject eff%=None feas=False nov=0.231
+  child 11/45: stage=struct_reject eff%=None feas=False nov=0.0
+  child 12/45: stage=struct_reject eff%=None feas=False nov=0.0
+  child 13/45: stage=      scored eff%=28.792 feas=False nov=0.0
+  child 14/45: stage=struct_reject eff%=None feas=False nov=0.0
+  child 15/45: stage=struct_reject eff%=None feas=False nov=0.0
+  child 16/45: stage=struct_reject eff%=None feas=False nov=0.0
+  child 17/45: stage=struct_reject eff%=None feas=False nov=0.0
+  child 18/45: stage=struct_reject eff%=None feas=False nov=0.0
+  child 19/45: stage=struct_reject eff%=None feas=False nov=0.0
+  child 20/45: stage=      scored eff%=0.155 feas=False nov=0.9161
+  child 21/45: stage=      scored eff%=99.488 feas=True nov=0.0074
+  child 22/45: stage=      scored eff%=2.57 feas=False nov=0.6861
+  child 23/45: stage=      scored eff%=99.612 feas=True nov=0.3467
+  child 24/45: stage=      scored eff%=52.761 feas=False nov=0.9118
+  child 25/45: stage=      scored eff%=0.25 feas=False nov=0.6875
+  child 26/45: stage=      scored eff%=0.313 feas=False nov=0.4605
+  child 27/45: stage=      scored eff%=98.706 feas=True nov=0.0
+  child 28/45: stage=      scored eff%=0.0 feas=False nov=0.6911
+  child 29/45: stage=      scored eff%=99.269 feas=True nov=0.3375
+  child 30/45: stage=      scored eff%=51.911 feas=False nov=0.9106
+  child 31/45: stage=      scored eff%=99.228 feas=True nov=0.0069
+  child 32/45: stage=      scored eff%=0.424 feas=False nov=0.9127
+  child 33/45: stage=      scored eff%=99.399 feas=True nov=0.0
+  child 34/45: stage=      scored eff%=99.453 feas=True nov=0.0
+  child 35/45: stage=      scored eff%=0.89 feas=False nov=0.686
+  child 36/45: stage=      scored eff%=52.762 feas=False nov=0.9115
+  child 37/45: stage=      scored eff%=99.611 feas=True nov=0.7986
+  child 38/45: stage=      scored eff%=88.673 feas=False nov=0.9118
+  child 39/45: stage=      scored eff%=0.673 feas=False nov=0.9146
+  child 40/45: stage=      scored eff%=41.408 feas=False nov=0.9116
+  child 41/45: stage=      scored eff%=99.693 feas=True nov=0.0
+  child 42/45: stage=      scored eff%=98.307 feas=False nov=0.9095
+  child 43/45: stage=      scored eff%=99.693 feas=True nov=0.0
+  child 44/45: stage=      scored eff%=16.164 feas=False nov=0.9138
+  child 45/45: stage=      scored eff%=99.316 feas=True nov=0.0
+  [v6 plan] gen22: VERIFY targets=['48a97e2e', '6167c487'] budget=2 params={'k': 4} :: policy:rule: front/uncertain candidates below final_k seeds
+
+  ===== V6 TRACE gen 22 =====
+  OBSERVED STATE: feasible 59/93 near-feasible 8 best 99.69 front-alive 5 hv 91.1 (d 0.0) uncertain 3 struct-fail 36 pressure 0.4 faulty-promising 0 dup 0.011 stall(best/front) 4/0 sims 2351
+  RELEVANT HISTORY: g15 STEER -> next-gen child novelty 0.377 -> 0.376, duplicate rate 0.011 -> 0.011, generated faulty fraction 0.8 -> 0.808 (memory lambda 64.0), feasible fd>=2 15 -> 20, cosmetic children 0.407 -> 0.273; g16 STEER -> next-gen child novelty 0.376 -> 0.272, duplicate rate 0.011 -> 0.0, generated faulty fraction 0.808 -> 0.6 (memory lambda 64.0), feasible fd>=2 20 -> 21, cosmetic children 0.273 -> 0.385; g17 STEER -> next-gen child novelty 0.272 -> 0.324, duplicate rate 0.0 -> 0.012, generated faulty fraction 0.6 -> 0.576 (memory lambda 64.0), feasible fd>=2 21 -> 21, cosmetic children 0.385 -> 0.2; g18 VERIFY -> 3 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB; 3/3 survived selection, 1 on front0; g19 VERIFY -> 2 verified (+4 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 0 on front0; g20 VERIFY -> 4 verified (+8 sizings), 0 lost feasibility, 0 dropped >3 dB; 4/4 survived selection, 1 on front0; g21 VERIFY -> 2 verified (+4 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 0 on front0; g22 VERIFY -> 2 verified (+4 sizings), 0 lost feasibility, 0 dropped >3 dB
+  VIOLATION MEMORY: patterns {'edge': 10, 'pair': 12, 'motif': 3, 'miss': 0} last-gen faulty 0.8 tilt lambda 64.0
+  CONTROLLER DECISION: VERIFY (policy:rule: front/uncertain candidates below final_k seeds)
+  TARGETS: ['48a97e2e', '6167c487']
+  EXISTING TOOL CALLED: Evaluator.extend (extend_staged_fitness)  cost={'sizings': 4, 'llm_calls': 0, 'wall_s': 103.8}
+  RESULT: {'verified': 2, 'extra_sizings': 4, 'lost_feasibility': 0, 'gain_drop_over_3db': 0, 'per_target': [{'id': '48a97e2e', 'gain_before': 99.45, 'gain_after': 99.45, 'feasible_before': True, 'feasible_after': True, 'feasible_frac': 0.75, 'spread': 97.7}, {'id': '6167c487', 'gain_before': 99.07, 'gain_after': 99.35, 'feasible_before': True, 'feasible_after': True, 'feasible_frac': 1.0, 'spread': 1.2}]}
+  STATE CHANGE: {'seed_uncertain_count': {'before': 3, 'after': 1}}
+
+  [v8 conv memory] gen22: observed 165 (36 new), invalid 0.278, padded 0.25, cosmetic 0.028, redundant-device rate 0.353, novel success 5 / hurt 13, patterns {'edge': 10, 'pair': 12, 'motif': 3, 'miss': 0}, tilt lambda=64.0
+  [v7 front-entry] gen22: 4 provisional front entrant(s), 4 verified at k=2 (+4 sizings), 4 still feasible, 0 left provisional (cap 6)
+  [fnov] gen22: run-to-date feasible functional distance best 4, >=1: 45, >=2: 34; stall 0; audit sizings 1602
+[outer] gen22 {'front0': 5, 'alive_in_front0': 5, 'best_gain': 99.636, 'max_novelty': 0.9146}  (sizings so far: 2359 [+1685 adaptive], 276.3 min)
+
+[outer] === generation 23: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.012  accepted nov u=0.025  (delta=+0.013; delta<<0 would mean the gate is trading novelty for wireability)
+  [struct] gen23 (struct_frac): 23 structural children from 29 parent(s) ops={'rewire': 8, 'transfer_L': 8, 'insert_series': 1, 'switch_path': 3, 'cell_graft': 1, 'sc_branch': 2}; scored 23, feasible 9, reduced distance {4: 21, 2: 2}
+  [fnov audit] gen23: 8 feasible circuit(s) with reduced distance >= 1 ablated (leave-one-out + greedy core, corners [0]), +95 sizings
+  child 1/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 2/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 3/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 4/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 5/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 6/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 7/42: stage=struct_reject eff%=None feas=False nov=0.0132
+  child 8/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 9/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 10/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 11/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 12/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 13/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 14/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 15/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 16/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 17/42: stage=      scored eff%=28.631 feas=False nov=0.459
+  child 18/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 19/42: stage=struct_reject eff%=None feas=False nov=0.0
+  child 20/42: stage=      scored eff%=99.622 feas=True nov=0.5741
+  child 21/42: stage=      scored eff%=0.46 feas=False nov=0.9139
+  child 22/42: stage=      scored eff%=0.423 feas=False nov=0.9134
+  child 23/42: stage=      scored eff%=0.301 feas=False nov=0.9181
+  child 24/42: stage=      scored eff%=56.758 feas=False nov=0.4585
+  child 25/42: stage=      scored eff%=0.992 feas=False nov=0.9143
+  child 26/42: stage=      scored eff%=99.508 feas=True nov=0.0098
+  child 27/42: stage=      scored eff%=0.87 feas=False nov=0.9139
+  child 28/42: stage=      scored eff%=99.457 feas=True nov=0.8014
+  child 29/42: stage=      scored eff%=0.331 feas=False nov=0.9141
+  child 30/42: stage=      scored eff%=0.0 feas=False nov=0.9148
+  child 31/42: stage=      scored eff%=33.485 feas=False nov=0.9103
+  child 32/42: stage=      scored eff%=88.54 feas=False nov=0.4587
+  child 33/42: stage=      scored eff%=0.894 feas=False nov=0.9085
+  child 34/42: stage=      scored eff%=99.666 feas=True nov=0.687
+  child 35/42: stage=      scored eff%=99.362 feas=True nov=0.0
+  child 36/42: stage=      scored eff%=0.14 feas=False nov=0.9143
+  child 37/42: stage=      scored eff%=0.863 feas=False nov=0.909
+  child 38/42: stage=      scored eff%=99.544 feas=True nov=0.0
+  child 39/42: stage=      scored eff%=93.682 feas=True nov=0.121
+  child 40/42: stage=      scored eff%=99.622 feas=True nov=0.3467
+  child 41/42: stage=      scored eff%=99.402 feas=True nov=0.0
+  child 42/42: stage=      scored eff%=76.86 feas=False nov=0.9099
+  [v6 plan] gen23: VERIFY targets=['c13bc206'] budget=1 params={'k': 4} :: policy:rule: front/uncertain candidates below final_k seeds
+
+  ===== V6 TRACE gen 23 =====
+  OBSERVED STATE: feasible 57/90 near-feasible 11 best 99.67 front-alive 5 hv 91.1 (d 0.0) uncertain 2 struct-fail 36 pressure 0.429 faulty-promising 0 dup 0.0 stall(best/front) 5/1 sims 2473
+  RELEVANT HISTORY: g16 STEER -> next-gen child novelty 0.376 -> 0.272, duplicate rate 0.011 -> 0.0, generated faulty fraction 0.808 -> 0.6 (memory lambda 64.0), feasible fd>=2 20 -> 21, cosmetic children 0.273 -> 0.385; g17 STEER -> next-gen child novelty 0.272 -> 0.324, duplicate rate 0.0 -> 0.012, generated faulty fraction 0.6 -> 0.576 (memory lambda 64.0), feasible fd>=2 21 -> 21, cosmetic children 0.385 -> 0.2; g18 VERIFY -> 3 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB; 3/3 survived selection, 1 on front0; g19 VERIFY -> 2 verified (+4 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 0 on front0; g20 VERIFY -> 4 verified (+8 sizings), 0 lost feasibility, 0 dropped >3 dB; 4/4 survived selection, 1 on front0; g21 VERIFY -> 2 verified (+4 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 0 on front0; g22 VERIFY -> 2 verified (+4 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 1 on front0; g23 VERIFY -> 1 verified (+2 sizings), 0 lost feasibility, 0 dropped >3 dB
+  VIOLATION MEMORY: patterns {'edge': 10, 'pair': 12, 'motif': 3, 'miss': 0} last-gen faulty 0.528 tilt lambda 64.0
+  CONTROLLER DECISION: VERIFY (policy:rule: front/uncertain candidates below final_k seeds)
+  TARGETS: ['c13bc206']
+  EXISTING TOOL CALLED: Evaluator.extend (extend_staged_fitness)  cost={'sizings': 2, 'llm_calls': 0, 'wall_s': 39.9}
+  RESULT: {'verified': 1, 'extra_sizings': 2, 'lost_feasibility': 0, 'gain_drop_over_3db': 0, 'per_target': [{'id': 'c13bc206', 'gain_before': 99.48, 'gain_after': 99.48, 'feasible_before': True, 'feasible_after': True, 'feasible_frac': 0.75, 'spread': 97.8}]}
+  STATE CHANGE: {'seed_uncertain_count': {'before': 2, 'after': 1}}
+
+  [v8 conv memory] gen23: observed 160 (23 new), invalid 0.043, padded 0.391, cosmetic 0.043, redundant-device rate 0.346, novel success 5 / hurt 11, patterns {'edge': 10, 'pair': 14, 'motif': 3, 'miss': 0}, tilt lambda=64.0
+  [v7 front-entry] gen23: 2 provisional front entrant(s), 2 verified at k=2 (+2 sizings), 2 still feasible, 0 left provisional (cap 6)
+  [fnov] gen23: run-to-date feasible functional distance best 4, >=1: 50, >=2: 38; stall 0; audit sizings 1697
+[outer] gen23 {'front0': 5, 'alive_in_front0': 5, 'best_gain': 99.636, 'max_novelty': 0.9146}  (sizings so far: 2477 [+1784 adaptive], 289.9 min)
+
+[outer] === generation 24: mutate -> evaluate -> select ===
+  [birth M=4] proposed nov u=0.124  accepted nov u=0.179  (delta=+0.055; delta<<0 would mean the gate is trading novelty for wireability)
+  [struct] gen24 (struct_frac): 24 structural children from 29 parent(s) ops={'rewire': 12, 'switch_path': 4, 'lc_path': 1, 'transfer_L': 6, 'cell_graft': 1}; scored 24, feasible 12, reduced distance {4: 20, 3: 2, 1: 1, 2: 1}
+  [fnov audit] gen24: 12 feasible circuit(s) with reduced distance >= 1 ablated (leave-one-out + greedy core, corners [0]), +140 sizings
+  child 1/43: stage=struct_reject eff%=None feas=False nov=0.45
+  child 2/43: stage=struct_reject eff%=None feas=False nov=0.0
+  child 3/43: stage=struct_reject eff%=None feas=False nov=0.0
+  child 4/43: stage=struct_reject eff%=None feas=False nov=0.0
+  child 5/43: stage=struct_reject eff%=None feas=False nov=0.9
+  child 6/43: stage=struct_reject eff%=None feas=False nov=0.0
+  child 7/43: stage=struct_reject eff%=None feas=False nov=0.0
+  child 8/43: stage=struct_reject eff%=None feas=False nov=0.0
+  child 9/43: stage=struct_reject eff%=None feas=False nov=0.0
+  child 10/43: stage=struct_reject eff%=None feas=False nov=0.0
+  child 11/43: stage=struct_reject eff%=None feas=False nov=0.0
+  child 12/43: stage=      scored eff%=16.668 feas=False nov=0.0
+  child 13/43: stage=struct_reject eff%=None feas=False nov=0.9
+  child 14/43: stage=struct_reject eff%=None feas=False nov=0.0
+  child 15/43: stage=struct_reject eff%=None feas=False nov=0.0
+  child 16/43: stage=        dead eff%=None feas=False nov=0.6839
+  child 17/43: stage=      scored eff%=16.826 feas=False nov=0.0161
+  child 18/43: stage=      scored eff%=0.0 feas=False nov=0.4574
+  child 19/43: stage=struct_reject eff%=None feas=False nov=0.0
+  child 20/43: stage=      scored eff%=99.651 feas=True nov=0.0067
+  child 21/43: stage=      scored eff%=0.964 feas=False nov=0.913
+  child 22/43: stage=      scored eff%=99.508 feas=False nov=0.9131
+  child 23/43: stage=      scored eff%=99.667 feas=True nov=0.687
+  child 24/43: stage=      scored eff%=99.432 feas=True nov=0.0
+  child 25/43: stage=      scored eff%=2.851 feas=False nov=0.6865
+  child 26/43: stage=      scored eff%=88.35 feas=False nov=0.9115
+  child 27/43: stage=      scored eff%=0.423 feas=False nov=0.9134
+  child 28/43: stage=      scored eff%=0.387 feas=False nov=0.2353
+  child 29/43: stage=      scored eff%=1.956 feas=False nov=0.9145
+  child 30/43: stage=      scored eff%=99.449 feas=True nov=0.9081
+  child 31/43: stage=      scored eff%=99.36 feas=True nov=0.0
+  child 32/43: stage=      scored eff%=0.398 feas=False nov=0.6871
+  child 33/43: stage=      scored eff%=99.787 feas=True nov=0.7974
+  child 34/43: stage=      scored eff%=99.599 feas=True nov=0.3467
+  child 35/43: stage=      scored eff%=99.504 feas=True nov=0.0
+  child 36/43: stage=      scored eff%=99.311 feas=True nov=0.0
+  child 37/43: stage=      scored eff%=1.001 feas=False nov=0.9088
+  child 38/43: stage=      scored eff%=99.469 feas=True nov=0.913
+  child 39/43: stage=      scored eff%=56.412 feas=False nov=0.9121
+  child 40/43: stage=      scored eff%=0.769 feas=False nov=0.4606
+  child 41/43: stage=      scored eff%=99.544 feas=True nov=0.0
+  child 42/43: stage=      scored eff%=98.975 feas=True nov=0.6859
+  child 43/43: stage=      scored eff%=45.848 feas=False nov=0.9083
+  [v6 plan] gen24: STEER targets=[] budget=1 params={'t_frac': 0.45, 'birth_m': 4, 'memory_lambda': 64.0, 'struct_frac': 0.6} :: policy:rule: best gain stalled >= 6 gens, duplicate_rate >= 0.07 or generated faulty_fraction >= 0.85
+
+  ===== V6 TRACE gen 24 =====
+  OBSERVED STATE: feasible 60/91 near-feasible 9 best 99.79 front-alive 5 hv 91.1 (d 0.0) uncertain 1 struct-fail 30 pressure 0.349 faulty-promising 2 dup 0.0 stall(best/front) 6/2 sims 2644
+  RELEVANT HISTORY: g17 STEER -> next-gen child novelty 0.272 -> 0.324, duplicate rate 0.0 -> 0.012, generated faulty fraction 0.6 -> 0.576 (memory lambda 64.0), feasible fd>=2 21 -> 21, cosmetic children 0.385 -> 0.2; g18 VERIFY -> 3 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB; 3/3 survived selection, 1 on front0; g19 VERIFY -> 2 verified (+4 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 0 on front0; g20 VERIFY -> 4 verified (+8 sizings), 0 lost feasibility, 0 dropped >3 dB; 4/4 survived selection, 1 on front0; g21 VERIFY -> 2 verified (+4 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 0 on front0; g22 VERIFY -> 2 verified (+4 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 1 on front0; g23 VERIFY -> 1 verified (+2 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 0 on front0; g24 STEER -> pending (measured next generation)
+  VIOLATION MEMORY: patterns {'edge': 10, 'pair': 14, 'motif': 3, 'miss': 0} last-gen faulty 0.435 tilt lambda 64.0
+  CONTROLLER DECISION: STEER (policy:rule: best gain stalled >= 6 gens, duplicate_rate >= 0.07 or generated faulty_fraction >= 0.85)
+  TARGETS: []
+  EXISTING TOOL CALLED: make_offspring(t_star, birth_m) for the next generation; MemoryGuidance.lam  cost={'sizings': 0, 'llm_calls': 0, 'wall_s': 0.0}
+  RESULT: {'t_frac': 0.45, 'birth_m': 4, 'set_at_gen': 24, 'memory_lambda': 64.0, 'struct_frac': 0.6}
+  STATE CHANGE: none
+
+  [v8 conv memory] gen24: observed 162 (44 new), invalid 0.386, padded 0.364, cosmetic 0.068, redundant-device rate 0.304, novel success 6 / hurt 13, patterns {'edge': 10, 'pair': 14, 'motif': 3, 'miss': 0}, tilt lambda=64.0
+  [v7 front-entry] gen24: 2 provisional front entrant(s), 2 verified at k=2 (+2 sizings), 2 still feasible, 0 left provisional (cap 6)
+  [fnov] gen24: run-to-date feasible functional distance best 4, >=1: 57, >=2: 44; stall 0; audit sizings 1837
+  [discovered] +1 new front circuit(s); set now 9
+[outer] gen24 {'front0': 3, 'alive_in_front0': 3, 'best_gain': 99.636, 'max_novelty': 0.9146}  (sizings so far: 2646 [+1926 adaptive], 296.1 min)
+
+[outer] sizing budget 2500 reached (2646 spent) -- stopping at generation 24
+
+[outer] FINAL alive Pareto front: 3 topologies
+[outer] robust re-score (k=4 corners) of the final front ...
+   nov=0.803 nn_sim=0.853  robust={'median_gain': 99.636, 'gain_spread': 0.278, 'feasible_frac': 1.0, 'feasible': True}
+   nov=0.915 nn_sim=0.844  robust={'median_gain': 99.423, 'gain_spread': 98.642, 'feasible_frac': 0.75, 'feasible': True}
+   nov=0.913 nn_sim=0.853  robust={'median_gain': 99.451, 'gain_spread': 0.513, 'feasible_frac': 1.0, 'feasible': True}
+
+[outer] DISCOVERED SET: 9 distinct circuits ever on a front (5 already re-scored, 4 to go at k=4)
+
+[conv audit] final repair audit of 9 survivor(s) at k=4 (LLM calls left: 160)
+[conv audit] 0 of 9 needed repair, 0 repaired and re-scored from scratch
+[conv audit] cost 0 sizings (READOUT, not search)
+[outer] discovered set: 9 circuits, 9 robust-feasible (final front alone: 3/3); re-score cost 6 sizings (READOUT, not search) -> runs/conv_fnov_rule_s0/discovered.json
+[outer] LLM rescue usage: 23 calls, 22826 in / 100926 out tokens, 24 edits accepted, 0 rejected (model=gpt-5-mini, enabled=True)
+[outer] V6 action sequence:
+Gen 0 -> RESCUE targets=['126064a1', '444d5e72', 'c4dc45fc']
+       1 attempted, 0 kept, 0 became feasible; 3/3 survived selection, 3 on front0
+Gen 1 -> RESCUE targets=['330b8066', '3c7e83a3', 'f7694157', '392c0049']
+       4 attempted, 1 kept, 1 became feasible; 1/1 still feasible at k=2; 5/5 survived selection, 1 on front0
+Gen 2 -> RESCUE targets=['e58f5082', '330b8066', 'e90d6cc7', '3e01ecd0']
+       3 attempted, 0 kept, 0 became feasible; 4/4 survived selection, 0 on front0
+Gen 3 -> RESCUE targets=['e58f5082', '330b8066', 'e90d6cc7', '3e01ecd0']
+       2 attempted, 0 kept, 0 became feasible; 4/4 survived selection, 0 on front0
+Gen 4 -> STEER
+       next-gen child novelty 0.344 -> 0.314, duplicate rate 0.011 -> 0.0, generated faulty fraction 0.667 -> 0.721 (memory lambda 8.0), feasible fd>=2 0 -> 1, cosmetic children 0.231 -> 0.3
+Gen 5 -> RESCUE targets=['994c5359', '33943728', '8d4c55a2', 'e58f5082']
+       3 attempted, 2 kept, 1 became feasible; 1/1 still feasible at k=2; 6/6 survived selection, 0 on front0
+Gen 6 -> RESCUE targets=['a1fb6b6c', 'e5c7b1e0', '994c5359', '33943728']
+       4 attempted, 3 kept, 2 became feasible; 2/2 still feasible at k=2; 7/7 survived selection, 0 on front0
+Gen 7 -> STEER
+       next-gen child novelty 0.445 -> 0.292, duplicate rate 0.021 -> 0.011, generated faulty fraction 0.747 -> 0.699 (memory lambda 8.0), feasible fd>=2 2 -> 2, cosmetic children 0.25 -> 0.44
+Gen 8 -> STEER
+       next-gen child novelty 0.292 -> 0.247, duplicate rate 0.011 -> 0.0, generated faulty fraction 0.699 -> 0.795 (memory lambda 12.0), feasible fd>=2 2 -> 3, cosmetic children 0.44 -> 0.5
+Gen 9 -> STEER
+       next-gen child novelty 0.247 -> 0.296, duplicate rate 0.0 -> 0.0, generated faulty fraction 0.795 -> 0.672 (memory lambda 18.0), feasible fd>=2 3 -> 3, cosmetic children 0.5 -> 0.556
+Gen 10 -> STEER
+       next-gen child novelty 0.296 -> 0.291, duplicate rate 0.0 -> 0.0, generated faulty fraction 0.672 -> 0.742 (memory lambda 27.0), feasible fd>=2 3 -> 5, cosmetic children 0.556 -> 0.481
+Gen 11 -> STEER
+       next-gen child novelty 0.291 -> 0.404, duplicate rate 0.0 -> 0.0, generated faulty fraction 0.742 -> 0.839 (memory lambda 40.5), feasible fd>=2 5 -> 6, cosmetic children 0.481 -> 0.333
+Gen 12 -> STEER
+       next-gen child novelty 0.404 -> 0.285, duplicate rate 0.0 -> 0.011, generated faulty fraction 0.839 -> 0.681 (memory lambda 60.75), feasible fd>=2 6 -> 10, cosmetic children 0.333 -> 0.391
+Gen 13 -> RACING
+       +14 sizings; front0 confirmed 2, entered 0, left 0
+Gen 14 -> STEER
+       next-gen child novelty 0.366 -> 0.377, duplicate rate 0.0 -> 0.011, generated faulty fraction 0.727 -> 0.8 (memory lambda 64.0), feasible fd>=2 13 -> 15, cosmetic children 0.333 -> 0.407
+Gen 15 -> STEER
+       next-gen child novelty 0.377 -> 0.376, duplicate rate 0.011 -> 0.011, generated faulty fraction 0.8 -> 0.808 (memory lambda 64.0), feasible fd>=2 15 -> 20, cosmetic children 0.407 -> 0.273
+Gen 16 -> STEER
+       next-gen child novelty 0.376 -> 0.272, duplicate rate 0.011 -> 0.0, generated faulty fraction 0.808 -> 0.6 (memory lambda 64.0), feasible fd>=2 20 -> 21, cosmetic children 0.273 -> 0.385
+Gen 17 -> STEER
+       next-gen child novelty 0.272 -> 0.324, duplicate rate 0.0 -> 0.012, generated faulty fraction 0.6 -> 0.576 (memory lambda 64.0), feasible fd>=2 21 -> 21, cosmetic children 0.385 -> 0.2
+Gen 18 -> VERIFY targets=['c1eedd4e', 'd9268f85', '06d5484d']
+       3 verified (+6 sizings), 0 lost feasibility, 0 dropped >3 dB; 3/3 survived selection, 1 on front0
+Gen 19 -> VERIFY targets=['49a9850d', '45003d93']
+       2 verified (+4 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 0 on front0
+Gen 20 -> VERIFY targets=['07cc4f36', 'aec86f77', 'ce03019c', '64a92ff9']
+       4 verified (+8 sizings), 0 lost feasibility, 0 dropped >3 dB; 4/4 survived selection, 1 on front0
+Gen 21 -> VERIFY targets=['0622da7a', '8e349d3c']
+       2 verified (+4 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 0 on front0
+Gen 22 -> VERIFY targets=['48a97e2e', '6167c487']
+       2 verified (+4 sizings), 0 lost feasibility, 0 dropped >3 dB; 2/2 survived selection, 1 on front0
+Gen 23 -> VERIFY targets=['c13bc206']
+       1 verified (+2 sizings), 0 lost feasibility, 0 dropped >3 dB; 1/1 survived selection, 0 on front0
+Gen 24 -> STEER
+       pending (measured next generation)
+
+[outer] V6 controller: 0 calls, 0 failures/fallbacks -> runs/conv_fnov_rule_s0/v6_trajectory.json
+[outer] FUNCTIONAL NOVELTY: 163 audits, 1837 audit sizings (inside the search budget); archive 666 distinct reduced topologies -> runs/conv_fnov_rule_s0/fnov_archive.json
+[outer] V8 converter memory top patterns:
+  AVOID C between 0 and IN: collapse 259/281
+  AVOID Sa between n and n: invalid 122/214
+  AVOID L between n and n: invalid 112/150
+  AVOID Sb between n and n: invalid 99/192
+  AVOID Sa between IN and n: invalid 90/239
+  AVOID Sb between OUT and n: invalid 62/216
+  AVOID Sa between n and sw: invalid 104/380
+  AVOID Sa between 0 and n: invalid 65/209
+  AVOID Sa between OUT and n: invalid 71/194
+  PREFER C between n and sw: in functionally novel feasible circuits 42 (weighted) of 543
+[outer] V5 repair usage: 0 LLM calls, 0 attempts, 0 successes, 0 recovered, 0 sizings spent on repair -> runs/conv_fnov_rule_s0/v5_monitor.json
+
+[outer] done. 2654 corner evaluations (1934 of them adaptive/robust re-score), 297.7 min. Front -> runs/conv_fnov_rule_s0/pareto_front.json
+[outer] top-by-efficiency on front: eff%=99.636 novelty=0.8032 (robust={'median_gain': 99.636, 'gain_spread': 0.278, 'feasible_frac': 1.0, 'feasible': True})

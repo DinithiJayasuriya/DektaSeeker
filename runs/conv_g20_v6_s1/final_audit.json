@@ -1,0 +1,87 @@
+[
+  {
+    "md5": "839d5a27",
+    "robust": {
+      "median_gain": 99.371,
+      "gain_spread": 0.836,
+      "feasible_frac": 1.0,
+      "feasible": true
+    },
+    "audit": {
+      "structural_valid": true,
+      "n_strong": 0,
+      "n_weak": 1,
+      "op_converged": true,
+      "op_fault": false,
+      "repaired": false
+    }
+  },
+  {
+    "md5": "3746b392",
+    "robust": {
+      "median_gain": 99.371,
+      "gain_spread": 0.817,
+      "feasible_frac": 1.0,
+      "feasible": true
+    },
+    "audit": {
+      "structural_valid": true,
+      "n_strong": 0,
+      "n_weak": 0,
+      "op_converged": true,
+      "op_fault": false,
+      "repaired": false
+    }
+  },
+  {
+    "md5": "ea24fe3c",
+    "robust": {
+      "median_gain": 99.371,
+      "gain_spread": 0.836,
+      "feasible_frac": 1.0,
+      "feasible": true
+    },
+    "audit": {
+      "structural_valid": true,
+      "n_strong": 0,
+      "n_weak": 1,
+      "op_converged": true,
+      "op_fault": false,
+      "repaired": false
+    }
+  },
+  {
+    "md5": "35ebf394",
+    "robust": {
+      "median_gain": 99.371,
+      "gain_spread": 0.836,
+      "feasible_frac": 1.0,
+      "feasible": true
+    },
+    "audit": {
+      "structural_valid": true,
+      "n_strong": 0,
+      "n_weak": 1,
+      "op_converged": true,
+      "op_fault": false,
+      "repaired": false
+    }
+  },
+  {
+    "md5": "0cf6a435",
+    "robust": {
+      "median_gain": 99.371,
+      "gain_spread": 0.836,
+      "feasible_frac": 1.0,
+      "feasible": true
+    },
+    "audit": {
+      "structural_valid": true,
+      "n_strong": 0,
+      "n_weak": 1,
+      "op_converged": true,
+      "op_fault": false,
+      "repaired": false
+    }
+  }
+]

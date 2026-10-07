@@ -1,0 +1,14 @@
+[
+  {
+    "stage": "scored",
+    "feasible": true,
+    "median_gain": 99.371,
+    "novelty": 0.0,
+    "nn_train_sim": 1.0,
+    "obj": [
+      -98.798,
+      1.0
+    ],
+    "cv": 0.0
+  }
+]

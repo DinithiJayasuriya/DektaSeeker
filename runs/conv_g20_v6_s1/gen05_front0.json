@@ -1,0 +1,230 @@
+[
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 98.811,
+    "novelty": 0.1667,
+    "nn_train_sim": 0.8333,
+    "obj": [
+      -98.811,
+      0.8333
+    ],
+    "cv": 0.13999999999999999
+  },
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 96.006,
+    "novelty": 0.0,
+    "nn_train_sim": 1.0,
+    "obj": [
+      -96.006,
+      1.0
+    ],
+    "cv": 0.13999999999999999
+  },
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 97.048,
+    "novelty": 0.0,
+    "nn_train_sim": 1.0,
+    "obj": [
+      -97.048,
+      1.0
+    ],
+    "cv": 0.13999999999999999
+  },
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 98.695,
+    "novelty": 0.0898,
+    "nn_train_sim": 0.9102,
+    "obj": [
+      -98.695,
+      0.9102
+    ],
+    "cv": 0.13999999999999999
+  },
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 96.474,
+    "novelty": 0.1217,
+    "nn_train_sim": 0.8783,
+    "obj": [
+      -96.474,
+      0.8783
+    ],
+    "cv": 0.13999999999999999
+  },
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 98.324,
+    "novelty": 0.1335,
+    "nn_train_sim": 0.8665,
+    "obj": [
+      -98.324,
+      0.8665
+    ],
+    "cv": 0.13999999999999999
+  },
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 97.429,
+    "novelty": 0.1056,
+    "nn_train_sim": 0.8944,
+    "obj": [
+      -97.429,
+      0.8944
+    ],
+    "cv": 0.13999999999999999
+  },
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 98.697,
+    "novelty": 0.1511,
+    "nn_train_sim": 0.8489,
+    "obj": [
+      -98.697,
+      0.8489
+    ],
+    "cv": 0.13999999999999999
+  },
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 97.044,
+    "novelty": 0.0,
+    "nn_train_sim": 1.0,
+    "obj": [
+      -97.044,
+      1.0
+    ],
+    "cv": 0.13999999999999999
+  },
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 98.332,
+    "novelty": 0.1219,
+    "nn_train_sim": 0.8781,
+    "obj": [
+      -98.332,
+      0.8781
+    ],
+    "cv": 0.13999999999999999
+  },
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 97.87,
+    "novelty": 0.0,
+    "nn_train_sim": 1.0,
+    "obj": [
+      -97.87,
+      1.0
+    ],
+    "cv": 0.13999999999999999
+  },
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 97.879,
+    "novelty": 0.0979,
+    "nn_train_sim": 0.9021,
+    "obj": [
+      -97.879,
+      0.9021
+    ],
+    "cv": 0.13999999999999999
+  },
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 98.281,
+    "novelty": 0.0,
+    "nn_train_sim": 1.0,
+    "obj": [
+      -98.281,
+      1.0
+    ],
+    "cv": 0.13999999999999999
+  },
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 98.611,
+    "novelty": 0.0925,
+    "nn_train_sim": 0.9075,
+    "obj": [
+      -98.611,
+      0.9075
+    ],
+    "cv": 0.13999999999999999
+  },
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 98.21,
+    "novelty": 0.0979,
+    "nn_train_sim": 0.9021,
+    "obj": [
+      -98.21,
+      0.9021
+    ],
+    "cv": 0.13999999999999999
+  },
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 97.397,
+    "novelty": 0.0,
+    "nn_train_sim": 1.0,
+    "obj": [
+      -97.397,
+      1.0
+    ],
+    "cv": 0.13999999999999999
+  },
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 98.808,
+    "novelty": 0.0979,
+    "nn_train_sim": 0.9021,
+    "obj": [
+      -98.808,
+      0.9021
+    ],
+    "cv": 0.13999999999999999
+  },
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 98.212,
+    "novelty": 0.0986,
+    "nn_train_sim": 0.9014,
+    "obj": [
+      -98.212,
+      0.9014
+    ],
+    "cv": 0.13999999999999999
+  },
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 97.402,
+    "novelty": 0.0,
+    "nn_train_sim": 1.0,
+    "obj": [
+      -97.402,
+      1.0
+    ],
+    "cv": 0.13999999999999999
+  }
+]

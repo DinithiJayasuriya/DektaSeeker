@@ -1,0 +1,36 @@
+{
+  "model": "gpt-5-mini",
+  "controller_calls": 21,
+  "input_tokens": 83614,
+  "output_tokens": 27335,
+  "controller_failures": 0,
+  "v7": null,
+  "lineage": {
+    "rescued": {
+      "entered_feasible": 0,
+      "verified": 0,
+      "still_feasible": 0,
+      "sizings": 0
+    },
+    "repaired": {
+      "entered_feasible": 0,
+      "verified": 0,
+      "still_feasible": 0,
+      "sizings": 0
+    },
+    "front_entry": {
+      "entered_feasible": 0,
+      "verified": 0,
+      "still_feasible": 0,
+      "sizings": 0
+    }
+  },
+  "actions": {
+    "CONTINUE": 0,
+    "RESCUE": 8,
+    "RACING": 7,
+    "REPAIR": 0,
+    "VERIFY": 5,
+    "STEER": 1
+  }
+}

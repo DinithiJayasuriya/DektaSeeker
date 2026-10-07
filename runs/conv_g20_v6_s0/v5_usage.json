@@ -1,0 +1,21 @@
+{
+  "calls": 1,
+  "attempts": 1,
+  "successes": 1,
+  "recovered": 1,
+  "improved": 0,
+  "sims_repair": 1,
+  "model": "gpt-5-mini",
+  "input_tokens": 1074,
+  "output_tokens": 5056,
+  "edit_kinds": {
+    "VOUT_SHORT": 1
+  },
+  "verdicts": {
+    "SIMULATABLE_BUT_REQUIRES_REVIEW": 1
+  },
+  "confidences": {
+    "LIKELY": 1
+  },
+  "skipped": 0
+}

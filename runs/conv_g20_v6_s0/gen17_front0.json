@@ -1,0 +1,38 @@
+[
+  {
+    "stage": "scored",
+    "feasible": true,
+    "median_gain": 99.598,
+    "novelty": 0.1472,
+    "nn_train_sim": 0.8528,
+    "obj": [
+      -99.279,
+      0.8528
+    ],
+    "cv": 0.0
+  },
+  {
+    "stage": "scored",
+    "feasible": true,
+    "median_gain": 99.371,
+    "novelty": 0.0,
+    "nn_train_sim": 1.0,
+    "obj": [
+      -99.371,
+      1.0
+    ],
+    "cv": 0.0
+  },
+  {
+    "stage": "scored",
+    "feasible": true,
+    "median_gain": 99.323,
+    "novelty": 0.1071,
+    "nn_train_sim": 0.8929,
+    "obj": [
+      -99.323,
+      0.8929
+    ],
+    "cv": 0.0
+  }
+]

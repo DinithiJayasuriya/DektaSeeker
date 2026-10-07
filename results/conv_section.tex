@@ -1,0 +1,126 @@
+% ---------------------------------------------------------------------------
+% Second application: switched power converters.  Every number below is backed
+% by a file on aeonlab2024 (see comments).  Figures referenced:
+%   fig_conv_novel_g20_s0.pdf   (results/figs_conv)  the four discovered converters, added device in red
+%   fig_conv_parents_g20_s0.pdf (results/figs_conv)  their nearest training samples
+%   table_merged.tex            (results/conv_mech_verify) -> \label{tab:conv_parent_child}
+% ---------------------------------------------------------------------------
+\section{Second application: switched power converters}
+\label{sec:converters}
+
+\paragraph{Dataset, representation and generator.}
+To test whether the loop transfers beyond op-amps we re-targeted it at the
+LaMAGIC converter corpus~\cite{lamagic}, a set of small hard-switched
+DC--DC topologies built from four two-terminal device types: a phase-$a$
+switch $S_a$ (closed for the duty fraction $D$ of the period), a phase-$b$
+switch $S_b$ (closed for $1-D$), an inductor and a capacitor, wired between
+the rails $V_\mathrm{IN}$, $V_\mathrm{OUT}$, ground and internal nets.
+Each record is a device--net hypergraph with three to six devices, a duty
+cycle from $\{0.1,0.3,0.5,0.7,0.9\}$, and ngspice labels for $V_\mathrm{out}$
+and efficiency. We read the two published shards (3--5 and 6 component),
+dropped 1{,}959 records with a missing rail, and split the remaining 196{,}376
+graphs 90/5/5 into 176{,}738 / 9{,}818 / 9{,}820 for training, validation and
+test. Because LaMAGIC enumerates every duty for every topology, the training
+split contains only 37{,}514 structurally distinct circuits (Weisfeiler--Lehman
+hash); this distinct set is also the reference against which we score
+novelty. The representation is the corpus's own bipartite device--net graph,
+with no motif layer: at three to six devices there is nothing to abstract, and
+keeping LaMAGIC's formulation keeps the comparison to their generator clean.
+Devices and nets occupy eight of the sixteen node classes of the op-amp
+encoder (rails are folded into the net they touch), every device--net
+incidence is a single undirected edge class since the devices are ideal and
+have no polarity, and the only conditioning signal is a one-hot duty label.
+We deliberately do \emph{not} condition on $V_\mathrm{out}$ or efficiency:
+performance-conditioned generation is the LaMAGIC baseline, whereas our claim
+is that the prior supplies the feasible region and the agents plus external
+simulation do the discovering. The same discrete diffusion architecture as
+the op-amp generator was trained on this graph set for 60 epochs (validation
+NLL 65.2, test NLL 64.8). Sampled at $D=0.5$, 71--83\,\% of its outputs pass
+the structural validity gate, but none of 100 samples met a 2:1 step-down
+specification at a grid duty, and 20--30\,\% are pass-throughs whose output
+ignores the switches. The generator therefore knows what a converter looks
+like, not what it does, which is exactly the regime the discovery loop is
+meant for.
+
+\paragraph{Discovery.}
+The loop of Section~\ref{sec:method} runs unchanged; only the three domain
+plugs are swapped. The \emph{evaluator} builds an ngspice transient deck at a
+stated, conventional operating point (100\,V input, 100\,kHz, 500\,$\mu$H with
+0.25\,$\Omega$ winding resistance, 10\,$\mu$F with 30\,m$\Omega$ ESR, 50\,m$\Omega$
+switches, 50\,$\Omega$ load) and asks the topology to deliver a 2:1
+step-down: $|V_\mathrm{out}-50\,\mathrm{V}|\le 5\,\%$, ripple $\le 5\,\%$, an output
+that responds to duty, and efficiency $\ge 90\,\%$, at \emph{some} duty found
+by a five-point sweep plus two secant refinements. Efficiency at that point
+takes the role that gain played for op-amps, and the four robustness
+``seeds'' become four operating corners: nominal, heavy load ($R/2$), light
+load ($2R$), and low line ($0.9\,V_\mathrm{IN}$ with L and C 20\,\% low).
+The \emph{checker} names faulty terminals (unbound pins, floating nets,
+shoot-through switch pairs, a shorted output, no input-to-output path), and
+because the genome \emph{is} the device--net graph, every LLM repair or
+rescue edit (connect a pin to a net, add an L or C, swap a switch phase,
+rewire) is applied in genome space, validity-gated as a set, and re-checked
+before any simulation. \emph{Novelty} is one minus the cosine similarity of
+WL features to the nearest of the 37{,}514 distinct training circuits. With
+these plugs, generation~0 is drawn by sequential Monte Carlo with the
+validity gate as its health signal, NSGA-II (population 48, 20 generations)
+optimises efficiency and novelty under feasibility domination, variation is
+SDEdit re-noising of parents, and the same single LLM controller chooses one
+action per generation among VERIFY, RACING, RESCUE, REPAIR and STEER from the
+observed population state. Every circuit that ever reaches a Pareto front is
+archived and re-scored on all four corners at the end, so the deliverable is
+the discovered set, not the final front. Two seeds were run on 24 ngspice
+workers; seed 0 spent 1{,}193 corner evaluations and 21 controller calls and
+archived 10 corner-robust converters, seed 1 spent 1{,}793 and archived 5.
+
+\paragraph{Evaluation.}
+Corner robustness is necessary but not sufficient for a discovery claim, so
+we evaluate the archived set in three further steps. First, \emph{exact
+overlap with the corpus}: each archived netlist is canonicalised (WL
+colouring of the device--net graph with rails fixed) and compared with all
+37{,}496 distinct topologies of train, validation and test; for every
+non-match we also test whether deleting one or two devices yields a corpus
+circuit, which identifies the nearest training sample and the device the
+search added. This step removed six archived circuits whose only departure
+from a training buck was a floating loop that carries no current, a case the
+structural gate admits and the novelty score rewards; we report it as a
+limitation and prune such subgraphs before scoring in future runs. Second,
+\emph{child-versus-parent re-simulation}: the surviving circuit and its
+nearest training sample are re-run under the identical specification at all
+four corners, so the effect of the single added device is read directly as a
+difference in feasible corners, median and worst-corner efficiency, and
+ripple. Third, \emph{mechanism verification} from the waveforms of the same
+deck, with a zero-volt probe source in series with every switch and
+capacitor: the RMS, peak and mean current of the added device, its
+utilisation $U$ (fraction of the period with $|i|>1\,\%$ of the load
+current), its peak voltage stress, the per-element dissipated power
+$\langle v\,i\rangle$ (conduction and ESR only, since the switches are ideal),
+capacitor charge balance, an open-loop load step ($50\to25\to50\,\Omega$),
+load and line sweeps, an eight-point component-tolerance grid, and an
+equivalent-circuit reduction in which the added device is merged, shorted
+or removed and the circuit re-simulated. Table~\ref{tab:conv_parent_child}
+collects these measurements for the four converters of seed~0 that are
+absent from the corpus and electrically distinct from the textbook buck
+(Fig.~\ref{fig:conv_novel}); their nearest training samples are shown in
+Fig.~\ref{fig:conv_parents}.
+
+\input{table_merged}   % -> \label{tab:conv_parent_child}
+
+% Optional results paragraph (keep or fold into the discussion):
+\paragraph{What was found.}
+All fifteen archived converters are buck derivatives; no boost or buck-boost
+topology became corner-robust in either seed, and two archived circuits are
+the textbook buck itself (train samples \#6935 and \#40128). Of the four
+electrically distinct additions, one (a) raises efficiency at every load and
+corner and is the best circuit of the run at 99.60\,\%; the reduction test
+shows it is a buck with half the inductance and half the winding resistance,
+and the gain is entirely the resistance halving. One (c) halves ripple and is
+equivalent to a larger output capacitor. One (b) carries no current and is
+redundant, a novelty-by-isomorphism that the performance tables expose. One
+(d) is a genuine new energy-transfer path: its parent is not a converter at
+all, and the added capacitor supplies the freewheel path that makes it meet
+the specification at all four corners, at the cost of 6.5\,A and 7.2\,A current
+peaks through the capacitor and its switch at a 1\,A load, and 0.4 percentage
+points of efficiency relative to the textbook buck. The search thus
+recovered one useful trade-off and one new mechanism from a generator that
+never produced a feasible converter on its own, and the evaluation chain
+correctly separated these from the two additions that only look novel.

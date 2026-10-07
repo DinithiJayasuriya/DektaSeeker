@@ -1,0 +1,4859 @@
+{
+ "summary": {
+  "gen": 6,
+  "evaluated": 89,
+  "run_best_feasible_fd": 4,
+  "run_feasible_fd_ge2": 1,
+  "run_feasible_fd_ge1": 1,
+  "audit_sims": 48,
+  "struct_frac": 0.4,
+  "sizings": 318,
+  "n_struct_children": 19
+ },
+ "records": [
+  {
+   "id": "634bdef4",
+   "stage": "scored",
+   "feasible": true,
+   "eff": 99.529,
+   "k": 2,
+   "feasible_frac": 1.0,
+   "ripple": 0.09514000000000067,
+   "vout": 50.00003,
+   "duty": 0.4985,
+   "netlist": "L0 OUT n13\nSb0 IN n13\nL1 OUT n13\nC0 n13 n14\nSa0 0 n14\nL2 OUT n15\nSa1 0 n15\nSb1 n14 n15\nSa2 n13 n15\nC1 OUT 0\n",
+   "survived": true,
+   "front0": true,
+   "raw_distance": 4,
+   "raw_ge": true,
+   "struct_distance": 4,
+   "functional_distance": 4,
+   "fd_ge": true,
+   "fd_extra": [
+    "L0",
+    "Sb0",
+    "C0",
+    "Sa0"
+   ],
+   "fd_nearest": 35030,
+   "redundant_count": 1,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "parallel",
+     "devices": [
+      "L1"
+     ],
+     "kept": "L0"
+    }
+   ],
+   "reduced_netlist": "L0 OUT n13; Sb0 IN n13; C0 n13 n14; Sa0 0 n14; L2 OUT n15; Sa1 0 n15; Sb1 n14 n15; Sa2 n13 n15; C1 OUT 0",
+   "core_netlist": "L0 OUT n13; Sb0 IN n13; C0 n13 n14; Sa0 0 n14; L2 OUT n15; Sa1 0 n15; Sb1 n14 n15; C1 OUT 0",
+   "device_classes": {
+    "L0": "performance",
+    "Sb0": "essential",
+    "C0": "essential",
+    "Sa0": "performance",
+    "L2": "performance",
+    "Sa1": "performance",
+    "Sb1": "essential",
+    "Sa2": "redundant",
+    "C1": "performance"
+   },
+   "fnov_status": "audited_k1",
+   "novelty": 0.8032,
+   "novelty_wl": 0.1469,
+   "origin": {
+    "kind": "struct_move",
+    "op": "rewire",
+    "move": {
+     "op": "rewire",
+     "device": "C0",
+     "moved_from": "n13",
+     "to": "OUT",
+     "reduced_child": "L0 OUT n13; Sb0 IN n13; C1 n13 n14; Sa0 0 n14; L2 OUT n15; Sa1 0 n15; Sb1 n14 n15; Sa2 n13 n15; C0 0 OUT"
+    },
+    "trigger": "struct_frac",
+    "gen": 5,
+    "parent": "5d79f397",
+    "parent_fd": 4,
+    "parent_eff": 0.523,
+    "struct_frac": 0.4,
+    "last_action": "STEER"
+   },
+   "first_seen_gen": 5,
+   "times_seen": 2
+  },
+  {
+   "id": "3d7202ee",
+   "stage": "scored",
+   "feasible": true,
+   "eff": 99.084,
+   "k": 2,
+   "feasible_frac": 1.0,
+   "ripple": 0.050600000000002865,
+   "vout": 50.0,
+   "duty": 0.4969,
+   "netlist": "C0 n5 OUT\nSb0 n0 IN\nSa0 n0 0\nSb1 0 n5\nL0 n0 OUT\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 0,
+   "raw_ge": false,
+   "struct_distance": 0,
+   "functional_distance": 0,
+   "fd_ge": false,
+   "fd_extra": [],
+   "fd_nearest": 20676,
+   "redundant_count": null,
+   "reduction_removed": 0,
+   "reduction_steps": [],
+   "reduced_netlist": "C0 n5 0; Sb0 n0 IN; Sa0 n0 0; Sb1 OUT n5; L0 n0 OUT",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.0,
+   "novelty_wl": 0.0,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 4,
+    "t_frac": 0.3,
+    "birth_m": 4,
+    "struct_frac": 0.25,
+    "memory_lambda": 8.0,
+    "last_action": "RESCUE",
+    "last_action_gen": 3,
+    "steer": null
+   },
+   "first_seen_gen": 4,
+   "times_seen": 3
+  },
+  {
+   "id": "1ad2387f",
+   "stage": "scored",
+   "feasible": true,
+   "eff": 99.077,
+   "k": 2,
+   "feasible_frac": 1.0,
+   "ripple": 0.06338999999999828,
+   "vout": 50.0,
+   "duty": 0.5029,
+   "netlist": "C0 n9 n11\nSa0 IN n9\nSb0 IN n10\nL0 OUT n9\nSb1 0 n9\nC1 n10 n11\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 3,
+   "raw_ge": false,
+   "struct_distance": 0,
+   "functional_distance": 0,
+   "fd_ge": false,
+   "fd_extra": [],
+   "fd_nearest": 8734,
+   "redundant_count": null,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "series",
+     "devices": [
+      "C1"
+     ],
+     "kept": "C0"
+    }
+   ],
+   "reduced_netlist": "Sa0 IN n9; Sb0 n10 n9; L0 OUT n9; Sb1 0 n9; C0 IN n10",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.0,
+   "novelty_wl": 0.0,
+   "origin": {
+    "kind": "rescue",
+    "ops": [
+     "rewire_pin"
+    ],
+    "gen": 5
+   },
+   "first_seen_gen": 5,
+   "times_seen": 2
+  },
+  {
+   "id": "96c9716d",
+   "stage": "scored",
+   "feasible": true,
+   "eff": 99.014,
+   "k": 2,
+   "feasible_frac": 1.0,
+   "ripple": 0.0634200000000007,
+   "vout": 49.99994,
+   "duty": 0.5031,
+   "netlist": "C0 0 IN\nSa0 n0 IN\nSb0 n0 n3\nSb1 n3 0\nL0 n0 OUT\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 0,
+   "raw_ge": false,
+   "struct_distance": 0,
+   "functional_distance": 0,
+   "fd_ge": false,
+   "fd_extra": [],
+   "fd_nearest": 3901,
+   "redundant_count": null,
+   "reduction_removed": 2,
+   "reduction_steps": [
+    {
+     "rule": "ideal_src_cap",
+     "devices": [
+      "C0"
+     ]
+    },
+    {
+     "rule": "series",
+     "devices": [
+      "Sb1"
+     ],
+     "kept": "Sb0"
+    }
+   ],
+   "reduced_netlist": "Sa0 n0 IN; L0 n0 OUT; Sb0 n0 0",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.0,
+   "novelty_wl": 0.0,
+   "origin": {
+    "kind": "rescue",
+    "ops": [
+     "swap_phase",
+     "rewire_pin"
+    ],
+    "gen": 1
+   },
+   "first_seen_gen": 1,
+   "times_seen": 6
+  },
+  {
+   "id": "c446f0bf",
+   "stage": "scored",
+   "feasible": true,
+   "eff": 99.014,
+   "k": 2,
+   "feasible_frac": 1.0,
+   "ripple": 0.0634200000000007,
+   "vout": 49.99994,
+   "duty": 0.5031,
+   "netlist": "Sa0 IN n9\nSb0 n9 n10\nSb1 0 n10\nL0 OUT n9\nC0 0 n11\nL1 IN n11\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 2,
+   "raw_ge": false,
+   "struct_distance": 0,
+   "functional_distance": 0,
+   "fd_ge": false,
+   "fd_extra": [],
+   "fd_nearest": 4311,
+   "redundant_count": null,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "series",
+     "devices": [
+      "Sb1"
+     ],
+     "kept": "Sb0"
+    }
+   ],
+   "reduced_netlist": "Sa0 IN n9; L0 OUT n9; C0 0 n11; L1 IN n11; Sb0 n9 0",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.0,
+   "novelty_wl": 0.0548,
+   "origin": {
+    "kind": "struct_move",
+    "op": "insert_series",
+    "move": {
+     "op": "insert_series",
+     "device": "C0",
+     "inserted": "L",
+     "at": [
+      "0",
+      "IN"
+     ],
+     "reduced_child": "Sa0 n0 IN; L0 n0 OUT; C0 0 m0; L1 m0 IN; Sb0 n0 0"
+    },
+    "trigger": "struct_frac",
+    "gen": 2,
+    "parent": "96c9716d",
+    "parent_fd": 0,
+    "parent_eff": 99.014,
+    "struct_frac": 0.25,
+    "last_action": "RESCUE"
+   },
+   "first_seen_gen": 2,
+   "times_seen": 5
+  },
+  {
+   "id": "0e037363",
+   "stage": "scored",
+   "feasible": true,
+   "eff": 99.32,
+   "k": 1,
+   "feasible_frac": 1.0,
+   "ripple": 0.0634200000000007,
+   "vout": 49.99994,
+   "duty": 0.5031,
+   "netlist": "C0 IN 0\nSa0 IN n10\nSb0 n10 n11\nSb1 0 n11\nL0 OUT n10\nL1 n10 n12\nC1 n11 n12\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 2,
+   "raw_ge": false,
+   "struct_distance": 2,
+   "functional_distance": 0,
+   "fd_ge": false,
+   "fd_extra": [],
+   "fd_nearest": 3901,
+   "redundant_count": 2,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "ideal_src_cap",
+     "devices": [
+      "C0"
+     ]
+    }
+   ],
+   "reduced_netlist": "Sa0 IN n10; Sb0 n10 n11; Sb1 0 n11; L0 OUT n10; L1 n12 n11; C1 n10 n12",
+   "core_netlist": "Sa0 IN n10; L0 OUT n10; Sb0 n10 0",
+   "device_classes": {
+    "Sa0": "essential",
+    "Sb0": "essential",
+    "Sb1": "essential",
+    "L0": "essential",
+    "L1": "redundant",
+    "C1": "redundant"
+   },
+   "fnov_status": "audited_k1",
+   "novelty": 0.0,
+   "novelty_wl": 0.1059,
+   "origin": {
+    "kind": "struct_move",
+    "op": "lc_path",
+    "move": {
+     "op": "lc_path",
+     "at": [
+      "n0",
+      "n3"
+     ],
+     "reduced_child": "Sa0 n0 IN; Sb0 n0 n3; Sb1 n3 0; L0 n0 OUT; L1 m0 n3; C1 n0 m0"
+    },
+    "trigger": "struct_frac",
+    "gen": 5,
+    "parent": "96c9716d",
+    "parent_fd": 0,
+    "parent_eff": 99.014,
+    "struct_frac": 0.4,
+    "last_action": "STEER"
+   },
+   "first_seen_gen": 5,
+   "times_seen": 2
+  },
+  {
+   "id": "5d79f397",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 0.523,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.16192000000000206,
+   "vout": 50.04223,
+   "duty": 0.5197,
+   "netlist": "L0 OUT n13\nC0 0 n13\nSb0 IN n13\nL1 OUT n13\nC1 n13 n14\nSa0 0 n14\nL2 OUT n15\nSa1 0 n15\nSb1 n14 n15\nSa2 n13 n15\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 4,
+   "raw_ge": true,
+   "struct_distance": 4,
+   "functional_distance": 4,
+   "fd_ge": true,
+   "fd_extra": [
+    "L0",
+    "C1",
+    "Sa0",
+    "Sb1"
+   ],
+   "fd_nearest": 32199,
+   "redundant_count": null,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "parallel",
+     "devices": [
+      "L1"
+     ],
+     "kept": "L0"
+    }
+   ],
+   "reduced_netlist": "L0 OUT n13; C0 0 n13; Sb0 IN n13; C1 n13 n14; Sa0 0 n14; L2 OUT n15; Sa1 0 n15; Sb1 n14 n15; Sa2 n13 n15",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.9139,
+   "novelty_wl": 0.1421,
+   "origin": {
+    "kind": "struct_move",
+    "op": "switch_path",
+    "move": {
+     "op": "switch_path",
+     "at": [
+      "n14",
+      "n12"
+     ],
+     "switch": "Sa",
+     "reduced_child": "L0 OUT n12; C0 0 n12; Sb0 IN n12; C1 n12 n13; Sa0 0 n13; L2 OUT n14; Sa1 0 n14; Sb1 n13 n14; Sa2 n14 n12"
+    },
+    "trigger": "struct_frac",
+    "gen": 4,
+    "parent": "c5af068b",
+    "parent_fd": 4,
+    "parent_eff": 0.702,
+    "struct_frac": 0.25,
+    "last_action": "RESCUE"
+   },
+   "first_seen_gen": 4,
+   "times_seen": 3
+  },
+  {
+   "id": "33943728",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 58.198,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.44953999999999894,
+   "vout": 49.54894,
+   "duty": 0.1338,
+   "netlist": "C0 0 IN\nC1 n5 n7\nL0 OUT n7\nSa0 0 n5\nSb0 IN n7\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 0,
+   "raw_ge": false,
+   "struct_distance": 0,
+   "functional_distance": 0,
+   "fd_ge": false,
+   "fd_extra": [],
+   "fd_nearest": 1146,
+   "redundant_count": null,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "ideal_src_cap",
+     "devices": [
+      "C0"
+     ]
+    }
+   ],
+   "reduced_netlist": "C1 n5 0; L0 OUT n7; Sa0 n7 n5; Sb0 IN n7",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.0,
+   "novelty_wl": 0.0,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 5,
+    "t_frac": 0.45,
+    "birth_m": 4,
+    "struct_frac": 0.4,
+    "memory_lambda": 8.0,
+    "last_action": "STEER",
+    "last_action_gen": 4,
+    "steer": {
+     "t_frac": 0.45,
+     "birth_m": 4,
+     "set_at_gen": 4,
+     "struct_frac": 0.4
+    }
+   },
+   "first_seen_gen": 5,
+   "times_seen": 2
+  },
+  {
+   "id": "c6e405c8",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 0.19,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.4735499999999959,
+   "vout": 49.74761,
+   "duty": 0.8825,
+   "netlist": "C0 IN 0\nC1 IN n13\nSb0 n13 n14\nSa0 OUT n14\nL0 IN n14\nSa1 IN n15\nSb1 0 n15\nL1 0 n15\nC2 0 n16\nSa2 n14 n16\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 4,
+   "raw_ge": true,
+   "struct_distance": 4,
+   "functional_distance": 4,
+   "fd_ge": true,
+   "fd_extra": [
+    "C1",
+    "Sb0",
+    "C2",
+    "Sa2"
+   ],
+   "fd_nearest": 7241,
+   "redundant_count": null,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "ideal_src_cap",
+     "devices": [
+      "C0"
+     ]
+    }
+   ],
+   "reduced_netlist": "C1 IN n13; Sb0 n13 n14; Sa0 OUT n14; L0 IN n14; Sa1 IN n15; Sb1 0 n15; L1 0 n15; C2 0 n16; Sa2 n14 n16",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.9129,
+   "novelty_wl": 0.136,
+   "origin": {
+    "kind": "struct_move",
+    "op": "sc_branch",
+    "move": {
+     "op": "sc_branch",
+     "at": [
+      "0",
+      "n12"
+     ],
+     "switch": "Sa",
+     "reduced_child": "C1 IN n11; Sb0 n11 n12; Sa0 OUT n12; L0 IN n12; Sa1 IN n13; Sb1 0 n13; L1 0 n13; C2 0 m0; Sa2 m0 n12"
+    },
+    "trigger": "struct_frac",
+    "gen": 5,
+    "parent": "517d15fb",
+    "parent_fd": 2,
+    "parent_eff": 0.19,
+    "struct_frac": 0.4,
+    "last_action": "STEER"
+   },
+   "first_seen_gen": 5,
+   "times_seen": 2
+  },
+  {
+   "id": "fb0b7e71",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 99.341,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.2616000000000014,
+   "vout": 100.2552,
+   "duty": 0.9,
+   "netlist": "C0 IN 0\nC1 IN n13\nSb0 n13 n14\nSa0 OUT n14\nL0 IN n14\nC2 n14 n15\nSa1 n13 n15\nSb1 0 n16\nL1 n15 n16\nSa2 n14 n16\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 4,
+   "raw_ge": true,
+   "struct_distance": 4,
+   "functional_distance": 4,
+   "fd_ge": true,
+   "fd_extra": [],
+   "fd_nearest": null,
+   "redundant_count": null,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "ideal_src_cap",
+     "devices": [
+      "C0"
+     ]
+    }
+   ],
+   "reduced_netlist": "C1 IN n13; Sb0 n13 n14; Sa0 OUT n14; L0 IN n14; C2 n14 n15; Sa1 n13 n15; Sb1 0 n16; L1 n15 n16; Sa2 n14 n16",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.9077,
+   "novelty_wl": 0.1425,
+   "origin": {
+    "kind": "struct_move",
+    "op": "rewire",
+    "move": {
+     "op": "rewire",
+     "device": "Sa2",
+     "moved_from": "n13",
+     "to": "n14",
+     "reduced_child": "C1 IN n13; Sb0 n13 n14; Sa0 OUT n14; L0 IN n14; C2 n14 n15; Sa1 n13 n15; Sb1 0 n16; L1 n15 n16; Sa2 n16 n14"
+    },
+    "trigger": "struct_frac",
+    "gen": 5,
+    "parent": "d86410dc",
+    "parent_fd": 4,
+    "parent_eff": 99.117,
+    "struct_frac": 0.4,
+    "last_action": "STEER"
+   },
+   "first_seen_gen": 5,
+   "times_seen": 2
+  },
+  {
+   "id": "994c5359",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 65.834,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.06412999999999869,
+   "vout": 49.99991,
+   "duty": 0.503,
+   "netlist": "Sa0 IN n10\nSb0 n10 n11\nSb1 0 n11\nL0 OUT n10\nC0 0 n12\nL1 IN n12\nL2 n11 n12\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 1,
+   "raw_ge": false,
+   "struct_distance": 1,
+   "functional_distance": 1,
+   "fd_ge": false,
+   "fd_extra": [
+    "Sa0"
+   ],
+   "fd_nearest": 33265,
+   "redundant_count": null,
+   "reduction_removed": 0,
+   "reduction_steps": [],
+   "reduced_netlist": "Sa0 IN n10; Sb0 n10 n11; Sb1 0 n11; L0 OUT n10; C0 0 n12; L1 IN n12; L2 n11 n12",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.2327,
+   "novelty_wl": 0.0766,
+   "origin": {
+    "kind": "struct_move",
+    "op": "transfer_L",
+    "move": {
+     "op": "transfer_L",
+     "at": [
+      "n11",
+      "n10"
+     ],
+     "reduced_child": "Sa0 IN n9; Sb0 n9 n10; Sb1 0 n10; L0 OUT n9; C0 0 n11; L1 IN n11; L2 n11 n10"
+    },
+    "trigger": "struct_frac",
+    "gen": 5,
+    "parent": "c446f0bf",
+    "parent_fd": 0,
+    "parent_eff": 99.014,
+    "struct_frac": 0.4,
+    "last_action": "STEER"
+   },
+   "first_seen_gen": 5,
+   "times_seen": 2
+  },
+  {
+   "id": "e5c7b1e0",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 88.373,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.06349999999999767,
+   "vout": 49.99988,
+   "duty": 0.5035,
+   "netlist": "Sa0 IN n10\nSb0 n10 n11\nSb1 0 n11\nL0 OUT n10\nC0 0 n12\nL1 OUT n12\nL2 n11 n12\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 2,
+   "raw_ge": false,
+   "struct_distance": 2,
+   "functional_distance": 2,
+   "fd_ge": false,
+   "fd_extra": [
+    "Sb1",
+    "L1"
+   ],
+   "fd_nearest": 310,
+   "redundant_count": null,
+   "reduction_removed": 0,
+   "reduction_steps": [],
+   "reduced_netlist": "Sa0 IN n10; Sb0 n10 n11; Sb1 0 n11; L0 OUT n10; C0 0 n12; L1 OUT n12; L2 n11 n12",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.4587,
+   "novelty_wl": 0.4587,
+   "origin": {
+    "kind": "rescue",
+    "ops": [
+     "rewire_pin"
+    ],
+    "gen": 5
+   },
+   "first_seen_gen": 5,
+   "times_seen": 2
+  },
+  {
+   "id": "6172f770",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 98.204,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 2.0915099999999995,
+   "vout": 98.32109,
+   "duty": 0.1,
+   "netlist": "C0 0 n11\nSa0 OUT IN\nL0 n9 n11\nC1 IN n11\nL1 OUT n3\nSa1 n3 n9\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 3,
+   "raw_ge": false,
+   "struct_distance": 3,
+   "functional_distance": 3,
+   "fd_ge": false,
+   "fd_extra": [
+    "Sa0",
+    "C1"
+   ],
+   "fd_nearest": 11430,
+   "redundant_count": null,
+   "reduction_removed": 0,
+   "reduction_steps": [],
+   "reduced_netlist": "C0 0 n11; Sa0 OUT IN; L0 n9 n3; C1 IN n11; L1 OUT n3; Sa1 n11 n9",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.6802,
+   "novelty_wl": 0.0774,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 4,
+    "t_frac": 0.3,
+    "birth_m": 4,
+    "struct_frac": 0.25,
+    "memory_lambda": 8.0,
+    "last_action": "RESCUE",
+    "last_action_gen": 3,
+    "steer": null
+   },
+   "first_seen_gen": 4,
+   "times_seen": 3
+  },
+  {
+   "id": "deabce91",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 99.267,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.1454999999999984,
+   "vout": 110.2866,
+   "duty": 0.1,
+   "netlist": "L0 IN n11\nSa0 n11 n12\nL1 0 n12\nC0 IN OUT\nC1 IN n12\nSb0 OUT n11\nC2 n11 n13\nSb1 IN n13\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 3,
+   "raw_ge": false,
+   "struct_distance": 3,
+   "functional_distance": 3,
+   "fd_ge": false,
+   "fd_extra": [
+    "C0",
+    "C2",
+    "Sb1"
+   ],
+   "fd_nearest": 638,
+   "redundant_count": null,
+   "reduction_removed": 0,
+   "reduction_steps": [],
+   "reduced_netlist": "L0 IN n11; Sa0 n11 n12; L1 0 n12; C0 IN OUT; C1 IN n12; Sb0 OUT n11; C2 n13 IN; Sb1 n11 n13",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.689,
+   "novelty_wl": 0.1205,
+   "origin": {
+    "kind": "struct_move",
+    "op": "sc_branch",
+    "move": {
+     "op": "sc_branch",
+     "at": [
+      "n10",
+      "IN"
+     ],
+     "switch": "Sb",
+     "reduced_child": "L0 IN n10; Sa0 n9 n10; L1 0 n9; C0 OUT IN; C1 IN n9; Sb0 OUT n10; C2 m0 IN; Sb1 n10 m0"
+    },
+    "trigger": "struct_frac",
+    "gen": 5,
+    "parent": "3a6d81b1",
+    "parent_fd": 1,
+    "parent_eff": 99.269,
+    "struct_frac": 0.4,
+    "last_action": "STEER"
+   },
+   "first_seen_gen": 5,
+   "times_seen": 2
+  },
+  {
+   "id": "da598590",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 96.879,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.9957200000000057,
+   "vout": 96.87805,
+   "duty": 0.1,
+   "netlist": "Sb0 n0 OUT\nC0 n0 OUT\nSa0 n0 IN\nC1 0 IN\nC2 OUT IN\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 1,
+   "raw_ge": false,
+   "struct_distance": 1,
+   "functional_distance": 1,
+   "fd_ge": false,
+   "fd_extra": [],
+   "fd_nearest": 24656,
+   "redundant_count": null,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "ideal_src_cap",
+     "devices": [
+      "C1"
+     ]
+    }
+   ],
+   "reduced_netlist": "Sb0 n0 OUT; C0 n0 OUT; Sa0 n0 IN; C2 OUT IN",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.2417,
+   "novelty_wl": 0.1128,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 4,
+    "t_frac": 0.3,
+    "birth_m": 4,
+    "struct_frac": 0.25,
+    "memory_lambda": 8.0,
+    "last_action": "RESCUE",
+    "last_action_gen": 3,
+    "steer": null
+   },
+   "first_seen_gen": 4,
+   "times_seen": 3
+  },
+  {
+   "id": "517d15fb",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 0.19,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.4895399999999981,
+   "vout": 49.79213,
+   "duty": 0.8834,
+   "netlist": "C0 IN 0\nC1 IN n11\nSb0 n11 n12\nSa0 OUT n12\nL0 IN n12\nSa1 IN n13\nSb1 0 n13\nL1 0 n13\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 3,
+   "raw_ge": false,
+   "struct_distance": 2,
+   "functional_distance": 2,
+   "fd_ge": false,
+   "fd_extra": [
+    "C1",
+    "Sb0"
+   ],
+   "fd_nearest": 7241,
+   "redundant_count": null,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "ideal_src_cap",
+     "devices": [
+      "C0"
+     ]
+    }
+   ],
+   "reduced_netlist": "C1 IN n11; Sb0 n11 n12; Sa0 OUT n12; L0 IN n12; Sa1 IN n13; Sb1 0 n13; L1 0 n13",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.4629,
+   "novelty_wl": 0.1168,
+   "origin": {
+    "kind": "struct_move",
+    "op": "cell_graft",
+    "move": {
+     "op": "cell_graft",
+     "cell": "buck",
+     "at": [
+      "IN",
+      "0"
+     ],
+     "reduced_child": "C1 n0 IN; Sb0 n0 n3; Sa0 n3 OUT; L0 n3 IN; Sa1 IN m0; Sb1 m0 0; L1 m0 0"
+    },
+    "trigger": "struct_frac",
+    "gen": 2,
+    "parent": "330b8066",
+    "parent_fd": 0,
+    "parent_eff": 50.645,
+    "struct_frac": 0.25,
+    "last_action": "RESCUE"
+   },
+   "first_seen_gen": 2,
+   "times_seen": 5
+  },
+  {
+   "id": "444d5e72",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 0.478,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.031589999999994234,
+   "vout": 49.20134,
+   "duty": 0.199,
+   "netlist": "C0 n3 IN\nSa0 0 n3\nL0 n4 IN\nL1 n3 n4\nSb0 n4 IN\nL2 n3 OUT\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 1,
+   "raw_ge": false,
+   "struct_distance": 1,
+   "functional_distance": 1,
+   "fd_ge": false,
+   "fd_extra": [
+    "C0"
+   ],
+   "fd_nearest": 11305,
+   "redundant_count": null,
+   "reduction_removed": 0,
+   "reduction_steps": [],
+   "reduced_netlist": "C0 n3 IN; Sa0 0 n3; L0 n4 IN; L1 n3 n4; Sb0 n4 IN; L2 n3 OUT",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.2318,
+   "novelty_wl": 0.0683,
+   "origin": {
+    "kind": "gen0_smc",
+    "gen": 0
+   },
+   "first_seen_gen": 0,
+   "times_seen": 7
+  },
+  {
+   "id": "f7eb2aa7",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 98.324,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 2.092160000000007,
+   "vout": 98.32391,
+   "duty": 0.1,
+   "netlist": "L0 n3 0\nSb0 n0 n3\nSa0 n8 IN\nSa1 n0 n8\nSa2 OUT IN\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 0,
+   "raw_ge": false,
+   "struct_distance": 0,
+   "functional_distance": 0,
+   "fd_ge": false,
+   "fd_extra": [],
+   "fd_nearest": 3401,
+   "redundant_count": null,
+   "reduction_removed": 4,
+   "reduction_steps": [
+    {
+     "rule": "antiphase",
+     "devices": [
+      "Sb0",
+      "Sa1"
+     ]
+    },
+    {
+     "rule": "dead",
+     "devices": [
+      "L0",
+      "Sa0"
+     ]
+    }
+   ],
+   "reduced_netlist": "Sa2 OUT IN",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.0376,
+   "novelty_wl": 0.0,
+   "origin": {
+    "kind": "gen0_smc",
+    "gen": 0
+   },
+   "first_seen_gen": 0,
+   "times_seen": 25
+  },
+  {
+   "id": "b17d2d90",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 97.987,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 2.0564600000000013,
+   "vout": 97.9808,
+   "duty": 0.9,
+   "netlist": "C0 0 n9\nSa0 OUT n9\nSb0 OUT n10\nSb1 IN OUT\nL0 0 n11\nC1 n10 n11\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 2,
+   "raw_ge": false,
+   "struct_distance": 2,
+   "functional_distance": 2,
+   "fd_ge": false,
+   "fd_extra": [
+    "C0"
+   ],
+   "fd_nearest": 14646,
+   "redundant_count": null,
+   "reduction_removed": 0,
+   "reduction_steps": [],
+   "reduced_netlist": "C0 0 n9; Sa0 OUT n9; Sb0 n10 n11; Sb1 IN OUT; L0 n11 n10; C1 0 n11",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.4556,
+   "novelty_wl": 0.0601,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 3,
+    "t_frac": 0.3,
+    "birth_m": 4,
+    "struct_frac": 0.25,
+    "memory_lambda": 8.0,
+    "last_action": "RESCUE",
+    "last_action_gen": 2,
+    "steer": null
+   },
+   "first_seen_gen": 3,
+   "times_seen": 4
+  },
+  {
+   "id": "3e01ecd0",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 17.031,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.1389999999999958,
+   "vout": 50.01044,
+   "duty": 0.8733,
+   "netlist": "L0 OUT n13\nSa0 n13 n14\nL1 IN n15\nSa1 n14 n15\nSb0 0 n15\nL2 n13 n16\nC0 IN n16\nSa2 n16 n17\nSb1 0 n17\nL3 n13 n17\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 4,
+   "raw_ge": true,
+   "struct_distance": 3,
+   "functional_distance": 3,
+   "fd_ge": false,
+   "fd_extra": [
+    "Sa2",
+    "Sb1",
+    "L3"
+   ],
+   "fd_nearest": 11495,
+   "redundant_count": null,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "series",
+     "devices": [
+      "Sa1"
+     ],
+     "kept": "Sa0"
+    }
+   ],
+   "reduced_netlist": "L0 OUT n13; L1 IN n15; Sb0 0 n15; L2 n13 n16; C0 IN n16; Sa2 n16 n17; Sb1 0 n17; L3 n13 n17; Sa0 n13 n15",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.6856,
+   "novelty_wl": 0.1225,
+   "origin": {
+    "kind": "struct_move",
+    "op": "cell_graft",
+    "move": {
+     "op": "cell_graft",
+     "cell": "buck",
+     "at": [
+      "n13",
+      "n10"
+     ],
+     "reduced_child": "L0 OUT n10; L1 IN n12; Sb0 0 n12; L2 n10 n13; C0 IN n13; Sa2 n13 m0; Sb1 m0 0; L3 m0 n10; Sa0 n10 n12"
+    },
+    "trigger": "struct_frac",
+    "gen": 2,
+    "parent": "3c7e83a3",
+    "parent_fd": 0,
+    "parent_eff": 13.621,
+    "struct_frac": 0.25,
+    "last_action": "RESCUE"
+   },
+   "first_seen_gen": 2,
+   "times_seen": 5
+  },
+  {
+   "id": "330b8066",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 50.645,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.4895399999999981,
+   "vout": 49.79213,
+   "duty": 0.8834,
+   "netlist": "C0 0 IN\nC1 n0 IN\nSb0 n0 n3\nSa0 n3 OUT\nL0 n3 IN\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 0,
+   "raw_ge": false,
+   "struct_distance": 0,
+   "functional_distance": 0,
+   "fd_ge": false,
+   "fd_extra": [],
+   "fd_nearest": 9711,
+   "redundant_count": null,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "ideal_src_cap",
+     "devices": [
+      "C0"
+     ]
+    }
+   ],
+   "reduced_netlist": "C1 n0 IN; Sb0 n0 n3; Sa0 n3 OUT; L0 n3 IN",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.0133,
+   "novelty_wl": 0.0,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 1,
+    "t_frac": 0.3,
+    "birth_m": 4,
+    "struct_frac": 0.25,
+    "memory_lambda": 8.0,
+    "last_action": "RESCUE",
+    "last_action_gen": 0,
+    "steer": null
+   },
+   "first_seen_gen": 1,
+   "times_seen": 6
+  },
+  {
+   "id": "3c7e83a3",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 13.621,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.3953199999999981,
+   "vout": 50.49457,
+   "duty": 0.3145,
+   "netlist": "L0 OUT n10\nSa0 n10 n11\nL1 IN n12\nSa1 n11 n12\nSb0 0 n12\nL2 n10 n13\nC0 IN n13\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 2,
+   "raw_ge": false,
+   "struct_distance": 0,
+   "functional_distance": 0,
+   "fd_ge": false,
+   "fd_extra": [],
+   "fd_nearest": 11495,
+   "redundant_count": null,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "series",
+     "devices": [
+      "Sa1"
+     ],
+     "kept": "Sa0"
+    }
+   ],
+   "reduced_netlist": "L0 OUT n10; L1 IN n12; Sb0 0 n12; L2 n10 n13; C0 IN n13; Sa0 n10 n12",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.0081,
+   "novelty_wl": 0.0619,
+   "origin": {
+    "kind": "struct_move",
+    "op": "lc_path",
+    "move": {
+     "op": "lc_path",
+     "at": [
+      "n10",
+      "IN"
+     ],
+     "reduced_child": "L0 OUT n10; L1 n1 IN; Sb0 n1 0; L2 n10 m0; C0 m0 IN; Sa0 n10 n1"
+    },
+    "trigger": "struct_frac",
+    "gen": 1,
+    "parent": "d0c542a0",
+    "parent_fd": 0,
+    "parent_eff": 37.469,
+    "struct_frac": 0.25,
+    "last_action": "RESCUE"
+   },
+   "first_seen_gen": 1,
+   "times_seen": 6
+  },
+  {
+   "id": "76684690",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 34.4,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.24951999999999686,
+   "vout": 50.18454,
+   "duty": 0.6838,
+   "netlist": "L0 OUT n13\nSa0 n13 n14\nL1 IN n15\nSa1 n14 n15\nSb0 0 n15\nC0 n15 n16\nSa2 n14 n16\nL2 n13 n17\nC1 n16 n17\nL3 n13 n14\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 4,
+   "raw_ge": true,
+   "struct_distance": 4,
+   "functional_distance": 4,
+   "fd_ge": true,
+   "fd_extra": [],
+   "fd_nearest": null,
+   "redundant_count": null,
+   "reduction_removed": 0,
+   "reduction_steps": [],
+   "reduced_netlist": "L0 OUT n13; Sa0 n13 n14; L1 IN n15; Sa1 n14 n15; Sb0 0 n15; C0 n15 n16; Sa2 n14 n16; L2 n13 n17; C1 n16 n17; L3 n13 n14",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.9125,
+   "novelty_wl": 0.1254,
+   "origin": {
+    "kind": "struct_move",
+    "op": "transfer_L",
+    "move": {
+     "op": "transfer_L",
+     "at": [
+      "n12",
+      "n13"
+     ],
+     "reduced_child": "L0 OUT n12; Sa0 n12 n13; L1 IN n14; Sa1 n13 n14; Sb0 0 n14; C0 n14 n15; Sa2 n13 n15; L2 n12 n16; C1 n15 n16; L3 n12 n13"
+    },
+    "trigger": "struct_frac",
+    "gen": 4,
+    "parent": "e90d6cc7",
+    "parent_fd": 4,
+    "parent_eff": 34.401,
+    "struct_frac": 0.25,
+    "last_action": "RESCUE"
+   },
+   "first_seen_gen": 4,
+   "times_seen": 3
+  },
+  {
+   "id": "e90d6cc7",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 34.401,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.2495100000000008,
+   "vout": 50.18403,
+   "duty": 0.6838,
+   "netlist": "L0 OUT n12\nSa0 n12 n13\nL1 IN n14\nSa1 n13 n14\nSb0 0 n14\nC0 n14 n15\nSa2 n13 n15\nL2 n12 n16\nC1 n15 n16\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 4,
+   "raw_ge": true,
+   "struct_distance": 4,
+   "functional_distance": 4,
+   "fd_ge": true,
+   "fd_extra": [
+    "C0",
+    "Sa2",
+    "L2",
+    "C1"
+   ],
+   "fd_nearest": 2531,
+   "redundant_count": null,
+   "reduction_removed": 0,
+   "reduction_steps": [],
+   "reduced_netlist": "L0 OUT n12; Sa0 n12 n13; L1 IN n14; Sa1 n13 n14; Sb0 0 n14; C0 n14 n15; Sa2 n13 n15; L2 n12 n16; C1 n15 n16",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.912,
+   "novelty_wl": 0.1204,
+   "origin": {
+    "kind": "struct_move",
+    "op": "lc_path",
+    "move": {
+     "op": "lc_path",
+     "at": [
+      "n10",
+      "n13"
+     ],
+     "reduced_child": "L0 OUT n10; Sa0 n10 n11; L1 IN n12; Sa1 n11 n12; Sb0 0 n12; C0 n12 n13; Sa2 n11 n13; L2 n10 m0; C1 m0 n13"
+    },
+    "trigger": "struct_frac",
+    "gen": 2,
+    "parent": "d11899eb",
+    "parent_fd": 2,
+    "parent_eff": 37.469,
+    "struct_frac": 0.25,
+    "last_action": "RESCUE"
+   },
+   "first_seen_gen": 2,
+   "times_seen": 5
+  },
+  {
+   "id": "c5af068b",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 0.702,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.1173300000000026,
+   "vout": 50.1699,
+   "duty": 0.6208,
+   "netlist": "L0 OUT n12\nC0 0 n12\nSb0 IN n12\nL1 OUT n12\nC1 n12 n13\nSa0 0 n13\nL2 OUT n14\nSa1 0 n14\nSb1 n13 n14\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 4,
+   "raw_ge": true,
+   "struct_distance": 4,
+   "functional_distance": 4,
+   "fd_ge": true,
+   "fd_extra": [
+    "L0",
+    "Sa0",
+    "Sa1"
+   ],
+   "fd_nearest": 12057,
+   "redundant_count": null,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "parallel",
+     "devices": [
+      "L1"
+     ],
+     "kept": "L0"
+    }
+   ],
+   "reduced_netlist": "L0 OUT n12; C0 0 n12; Sb0 IN n12; C1 n12 n13; Sa0 0 n13; L2 OUT n14; Sa1 0 n14; Sb1 n13 n14",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.9133,
+   "novelty_wl": 0.1352,
+   "origin": {
+    "kind": "struct_move",
+    "op": "cell_graft",
+    "move": {
+     "op": "cell_graft",
+     "cell": "boost",
+     "at": [
+      "OUT",
+      "n10"
+     ],
+     "reduced_child": "L0 OUT n9; C0 0 n9; Sb0 IN n9; C1 n9 n10; Sa0 0 n10; L2 OUT m0; Sa1 m0 0; Sb1 m0 n10"
+    },
+    "trigger": "struct_frac",
+    "gen": 3,
+    "parent": "b42f88c4",
+    "parent_fd": 0,
+    "parent_eff": 97.741,
+    "struct_frac": 0.25,
+    "last_action": "RESCUE"
+   },
+   "first_seen_gen": 3,
+   "times_seen": 4
+  },
+  {
+   "id": "e58f5082",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 50.897,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.5280599999999964,
+   "vout": 50.04612,
+   "duty": 0.8294,
+   "netlist": "C0 IN 0\nC1 IN n10\nSb0 n10 n11\nSa0 OUT n11\nL0 IN n11\nC2 n11 n12\nSa1 n10 n12\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 2,
+   "raw_ge": false,
+   "struct_distance": 2,
+   "functional_distance": 2,
+   "fd_ge": false,
+   "fd_extra": [
+    "C2",
+    "Sa1"
+   ],
+   "fd_nearest": 9711,
+   "redundant_count": null,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "ideal_src_cap",
+     "devices": [
+      "C0"
+     ]
+    }
+   ],
+   "reduced_netlist": "C1 IN n10; Sb0 n10 n11; Sa0 OUT n11; L0 IN n11; C2 n12 n10; Sa1 n11 n12",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.4618,
+   "novelty_wl": 0.0963,
+   "origin": {
+    "kind": "struct_move",
+    "op": "sc_branch",
+    "move": {
+     "op": "sc_branch",
+     "at": [
+      "n3",
+      "n0"
+     ],
+     "switch": "Sa",
+     "reduced_child": "C1 n0 IN; Sb0 n0 n3; Sa0 n3 OUT; L0 n3 IN; C2 m0 n0; Sa1 n3 m0"
+    },
+    "trigger": "struct_frac",
+    "gen": 2,
+    "parent": "330b8066",
+    "parent_fd": 0,
+    "parent_eff": 50.645,
+    "struct_frac": 0.25,
+    "last_action": "RESCUE"
+   },
+   "first_seen_gen": 2,
+   "times_seen": 5
+  },
+  {
+   "id": "9a9a3fc8",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 98.322,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 2.0921500000000037,
+   "vout": 98.32391,
+   "duty": 0.1,
+   "netlist": "Sa0 0 n7\nSa1 n0 OUT\nSa2 OUT IN\nSb0 IN n7\nSb1 n0 IN\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 0,
+   "raw_ge": false,
+   "struct_distance": 0,
+   "functional_distance": 0,
+   "fd_ge": false,
+   "fd_extra": [],
+   "fd_nearest": 3401,
+   "redundant_count": null,
+   "reduction_removed": 4,
+   "reduction_steps": [
+    {
+     "rule": "antiphase",
+     "devices": [
+      "Sa0",
+      "Sb0"
+     ]
+    },
+    {
+     "rule": "antiphase",
+     "devices": [
+      "Sa1",
+      "Sb1"
+     ]
+    }
+   ],
+   "reduced_netlist": "Sa2 OUT IN",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.0376,
+   "novelty_wl": 0.0,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 5,
+    "t_frac": 0.45,
+    "birth_m": 4,
+    "struct_frac": 0.4,
+    "memory_lambda": 8.0,
+    "last_action": "STEER",
+    "last_action_gen": 4,
+    "steer": {
+     "t_frac": 0.45,
+     "birth_m": 4,
+     "set_at_gen": 4,
+     "struct_frac": 0.4
+    }
+   },
+   "first_seen_gen": 0,
+   "times_seen": 26
+  },
+  {
+   "id": "ea403780",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 91.584,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 1.4564100000000053,
+   "vout": 99.25865,
+   "duty": 0.7,
+   "netlist": "Sb0 0 n13\nC0 IN 0\nL0 n13 n14\nSb1 OUT n14\nSb2 IN OUT\nL1 n13 n15\nSa0 0 n15\nC1 n15 n16\nSb3 0 n16\nL2 IN n16\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 4,
+   "raw_ge": true,
+   "struct_distance": 4,
+   "functional_distance": 4,
+   "fd_ge": true,
+   "fd_extra": [
+    "L0",
+    "Sb1",
+    "Sa0",
+    "Sb3"
+   ],
+   "fd_nearest": 8739,
+   "redundant_count": null,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "ideal_src_cap",
+     "devices": [
+      "C0"
+     ]
+    }
+   ],
+   "reduced_netlist": "Sb0 0 n13; L0 n14 OUT; Sb1 n13 n14; Sb2 IN OUT; L1 n13 n15; Sa0 0 n15; C1 n15 n16; Sb3 0 n16; L2 IN n16",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.911,
+   "novelty_wl": 0.0915,
+   "origin": {
+    "kind": "struct_move",
+    "op": "cell_graft",
+    "move": {
+     "op": "cell_graft",
+     "cell": "cuk",
+     "at": [
+      "n0",
+      "IN"
+     ],
+     "reduced_child": "Sb0 n0 0; L0 n3 OUT; Sb1 n0 n3; Sb2 IN OUT; L1 n0 m0; Sa0 m0 0; C1 m0 m1; Sb3 m1 0; L2 m1 IN"
+    },
+    "trigger": "struct_frac",
+    "gen": 3,
+    "parent": "06d7b679",
+    "parent_fd": 0,
+    "parent_eff": 97.825,
+    "struct_frac": 0.25,
+    "last_action": "RESCUE"
+   },
+   "first_seen_gen": 3,
+   "times_seen": 4
+  },
+  {
+   "id": "512dba15",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 96.408,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 1.9482699999999937,
+   "vout": 96.405,
+   "duty": 0.1,
+   "netlist": "Sb0 IN n11\nC0 IN n11\nSa0 OUT n11\nC1 IN 0\nSa1 IN n12\nC2 n11 n12\nC3 n12 n13\nSa2 OUT n13\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 3,
+   "raw_ge": false,
+   "struct_distance": 3,
+   "functional_distance": 3,
+   "fd_ge": false,
+   "fd_extra": [
+    "C3",
+    "Sa2"
+   ],
+   "fd_nearest": 21106,
+   "redundant_count": null,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "ideal_src_cap",
+     "devices": [
+      "C1"
+     ]
+    }
+   ],
+   "reduced_netlist": "Sb0 IN n11; C0 IN n11; Sa0 OUT n11; Sa1 IN n12; C2 n11 n12; C3 n13 OUT; Sa2 n12 n13",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.687,
+   "novelty_wl": 0.1023,
+   "origin": {
+    "kind": "struct_move",
+    "op": "sc_branch",
+    "move": {
+     "op": "sc_branch",
+     "at": [
+      "n10",
+      "OUT"
+     ],
+     "switch": "Sa",
+     "reduced_child": "Sb0 IN n9; C0 IN n9; Sa0 OUT n9; Sa1 IN n10; C2 n9 n10; C3 m0 OUT; Sa2 n10 m0"
+    },
+    "trigger": "struct_frac",
+    "gen": 5,
+    "parent": "31f7db9a",
+    "parent_fd": 1,
+    "parent_eff": 96.447,
+    "struct_frac": 0.4,
+    "last_action": "STEER"
+   },
+   "first_seen_gen": 5,
+   "times_seen": 2
+  },
+  {
+   "id": "8d4c55a2",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 57.221,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.36820000000000164,
+   "vout": 49.7562,
+   "duty": 0.8808,
+   "netlist": "C0 n9 n11\nSa0 IN n9\nSb0 IN n10\nL0 OUT n9\nSb1 0 n11\nC1 n10 n11\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 1,
+   "raw_ge": false,
+   "struct_distance": 3,
+   "functional_distance": 3,
+   "fd_ge": false,
+   "fd_extra": [
+    "Sb0",
+    "C1"
+   ],
+   "fd_nearest": 656,
+   "redundant_count": null,
+   "reduction_removed": 0,
+   "reduction_steps": [],
+   "reduced_netlist": "C0 n9 n11; Sa0 IN n9; Sb0 n10 n11; L0 OUT n9; Sb1 0 n11; C1 IN n10",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.684,
+   "novelty_wl": 0.0814,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 4,
+    "t_frac": 0.3,
+    "birth_m": 4,
+    "struct_frac": 0.25,
+    "memory_lambda": 8.0,
+    "last_action": "RESCUE",
+    "last_action_gen": 3,
+    "steer": null
+   },
+   "first_seen_gen": 4,
+   "times_seen": 3
+  },
+  {
+   "id": "eaabb16a",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 98.081,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.0012799999999941747,
+   "vout": 98.08147,
+   "duty": 0.9,
+   "netlist": "L0 OUT n2\nC0 n2 0\nSb0 n2 IN\nL1 OUT n2\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 1,
+   "raw_ge": false,
+   "struct_distance": 0,
+   "functional_distance": 0,
+   "fd_ge": false,
+   "fd_extra": [],
+   "fd_nearest": 3904,
+   "redundant_count": null,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "parallel",
+     "devices": [
+      "L1"
+     ],
+     "kept": "L0"
+    }
+   ],
+   "reduced_netlist": "L0 OUT n2; C0 n2 0; Sb0 n2 IN",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.0,
+   "novelty_wl": 0.0871,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 1,
+    "t_frac": 0.3,
+    "birth_m": 4,
+    "struct_frac": 0.25,
+    "memory_lambda": 8.0,
+    "last_action": "RESCUE",
+    "last_action_gen": 0,
+    "steer": null
+   },
+   "first_seen_gen": 1,
+   "times_seen": 6
+  },
+  {
+   "id": "3da186e0",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 98.052,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 2.0974199999999996,
+   "vout": 98.31608,
+   "duty": 0.1,
+   "netlist": "C0 0 n13\nSa0 IN OUT\nL0 n13 n14\nC1 IN n14\nL1 OUT n15\nSa1 n13 n15\nL2 n15 n16\nC2 IN n16\nL3 n15 n17\nC3 n14 n17\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 4,
+   "raw_ge": true,
+   "struct_distance": 4,
+   "functional_distance": 4,
+   "fd_ge": true,
+   "fd_extra": [],
+   "fd_nearest": null,
+   "redundant_count": null,
+   "reduction_removed": 0,
+   "reduction_steps": [],
+   "reduced_netlist": "C0 0 n13; Sa0 IN OUT; L0 n13 n14; C1 IN n14; L1 OUT n15; Sa1 n13 n15; L2 n15 n16; C2 IN n16; L3 n15 n17; C3 n14 n17",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.9121,
+   "novelty_wl": 0.1205,
+   "origin": {
+    "kind": "struct_move",
+    "op": "lc_path",
+    "move": {
+     "op": "lc_path",
+     "at": [
+      "n13",
+      "n12"
+     ],
+     "reduced_child": "C0 0 n11; Sa0 IN OUT; L0 n11 n12; C1 IN n12; L1 OUT n13; Sa1 n11 n13; L2 n13 n14; C2 IN n14; L3 n13 m0; C3 m0 n12"
+    },
+    "trigger": "struct_frac",
+    "gen": 5,
+    "parent": "b5c5f742",
+    "parent_fd": 4,
+    "parent_eff": 97.911,
+    "struct_frac": 0.4,
+    "last_action": "STEER"
+   },
+   "first_seen_gen": 5,
+   "times_seen": 2
+  },
+  {
+   "id": "00e61dc6",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 97.331,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 2.090379999999996,
+   "vout": 98.30948,
+   "duty": 0.9,
+   "netlist": "C0 n11 n12\nSb0 0 n11\nL0 OUT n12\nSb1 n11 n12\nSb2 IN OUT\nL1 OUT n13\nC1 n11 n13\nL2 n12 n13\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 3,
+   "raw_ge": false,
+   "struct_distance": 3,
+   "functional_distance": 3,
+   "fd_ge": false,
+   "fd_extra": [
+    "L1",
+    "C1",
+    "L2"
+   ],
+   "fd_nearest": 7700,
+   "redundant_count": null,
+   "reduction_removed": 0,
+   "reduction_steps": [],
+   "reduced_netlist": "C0 n11 n12; Sb0 0 n11; L0 OUT n12; Sb1 n11 n12; Sb2 IN OUT; L1 OUT n13; C1 n11 n13; L2 n12 n13",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.6853,
+   "novelty_wl": 0.1025,
+   "origin": {
+    "kind": "struct_move",
+    "op": "transfer_L",
+    "move": {
+     "op": "transfer_L",
+     "at": [
+      "n11",
+      "n12"
+     ],
+     "reduced_child": "C0 n10 n11; Sb0 0 n10; L0 OUT n11; Sb1 n10 n11; Sb2 IN OUT; L1 OUT n12; C1 n10 n12; L2 n11 n12"
+    },
+    "trigger": "struct_frac",
+    "gen": 3,
+    "parent": "2f107b00",
+    "parent_fd": 2,
+    "parent_eff": 97.331,
+    "struct_frac": 0.25,
+    "last_action": "RESCUE"
+   },
+   "first_seen_gen": 3,
+   "times_seen": 4
+  },
+  {
+   "id": "bdde462a",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 98.575,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 1.4339899999999943,
+   "vout": 98.57411,
+   "duty": 0.9,
+   "netlist": "C0 0 n9\nC1 OUT n9\nSa0 n9 n10\nSb0 IN OUT\nC2 n9 n11\nSb1 n10 n11\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 3,
+   "raw_ge": false,
+   "struct_distance": 0,
+   "functional_distance": 0,
+   "fd_ge": false,
+   "fd_extra": [],
+   "fd_nearest": 3566,
+   "redundant_count": null,
+   "reduction_removed": 4,
+   "reduction_steps": [
+    {
+     "rule": "antiphase",
+     "devices": [
+      "Sa0",
+      "Sb1"
+     ]
+    },
+    {
+     "rule": "dead",
+     "devices": [
+      "C2"
+     ]
+    },
+    {
+     "rule": "series",
+     "devices": [
+      "C1"
+     ],
+     "kept": "C0"
+    }
+   ],
+   "reduced_netlist": "Sb0 IN OUT; C0 0 OUT",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.0209,
+   "novelty_wl": 0.1053,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 4,
+    "t_frac": 0.3,
+    "birth_m": 4,
+    "struct_frac": 0.25,
+    "memory_lambda": 8.0,
+    "last_action": "RESCUE",
+    "last_action_gen": 3,
+    "steer": null
+   },
+   "first_seen_gen": 1,
+   "times_seen": 13
+  },
+  {
+   "id": "9e3df08e",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 97.961,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 2.031720000000007,
+   "vout": 97.95683,
+   "duty": 0.9,
+   "netlist": "C0 0 n11\nSa0 OUT n11\nSb0 OUT n12\nSb1 IN OUT\nL0 0 n13\nC1 n12 n13\nC2 IN n14\nSb2 n13 n14\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 4,
+   "raw_ge": true,
+   "struct_distance": 4,
+   "functional_distance": 4,
+   "fd_ge": true,
+   "fd_extra": [
+    "Sa0",
+    "Sb0",
+    "C1"
+   ],
+   "fd_nearest": 27383,
+   "redundant_count": null,
+   "reduction_removed": 0,
+   "reduction_steps": [],
+   "reduced_netlist": "C0 0 n11; Sa0 OUT n11; Sb0 n12 n13; Sb1 IN OUT; L0 0 n13; C1 OUT n12; C2 IN n14; Sb2 n13 n14",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.9124,
+   "novelty_wl": 0.0915,
+   "origin": {
+    "kind": "struct_move",
+    "op": "sc_branch",
+    "move": {
+     "op": "sc_branch",
+     "at": [
+      "IN",
+      "n11"
+     ],
+     "switch": "Sb",
+     "reduced_child": "C0 0 n9; Sa0 OUT n9; Sb0 n10 n11; Sb1 IN OUT; L0 0 n11; C1 OUT n10; C2 IN m0; Sb2 m0 n11"
+    },
+    "trigger": "struct_frac",
+    "gen": 5,
+    "parent": "b17d2d90",
+    "parent_fd": 2,
+    "parent_eff": 97.987,
+    "struct_frac": 0.4,
+    "last_action": "STEER"
+   },
+   "first_seen_gen": 5,
+   "times_seen": 2
+  },
+  {
+   "id": "1044e1d2",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 97.354,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 2.0792999999999893,
+   "vout": 97.35557,
+   "duty": 0.9,
+   "netlist": "C0 IN n12\nSb0 IN n11\nSb1 OUT n11\nSa0 n8 0\nL0 IN n11\nSb2 n8 n12\nSb3 OUT n12\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 2,
+   "raw_ge": false,
+   "struct_distance": 1,
+   "functional_distance": 1,
+   "fd_ge": false,
+   "fd_extra": [],
+   "fd_nearest": 31416,
+   "redundant_count": null,
+   "reduction_removed": 2,
+   "reduction_steps": [
+    {
+     "rule": "antiphase",
+     "devices": [
+      "Sa0",
+      "Sb2"
+     ]
+    }
+   ],
+   "reduced_netlist": "C0 IN n12; Sb0 IN n11; Sb1 OUT n11; L0 IN n11; Sb3 OUT n12",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.2342,
+   "novelty_wl": 0.0848,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 3,
+    "t_frac": 0.3,
+    "birth_m": 4,
+    "struct_frac": 0.25,
+    "memory_lambda": 8.0,
+    "last_action": "RESCUE",
+    "last_action_gen": 2,
+    "steer": null
+   },
+   "first_seen_gen": 3,
+   "times_seen": 4
+  },
+  {
+   "id": "d8dc7baf",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 97.755,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 1.1187999999999931,
+   "vout": 97.75413,
+   "duty": 0.1,
+   "netlist": "Sa0 n0 IN\nSb0 n0 IN\nSa1 n0 OUT\nC0 0 IN\nC1 IN OUT\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 1,
+   "raw_ge": false,
+   "struct_distance": 0,
+   "functional_distance": 0,
+   "fd_ge": false,
+   "fd_extra": [],
+   "fd_nearest": 3433,
+   "redundant_count": null,
+   "reduction_removed": 3,
+   "reduction_steps": [
+    {
+     "rule": "ideal_src_cap",
+     "devices": [
+      "C0"
+     ]
+    },
+    {
+     "rule": "always_on",
+     "devices": [
+      "Sa0",
+      "Sb0"
+     ],
+     "merged": [
+      "n0",
+      "IN"
+     ]
+    }
+   ],
+   "reduced_netlist": "Sa1 IN OUT; C1 IN OUT",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.0239,
+   "novelty_wl": 0.1047,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 3,
+    "t_frac": 0.3,
+    "birth_m": 4,
+    "struct_frac": 0.25,
+    "memory_lambda": 8.0,
+    "last_action": "RESCUE",
+    "last_action_gen": 2,
+    "steer": null
+   },
+   "first_seen_gen": 3,
+   "times_seen": 4
+  },
+  {
+   "id": "14a3ab8f",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 98.306,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 2.0899,
+   "vout": 98.3178,
+   "duty": 0.1,
+   "netlist": "C0 0 n11\nSa0 IN OUT\nL0 n11 n12\nC1 IN n11\nL1 OUT n13\nSa1 n12 n13\nC2 n13 n14\nSb0 n11 n14\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 4,
+   "raw_ge": true,
+   "struct_distance": 4,
+   "functional_distance": 4,
+   "fd_ge": true,
+   "fd_extra": [
+    "C1",
+    "C2",
+    "Sb0"
+   ],
+   "fd_nearest": 35799,
+   "redundant_count": null,
+   "reduction_removed": 0,
+   "reduction_steps": [],
+   "reduced_netlist": "C0 0 n11; Sa0 IN OUT; L0 n11 n12; C1 IN n11; L1 OUT n13; Sa1 n12 n13; C2 n14 n11; Sb0 n13 n14",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.9099,
+   "novelty_wl": 0.0986,
+   "origin": {
+    "kind": "struct_move",
+    "op": "sc_branch",
+    "move": {
+     "op": "sc_branch",
+     "at": [
+      "n3",
+      "n11"
+     ],
+     "switch": "Sb",
+     "reduced_child": "C0 0 n11; Sa0 OUT IN; L0 n9 n11; C1 IN n11; L1 OUT n3; Sa1 n3 n9; C2 m0 n11; Sb0 n3 m0"
+    },
+    "trigger": "struct_frac",
+    "gen": 5,
+    "parent": "6172f770",
+    "parent_fd": 3,
+    "parent_eff": 98.204,
+    "struct_frac": 0.4,
+    "last_action": "STEER"
+   },
+   "first_seen_gen": 5,
+   "times_seen": 2
+  },
+  {
+   "id": "f041b932",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 98.341,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.9865999999999957,
+   "vout": 98.34039,
+   "duty": 0.9,
+   "netlist": "C0 OUT n11\nC1 IN 0\nC2 IN n11\nL0 OUT n11\nSb0 OUT n11\nSb1 IN n11\nC3 OUT n12\nSb2 0 n12\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 3,
+   "raw_ge": false,
+   "struct_distance": 2,
+   "functional_distance": 2,
+   "fd_ge": false,
+   "fd_extra": [
+    "C0",
+    "C2"
+   ],
+   "fd_nearest": 20656,
+   "redundant_count": null,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "ideal_src_cap",
+     "devices": [
+      "C1"
+     ]
+    }
+   ],
+   "reduced_netlist": "C0 OUT n11; C2 IN n11; L0 OUT n11; Sb0 OUT n11; Sb1 IN n11; C3 n12 0; Sb2 OUT n12",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.4577,
+   "novelty_wl": 0.0814,
+   "origin": {
+    "kind": "struct_move",
+    "op": "sc_branch",
+    "move": {
+     "op": "sc_branch",
+     "at": [
+      "OUT",
+      "0"
+     ],
+     "switch": "Sb",
+     "reduced_child": "C0 OUT n7; C2 IN n7; L0 OUT n7; Sb0 OUT n7; Sb1 IN n7; C3 m0 0; Sb2 OUT m0"
+    },
+    "trigger": "struct_frac",
+    "gen": 4,
+    "parent": "6d4fe80b",
+    "parent_fd": 1,
+    "parent_eff": 98.359,
+    "struct_frac": 0.25,
+    "last_action": "RESCUE"
+   },
+   "first_seen_gen": 4,
+   "times_seen": 3
+  },
+  {
+   "id": "b7dbb5d3",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 97.482,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 2.0536299999999983,
+   "vout": 97.9779,
+   "duty": 0.1,
+   "netlist": "C0 n6 OUT\nSb0 IN n6\nSa0 IN OUT\nSa1 n0 0\nL0 n0 OUT\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 0,
+   "raw_ge": false,
+   "struct_distance": 0,
+   "functional_distance": 0,
+   "fd_ge": false,
+   "fd_extra": [],
+   "fd_nearest": 9909,
+   "redundant_count": null,
+   "reduction_removed": 0,
+   "reduction_steps": [],
+   "reduced_netlist": "C0 n6 IN; Sb0 OUT n6; Sa0 IN OUT; Sa1 n0 OUT; L0 0 n0",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.0,
+   "novelty_wl": 0.0,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 5,
+    "t_frac": 0.45,
+    "birth_m": 4,
+    "struct_frac": 0.4,
+    "memory_lambda": 8.0,
+    "last_action": "STEER",
+    "last_action_gen": 4,
+    "steer": {
+     "t_frac": 0.45,
+     "birth_m": 4,
+     "set_at_gen": 4,
+     "struct_frac": 0.4
+    }
+   },
+   "first_seen_gen": 5,
+   "times_seen": 2
+  },
+  {
+   "id": "d3474809",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 98.14,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.8618299999999977,
+   "vout": 98.13923,
+   "duty": 0.9,
+   "netlist": "C0 OUT n7\nC1 0 IN\nC2 IN n7\nL0 OUT n7\nC3 OUT n7\nSb0 IN n7\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 2,
+   "raw_ge": false,
+   "struct_distance": 1,
+   "functional_distance": 1,
+   "fd_ge": false,
+   "fd_extra": [],
+   "fd_nearest": 20349,
+   "redundant_count": null,
+   "reduction_removed": 2,
+   "reduction_steps": [
+    {
+     "rule": "ideal_src_cap",
+     "devices": [
+      "C1"
+     ]
+    },
+    {
+     "rule": "parallel",
+     "devices": [
+      "C3"
+     ],
+     "kept": "C0"
+    }
+   ],
+   "reduced_netlist": "C0 OUT n7; C2 IN n7; L0 OUT n7; Sb0 IN n7",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.2389,
+   "novelty_wl": 0.1471,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 3,
+    "t_frac": 0.3,
+    "birth_m": 4,
+    "struct_frac": 0.25,
+    "memory_lambda": 8.0,
+    "last_action": "RESCUE",
+    "last_action_gen": 2,
+    "steer": null
+   },
+   "first_seen_gen": 3,
+   "times_seen": 4
+  },
+  {
+   "id": "e6758577",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 97.728,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 2.0915800000000075,
+   "vout": 98.31415,
+   "duty": 0.9,
+   "netlist": "Sb0 0 n9\nL0 OUT n10\nSb1 n9 n10\nSb2 IN OUT\nC0 n9 n11\nL1 OUT n11\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 2,
+   "raw_ge": false,
+   "struct_distance": 3,
+   "functional_distance": 3,
+   "fd_ge": false,
+   "fd_extra": [
+    "L0",
+    "Sb1"
+   ],
+   "fd_nearest": 290,
+   "redundant_count": null,
+   "reduction_removed": 0,
+   "reduction_steps": [],
+   "reduced_netlist": "Sb0 0 n9; L0 OUT n10; Sb1 n9 n10; Sb2 IN OUT; C0 n11 OUT; L1 n9 n11",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.6827,
+   "novelty_wl": 0.0737,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 3,
+    "t_frac": 0.3,
+    "birth_m": 4,
+    "struct_frac": 0.25,
+    "memory_lambda": 8.0,
+    "last_action": "RESCUE",
+    "last_action_gen": 2,
+    "steer": null
+   },
+   "first_seen_gen": 3,
+   "times_seen": 4
+  },
+  {
+   "id": "69f94876",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 96.958,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.6635299999999944,
+   "vout": 96.95806,
+   "duty": 0.1,
+   "netlist": "Sb0 IN n10\nC0 IN n10\nSa0 OUT n10\nC1 OUT 0\nC2 IN OUT\nC3 IN n11\nSb1 OUT n11\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 3,
+   "raw_ge": false,
+   "struct_distance": 2,
+   "functional_distance": 2,
+   "fd_ge": false,
+   "fd_extra": [
+    "C3",
+    "Sb1"
+   ],
+   "fd_nearest": 8931,
+   "redundant_count": null,
+   "reduction_removed": 0,
+   "reduction_steps": [],
+   "reduced_netlist": "Sb0 IN n10; C0 IN n10; Sa0 OUT n10; C1 OUT 0; C2 IN OUT; C3 IN n11; Sb1 OUT n11",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.46,
+   "novelty_wl": 0.1003,
+   "origin": {
+    "kind": "struct_move",
+    "op": "sc_branch",
+    "move": {
+     "op": "sc_branch",
+     "at": [
+      "IN",
+      "OUT"
+     ],
+     "switch": "Sb",
+     "reduced_child": "Sb0 n0 IN; C0 n0 IN; Sa0 n0 OUT; C1 0 OUT; C2 IN OUT; C3 IN m0; Sb1 m0 OUT"
+    },
+    "trigger": "struct_frac",
+    "gen": 4,
+    "parent": "126064a1",
+    "parent_fd": 0,
+    "parent_eff": 97.012,
+    "struct_frac": 0.25,
+    "last_action": "RESCUE"
+   },
+   "first_seen_gen": 4,
+   "times_seen": 3
+  },
+  {
+   "id": "3a6d81b1",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 99.269,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.1465999999999923,
+   "vout": 110.2879,
+   "duty": 0.1,
+   "netlist": "L0 IN n10\nSa0 n9 n10\nL1 0 n9\nC0 OUT IN\nC1 IN n9\nSb0 OUT n10\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 1,
+   "raw_ge": false,
+   "struct_distance": 1,
+   "functional_distance": 1,
+   "fd_ge": false,
+   "fd_extra": [
+    "C0"
+   ],
+   "fd_nearest": 638,
+   "redundant_count": null,
+   "reduction_removed": 0,
+   "reduction_steps": [],
+   "reduced_netlist": "L0 IN n10; Sa0 n9 n10; L1 0 n9; C0 OUT IN; C1 IN n9; Sb0 OUT n10",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.2361,
+   "novelty_wl": 0.1105,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 3,
+    "t_frac": 0.3,
+    "birth_m": 4,
+    "struct_frac": 0.25,
+    "memory_lambda": 8.0,
+    "last_action": "RESCUE",
+    "last_action_gen": 2,
+    "steer": null
+   },
+   "first_seen_gen": 3,
+   "times_seen": 4
+  },
+  {
+   "id": "b5c5f742",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 97.911,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 2.0995100000000093,
+   "vout": 98.31228,
+   "duty": 0.1,
+   "netlist": "C0 0 n11\nSa0 IN OUT\nL0 n11 n12\nC1 IN n12\nL1 OUT n13\nSa1 n11 n13\nL2 n13 n14\nC2 IN n14\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 4,
+   "raw_ge": true,
+   "struct_distance": 4,
+   "functional_distance": 4,
+   "fd_ge": true,
+   "fd_extra": [
+    "Sa0",
+    "L0",
+    "C1"
+   ],
+   "fd_nearest": 3555,
+   "redundant_count": null,
+   "reduction_removed": 0,
+   "reduction_steps": [],
+   "reduced_netlist": "C0 0 n11; Sa0 IN OUT; L0 n11 n12; C1 IN n12; L1 OUT n13; Sa1 n11 n13; L2 n13 n14; C2 IN n14",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.9096,
+   "novelty_wl": 0.0964,
+   "origin": {
+    "kind": "struct_move",
+    "op": "lc_path",
+    "move": {
+     "op": "lc_path",
+     "at": [
+      "n3",
+      "IN"
+     ],
+     "reduced_child": "C0 0 n9; Sa0 OUT IN; L0 n9 n11; C1 IN n11; L1 OUT n3; Sa1 n3 n9; L2 n3 m0; C2 m0 IN"
+    },
+    "trigger": "struct_frac",
+    "gen": 3,
+    "parent": "baca3ef9",
+    "parent_fd": 2,
+    "parent_eff": 98.096,
+    "struct_frac": 0.25,
+    "last_action": "RESCUE"
+   },
+   "first_seen_gen": 3,
+   "times_seen": 4
+  },
+  {
+   "id": "6d4fe80b",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 98.359,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 1.0262300000000124,
+   "vout": 98.35857,
+   "duty": 0.9,
+   "netlist": "C0 OUT n7\nC1 0 IN\nC2 IN n7\nL0 OUT n7\nSb0 OUT n7\nSb1 IN n7\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 1,
+   "raw_ge": false,
+   "struct_distance": 1,
+   "functional_distance": 1,
+   "fd_ge": false,
+   "fd_extra": [],
+   "fd_nearest": 2231,
+   "redundant_count": null,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "ideal_src_cap",
+     "devices": [
+      "C1"
+     ]
+    }
+   ],
+   "reduced_netlist": "C0 OUT n7; C2 IN n7; L0 OUT n7; Sb0 OUT n7; Sb1 IN n7",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.2364,
+   "novelty_wl": 0.1071,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 2,
+    "t_frac": 0.3,
+    "birth_m": 4,
+    "struct_frac": 0.25,
+    "memory_lambda": 8.0,
+    "last_action": "RESCUE",
+    "last_action_gen": 1,
+    "steer": null
+   },
+   "first_seen_gen": 2,
+   "times_seen": 5
+  },
+  {
+   "id": "b42f88c4",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 97.741,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.0009100000000046293,
+   "vout": 97.74059,
+   "duty": 0.9,
+   "netlist": "L0 OUT n9\nC0 0 n9\nSb0 IN n9\nL1 OUT n9\nC1 n9 n10\nSa0 0 n10\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 1,
+   "raw_ge": false,
+   "struct_distance": 0,
+   "functional_distance": 0,
+   "fd_ge": false,
+   "fd_extra": [],
+   "fd_nearest": 8588,
+   "redundant_count": null,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "parallel",
+     "devices": [
+      "L1"
+     ],
+     "kept": "L0"
+    }
+   ],
+   "reduced_netlist": "L0 OUT n9; C0 0 n9; Sb0 IN n9; C1 n10 0; Sa0 n9 n10",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.0,
+   "novelty_wl": 0.1049,
+   "origin": {
+    "kind": "struct_move",
+    "op": "sc_branch",
+    "move": {
+     "op": "sc_branch",
+     "at": [
+      "n2",
+      "0"
+     ],
+     "switch": "Sa",
+     "reduced_child": "L0 OUT n2; C0 n2 0; Sb0 n2 IN; C1 m0 0; Sa0 n2 m0"
+    },
+    "trigger": "struct_frac",
+    "gen": 2,
+    "parent": "eaabb16a",
+    "parent_fd": 0,
+    "parent_eff": 98.081,
+    "struct_frac": 0.25,
+    "last_action": "RESCUE"
+   },
+   "first_seen_gen": 2,
+   "times_seen": 5
+  },
+  {
+   "id": "da415902",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 98.327,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 2.092160000000007,
+   "vout": 98.32391,
+   "duty": 0.1,
+   "netlist": "C0 0 IN\nC1 n0 n8\nSa0 IN OUT\nSb0 IN n8\nSb1 n0 IN\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 1,
+   "raw_ge": false,
+   "struct_distance": 0,
+   "functional_distance": 0,
+   "fd_ge": false,
+   "fd_extra": [],
+   "fd_nearest": 1100,
+   "redundant_count": null,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "ideal_src_cap",
+     "devices": [
+      "C0"
+     ]
+    }
+   ],
+   "reduced_netlist": "C1 n8 IN; Sa0 IN OUT; Sb0 n0 n8; Sb1 n8 n0",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.0106,
+   "novelty_wl": 0.0963,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 5,
+    "t_frac": 0.45,
+    "birth_m": 4,
+    "struct_frac": 0.4,
+    "memory_lambda": 8.0,
+    "last_action": "STEER",
+    "last_action_gen": 4,
+    "steer": {
+     "t_frac": 0.45,
+     "birth_m": 4,
+     "set_at_gen": 4,
+     "struct_frac": 0.4
+    }
+   },
+   "first_seen_gen": 5,
+   "times_seen": 2
+  },
+  {
+   "id": "b5b1077f",
+   "stage": "struct_reject",
+   "feasible": false,
+   "eff": null,
+   "k": null,
+   "feasible_frac": null,
+   "ripple": null,
+   "vout": null,
+   "duty": null,
+   "netlist": "Sb0 OUT n11\nL0 IN n12\nL1 n0 n12\nSa0 n8 n11\nL2 0 n14\nSa1 n0 n13\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 4,
+   "raw_ge": true,
+   "struct_distance": 4,
+   "functional_distance": 4,
+   "fd_ge": true,
+   "fd_extra": [],
+   "fd_nearest": null,
+   "redundant_count": null,
+   "reduction_removed": 6,
+   "reduction_steps": [
+    {
+     "rule": "dead",
+     "devices": [
+      "Sb0",
+      "L0",
+      "L1",
+      "Sa0",
+      "L2",
+      "Sa1"
+     ]
+    }
+   ],
+   "reduced_netlist": "",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.9,
+   "novelty_wl": 0.1175,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 6,
+    "t_frac": 0.3,
+    "birth_m": 4,
+    "struct_frac": 0.4,
+    "memory_lambda": 8.0,
+    "last_action": "RESCUE",
+    "last_action_gen": 5,
+    "steer": null
+   }
+  },
+  {
+   "id": "1f963468",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 0.255,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 30.912449999999996,
+   "vout": 49.59309,
+   "duty": 0.4336,
+   "netlist": "L0 0 n9\nC0 n9 n10\nSb0 IN n9\nL1 OUT n9\nC1 OUT n10\nC2 0 n10\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 2,
+   "raw_ge": false,
+   "struct_distance": 2,
+   "functional_distance": 2,
+   "fd_ge": false,
+   "fd_extra": [
+    "C0"
+   ],
+   "fd_nearest": 26794,
+   "redundant_count": null,
+   "reduction_removed": 0,
+   "reduction_steps": [],
+   "reduced_netlist": "L0 0 n9; C0 n9 n10; Sb0 IN n9; L1 OUT n9; C1 OUT n10; C2 0 n10",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.4599,
+   "novelty_wl": 0.0986,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 6,
+    "t_frac": 0.3,
+    "birth_m": 4,
+    "struct_frac": 0.4,
+    "memory_lambda": 8.0,
+    "last_action": "RESCUE",
+    "last_action_gen": 5,
+    "steer": null
+   },
+   "first_seen_gen": 6
+  },
+  {
+   "id": "4656af3f",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 0.0,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.004856400000000011,
+   "vout": 0.2434821,
+   "duty": 0.3,
+   "netlist": "L0 0 n11\nSa0 n9 n10\nL1 IN n11\nL2 OUT n9\nC0 OUT 0\nC1 n10 n11\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 2,
+   "raw_ge": false,
+   "struct_distance": 2,
+   "functional_distance": 2,
+   "fd_ge": false,
+   "fd_extra": [
+    "C0"
+   ],
+   "fd_nearest": 12578,
+   "redundant_count": null,
+   "reduction_removed": 0,
+   "reduction_steps": [],
+   "reduced_netlist": "L0 0 n11; Sa0 n10 n11; L1 IN n11; L2 OUT n9; C0 OUT 0; C1 n9 n10",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.4579,
+   "novelty_wl": 0.0789,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 6,
+    "t_frac": 0.3,
+    "birth_m": 4,
+    "struct_frac": 0.4,
+    "memory_lambda": 8.0,
+    "last_action": "RESCUE",
+    "last_action_gen": 5,
+    "steer": null
+   },
+   "first_seen_gen": 6
+  },
+  {
+   "id": "b051d770",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 0.0,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 3.3492743999999997e-10,
+   "vout": 9.098284e-11,
+   "duty": 0.1,
+   "netlist": "Sa0 0 n9\nC0 n6 OUT\nSb0 IN n6\nL0 OUT n9\nSa1 0 n9\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 2,
+   "raw_ge": false,
+   "struct_distance": 1,
+   "functional_distance": 1,
+   "fd_ge": false,
+   "fd_extra": [],
+   "fd_nearest": 285,
+   "redundant_count": null,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "parallel",
+     "devices": [
+      "Sa1"
+     ],
+     "kept": "Sa0"
+    }
+   ],
+   "reduced_netlist": "Sa0 n9 OUT; C0 n6 IN; Sb0 OUT n6; L0 0 n9",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.2379,
+   "novelty_wl": 0.0769,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 6,
+    "t_frac": 0.3,
+    "birth_m": 4,
+    "struct_frac": 0.4,
+    "memory_lambda": 8.0,
+    "last_action": "RESCUE",
+    "last_action_gen": 5,
+    "steer": null
+   },
+   "first_seen_gen": 6
+  },
+  {
+   "id": "df709b09",
+   "stage": "struct_reject",
+   "feasible": false,
+   "eff": null,
+   "k": null,
+   "feasible_frac": null,
+   "ripple": null,
+   "vout": null,
+   "duty": null,
+   "netlist": "L0 n1 OUT\nL1 n10 n12\nSa0 n1 n11\nSb0 0 n13\nL2 n12 n13\nSb1 n10 n11\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 4,
+   "raw_ge": true,
+   "struct_distance": 4,
+   "functional_distance": 4,
+   "fd_ge": true,
+   "fd_extra": [],
+   "fd_nearest": null,
+   "redundant_count": null,
+   "reduction_removed": 6,
+   "reduction_steps": [
+    {
+     "rule": "series",
+     "devices": [
+      "L2"
+     ],
+     "kept": "L1"
+    },
+    {
+     "rule": "antiphase",
+     "devices": [
+      "Sa0",
+      "Sb1"
+     ]
+    },
+    {
+     "rule": "dead",
+     "devices": [
+      "L0",
+      "Sb0",
+      "L1"
+     ]
+    }
+   ],
+   "reduced_netlist": "",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.9,
+   "novelty_wl": 0.0689,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 6,
+    "t_frac": 0.3,
+    "birth_m": 4,
+    "struct_frac": 0.4,
+    "memory_lambda": 8.0,
+    "last_action": "RESCUE",
+    "last_action_gen": 5,
+    "steer": null
+   }
+  },
+  {
+   "id": "a63d7bf7",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 0.005,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 3.000000000000398e-06,
+   "vout": 0.004749524,
+   "duty": 0.1,
+   "netlist": "C0 0 IN\nSa0 n0 IN\nSb0 n0 n3\nC1 IN OUT\nSb1 n3 OUT\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 1,
+   "raw_ge": false,
+   "struct_distance": 0,
+   "functional_distance": 0,
+   "fd_ge": false,
+   "fd_extra": [],
+   "fd_nearest": 3499,
+   "redundant_count": null,
+   "reduction_removed": 4,
+   "reduction_steps": [
+    {
+     "rule": "ideal_src_cap",
+     "devices": [
+      "C0"
+     ]
+    },
+    {
+     "rule": "antiphase",
+     "devices": [
+      "Sa0",
+      "Sb0"
+     ]
+    },
+    {
+     "rule": "dead",
+     "devices": [
+      "Sb1"
+     ]
+    }
+   ],
+   "reduced_netlist": "C1 IN OUT",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.0397,
+   "novelty_wl": 0.0755,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 6,
+    "t_frac": 0.3,
+    "birth_m": 4,
+    "struct_frac": 0.4,
+    "memory_lambda": 8.0,
+    "last_action": "RESCUE",
+    "last_action_gen": 5,
+    "steer": null
+   },
+   "first_seen_gen": 1,
+   "times_seen": 3
+  },
+  {
+   "id": "9a9a3fc8",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 98.322,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 2.0921500000000037,
+   "vout": 98.32391,
+   "duty": 0.1,
+   "netlist": "Sa0 0 n7\nSa1 n0 OUT\nSa2 OUT IN\nSb0 IN n7\nSb1 n0 IN\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 0,
+   "raw_ge": false,
+   "struct_distance": 0,
+   "functional_distance": 0,
+   "fd_ge": false,
+   "fd_extra": [],
+   "fd_nearest": 3401,
+   "redundant_count": null,
+   "reduction_removed": 4,
+   "reduction_steps": [
+    {
+     "rule": "antiphase",
+     "devices": [
+      "Sa0",
+      "Sb0"
+     ]
+    },
+    {
+     "rule": "antiphase",
+     "devices": [
+      "Sa1",
+      "Sb1"
+     ]
+    }
+   ],
+   "reduced_netlist": "Sa2 OUT IN",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.0376,
+   "novelty_wl": 0.0,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 5,
+    "t_frac": 0.45,
+    "birth_m": 4,
+    "struct_frac": 0.4,
+    "memory_lambda": 8.0,
+    "last_action": "STEER",
+    "last_action_gen": 4,
+    "steer": {
+     "t_frac": 0.45,
+     "birth_m": 4,
+     "set_at_gen": 4,
+     "struct_frac": 0.4
+    }
+   },
+   "first_seen_gen": 0,
+   "times_seen": 27
+  },
+  {
+   "id": "1df6f262",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 0.0,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 6.210428e-10,
+   "vout": 7.40684e-13,
+   "duty": 0.1,
+   "netlist": "C0 IN n9\nSb0 n9 n10\nSb1 OUT n10\nL0 0 n9\nC1 OUT n11\nL1 IN n11\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 2,
+   "raw_ge": false,
+   "struct_distance": 1,
+   "functional_distance": 1,
+   "fd_ge": false,
+   "fd_extra": [],
+   "fd_nearest": 20843,
+   "redundant_count": null,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "series",
+     "devices": [
+      "Sb1"
+     ],
+     "kept": "Sb0"
+    }
+   ],
+   "reduced_netlist": "C0 IN n9; L0 0 n9; C1 n11 IN; L1 OUT n11; Sb0 n9 OUT",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.2353,
+   "novelty_wl": 0.0521,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 6,
+    "t_frac": 0.3,
+    "birth_m": 4,
+    "struct_frac": 0.4,
+    "memory_lambda": 8.0,
+    "last_action": "RESCUE",
+    "last_action_gen": 5,
+    "steer": null
+   },
+   "first_seen_gen": 6
+  },
+  {
+   "id": "6017ad6b",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 98.327,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 2.092160000000007,
+   "vout": 98.32391,
+   "duty": 0.1,
+   "netlist": "L0 0 n9\nC0 IN n9\nSb0 n9 n10\nSa0 IN OUT\nL1 n9 n11\nC1 n10 n11\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 3,
+   "raw_ge": false,
+   "struct_distance": 3,
+   "functional_distance": 3,
+   "fd_ge": false,
+   "fd_extra": [
+    "Sb0",
+    "C1"
+   ],
+   "fd_nearest": 493,
+   "redundant_count": null,
+   "reduction_removed": 0,
+   "reduction_steps": [],
+   "reduced_netlist": "L0 0 n9; C0 IN n9; Sb0 n9 n10; Sa0 IN OUT; L1 n9 n11; C1 n10 n11",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.6868,
+   "novelty_wl": 0.1176,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 6,
+    "t_frac": 0.3,
+    "birth_m": 4,
+    "struct_frac": 0.4,
+    "memory_lambda": 8.0,
+    "last_action": "RESCUE",
+    "last_action_gen": 5,
+    "steer": null
+   },
+   "first_seen_gen": 6
+  },
+  {
+   "id": "8add874f",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 0.0,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 3.3710669999999997e-10,
+   "vout": 3.116997e-11,
+   "duty": 0.1,
+   "netlist": "L0 n3 0\nC0 n0 n8\nSa0 n8 IN\nSa1 n3 IN\nSa2 n0 OUT\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 1,
+   "raw_ge": false,
+   "struct_distance": 1,
+   "functional_distance": 1,
+   "fd_ge": false,
+   "fd_extra": [],
+   "fd_nearest": 611,
+   "redundant_count": null,
+   "reduction_removed": 0,
+   "reduction_steps": [],
+   "reduced_netlist": "L0 n3 0; C0 n8 IN; Sa0 n0 n8; Sa1 n3 IN; Sa2 n8 n0",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.2333,
+   "novelty_wl": 0.0462,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 6,
+    "t_frac": 0.3,
+    "birth_m": 4,
+    "struct_frac": 0.4,
+    "memory_lambda": 8.0,
+    "last_action": "RESCUE",
+    "last_action_gen": 5,
+    "steer": null
+   },
+   "first_seen_gen": 6
+  },
+  {
+   "id": "5d173776",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 0.1,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 75.28757,
+   "vout": 2.489948e-06,
+   "duty": 0.7,
+   "netlist": "C0 IN 0\nL0 IN n10\nSb0 n10 n11\nSb1 0 n11\nC1 OUT n10\nL1 n10 n12\nC2 n11 n12\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 2,
+   "raw_ge": false,
+   "struct_distance": 2,
+   "functional_distance": 2,
+   "fd_ge": false,
+   "fd_extra": [
+    "L0"
+   ],
+   "fd_nearest": 20292,
+   "redundant_count": null,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "ideal_src_cap",
+     "devices": [
+      "C0"
+     ]
+    }
+   ],
+   "reduced_netlist": "L0 IN n10; Sb0 n10 n11; Sb1 0 n11; C1 OUT n10; L1 n12 n11; C2 n10 n12",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.4557,
+   "novelty_wl": 0.0922,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 6,
+    "t_frac": 0.3,
+    "birth_m": 4,
+    "struct_frac": 0.4,
+    "memory_lambda": 8.0,
+    "last_action": "RESCUE",
+    "last_action_gen": 5,
+    "steer": null
+   },
+   "first_seen_gen": 6
+  },
+  {
+   "id": "01a9f733",
+   "stage": "struct_reject",
+   "feasible": false,
+   "eff": null,
+   "k": null,
+   "feasible_frac": null,
+   "ripple": null,
+   "vout": null,
+   "duty": null,
+   "netlist": "Sb0 n3 n13\nSa0 n3 0\nL0 n12 n14\nL1 n13 n15\nSa1 IN OUT\nSb1 n14 n15\nL2 n9 n12\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 4,
+   "raw_ge": true,
+   "struct_distance": 0,
+   "functional_distance": 0,
+   "fd_ge": false,
+   "fd_extra": [],
+   "fd_nearest": 3401,
+   "redundant_count": null,
+   "reduction_removed": 6,
+   "reduction_steps": [
+    {
+     "rule": "dead",
+     "devices": [
+      "Sb0",
+      "Sa0",
+      "L0",
+      "L1",
+      "Sb1",
+      "L2"
+     ]
+    }
+   ],
+   "reduced_netlist": "Sa1 IN OUT",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.0376,
+   "novelty_wl": 0.0729,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 6,
+    "t_frac": 0.3,
+    "birth_m": 4,
+    "struct_frac": 0.4,
+    "memory_lambda": 8.0,
+    "last_action": "RESCUE",
+    "last_action_gen": 5,
+    "steer": null
+   }
+  },
+  {
+   "id": "1ef56f29",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 28.81,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.19555000000000078,
+   "vout": 28.80971,
+   "duty": 0.9,
+   "netlist": "Sa0 IN n10\nSb0 n9 n10\nL0 OUT n9\nSa1 IN n9\nSa2 0 n4\nC0 n4 IN\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 2,
+   "raw_ge": false,
+   "struct_distance": 0,
+   "functional_distance": 0,
+   "fd_ge": false,
+   "fd_extra": [],
+   "fd_nearest": 3921,
+   "redundant_count": null,
+   "reduction_removed": 2,
+   "reduction_steps": [
+    {
+     "rule": "antiphase",
+     "devices": [
+      "Sa0",
+      "Sb0"
+     ]
+    }
+   ],
+   "reduced_netlist": "L0 n9 IN; Sa1 OUT n9; Sa2 n4 IN; C0 0 n4",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.0,
+   "novelty_wl": 0.0537,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 6,
+    "t_frac": 0.3,
+    "birth_m": 4,
+    "struct_frac": 0.4,
+    "memory_lambda": 8.0,
+    "last_action": "RESCUE",
+    "last_action_gen": 5,
+    "steer": null
+   },
+   "first_seen_gen": 6
+  },
+  {
+   "id": "974b8f2c",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 98.701,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 1.0885200000000026,
+   "vout": 98.69983,
+   "duty": 0.9,
+   "netlist": "Sb0 OUT IN\nC0 OUT IN\nSa0 OUT n8\nC1 0 IN\nL0 IN n8\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 1,
+   "raw_ge": false,
+   "struct_distance": 0,
+   "functional_distance": 0,
+   "fd_ge": false,
+   "fd_extra": [],
+   "fd_nearest": 5139,
+   "redundant_count": null,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "ideal_src_cap",
+     "devices": [
+      "C1"
+     ]
+    }
+   ],
+   "reduced_netlist": "Sb0 OUT IN; C0 OUT IN; Sa0 OUT n8; L0 IN n8",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.016,
+   "novelty_wl": 0.1328,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 6,
+    "t_frac": 0.3,
+    "birth_m": 4,
+    "struct_frac": 0.4,
+    "memory_lambda": 8.0,
+    "last_action": "RESCUE",
+    "last_action_gen": 5,
+    "steer": null
+   },
+   "first_seen_gen": 6
+  },
+  {
+   "id": "88448639",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 70.103,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 1.0945800000000077,
+   "vout": 98.69418,
+   "duty": 0.9,
+   "netlist": "Sb0 n9 n10\nSb1 OUT IN\nL0 IN n9\nC0 n9 n10\nSa0 0 n10\nC1 OUT IN\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 1,
+   "raw_ge": false,
+   "struct_distance": 1,
+   "functional_distance": 1,
+   "fd_ge": false,
+   "fd_extra": [
+    "C1"
+   ],
+   "fd_nearest": 26380,
+   "redundant_count": null,
+   "reduction_removed": 0,
+   "reduction_steps": [],
+   "reduced_netlist": "Sb0 n9 n10; Sb1 OUT IN; L0 IN n9; C0 n9 n10; Sa0 0 n10; C1 OUT IN",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.2357,
+   "novelty_wl": 0.1071,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 6,
+    "t_frac": 0.3,
+    "birth_m": 4,
+    "struct_frac": 0.4,
+    "memory_lambda": 8.0,
+    "last_action": "RESCUE",
+    "last_action_gen": 5,
+    "steer": null
+   },
+   "first_seen_gen": 6
+  },
+  {
+   "id": "a4151452",
+   "stage": "struct_reject",
+   "feasible": false,
+   "eff": null,
+   "k": null,
+   "feasible_frac": null,
+   "ripple": null,
+   "vout": null,
+   "duty": null,
+   "netlist": "L0 n4 n11\nSb0 n11 OUT\nSa0 n5 n9\nSa1 0 n13\nL1 IN n13\nC0 n4 n5\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 3,
+   "raw_ge": false,
+   "struct_distance": 0,
+   "functional_distance": 0,
+   "fd_ge": false,
+   "fd_extra": [],
+   "fd_nearest": 3573,
+   "redundant_count": null,
+   "reduction_removed": 4,
+   "reduction_steps": [
+    {
+     "rule": "dead",
+     "devices": [
+      "L0",
+      "Sb0",
+      "Sa0",
+      "C0"
+     ]
+    }
+   ],
+   "reduced_netlist": "Sa1 n13 IN; L1 0 n13",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.0151,
+   "novelty_wl": 0.0799,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 6,
+    "t_frac": 0.3,
+    "birth_m": 4,
+    "struct_frac": 0.4,
+    "memory_lambda": 8.0,
+    "last_action": "RESCUE",
+    "last_action_gen": 5,
+    "steer": null
+   }
+  },
+  {
+   "id": "00f2bd14",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 56.747,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.12809000000000026,
+   "vout": 50.06114,
+   "duty": 0.8299,
+   "netlist": "C0 n9 n10\nSa0 IN n9\nSa1 IN n10\nL0 OUT n9\nSb0 0 n11\nL1 n10 n11\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 1,
+   "raw_ge": false,
+   "struct_distance": 2,
+   "functional_distance": 2,
+   "fd_ge": false,
+   "fd_extra": [
+    "Sa0"
+   ],
+   "fd_nearest": 32036,
+   "redundant_count": null,
+   "reduction_removed": 0,
+   "reduction_steps": [],
+   "reduced_netlist": "C0 n9 n10; Sa0 IN n9; Sa1 IN n10; L0 OUT n9; Sb0 n11 n10; L1 0 n11",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.4585,
+   "novelty_wl": 0.0537,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 6,
+    "t_frac": 0.3,
+    "birth_m": 4,
+    "struct_frac": 0.4,
+    "memory_lambda": 8.0,
+    "last_action": "RESCUE",
+    "last_action_gen": 5,
+    "steer": null
+   },
+   "first_seen_gen": 6
+  },
+  {
+   "id": "bb2410c3",
+   "stage": "dead",
+   "feasible": false,
+   "eff": null,
+   "k": 1,
+   "feasible_frac": null,
+   "ripple": null,
+   "vout": null,
+   "duty": null,
+   "netlist": "Sb0 n10 n11\nSb1 OUT n11\nC0 n8 n10\nC1 0 n12\nL0 IN n12\nL1 n8 n12\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 3,
+   "raw_ge": false,
+   "struct_distance": 2,
+   "functional_distance": 2,
+   "fd_ge": false,
+   "fd_extra": [
+    "C1"
+   ],
+   "fd_nearest": 4209,
+   "redundant_count": null,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "series",
+     "devices": [
+      "Sb1"
+     ],
+     "kept": "Sb0"
+    }
+   ],
+   "reduced_netlist": "C0 n10 OUT; C1 0 n12; L0 IN n12; L1 n8 n12; Sb0 n8 n10",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.4582,
+   "novelty_wl": 0.0672,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 6,
+    "t_frac": 0.3,
+    "birth_m": 4,
+    "struct_frac": 0.4,
+    "memory_lambda": 8.0,
+    "last_action": "RESCUE",
+    "last_action_gen": 5,
+    "steer": null
+   }
+  },
+  {
+   "id": "201e1602",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 98.322,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 2.0921500000000037,
+   "vout": 98.32392,
+   "duty": 0.1,
+   "netlist": "L0 n3 0\nSb0 n0 n3\nSa0 n8 IN\nSb1 n0 n8\nSa1 OUT IN\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 0,
+   "raw_ge": false,
+   "struct_distance": 0,
+   "functional_distance": 0,
+   "fd_ge": false,
+   "fd_extra": [],
+   "fd_nearest": 3401,
+   "redundant_count": null,
+   "reduction_removed": 4,
+   "reduction_steps": [
+    {
+     "rule": "series",
+     "devices": [
+      "Sb1"
+     ],
+     "kept": "Sb0"
+    },
+    {
+     "rule": "antiphase",
+     "devices": [
+      "Sa0",
+      "Sb0"
+     ]
+    },
+    {
+     "rule": "dead",
+     "devices": [
+      "L0"
+     ]
+    }
+   ],
+   "reduced_netlist": "Sa1 OUT IN",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.0376,
+   "novelty_wl": 0.0,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 6,
+    "t_frac": 0.3,
+    "birth_m": 4,
+    "struct_frac": 0.4,
+    "memory_lambda": 8.0,
+    "last_action": "RESCUE",
+    "last_action_gen": 5,
+    "steer": null
+   },
+   "first_seen_gen": 0,
+   "times_seen": 28
+  },
+  {
+   "id": "330b8066",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 50.645,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.4895399999999981,
+   "vout": 49.79213,
+   "duty": 0.8834,
+   "netlist": "C0 0 IN\nC1 n0 IN\nSb0 n0 n3\nSa0 n3 OUT\nL0 n3 IN\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 0,
+   "raw_ge": false,
+   "struct_distance": 0,
+   "functional_distance": 0,
+   "fd_ge": false,
+   "fd_extra": [],
+   "fd_nearest": 9711,
+   "redundant_count": null,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "ideal_src_cap",
+     "devices": [
+      "C0"
+     ]
+    }
+   ],
+   "reduced_netlist": "C1 n0 IN; Sb0 n0 n3; Sa0 n3 OUT; L0 n3 IN",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.0133,
+   "novelty_wl": 0.0,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 1,
+    "t_frac": 0.3,
+    "birth_m": 4,
+    "struct_frac": 0.25,
+    "memory_lambda": 8.0,
+    "last_action": "RESCUE",
+    "last_action_gen": 0,
+    "steer": null
+   },
+   "first_seen_gen": 1,
+   "times_seen": 7
+  },
+  {
+   "id": "585f1684",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 46.785,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.5220100000000016,
+   "vout": 50.25251,
+   "duty": 0.8437,
+   "netlist": "C0 n0 0\nC1 n0 IN\nSb0 n0 n3\nSa0 n3 OUT\nL0 n3 IN\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 0,
+   "raw_ge": false,
+   "struct_distance": 0,
+   "functional_distance": 0,
+   "fd_ge": false,
+   "fd_extra": [],
+   "fd_nearest": 17566,
+   "redundant_count": null,
+   "reduction_removed": 0,
+   "reduction_steps": [],
+   "reduced_netlist": "C0 n0 0; C1 n0 IN; Sb0 n0 n3; Sa0 n3 OUT; L0 n3 IN",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.0,
+   "novelty_wl": 0.0,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 6,
+    "t_frac": 0.3,
+    "birth_m": 4,
+    "struct_frac": 0.4,
+    "memory_lambda": 8.0,
+    "last_action": "RESCUE",
+    "last_action_gen": 5,
+    "steer": null
+   },
+   "first_seen_gen": 6
+  },
+  {
+   "id": "c06d50fa",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 0.368,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.10368300000000019,
+   "vout": 3.271271,
+   "duty": 0.1,
+   "netlist": "C0 n7 OUT\nSa0 n7 n12\nSb0 n10 n11\nL0 0 n11\nL1 IN n10\nC1 n10 n12\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 3,
+   "raw_ge": false,
+   "struct_distance": 3,
+   "functional_distance": 3,
+   "fd_ge": false,
+   "fd_extra": [
+    "C0",
+    "C1"
+   ],
+   "fd_nearest": 6944,
+   "redundant_count": null,
+   "reduction_removed": 0,
+   "reduction_steps": [],
+   "reduced_netlist": "C0 n7 OUT; Sa0 n12 n10; Sb0 n10 n11; L0 0 n11; L1 IN n10; C1 n7 n12",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.6792,
+   "novelty_wl": 0.0642,
+   "origin": {
+    "kind": "sdedit",
+    "gen": 6,
+    "t_frac": 0.3,
+    "birth_m": 4,
+    "struct_frac": 0.4,
+    "memory_lambda": 8.0,
+    "last_action": "RESCUE",
+    "last_action_gen": 5,
+    "steer": null
+   },
+   "first_seen_gen": 6
+  },
+  {
+   "id": "c2bdf0a5",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 0.466,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.0559599999999989,
+   "vout": 49.82591,
+   "duty": 0.5846,
+   "netlist": "Sb0 IN n13\nL0 OUT n13\nC0 n13 n14\nSa0 0 n14\nL1 OUT n15\nSa1 0 n15\nSb1 n14 n15\nSa2 n13 n15\nC1 OUT 0\nL2 IN n13\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 4,
+   "raw_ge": true,
+   "struct_distance": 4,
+   "functional_distance": 4,
+   "fd_ge": true,
+   "fd_extra": [],
+   "fd_nearest": null,
+   "redundant_count": null,
+   "reduction_removed": 0,
+   "reduction_steps": [],
+   "reduced_netlist": "Sb0 IN n13; L0 OUT n13; C0 n13 n14; Sa0 0 n14; L1 OUT n15; Sa1 0 n15; Sb1 n14 n15; Sa2 n13 n15; C1 OUT 0; L2 IN n13",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.9156,
+   "novelty_wl": 0.1563,
+   "origin": {
+    "kind": "struct_move",
+    "op": "rewire",
+    "move": {
+     "op": "rewire",
+     "device": "L0",
+     "moved_from": "OUT",
+     "to": "IN",
+     "reduced_child": "Sb0 IN n13; L1 OUT n13; C0 n13 n14; Sa0 0 n14; L2 OUT n15; Sa1 0 n15; Sb1 n14 n15; Sa2 n13 n15; C1 OUT 0; L0 n13 IN"
+    },
+    "trigger": "struct_frac",
+    "gen": 6,
+    "parent": "634bdef4",
+    "parent_fd": 4,
+    "parent_eff": 99.529,
+    "struct_frac": 0.4,
+    "last_action": "RESCUE"
+   },
+   "first_seen_gen": 6
+  },
+  {
+   "id": "a75b2a07",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 51.103,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.6022999999999996,
+   "vout": 50.25372,
+   "duty": 0.8437,
+   "netlist": "C0 IN 0\nC1 IN n10\nSb0 n10 n11\nSa0 OUT n11\nL0 IN n11\nL1 n11 n12\nC2 n10 n12\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 2,
+   "raw_ge": false,
+   "struct_distance": 2,
+   "functional_distance": 2,
+   "fd_ge": false,
+   "fd_extra": [
+    "L1",
+    "C2"
+   ],
+   "fd_nearest": 9711,
+   "redundant_count": null,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "ideal_src_cap",
+     "devices": [
+      "C0"
+     ]
+    }
+   ],
+   "reduced_netlist": "C1 IN n10; Sb0 n10 n11; Sa0 OUT n11; L0 IN n11; L1 n11 n12; C2 n10 n12",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.4625,
+   "novelty_wl": 0.1007,
+   "origin": {
+    "kind": "struct_move",
+    "op": "lc_path",
+    "move": {
+     "op": "lc_path",
+     "at": [
+      "n3",
+      "n0"
+     ],
+     "reduced_child": "C1 n0 IN; Sb0 n0 n3; Sa0 n3 OUT; L0 n3 IN; L1 n3 m0; C2 m0 n0"
+    },
+    "trigger": "struct_frac",
+    "gen": 6,
+    "parent": "330b8066",
+    "parent_fd": 0,
+    "parent_eff": 50.645,
+    "struct_frac": 0.4,
+    "last_action": "RESCUE"
+   },
+   "first_seen_gen": 6
+  },
+  {
+   "id": "9d941c6d",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 0.153,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 23.367129999999996,
+   "vout": 49.80582,
+   "duty": 0.8671,
+   "netlist": "Sb0 OUT n13\nC0 OUT n13\nSa0 IN n13\nC1 IN 0\nC2 IN OUT\nL0 n13 n14\nSa1 0 n14\nC3 n14 n15\nSb1 0 n15\nL1 IN n15\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 4,
+   "raw_ge": true,
+   "struct_distance": 4,
+   "functional_distance": 4,
+   "fd_ge": true,
+   "fd_extra": [
+    "Sb0",
+    "C0",
+    "Sa0",
+    "L0"
+   ],
+   "fd_nearest": 12856,
+   "redundant_count": null,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "ideal_src_cap",
+     "devices": [
+      "C1"
+     ]
+    }
+   ],
+   "reduced_netlist": "Sb0 OUT n13; C0 OUT n13; Sa0 IN n13; C2 IN OUT; L0 n13 n14; Sa1 0 n14; C3 n14 n15; Sb1 0 n15; L1 IN n15",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.9154,
+   "novelty_wl": 0.1352,
+   "origin": {
+    "kind": "struct_move",
+    "op": "cell_graft",
+    "move": {
+     "op": "cell_graft",
+     "cell": "cuk",
+     "at": [
+      "n0",
+      "IN"
+     ],
+     "reduced_child": "Sb0 n0 OUT; C0 n0 OUT; Sa0 n0 IN; C2 OUT IN; L0 n0 m0; Sa1 m0 0; C3 m0 m1; Sb1 m1 0; L1 m1 IN"
+    },
+    "trigger": "struct_frac",
+    "gen": 6,
+    "parent": "da598590",
+    "parent_fd": 1,
+    "parent_eff": 96.879,
+    "struct_frac": 0.4,
+    "last_action": "RESCUE"
+   },
+   "first_seen_gen": 6
+  },
+  {
+   "id": "6f9a87af",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 97.987,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 2.0564700000000045,
+   "vout": 97.9808,
+   "duty": 0.9,
+   "netlist": "C0 0 n10\nSa0 OUT n10\nSb0 OUT n11\nSb1 IN OUT\nC1 n11 n12\nL0 n12 n13\nSb2 0 n13\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 2,
+   "raw_ge": false,
+   "struct_distance": 2,
+   "functional_distance": 2,
+   "fd_ge": false,
+   "fd_extra": [
+    "C0",
+    "Sa0"
+   ],
+   "fd_nearest": 15018,
+   "redundant_count": null,
+   "reduction_removed": 0,
+   "reduction_steps": [],
+   "reduced_netlist": "C0 0 n10; Sa0 OUT n10; Sb0 n11 n12; Sb1 IN OUT; C1 OUT n11; L0 n13 0; Sb2 n12 n13",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.4604,
+   "novelty_wl": 0.104,
+   "origin": {
+    "kind": "struct_move",
+    "op": "insert_series",
+    "move": {
+     "op": "insert_series",
+     "device": "L0",
+     "inserted": "Sb",
+     "at": [
+      "n11",
+      "0"
+     ],
+     "reduced_child": "C0 0 n9; Sa0 OUT n9; Sb0 n10 n11; Sb1 IN OUT; C1 OUT n10; L0 m0 0; Sb2 n11 m0"
+    },
+    "trigger": "struct_frac",
+    "gen": 6,
+    "parent": "b17d2d90",
+    "parent_fd": 2,
+    "parent_eff": 97.987,
+    "struct_frac": 0.4,
+    "last_action": "RESCUE"
+   },
+   "first_seen_gen": 6
+  },
+  {
+   "id": "64837b8d",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 96.879,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.9957700000000074,
+   "vout": 96.878,
+   "duty": 0.1,
+   "netlist": "Sb0 OUT n10\nC0 OUT n10\nSa0 IN n10\nC1 IN 0\nC2 IN OUT\nL0 IN n11\nC3 OUT n11\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 1,
+   "raw_ge": false,
+   "struct_distance": 3,
+   "functional_distance": 3,
+   "fd_ge": false,
+   "fd_extra": [
+    "Sb0",
+    "C0"
+   ],
+   "fd_nearest": 9812,
+   "redundant_count": null,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "ideal_src_cap",
+     "devices": [
+      "C1"
+     ]
+    }
+   ],
+   "reduced_netlist": "Sb0 OUT n10; C0 OUT n10; Sa0 IN n10; C2 IN OUT; L0 n11 OUT; C3 IN n11",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.6883,
+   "novelty_wl": 0.0762,
+   "origin": {
+    "kind": "struct_move",
+    "op": "lc_path",
+    "move": {
+     "op": "lc_path",
+     "at": [
+      "IN",
+      "OUT"
+     ],
+     "reduced_child": "Sb0 n0 OUT; C0 n0 OUT; Sa0 n0 IN; C2 OUT IN; L0 m0 OUT; C3 IN m0"
+    },
+    "trigger": "struct_frac",
+    "gen": 6,
+    "parent": "da598590",
+    "parent_fd": 1,
+    "parent_eff": 96.879,
+    "struct_frac": 0.4,
+    "last_action": "RESCUE"
+   },
+   "first_seen_gen": 6
+  },
+  {
+   "id": "9c12e3f4",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 0.419,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 6.998370000000001,
+   "vout": 50.03846,
+   "duty": 0.1,
+   "netlist": "C0 OUT n11\nSb0 IN n12\nSa0 0 n12\nSb1 0 n11\nL0 OUT n12\nSa1 n11 n13\nL1 0 n13\nSb2 OUT n13\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 3,
+   "raw_ge": false,
+   "struct_distance": 3,
+   "functional_distance": 3,
+   "fd_ge": false,
+   "fd_extra": [
+    "C0",
+    "Sb1",
+    "Sa1"
+   ],
+   "fd_nearest": 15194,
+   "redundant_count": null,
+   "reduction_removed": 0,
+   "reduction_steps": [],
+   "reduced_netlist": "C0 OUT n11; Sb0 IN n12; Sa0 0 n12; Sb1 0 n11; L0 OUT n12; Sa1 n11 n13; L1 0 n13; Sb2 OUT n13",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.6877,
+   "novelty_wl": 0.1272,
+   "origin": {
+    "kind": "struct_move",
+    "op": "cell_graft",
+    "move": {
+     "op": "cell_graft",
+     "cell": "buckboost",
+     "at": [
+      "n5",
+      "OUT"
+     ],
+     "reduced_child": "C0 n5 OUT; Sb0 n0 IN; Sa0 n0 0; Sb1 0 n5; L0 n0 OUT; Sa1 n5 m0; L1 m0 0; Sb2 m0 OUT"
+    },
+    "trigger": "struct_frac",
+    "gen": 6,
+    "parent": "3d7202ee",
+    "parent_fd": 0,
+    "parent_eff": 99.084,
+    "struct_frac": 0.4,
+    "last_action": "RESCUE"
+   },
+   "first_seen_gen": 6
+  },
+  {
+   "id": "7cd3803b",
+   "stage": "scored",
+   "feasible": true,
+   "eff": 99.361,
+   "k": 1,
+   "feasible_frac": 1.0,
+   "ripple": 0.06338999999999828,
+   "vout": 50.0,
+   "duty": 0.5029,
+   "netlist": "C0 n11 n12\nSa0 IN n11\nSb0 IN n13\nL0 OUT n11\nSb1 0 n11\nC1 n12 n13\nC2 n11 n14\nSb2 n13 n14\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 4,
+   "raw_ge": true,
+   "struct_distance": 3,
+   "functional_distance": 0,
+   "fd_ge": false,
+   "fd_extra": [],
+   "fd_nearest": 3901,
+   "redundant_count": 4,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "series",
+     "devices": [
+      "C1"
+     ],
+     "kept": "C0"
+    }
+   ],
+   "reduced_netlist": "Sa0 IN n11; Sb0 IN n13; L0 OUT n11; Sb1 0 n11; C2 n11 n14; Sb2 n13 n14; C0 n11 n13",
+   "core_netlist": "Sa0 IN n11; L0 OUT n11; Sb1 0 n11",
+   "device_classes": {
+    "Sa0": "essential",
+    "Sb0": "redundant",
+    "L0": "essential",
+    "Sb1": "essential",
+    "C2": "redundant",
+    "Sb2": "redundant",
+    "C0": "redundant"
+   },
+   "fnov_status": "audited_k1",
+   "novelty": 0.0,
+   "novelty_wl": 0.1178,
+   "origin": {
+    "kind": "struct_move",
+    "op": "sc_branch",
+    "move": {
+     "op": "sc_branch",
+     "at": [
+      "n9",
+      "n10"
+     ],
+     "switch": "Sb",
+     "reduced_child": "Sa0 IN n9; Sb0 IN n10; L0 OUT n9; Sb1 0 n9; C2 n9 m0; Sb2 m0 n10; C0 n9 n10"
+    },
+    "trigger": "struct_frac",
+    "gen": 6,
+    "parent": "1ad2387f",
+    "parent_fd": 0,
+    "parent_eff": 99.077,
+    "struct_frac": 0.4,
+    "last_action": "RESCUE"
+   },
+   "first_seen_gen": 6
+  },
+  {
+   "id": "d6130d21",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 96.77,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.9848600000000118,
+   "vout": 96.7697,
+   "duty": 0.1,
+   "netlist": "Sb0 OUT n10\nC0 OUT n10\nSa0 IN n10\nC1 IN 0\nC2 IN OUT\nC3 OUT n11\nSb1 0 n11\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 2,
+   "raw_ge": false,
+   "struct_distance": 1,
+   "functional_distance": 1,
+   "fd_ge": false,
+   "fd_extra": [
+    "C2"
+   ],
+   "fd_nearest": 32293,
+   "redundant_count": null,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "ideal_src_cap",
+     "devices": [
+      "C1"
+     ]
+    }
+   ],
+   "reduced_netlist": "Sb0 OUT n10; C0 OUT n10; Sa0 IN n10; C2 IN OUT; C3 n11 0; Sb1 OUT n11",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.2338,
+   "novelty_wl": 0.1267,
+   "origin": {
+    "kind": "struct_move",
+    "op": "sc_branch",
+    "move": {
+     "op": "sc_branch",
+     "at": [
+      "OUT",
+      "0"
+     ],
+     "switch": "Sb",
+     "reduced_child": "Sb0 n0 OUT; C0 n0 OUT; Sa0 n0 IN; C2 OUT IN; C3 m0 0; Sb1 OUT m0"
+    },
+    "trigger": "struct_frac",
+    "gen": 6,
+    "parent": "da598590",
+    "parent_fd": 1,
+    "parent_eff": 96.879,
+    "struct_frac": 0.4,
+    "last_action": "RESCUE"
+   },
+   "first_seen_gen": 6
+  },
+  {
+   "id": "8f5c9c83",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 97.741,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.0009000000000014552,
+   "vout": 97.74064,
+   "duty": 0.9,
+   "netlist": "L0 OUT n11\nC0 0 n11\nSb0 IN n11\nL1 OUT n11\nC1 n11 n12\nSa0 0 n12\nL2 n11 n13\nC2 n12 n13\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 3,
+   "raw_ge": false,
+   "struct_distance": 4,
+   "functional_distance": 4,
+   "fd_ge": true,
+   "fd_extra": [
+    "C0",
+    "L2",
+    "C2"
+   ],
+   "fd_nearest": 8020,
+   "redundant_count": null,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "parallel",
+     "devices": [
+      "L1"
+     ],
+     "kept": "L0"
+    }
+   ],
+   "reduced_netlist": "L0 OUT n11; C0 0 n11; Sb0 IN n11; C1 n11 n12; Sa0 0 n12; L2 n13 n12; C2 n11 n13",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.9087,
+   "novelty_wl": 0.118,
+   "origin": {
+    "kind": "struct_move",
+    "op": "lc_path",
+    "move": {
+     "op": "lc_path",
+     "at": [
+      "n9",
+      "n10"
+     ],
+     "reduced_child": "L0 OUT n9; C0 0 n9; Sb0 IN n9; C1 n9 n10; Sa0 0 n10; L2 m0 n10; C2 n9 m0"
+    },
+    "trigger": "struct_frac",
+    "gen": 6,
+    "parent": "b42f88c4",
+    "parent_fd": 0,
+    "parent_eff": 97.741,
+    "struct_frac": 0.4,
+    "last_action": "RESCUE"
+   },
+   "first_seen_gen": 6
+  },
+  {
+   "id": "dee82ea7",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 0.602,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.1443000000000012,
+   "vout": 50.24903,
+   "duty": 0.5859,
+   "netlist": "L0 OUT n13\nC0 0 n13\nSb0 IN n13\nL1 OUT n13\nC1 n13 n14\nSa0 0 n14\nL2 OUT n15\nSa1 0 n15\nSb1 n14 n15\nL3 n13 n15\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 4,
+   "raw_ge": true,
+   "struct_distance": 4,
+   "functional_distance": 4,
+   "fd_ge": true,
+   "fd_extra": [
+    "L0",
+    "C1",
+    "Sa0",
+    "Sb1"
+   ],
+   "fd_nearest": 6406,
+   "redundant_count": null,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "parallel",
+     "devices": [
+      "L1"
+     ],
+     "kept": "L0"
+    }
+   ],
+   "reduced_netlist": "L0 OUT n13; C0 0 n13; Sb0 IN n13; C1 n13 n14; Sa0 0 n14; L2 OUT n15; Sa1 0 n15; Sb1 n14 n15; L3 n13 n15",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.9122,
+   "novelty_wl": 0.1458,
+   "origin": {
+    "kind": "struct_move",
+    "op": "transfer_L",
+    "move": {
+     "op": "transfer_L",
+     "at": [
+      "n12",
+      "n14"
+     ],
+     "reduced_child": "L0 OUT n12; C0 0 n12; Sb0 IN n12; C1 n12 n13; Sa0 0 n13; L2 OUT n14; Sa1 0 n14; Sb1 n13 n14; L3 n12 n14"
+    },
+    "trigger": "struct_frac",
+    "gen": 6,
+    "parent": "c5af068b",
+    "parent_fd": 4,
+    "parent_eff": 0.702,
+    "struct_frac": 0.4,
+    "last_action": "RESCUE"
+   },
+   "first_seen_gen": 6
+  },
+  {
+   "id": "8282fd41",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 0.339,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.033989999999995746,
+   "vout": 49.98118,
+   "duty": 0.8677,
+   "netlist": "L0 OUT n13\nC0 0 n13\nSb0 IN n13\nL1 OUT n13\nC1 n13 n14\nSa0 0 n14\nL2 OUT n15\nSa1 0 n15\nSb1 n14 n15\nL3 IN n13\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 4,
+   "raw_ge": true,
+   "struct_distance": 4,
+   "functional_distance": 4,
+   "fd_ge": true,
+   "fd_extra": [
+    "L0",
+    "C0",
+    "Sb0",
+    "Sa1"
+   ],
+   "fd_nearest": 22745,
+   "redundant_count": null,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "parallel",
+     "devices": [
+      "L1"
+     ],
+     "kept": "L0"
+    }
+   ],
+   "reduced_netlist": "L0 OUT n13; C0 0 n13; Sb0 IN n13; C1 n13 n14; Sa0 0 n14; L2 OUT n15; Sa1 0 n15; Sb1 n14 n15; L3 IN n13",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.9135,
+   "novelty_wl": 0.1483,
+   "origin": {
+    "kind": "struct_move",
+    "op": "transfer_L",
+    "move": {
+     "op": "transfer_L",
+     "at": [
+      "n12",
+      "IN"
+     ],
+     "reduced_child": "L0 OUT n12; C0 0 n12; Sb0 IN n12; C1 n12 n13; Sa0 0 n13; L2 OUT n14; Sa1 0 n14; Sb1 n13 n14; L3 n12 IN"
+    },
+    "trigger": "struct_frac",
+    "gen": 6,
+    "parent": "c5af068b",
+    "parent_fd": 4,
+    "parent_eff": 0.702,
+    "struct_frac": 0.4,
+    "last_action": "RESCUE"
+   },
+   "first_seen_gen": 6
+  },
+  {
+   "id": "4d7847c4",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 99.358,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.26149999999999807,
+   "vout": 100.2723,
+   "duty": 0.9,
+   "netlist": "C0 IN 0\nC1 IN n13\nSb0 n13 n14\nSa0 OUT n14\nL0 IN n14\nC2 n14 n15\nSa1 n13 n15\nSb1 0 n16\nL1 n15 n16\nSa2 OUT n16\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 4,
+   "raw_ge": true,
+   "struct_distance": 4,
+   "functional_distance": 4,
+   "fd_ge": true,
+   "fd_extra": [],
+   "fd_nearest": null,
+   "redundant_count": null,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "ideal_src_cap",
+     "devices": [
+      "C0"
+     ]
+    }
+   ],
+   "reduced_netlist": "C1 IN n13; Sb0 n13 n14; Sa0 OUT n14; L0 IN n14; C2 n14 n15; Sa1 n13 n15; Sb1 0 n16; L1 n15 n16; Sa2 OUT n16",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.9099,
+   "novelty_wl": 0.1556,
+   "origin": {
+    "kind": "struct_move",
+    "op": "rewire",
+    "move": {
+     "op": "rewire",
+     "device": "Sa2",
+     "moved_from": "n14",
+     "to": "OUT",
+     "reduced_child": "C1 IN n13; Sb0 n13 n14; Sa0 OUT n14; L0 IN n14; C2 n14 n15; Sa1 n13 n15; Sb1 0 n16; L1 n15 n16; Sa2 n16 OUT"
+    },
+    "trigger": "struct_frac",
+    "gen": 6,
+    "parent": "fb0b7e71",
+    "parent_fd": 4,
+    "parent_eff": 99.341,
+    "struct_frac": 0.4,
+    "last_action": "RESCUE"
+   },
+   "first_seen_gen": 6
+  },
+  {
+   "id": "a1fb6b6c",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 88.517,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.06340000000000146,
+   "vout": 49.99997,
+   "duty": 0.502,
+   "netlist": "Sa0 IN n13\nSb0 n13 n14\nSb1 0 n14\nL0 OUT n13\nC0 0 n15\nL1 OUT n15\nL2 n14 n15\nSa1 IN n16\nSb2 0 n16\nL3 n15 n16\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 4,
+   "raw_ge": true,
+   "struct_distance": 4,
+   "functional_distance": 4,
+   "fd_ge": true,
+   "fd_extra": [],
+   "fd_nearest": null,
+   "redundant_count": null,
+   "reduction_removed": 0,
+   "reduction_steps": [],
+   "reduced_netlist": "Sa0 IN n13; Sb0 n13 n14; Sb1 0 n14; L0 OUT n13; C0 0 n15; L1 OUT n15; L2 n14 n15; Sa1 IN n16; Sb2 0 n16; L3 n15 n16",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.9133,
+   "novelty_wl": 0.1329,
+   "origin": {
+    "kind": "struct_move",
+    "op": "cell_graft",
+    "move": {
+     "op": "cell_graft",
+     "cell": "buck",
+     "at": [
+      "IN",
+      "n12"
+     ],
+     "reduced_child": "Sa0 IN n10; Sb0 n10 n11; Sb1 0 n11; L0 OUT n10; C0 0 n12; L1 OUT n12; L2 n11 n12; Sa1 IN m0; Sb2 m0 0; L3 m0 n12"
+    },
+    "trigger": "struct_frac",
+    "gen": 6,
+    "parent": "e5c7b1e0",
+    "parent_fd": 2,
+    "parent_eff": 88.373,
+    "struct_frac": 0.4,
+    "last_action": "RESCUE"
+   },
+   "first_seen_gen": 6
+  },
+  {
+   "id": "c0f2c4c9",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 0.676,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 21.4529,
+   "vout": 50.20814,
+   "duty": 0.5922,
+   "netlist": "L0 OUT n13\nC0 0 n13\nSb0 IN n13\nL1 OUT n13\nC1 n13 n14\nSa0 0 n14\nL2 OUT n15\nSa1 0 n15\nSb1 n14 n15\nSa2 OUT n13\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 4,
+   "raw_ge": true,
+   "struct_distance": 4,
+   "functional_distance": 4,
+   "fd_ge": true,
+   "fd_extra": [
+    "L0",
+    "Sb0",
+    "Sa0",
+    "Sa1"
+   ],
+   "fd_nearest": 35139,
+   "redundant_count": null,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "parallel",
+     "devices": [
+      "L1"
+     ],
+     "kept": "L0"
+    }
+   ],
+   "reduced_netlist": "L0 OUT n13; C0 0 n13; Sb0 IN n13; C1 n13 n14; Sa0 0 n14; L2 OUT n15; Sa1 0 n15; Sb1 n14 n15; Sa2 OUT n13",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.9139,
+   "novelty_wl": 0.1469,
+   "origin": {
+    "kind": "struct_move",
+    "op": "rewire",
+    "move": {
+     "op": "rewire",
+     "device": "Sa2",
+     "moved_from": "n15",
+     "to": "OUT",
+     "reduced_child": "L0 OUT n13; C0 0 n13; Sb0 IN n13; C1 n13 n14; Sa0 0 n14; L2 OUT n15; Sa1 0 n15; Sb1 n14 n15; Sa2 n13 OUT"
+    },
+    "trigger": "struct_frac",
+    "gen": 6,
+    "parent": "5d79f397",
+    "parent_fd": 4,
+    "parent_eff": 0.523,
+    "struct_frac": 0.4,
+    "last_action": "RESCUE"
+   },
+   "first_seen_gen": 6
+  },
+  {
+   "id": "1157aacc",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 0.467,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.9957200000000057,
+   "vout": 96.87805,
+   "duty": 0.1,
+   "netlist": "Sb0 OUT n9\nC0 OUT n9\nSa0 IN n9\nC1 IN 0\nC2 IN OUT\nL0 IN 0\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 2,
+   "raw_ge": false,
+   "struct_distance": 2,
+   "functional_distance": 2,
+   "fd_ge": false,
+   "fd_extra": [
+    "C2"
+   ],
+   "fd_nearest": 32605,
+   "redundant_count": null,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "ideal_src_cap",
+     "devices": [
+      "C1"
+     ]
+    }
+   ],
+   "reduced_netlist": "Sb0 OUT n9; C0 OUT n9; Sa0 IN n9; C2 IN OUT; L0 IN 0",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.4655,
+   "novelty_wl": 0.1154,
+   "origin": {
+    "kind": "struct_move",
+    "op": "transfer_L",
+    "move": {
+     "op": "transfer_L",
+     "at": [
+      "0",
+      "IN"
+     ],
+     "reduced_child": "Sb0 n0 OUT; C0 n0 OUT; Sa0 n0 IN; C2 OUT IN; L0 0 IN"
+    },
+    "trigger": "struct_frac",
+    "gen": 6,
+    "parent": "da598590",
+    "parent_fd": 1,
+    "parent_eff": 96.879,
+    "struct_frac": 0.4,
+    "last_action": "RESCUE"
+   },
+   "first_seen_gen": 6
+  },
+  {
+   "id": "f889287b",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 99.235,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.13350000000001216,
+   "vout": 110.2842,
+   "duty": 0.1,
+   "netlist": "L0 IN n13\nSa0 n13 n14\nL1 0 n14\nC0 IN OUT\nC1 IN n14\nSb0 OUT n13\nC2 n13 n15\nSb1 IN n15\nC3 n13 n16\nSa1 OUT n16\n",
+   "survived": false,
+   "front0": false,
+   "raw_distance": 4,
+   "raw_ge": true,
+   "struct_distance": 4,
+   "functional_distance": 4,
+   "fd_ge": true,
+   "fd_extra": [],
+   "fd_nearest": null,
+   "redundant_count": null,
+   "reduction_removed": 0,
+   "reduction_steps": [],
+   "reduced_netlist": "L0 IN n13; Sa0 n13 n14; L1 0 n14; C0 IN OUT; C1 IN n14; Sb0 OUT n13; C2 n15 IN; Sb1 n13 n15; C3 n16 OUT; Sa1 n13 n16",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.9147,
+   "novelty_wl": 0.1345,
+   "origin": {
+    "kind": "struct_move",
+    "op": "sc_branch",
+    "move": {
+     "op": "sc_branch",
+     "at": [
+      "n11",
+      "OUT"
+     ],
+     "switch": "Sa",
+     "reduced_child": "L0 IN n11; Sa0 n11 n12; L1 0 n12; C0 IN OUT; C1 IN n12; Sb0 OUT n11; C2 n13 IN; Sb1 n11 n13; C3 m0 OUT; Sa1 n11 m0"
+    },
+    "trigger": "struct_frac",
+    "gen": 6,
+    "parent": "deabce91",
+    "parent_fd": 3,
+    "parent_eff": 99.267,
+    "struct_frac": 0.4,
+    "last_action": "RESCUE"
+   },
+   "first_seen_gen": 6
+  },
+  {
+   "id": "138e6d3c",
+   "stage": "scored",
+   "feasible": true,
+   "eff": 97.83,
+   "k": 2,
+   "feasible_frac": 1.0,
+   "ripple": 0.05033000000000243,
+   "vout": 49.99998,
+   "duty": 0.502,
+   "netlist": "Sa0 IN n13\nSb0 n13 n14\nSb1 0 n14\nL0 OUT n13\nC0 OUT 0\nL1 OUT n15\nL2 n14 n15\nSa1 IN n16\nSb2 0 n16\nL3 n15 n16\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 4,
+   "raw_ge": true,
+   "struct_distance": 4,
+   "functional_distance": 0,
+   "fd_ge": false,
+   "fd_extra": [],
+   "fd_nearest": 10480,
+   "redundant_count": 3,
+   "reduction_removed": 0,
+   "reduction_steps": [],
+   "reduced_netlist": "Sa0 IN n13; Sb0 n13 n14; Sb1 0 n14; L0 OUT n13; C0 OUT 0; L1 OUT n15; L2 n14 n15; Sa1 IN n16; Sb2 0 n16; L3 n15 n16",
+   "core_netlist": "Sa0 IN n13; L0 OUT n13; C0 OUT 0; Sb0 n13 0",
+   "device_classes": {
+    "Sa0": "essential",
+    "Sb0": "essential",
+    "Sb1": "essential",
+    "L0": "performance",
+    "C0": "performance",
+    "L1": "redundant",
+    "L2": "redundant",
+    "Sa1": "performance",
+    "Sb2": "performance",
+    "L3": "performance"
+   },
+   "fnov_status": "audited_k1",
+   "novelty": 0.0,
+   "novelty_wl": 0.9134,
+   "origin": {
+    "kind": "rescue",
+    "ops": [
+     "rewire_pin"
+    ],
+    "gen": 6
+   },
+   "first_seen_gen": 6
+  },
+  {
+   "id": "de361452",
+   "stage": "scored",
+   "feasible": true,
+   "eff": 99.361,
+   "k": 2,
+   "feasible_frac": 1.0,
+   "ripple": 0.12691999999999837,
+   "vout": 49.99996,
+   "duty": 0.5019,
+   "netlist": "Sa0 IN n10\nSb0 n10 n11\nSb1 0 n11\nL0 OUT n10\nC0 0 n12\nL1 OUT n10\nL2 n11 n12\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 2,
+   "raw_ge": false,
+   "struct_distance": 1,
+   "functional_distance": 0,
+   "fd_ge": false,
+   "fd_extra": [],
+   "fd_nearest": 3901,
+   "redundant_count": 2,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "parallel",
+     "devices": [
+      "L1"
+     ],
+     "kept": "L0"
+    }
+   ],
+   "reduced_netlist": "Sa0 IN n10; Sb0 n10 n11; Sb1 0 n11; L0 OUT n10; C0 0 n12; L2 n11 n12",
+   "core_netlist": "Sa0 IN n10; L0 OUT n10; Sb0 n10 0",
+   "device_classes": {
+    "Sa0": "essential",
+    "Sb0": "essential",
+    "Sb1": "essential",
+    "L0": "essential",
+    "C0": "redundant",
+    "L2": "redundant"
+   },
+   "fnov_status": "audited_k1",
+   "novelty": 0.0,
+   "novelty_wl": 0.2309,
+   "origin": {
+    "kind": "rescue",
+    "ops": [
+     "rewire_pin"
+    ],
+    "gen": 6
+   },
+   "first_seen_gen": 6
+  },
+  {
+   "id": "29c11b99",
+   "stage": "scored",
+   "feasible": false,
+   "eff": 79.767,
+   "k": 1,
+   "feasible_frac": 0.0,
+   "ripple": 0.0317100000000039,
+   "vout": 49.99992,
+   "duty": 0.5031,
+   "netlist": "Sa0 IN n10\nSb0 n10 n11\nSb1 0 n11\nL0 OUT n10\nC0 OUT 0\nL1 IN n12\nL2 n11 n12\n",
+   "survived": true,
+   "front0": false,
+   "raw_distance": 3,
+   "raw_ge": false,
+   "struct_distance": 1,
+   "functional_distance": 1,
+   "fd_ge": false,
+   "fd_extra": [
+    "C0"
+   ],
+   "fd_nearest": 27263,
+   "redundant_count": null,
+   "reduction_removed": 1,
+   "reduction_steps": [
+    {
+     "rule": "series",
+     "devices": [
+      "L2"
+     ],
+     "kept": "L1"
+    }
+   ],
+   "reduced_netlist": "Sa0 IN n10; Sb0 n10 n11; Sb1 0 n11; L0 OUT n10; C0 OUT 0; L1 IN n11",
+   "core_netlist": null,
+   "device_classes": null,
+   "fnov_status": "structural",
+   "novelty": 0.2357,
+   "novelty_wl": 0.2357,
+   "origin": {
+    "kind": "rescue",
+    "ops": [
+     "rewire_pin"
+    ],
+    "gen": 6
+   },
+   "first_seen_gen": 6
+  }
+ ]
+}

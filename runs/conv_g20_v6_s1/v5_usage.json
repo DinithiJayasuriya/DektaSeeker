@@ -1,0 +1,15 @@
+{
+  "calls": 0,
+  "attempts": 0,
+  "successes": 0,
+  "recovered": 0,
+  "improved": 0,
+  "sims_repair": 0,
+  "model": "gpt-5-mini",
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "edit_kinds": {},
+  "verdicts": {},
+  "confidences": {},
+  "skipped": 0
+}

@@ -1,0 +1,266 @@
+[
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 98.582,
+    "novelty": 0.0,
+    "nn_train_sim": 1.0,
+    "obj": [
+      -98.582,
+      1.0
+    ],
+    "cv": 0.13999999999999999
+  },
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 0.478,
+    "novelty": 0.2318,
+    "nn_train_sim": 0.9317,
+    "obj": [
+      -0.478,
+      0.7682
+    ],
+    "cv": 0.13999999999999999
+  },
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 98.327,
+    "novelty": 0.0,
+    "nn_train_sim": 1.0,
+    "obj": [
+      -98.327,
+      1.0
+    ],
+    "cv": 0.13999999999999999
+  },
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 97.012,
+    "novelty": 0.009,
+    "nn_train_sim": 0.9102,
+    "obj": [
+      -97.012,
+      0.991
+    ],
+    "cv": 0.13999999999999999
+  },
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 98.324,
+    "novelty": 0.0376,
+    "nn_train_sim": 1.0,
+    "obj": [
+      -98.324,
+      0.9624
+    ],
+    "cv": 0.13999999999999999
+  },
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 98.324,
+    "novelty": 0.0112,
+    "nn_train_sim": 1.0,
+    "obj": [
+      -98.324,
+      0.9888
+    ],
+    "cv": 0.13999999999999999
+  },
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 98.582,
+    "novelty": 0.0,
+    "nn_train_sim": 1.0,
+    "obj": [
+      -98.582,
+      1.0
+    ],
+    "cv": 0.13999999999999999
+  },
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 98.582,
+    "novelty": 0.0,
+    "nn_train_sim": 1.0,
+    "obj": [
+      -98.582,
+      1.0
+    ],
+    "cv": 0.13999999999999999
+  },
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 97.012,
+    "novelty": 0.009,
+    "nn_train_sim": 0.9102,
+    "obj": [
+      -97.012,
+      0.991
+    ],
+    "cv": 0.13999999999999999
+  },
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 97.012,
+    "novelty": 0.009,
+    "nn_train_sim": 0.9102,
+    "obj": [
+      -97.012,
+      0.991
+    ],
+    "cv": 0.13999999999999999
+  },
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 98.324,
+    "novelty": 0.0376,
+    "nn_train_sim": 1.0,
+    "obj": [
+      -98.324,
+      0.9624
+    ],
+    "cv": 0.13999999999999999
+  },
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 98.324,
+    "novelty": 0.0112,
+    "nn_train_sim": 1.0,
+    "obj": [
+      -98.324,
+      0.9888
+    ],
+    "cv": 0.13999999999999999
+  },
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 98.324,
+    "novelty": 0.0112,
+    "nn_train_sim": 1.0,
+    "obj": [
+      -98.324,
+      0.9888
+    ],
+    "cv": 0.13999999999999999
+  },
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 98.324,
+    "novelty": 0.0112,
+    "nn_train_sim": 1.0,
+    "obj": [
+      -98.324,
+      0.9888
+    ],
+    "cv": 0.13999999999999999
+  },
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 98.324,
+    "novelty": 0.0112,
+    "nn_train_sim": 1.0,
+    "obj": [
+      -98.324,
+      0.9888
+    ],
+    "cv": 0.13999999999999999
+  },
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 98.324,
+    "novelty": 0.0112,
+    "nn_train_sim": 1.0,
+    "obj": [
+      -98.324,
+      0.9888
+    ],
+    "cv": 0.13999999999999999
+  },
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 98.324,
+    "novelty": 0.0112,
+    "nn_train_sim": 1.0,
+    "obj": [
+      -98.324,
+      0.9888
+    ],
+    "cv": 0.13999999999999999
+  },
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 98.324,
+    "novelty": 0.0112,
+    "nn_train_sim": 1.0,
+    "obj": [
+      -98.324,
+      0.9888
+    ],
+    "cv": 0.13999999999999999
+  },
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 98.324,
+    "novelty": 0.0112,
+    "nn_train_sim": 1.0,
+    "obj": [
+      -98.324,
+      0.9888
+    ],
+    "cv": 0.13999999999999999
+  },
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 98.324,
+    "novelty": 0.0112,
+    "nn_train_sim": 1.0,
+    "obj": [
+      -98.324,
+      0.9888
+    ],
+    "cv": 0.13999999999999999
+  },
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 98.324,
+    "novelty": 0.0112,
+    "nn_train_sim": 1.0,
+    "obj": [
+      -98.324,
+      0.9888
+    ],
+    "cv": 0.13999999999999999
+  },
+  {
+    "stage": "scored",
+    "feasible": false,
+    "median_gain": 98.324,
+    "novelty": 0.0112,
+    "nn_train_sim": 1.0,
+    "obj": [
+      -98.324,
+      0.9888
+    ],
+    "cv": 0.13999999999999999
+  }
+]

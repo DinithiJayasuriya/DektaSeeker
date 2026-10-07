@@ -1,0 +1,6 @@
+Sb0 IN OUT
+C0 n0 IN
+Sa0 n0 0
+C1 IN OUT
+Sb1 IN OUT
+Sa1 n0 OUT

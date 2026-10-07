@@ -1,0 +1,26 @@
+[
+  {
+    "stage": "scored",
+    "feasible": true,
+    "median_gain": 99.636,
+    "novelty": 0.8032,
+    "nn_train_sim": 0.8531,
+    "obj": [
+      -99.414,
+      0.19679999999999997
+    ],
+    "cv": 0.0
+  },
+  {
+    "stage": "scored",
+    "feasible": true,
+    "median_gain": 99.423,
+    "novelty": 0.9146,
+    "nn_train_sim": 0.8444,
+    "obj": [
+      -99.306,
+      0.08540000000000003
+    ],
+    "cv": 0.0
+  }
+]

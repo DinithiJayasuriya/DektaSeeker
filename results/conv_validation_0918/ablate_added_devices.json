@@ -1,0 +1,2064 @@
+{
+ "a|child|": {
+  "netlist": "Sb0 n1 0; L0 n1 OUT; Sa0 IN n1; C0 IN OUT; L1 n1 OUT",
+  "corners": [
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5016,
+    "vout": 50.0,
+    "eff": 99.59990717288652,
+    "ripple": 63.409999999997524,
+    "corner": "nominal"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5034,
+    "vout": 50.0,
+    "eff": 99.27933133384761,
+    "ripple": 63.38999999999828,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5008,
+    "vout": 50.00002,
+    "eff": 99.7224129134837,
+    "ripple": 63.740000000002794,
+    "corner": "light_load"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5574,
+    "vout": 50.0,
+    "eff": 99.59635604965952,
+    "ripple": 87.58999999999872,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 4,
+  "eff_median": 99.59813161127302,
+  "eff_all_median": 99.59813161127302,
+  "vout_nom": 50.0,
+  "reasons": []
+ },
+ "a|parent|": {
+  "netlist": "Sb0 n1 0; L0 n1 OUT; Sa0 IN n1; C0 IN OUT",
+  "corners": [
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5029,
+    "vout": 50.0,
+    "eff": 99.37086331600108,
+    "ripple": 31.709999999996796,
+    "corner": "nominal"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5059,
+    "vout": 50.0,
+    "eff": 98.7980133693485,
+    "ripple": 31.680000000001485,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5014,
+    "vout": 50.0,
+    "eff": 99.63545380163059,
+    "ripple": 32.60999999999825,
+    "corner": "light_load"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5588,
+    "vout": 50.0,
+    "eff": 99.37161366383536,
+    "ripple": 43.73999999999967,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 4,
+  "eff_median": 99.37123848991823,
+  "eff_all_median": 99.37123848991823,
+  "vout_nom": 50.0,
+  "reasons": []
+ },
+ "a|del|L1": {
+  "netlist": "Sb0 n1 0; L0 n1 OUT; Sa0 IN n1; C0 IN OUT",
+  "corners": [
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5029,
+    "vout": 50.0,
+    "eff": 99.37086331600108,
+    "ripple": 31.709999999996796,
+    "corner": "nominal"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5059,
+    "vout": 50.0,
+    "eff": 98.7980133693485,
+    "ripple": 31.680000000001485,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5014,
+    "vout": 50.0,
+    "eff": 99.63545380163059,
+    "ripple": 32.60999999999825,
+    "corner": "light_load"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5588,
+    "vout": 50.0,
+    "eff": 99.37161366383536,
+    "ripple": 43.73999999999967,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 4,
+  "eff_median": 99.37123848991823,
+  "eff_all_median": 99.37123848991823,
+  "vout_nom": 50.0,
+  "reasons": []
+ },
+ "a|short|L1": {
+  "netlist": "Sb0 OUT 0; Sa0 IN OUT; C0 IN OUT",
+  "corners": [
+   {
+    "feasible": false,
+    "reason": "ripple",
+    "duty": 0.5004,
+    "vout": 50.0,
+    "eff": 0.3972512901804823,
+    "ripple": 96696.98,
+    "corner": "nominal"
+   },
+   {
+    "feasible": false,
+    "reason": "ripple",
+    "duty": 0.5009,
+    "vout": 50.0,
+    "eff": 0.7914882478106379,
+    "ripple": 96610.391,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": false,
+    "reason": "ripple",
+    "duty": 0.5001,
+    "vout": 50.0,
+    "eff": 0.19900400346949992,
+    "ripple": 96740.30500000001,
+    "corner": "light_load"
+   },
+   {
+    "feasible": false,
+    "reason": "ripple",
+    "duty": 0.556,
+    "vout": 50.0,
+    "eff": 0.5812292124917475,
+    "ripple": 88626.9369,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 0,
+  "eff_median": null,
+  "eff_all_median": 0.48924025133611493,
+  "vout_nom": 50.0,
+  "reasons": [
+   "ripple"
+  ]
+ },
+ "a|add|L1": {
+  "netlist": "Sb0 n1 0; L0 n1 OUT; Sa0 IN n1; C0 IN OUT; L1 n1 OUT",
+  "corners": [
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5016,
+    "vout": 50.0,
+    "eff": 99.59990717288652,
+    "ripple": 63.409999999997524,
+    "corner": "nominal"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5034,
+    "vout": 50.0,
+    "eff": 99.27933133384761,
+    "ripple": 63.38999999999828,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5008,
+    "vout": 50.00002,
+    "eff": 99.7224129134837,
+    "ripple": 63.740000000002794,
+    "corner": "light_load"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5574,
+    "vout": 50.0,
+    "eff": 99.59635604965952,
+    "ripple": 87.58999999999872,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 4,
+  "eff_median": 99.59813161127302,
+  "eff_all_median": 99.59813161127302,
+  "vout_nom": 50.0,
+  "reasons": []
+ },
+ "b|child|": {
+  "netlist": "Sb0 0 n7; Sa0 IN n7; C0 IN 0; L0 n7 n8; Sa1 OUT n8; C1 OUT n8",
+  "corners": [
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5052,
+    "vout": 49.99957,
+    "eff": 98.95115925232817,
+    "ripple": 63.5600000000025,
+    "corner": "nominal"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5102,
+    "vout": 49.99837,
+    "eff": 97.98577154112239,
+    "ripple": 63.67000000000189,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5026,
+    "vout": 49.99989,
+    "eff": 99.41942798604462,
+    "ripple": 63.51999999999691,
+    "corner": "light_load"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5612,
+    "vout": 49.99677,
+    "eff": 98.96502897376476,
+    "ripple": 87.72000000000446,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 4,
+  "eff_median": 98.95809411304646,
+  "eff_all_median": 98.95809411304646,
+  "vout_nom": 49.99957,
+  "reasons": []
+ },
+ "b|parent|": {
+  "netlist": "Sb0 0 n7; Sa0 IN n7; C0 IN 0; L0 n7 n8; Sa1 OUT n8",
+  "corners": [
+   {
+    "feasible": false,
+    "reason": "Vout 28.8 misses 50.0",
+    "duty": 0.9,
+    "vout": 28.79521,
+    "eff": 28.793365177914275,
+    "ripple": 195.5399999999976,
+    "corner": "nominal"
+   },
+   {
+    "feasible": false,
+    "reason": "Vout 16.8 misses 50.0",
+    "duty": 0.9,
+    "vout": 16.81954,
+    "eff": 16.81909738344527,
+    "ripple": 228.21999999999676,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": false,
+    "reason": "Vout 44.7 misses 50.0",
+    "duty": 0.9,
+    "vout": 44.71348,
+    "eff": 44.70803882737881,
+    "ripple": 151.9000000000048,
+    "corner": "light_load"
+   },
+   {
+    "feasible": false,
+    "reason": "Vout 30.2 misses 50.0",
+    "duty": 0.9,
+    "vout": 30.21159,
+    "eff": 33.566427137193756,
+    "ripple": 250.60000000000215,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 0,
+  "eff_median": null,
+  "eff_all_median": 31.179896157554015,
+  "vout_nom": 28.79521,
+  "reasons": [
+   "Vout 16.8 misses 50.0",
+   "Vout 28.8 misses 50.0",
+   "Vout 30.2 misses 50.0",
+   "Vout 44.7 misses 50.0"
+  ]
+ },
+ "b|del|C1": {
+  "netlist": "Sb0 0 n7; Sa0 IN n7; C0 IN 0; L0 n7 n8; Sa1 OUT n8",
+  "corners": [
+   {
+    "feasible": false,
+    "reason": "Vout 28.8 misses 50.0",
+    "duty": 0.9,
+    "vout": 28.79521,
+    "eff": 28.793365177914275,
+    "ripple": 195.5399999999976,
+    "corner": "nominal"
+   },
+   {
+    "feasible": false,
+    "reason": "Vout 16.8 misses 50.0",
+    "duty": 0.9,
+    "vout": 16.81954,
+    "eff": 16.81909738344527,
+    "ripple": 228.21999999999676,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": false,
+    "reason": "Vout 44.7 misses 50.0",
+    "duty": 0.9,
+    "vout": 44.71348,
+    "eff": 44.70803882737881,
+    "ripple": 151.9000000000048,
+    "corner": "light_load"
+   },
+   {
+    "feasible": false,
+    "reason": "Vout 30.2 misses 50.0",
+    "duty": 0.9,
+    "vout": 30.21159,
+    "eff": 33.566427137193756,
+    "ripple": 250.60000000000215,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 0,
+  "eff_median": null,
+  "eff_all_median": 31.179896157554015,
+  "vout_nom": 28.79521,
+  "reasons": [
+   "Vout 16.8 misses 50.0",
+   "Vout 28.8 misses 50.0",
+   "Vout 30.2 misses 50.0",
+   "Vout 44.7 misses 50.0"
+  ]
+ },
+ "b|short|C1": {
+  "netlist": "Sb0 0 n7; Sa0 IN n7; C0 IN 0; L0 n7 OUT",
+  "corners": [
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5029,
+    "vout": 50.0,
+    "eff": 99.37023134776415,
+    "ripple": 63.38999999999828,
+    "corner": "nominal"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5059,
+    "vout": 50.0,
+    "eff": 98.79773041853683,
+    "ripple": 63.349999999999795,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5014,
+    "vout": 50.0,
+    "eff": 99.63386547116656,
+    "ripple": 63.4200000000007,
+    "corner": "light_load"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5588,
+    "vout": 50.0,
+    "eff": 99.37084369191156,
+    "ripple": 87.49000000000251,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 4,
+  "eff_median": 99.37053751983785,
+  "eff_all_median": 99.37053751983785,
+  "vout_nom": 50.0,
+  "reasons": []
+ },
+ "b|add|C1": {
+  "netlist": "Sb0 0 n7; Sa0 IN n7; C0 IN 0; L0 n7 n8; Sa1 OUT n8; C1 OUT n8",
+  "corners": [
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5052,
+    "vout": 49.99957,
+    "eff": 98.95115925232817,
+    "ripple": 63.5600000000025,
+    "corner": "nominal"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5102,
+    "vout": 49.99837,
+    "eff": 97.98577154112239,
+    "ripple": 63.67000000000189,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5026,
+    "vout": 49.99989,
+    "eff": 99.41942798604462,
+    "ripple": 63.51999999999691,
+    "corner": "light_load"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5612,
+    "vout": 49.99677,
+    "eff": 98.96502897376476,
+    "ripple": 87.72000000000446,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 4,
+  "eff_median": 98.95809411304646,
+  "eff_all_median": 98.95809411304646,
+  "vout_nom": 49.99957,
+  "reasons": []
+ },
+ "c|child|": {
+  "netlist": "L0 OUT n13; Sb0 IN n13; L1 OUT n13; C0 n13 n14; Sa0 0 n14; L2 OUT n15; Sa1 0 n15; Sb1 n14 n15; Sa2 n13 n15; C1 OUT 0",
+  "corners": [
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4985,
+    "vout": 50.00003,
+    "eff": 99.6428209868129,
+    "ripple": 95.14000000000067,
+    "corner": "nominal"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4972,
+    "vout": 50.00013,
+    "eff": 99.41425472562825,
+    "ripple": 95.10000000000218,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4992,
+    "vout": 50.00001,
+    "eff": 99.69274719893512,
+    "ripple": 95.23000000000081,
+    "corner": "light_load"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4428,
+    "vout": 50.00076,
+    "eff": 99.62905283242482,
+    "ripple": 131.4300000000017,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 4,
+  "eff_median": 99.63593690961886,
+  "eff_all_median": 99.63593690961886,
+  "vout_nom": 50.00003,
+  "reasons": []
+ },
+ "c|parent|": {
+  "netlist": "L0 OUT n13; Sb0 IN n13; L2 OUT n15; Sa1 0 n15; Sa2 n13 n15",
+  "corners": [
+   {
+    "feasible": false,
+    "reason": "efficiency 0.884 below floor 0.9",
+    "duty": 0.4963,
+    "vout": 49.99988,
+    "eff": 88.35711622367168,
+    "ripple": 116.5499999999966,
+    "corner": "nominal"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4931,
+    "vout": 49.99965,
+    "eff": 92.97117483646153,
+    "ripple": 115.81999999999937,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": false,
+    "reason": "efficiency 0.798 below floor 0.9",
+    "duty": 0.4979,
+    "vout": 49.99996,
+    "eff": 79.75629636837245,
+    "ripple": 116.91000000000429,
+    "corner": "light_load"
+   },
+   {
+    "feasible": false,
+    "reason": "efficiency 0.885 below floor 0.9",
+    "duty": 0.4404,
+    "vout": 49.99882,
+    "eff": 88.51033237696451,
+    "ripple": 146.91000000000543,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 1,
+  "eff_median": 92.97117483646153,
+  "eff_all_median": 88.43372430031809,
+  "vout_nom": 49.99988,
+  "reasons": [
+   "efficiency 0.798 below floor 0.9",
+   "efficiency 0.884 below floor 0.9",
+   "efficiency 0.885 below floor 0.9"
+  ]
+ },
+ "c|del|L1": {
+  "netlist": "L0 OUT n13; Sb0 IN n13; C0 n13 n14; Sa0 0 n14; L2 OUT n15; Sa1 0 n15; Sb1 n14 n15; Sa2 n13 n15; C1 OUT 0",
+  "corners": [
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4981,
+    "vout": 50.00013,
+    "eff": 99.56871058843583,
+    "ripple": 63.38999999999828,
+    "corner": "nominal"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5,
+    "vout": 49.62314,
+    "eff": 99.2328411835773,
+    "ripple": 63.33000000000055,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.499,
+    "vout": 50.00004,
+    "eff": 99.68738099842695,
+    "ripple": 63.60000000000099,
+    "corner": "light_load"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4422,
+    "vout": 50.00256,
+    "eff": 99.54962406958042,
+    "ripple": 87.50999999999465,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 4,
+  "eff_median": 99.55916732900812,
+  "eff_all_median": 99.55916732900812,
+  "vout_nom": 50.00013,
+  "reasons": []
+ },
+ "c|short|L1": {
+  "netlist": "Sb0 IN OUT; C0 OUT n14; Sa0 0 n14; L2 OUT n15; Sa1 0 n15; Sb1 n14 n15; Sa2 OUT n15; C1 OUT 0",
+  "corners": [
+   {
+    "feasible": false,
+    "reason": "ripple",
+    "duty": 0.5613,
+    "vout": 50.1707,
+    "eff": 0.4001456823563434,
+    "ripple": 88662.69200000001,
+    "corner": "nominal"
+   },
+   {
+    "feasible": false,
+    "reason": "ripple",
+    "duty": 0.5606,
+    "vout": 50.16898,
+    "eff": 0.7974752464228664,
+    "ripple": 88600.09700000001,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": false,
+    "reason": "ripple",
+    "duty": 0.5616,
+    "vout": 50.17156,
+    "eff": 0.20042591221217945,
+    "ripple": 88693.96399999999,
+    "corner": "light_load"
+   },
+   {
+    "feasible": false,
+    "reason": "ripple",
+    "duty": 0.4976,
+    "vout": 50.00701,
+    "eff": 0.5844864950266179,
+    "ripple": 82609.656,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 0,
+  "eff_median": null,
+  "eff_all_median": 0.49231608869148064,
+  "vout_nom": 50.1707,
+  "reasons": [
+   "ripple"
+  ]
+ },
+ "c|add|L1": {
+  "netlist": "L0 OUT n13; Sb0 IN n13; L2 OUT n15; Sa1 0 n15; Sa2 n13 n15; L1 OUT n13",
+  "corners": [
+   {
+    "feasible": false,
+    "reason": "efficiency 0.885 below floor 0.9",
+    "duty": 0.4977,
+    "vout": 49.99994,
+    "eff": 88.51956921386062,
+    "ripple": 164.94000000000142,
+    "corner": "nominal"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4957,
+    "vout": 49.99981,
+    "eff": 93.38538043097611,
+    "ripple": 164.65000000000174,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": false,
+    "reason": "efficiency 0.798 below floor 0.9",
+    "duty": 0.4987,
+    "vout": 50.00012,
+    "eff": 79.7830934962515,
+    "ripple": 165.0899999999993,
+    "corner": "light_load"
+   },
+   {
+    "feasible": false,
+    "reason": "efficiency 0.887 below floor 0.9",
+    "duty": 0.442,
+    "vout": 49.99912,
+    "eff": 88.65130549508848,
+    "ripple": 222.8200000000058,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 1,
+  "eff_median": 93.38538043097611,
+  "eff_all_median": 88.58543735447455,
+  "vout_nom": 49.99994,
+  "reasons": [
+   "efficiency 0.798 below floor 0.9",
+   "efficiency 0.885 below floor 0.9",
+   "efficiency 0.887 below floor 0.9"
+  ]
+ },
+ "c|del|C0": {
+  "netlist": "L0 OUT n13; Sb0 IN n13; L1 OUT n13; Sa0 0 n14; L2 OUT n15; Sa1 0 n15; Sb1 n14 n15; Sa2 n13 n15; C1 OUT 0",
+  "corners": [
+   {
+    "feasible": false,
+    "reason": "efficiency 0.885 below floor 0.9",
+    "duty": 0.4977,
+    "vout": 49.99994,
+    "eff": 88.52665675756306,
+    "ripple": 82.45000000000147,
+    "corner": "nominal"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4957,
+    "vout": 49.99981,
+    "eff": 93.38928014090676,
+    "ripple": 82.30999999999966,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": false,
+    "reason": "efficiency 0.798 below floor 0.9",
+    "duty": 0.4987,
+    "vout": 49.99998,
+    "eff": 79.79413742662528,
+    "ripple": 82.54000000000161,
+    "corner": "light_load"
+   },
+   {
+    "feasible": false,
+    "reason": "efficiency 0.887 below floor 0.9",
+    "duty": 0.442,
+    "vout": 49.99908,
+    "eff": 88.66409756099291,
+    "ripple": 111.32999999999527,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 1,
+  "eff_median": 93.38928014090676,
+  "eff_all_median": 88.59537715927799,
+  "vout_nom": 49.99994,
+  "reasons": [
+   "efficiency 0.798 below floor 0.9",
+   "efficiency 0.885 below floor 0.9",
+   "efficiency 0.887 below floor 0.9"
+  ]
+ },
+ "c|short|C0": {
+  "netlist": "L0 OUT n14; Sb0 IN n14; L1 OUT n14; Sa0 0 n14; L2 OUT n15; Sa1 0 n15; Sb1 n14 n15; Sa2 n14 n15; C1 OUT 0",
+  "corners": [
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4987,
+    "vout": 50.00002,
+    "eff": 99.67074804600716,
+    "ripple": 95.12000000000143,
+    "corner": "nominal"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4974,
+    "vout": 50.00005,
+    "eff": 99.46547414551954,
+    "ripple": 95.05000000000052,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4993,
+    "vout": 50.00001,
+    "eff": 99.7096855119151,
+    "ripple": 95.30000000000172,
+    "corner": "light_load"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4429,
+    "vout": 50.00041,
+    "eff": 99.65940985901625,
+    "ripple": 131.40999999999536,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 4,
+  "eff_median": 99.6650789525117,
+  "eff_all_median": 99.6650789525117,
+  "vout_nom": 50.00002,
+  "reasons": []
+ },
+ "c|add|C0": {
+  "netlist": "L0 OUT n13; Sb0 IN n13; L2 OUT n15; Sa1 0 n15; Sa2 n13 n15; C0 n13 n14",
+  "corners": [
+   {
+    "feasible": false,
+    "reason": "efficiency 0.884 below floor 0.9",
+    "duty": 0.4963,
+    "vout": 49.99988,
+    "eff": 88.35711622367168,
+    "ripple": 116.5499999999966,
+    "corner": "nominal"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4931,
+    "vout": 49.99965,
+    "eff": 92.97117483646153,
+    "ripple": 115.81999999999937,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": false,
+    "reason": "efficiency 0.798 below floor 0.9",
+    "duty": 0.4979,
+    "vout": 49.99996,
+    "eff": 79.75629636837245,
+    "ripple": 116.91000000000429,
+    "corner": "light_load"
+   },
+   {
+    "feasible": false,
+    "reason": "efficiency 0.885 below floor 0.9",
+    "duty": 0.4404,
+    "vout": 49.99882,
+    "eff": 88.51033237696451,
+    "ripple": 146.91000000000543,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 1,
+  "eff_median": 92.97117483646153,
+  "eff_all_median": 88.43372430031809,
+  "vout_nom": 49.99988,
+  "reasons": [
+   "efficiency 0.798 below floor 0.9",
+   "efficiency 0.884 below floor 0.9",
+   "efficiency 0.885 below floor 0.9"
+  ]
+ },
+ "c|del|Sa0": {
+  "netlist": "L0 OUT n13; Sb0 IN n13; L1 OUT n13; C0 n13 n14; L2 OUT n15; Sa1 0 n15; Sb1 n14 n15; Sa2 n13 n15; C1 OUT 0",
+  "corners": [
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4979,
+    "vout": 50.00189,
+    "eff": 99.46970771462088,
+    "ripple": 99.9000000000052,
+    "corner": "nominal"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4959,
+    "vout": 50.0019,
+    "eff": 99.15545799399958,
+    "ripple": 97.43999999999886,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5,
+    "vout": 49.88798,
+    "eff": 99.49914825619398,
+    "ripple": 101.35999999999967,
+    "corner": "light_load"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4422,
+    "vout": 49.99807,
+    "eff": 99.51506584121238,
+    "ripple": 131.5400000000011,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 4,
+  "eff_median": 99.48442798540742,
+  "eff_all_median": 99.48442798540742,
+  "vout_nom": 50.00189,
+  "reasons": []
+ },
+ "c|short|Sa0": {
+  "netlist": "L0 OUT n13; Sb0 IN n13; L1 OUT n13; C0 n13 0; L2 OUT n15; Sa1 0 n15; Sb1 0 n15; Sa2 n13 n15; C1 OUT 0",
+  "corners": [
+   {
+    "feasible": false,
+    "reason": "efficiency 0.002 below floor 0.9",
+    "duty": 0.2601,
+    "vout": 50.16002,
+    "eff": 0.24495675578054027,
+    "ripple": 36.03999999999985,
+    "corner": "nominal"
+   },
+   {
+    "feasible": false,
+    "reason": "efficiency 0.005 below floor 0.9",
+    "duty": 0.258,
+    "vout": 50.16662,
+    "eff": 0.48781995927548744,
+    "ripple": 35.789999999998656,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": false,
+    "reason": "efficiency 0.001 below floor 0.9",
+    "duty": 0.2611,
+    "vout": 50.15665,
+    "eff": 0.12274155279390978,
+    "ripple": 36.22000000000014,
+    "corner": "light_load"
+   },
+   {
+    "feasible": false,
+    "reason": "efficiency 0.003 below floor 0.9",
+    "duty": 0.1554,
+    "vout": 50.21544,
+    "eff": 0.28915189186120976,
+    "ripple": 32.620000000001426,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 0,
+  "eff_median": null,
+  "eff_all_median": 0.267054323820875,
+  "vout_nom": 50.16002,
+  "reasons": [
+   "efficiency 0.001 below floor 0.9",
+   "efficiency 0.002 below floor 0.9",
+   "efficiency 0.003 below floor 0.9",
+   "efficiency 0.005 below floor 0.9"
+  ]
+ },
+ "c|add|Sa0": {
+  "netlist": "L0 OUT n13; Sb0 IN n13; L2 OUT n15; Sa1 0 n15; Sa2 n13 n15; Sa0 0 n14",
+  "corners": [
+   {
+    "feasible": false,
+    "reason": "efficiency 0.884 below floor 0.9",
+    "duty": 0.4963,
+    "vout": 49.99988,
+    "eff": 88.35711622367168,
+    "ripple": 116.5499999999966,
+    "corner": "nominal"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4931,
+    "vout": 49.99965,
+    "eff": 92.97117483646153,
+    "ripple": 115.81999999999937,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": false,
+    "reason": "efficiency 0.798 below floor 0.9",
+    "duty": 0.4979,
+    "vout": 49.99996,
+    "eff": 79.75629636837245,
+    "ripple": 116.91000000000429,
+    "corner": "light_load"
+   },
+   {
+    "feasible": false,
+    "reason": "efficiency 0.885 below floor 0.9",
+    "duty": 0.4404,
+    "vout": 49.99882,
+    "eff": 88.51033237696451,
+    "ripple": 146.91000000000543,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 1,
+  "eff_median": 92.97117483646153,
+  "eff_all_median": 88.43372430031809,
+  "vout_nom": 49.99988,
+  "reasons": [
+   "efficiency 0.798 below floor 0.9",
+   "efficiency 0.884 below floor 0.9",
+   "efficiency 0.885 below floor 0.9"
+  ]
+ },
+ "c|del|Sb1": {
+  "netlist": "L0 OUT n13; Sb0 IN n13; L1 OUT n13; C0 n13 n14; Sa0 0 n14; L2 OUT n15; Sa1 0 n15; Sa2 n13 n15; C1 OUT 0",
+  "corners": [
+   {
+    "feasible": false,
+    "reason": "efficiency 0.885 below floor 0.9",
+    "duty": 0.4977,
+    "vout": 49.99995,
+    "eff": 88.52974666813272,
+    "ripple": 82.43999999999829,
+    "corner": "nominal"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4957,
+    "vout": 49.99981,
+    "eff": 93.39091859987299,
+    "ripple": 82.30999999999966,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": false,
+    "reason": "efficiency 0.798 below floor 0.9",
+    "duty": 0.4987,
+    "vout": 49.99998,
+    "eff": 79.7991804940082,
+    "ripple": 82.53000000000554,
+    "corner": "light_load"
+   },
+   {
+    "feasible": false,
+    "reason": "efficiency 0.887 below floor 0.9",
+    "duty": 0.442,
+    "vout": 49.99912,
+    "eff": 88.66812323876846,
+    "ripple": 111.3199999999992,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 1,
+  "eff_median": 93.39091859987299,
+  "eff_all_median": 88.5989349534506,
+  "vout_nom": 49.99995,
+  "reasons": [
+   "efficiency 0.798 below floor 0.9",
+   "efficiency 0.885 below floor 0.9",
+   "efficiency 0.887 below floor 0.9"
+  ]
+ },
+ "c|short|Sb1": {
+  "netlist": "L0 OUT n13; Sb0 IN n13; L1 OUT n13; C0 n13 n15; Sa0 0 n15; L2 OUT n15; Sa1 0 n15; Sa2 n13 n15; C1 OUT 0",
+  "corners": [
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4985,
+    "vout": 50.00002,
+    "eff": 99.64575974917996,
+    "ripple": 95.1299999999975,
+    "corner": "nominal"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4972,
+    "vout": 50.00006,
+    "eff": 99.41850292090685,
+    "ripple": 95.06999999999977,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4992,
+    "vout": 50.0,
+    "eff": 99.69572875754048,
+    "ripple": 95.23000000000081,
+    "corner": "light_load"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4428,
+    "vout": 50.00038,
+    "eff": 99.62884862575162,
+    "ripple": 131.41999999999854,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 4,
+  "eff_median": 99.63730418746579,
+  "eff_all_median": 99.63730418746579,
+  "vout_nom": 50.00002,
+  "reasons": []
+ },
+ "c|add|Sb1": {
+  "netlist": "L0 OUT n13; Sb0 IN n13; L2 OUT n15; Sa1 0 n15; Sa2 n13 n15; Sb1 n14 n15",
+  "corners": [
+   {
+    "feasible": false,
+    "reason": "efficiency 0.884 below floor 0.9",
+    "duty": 0.4963,
+    "vout": 49.99988,
+    "eff": 88.35711622367168,
+    "ripple": 116.5499999999966,
+    "corner": "nominal"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4931,
+    "vout": 49.99965,
+    "eff": 92.97117483646153,
+    "ripple": 115.81999999999937,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": false,
+    "reason": "efficiency 0.798 below floor 0.9",
+    "duty": 0.4979,
+    "vout": 49.99996,
+    "eff": 79.75629636837245,
+    "ripple": 116.91000000000429,
+    "corner": "light_load"
+   },
+   {
+    "feasible": false,
+    "reason": "efficiency 0.885 below floor 0.9",
+    "duty": 0.4404,
+    "vout": 49.99882,
+    "eff": 88.51033237696451,
+    "ripple": 146.91000000000543,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 1,
+  "eff_median": 92.97117483646153,
+  "eff_all_median": 88.43372430031809,
+  "vout_nom": 49.99988,
+  "reasons": [
+   "efficiency 0.798 below floor 0.9",
+   "efficiency 0.884 below floor 0.9",
+   "efficiency 0.885 below floor 0.9"
+  ]
+ },
+ "c|del|C1": {
+  "netlist": "L0 OUT n13; Sb0 IN n13; L1 OUT n13; C0 n13 n14; Sa0 0 n14; L2 OUT n15; Sa1 0 n15; Sb1 n14 n15; Sa2 n13 n15",
+  "corners": [
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4985,
+    "vout": 50.00003,
+    "eff": 99.6371426151677,
+    "ripple": 190.36999999999438,
+    "corner": "nominal"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4972,
+    "vout": 50.00013,
+    "eff": 99.41138928432254,
+    "ripple": 190.2199999999965,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4992,
+    "vout": 50.00001,
+    "eff": 99.68269082012341,
+    "ripple": 190.4299999999992,
+    "corner": "light_load"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4428,
+    "vout": 50.00076,
+    "eff": 99.62198725957798,
+    "ripple": 263.10000000000144,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 4,
+  "eff_median": 99.62956493737283,
+  "eff_all_median": 99.62956493737283,
+  "vout_nom": 50.00003,
+  "reasons": []
+ },
+ "c|add|C1": {
+  "netlist": "L0 OUT n13; Sb0 IN n13; L2 OUT n15; Sa1 0 n15; Sa2 n13 n15; C1 OUT 0",
+  "corners": [
+   {
+    "feasible": false,
+    "reason": "efficiency 0.884 below floor 0.9",
+    "duty": 0.4963,
+    "vout": 49.99988,
+    "eff": 88.36401404923593,
+    "ripple": 58.23999999999785,
+    "corner": "nominal"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4931,
+    "vout": 49.99965,
+    "eff": 92.97499960485077,
+    "ripple": 57.86000000000513,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": false,
+    "reason": "efficiency 0.798 below floor 0.9",
+    "duty": 0.4979,
+    "vout": 49.99995,
+    "eff": 79.76531720496665,
+    "ripple": 58.59000000000236,
+    "corner": "light_load"
+   },
+   {
+    "feasible": false,
+    "reason": "efficiency 0.885 below floor 0.9",
+    "duty": 0.4404,
+    "vout": 49.99882,
+    "eff": 88.5201517589689,
+    "ripple": 73.37000000000415,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 1,
+  "eff_median": 92.97499960485077,
+  "eff_all_median": 88.44208290410242,
+  "vout_nom": 49.99988,
+  "reasons": [
+   "efficiency 0.798 below floor 0.9",
+   "efficiency 0.884 below floor 0.9",
+   "efficiency 0.885 below floor 0.9"
+  ]
+ },
+ "d|child|": {
+  "netlist": "L0 OUT n13; L1 OUT n13; C0 n13 n14; Sa0 0 n14; L2 OUT n15; Sa1 0 n15; Sb0 n14 n15; Sa2 n13 n15; C1 OUT 0; Sb1 IN n15",
+  "corners": [
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4978,
+    "vout": 50.00016,
+    "eff": 99.46866191488208,
+    "ripple": 95.08999999999901,
+    "corner": "nominal"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5,
+    "vout": 49.56609,
+    "eff": 99.08137529547639,
+    "ripple": 94.97999999999962,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4989,
+    "vout": 50.00005,
+    "eff": 99.59401592783355,
+    "ripple": 95.15999999999991,
+    "corner": "light_load"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4419,
+    "vout": 50.00288,
+    "eff": 99.43299937662741,
+    "ripple": 131.34000000000157,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 4,
+  "eff_median": 99.45083064575473,
+  "eff_all_median": 99.45083064575473,
+  "vout_nom": 50.00016,
+  "reasons": []
+ },
+ "d|parent|": {
+  "netlist": "L0 OUT n13; Sa1 0 n15; Sa2 n13 n15; C1 OUT 0; Sb1 IN n15",
+  "corners": [
+   {
+    "feasible": false,
+    "reason": "passthrough: output ignores duty",
+    "duty": 0.3,
+    "vout": 0.004783086,
+    "eff": 0.002691753752679645,
+    "ripple": 0.0019529999999998507,
+    "corner": "nominal"
+   },
+   {
+    "feasible": false,
+    "reason": "passthrough: output ignores duty",
+    "duty": 0.9,
+    "vout": 0.002074461,
+    "eff": 0.00156504124544609,
+    "ripple": 0.002888999999999843,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": false,
+    "reason": "passthrough: output ignores duty",
+    "duty": 0.1,
+    "vout": 0.009899441,
+    "eff": 0.005158378693347357,
+    "ripple": 0.000745999999999386,
+    "corner": "light_load"
+   },
+   {
+    "feasible": false,
+    "reason": "passthrough: output ignores duty",
+    "duty": 0.3,
+    "vout": 0.004258668,
+    "eff": 0.0026343987856603333,
+    "ripple": 0.002605000000000142,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 0,
+  "eff_median": null,
+  "eff_all_median": 0.002663076269169989,
+  "vout_nom": 0.004783086,
+  "reasons": [
+   "passthrough: output ignores duty"
+  ]
+ },
+ "d|del|L1": {
+  "netlist": "L0 OUT n13; C0 n13 n14; Sa0 0 n14; L2 OUT n15; Sa1 0 n15; Sb0 n14 n15; Sa2 n13 n15; C1 OUT 0; Sb1 IN n15",
+  "corners": [
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4976,
+    "vout": 50.00013,
+    "eff": 99.47311365676909,
+    "ripple": 63.37999999999511,
+    "corner": "nominal"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5,
+    "vout": 49.53356,
+    "eff": 99.04478265051118,
+    "ripple": 63.32999999999345,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4988,
+    "vout": 50.00003,
+    "eff": 99.64188762884173,
+    "ripple": 63.4200000000007,
+    "corner": "light_load"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4417,
+    "vout": 50.002,
+    "eff": 99.45372471990115,
+    "ripple": 87.51000000000175,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 4,
+  "eff_median": 99.46341918833511,
+  "eff_all_median": 99.46341918833511,
+  "vout_nom": 50.00013,
+  "reasons": []
+ },
+ "d|short|L1": {
+  "netlist": "C0 OUT n14; Sa0 0 n14; L2 OUT n15; Sa1 0 n15; Sb0 n14 n15; Sa2 OUT n15; C1 OUT 0; Sb1 IN n15",
+  "corners": [
+   {
+    "feasible": false,
+    "reason": "ripple",
+    "duty": 0.2743,
+    "vout": 49.28868,
+    "eff": 0.5097621695866708,
+    "ripple": 55284.96,
+    "corner": "nominal"
+   },
+   {
+    "feasible": false,
+    "reason": "ripple",
+    "duty": 0.2728,
+    "vout": 49.26141,
+    "eff": 1.0126914746156581,
+    "ripple": 55127.37,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": false,
+    "reason": "ripple",
+    "duty": 0.275,
+    "vout": 49.30268,
+    "eff": 0.2557437087635303,
+    "ripple": 55363.91,
+    "corner": "light_load"
+   },
+   {
+    "feasible": false,
+    "reason": "ripple",
+    "duty": 0.2416,
+    "vout": 48.8408,
+    "eff": 0.6962294519027327,
+    "ripple": 54242.46000000001,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 0,
+  "eff_median": null,
+  "eff_all_median": 0.6029958107447018,
+  "vout_nom": 49.28868,
+  "reasons": [
+   "ripple"
+  ]
+ },
+ "d|add|L1": {
+  "netlist": "L0 OUT n13; Sa1 0 n15; Sa2 n13 n15; C1 OUT 0; Sb1 IN n15; L1 OUT n13",
+  "corners": [
+   {
+    "feasible": false,
+    "reason": "passthrough: output ignores duty",
+    "duty": 0.1,
+    "vout": 0.004949967,
+    "eff": 0.0025793794246914224,
+    "ripple": 0.0007460000000002534,
+    "corner": "nominal"
+   },
+   {
+    "feasible": false,
+    "reason": "passthrough: output ignores duty",
+    "duty": 0.3,
+    "vout": 0.002391522,
+    "eff": 0.0013458340490718145,
+    "ripple": 0.001955000000000099,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": false,
+    "reason": "passthrough: output ignores duty",
+    "duty": 0.1,
+    "vout": 0.009802197,
+    "eff": 0.0050575307321499815,
+    "ripple": 0.0014749999999990465,
+    "corner": "light_load"
+   },
+   {
+    "feasible": false,
+    "reason": "passthrough: output ignores duty",
+    "duty": 0.1,
+    "vout": 0.004443917,
+    "eff": 0.0025665949044726714,
+    "ripple": 0.0009620000000001849,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 0,
+  "eff_median": null,
+  "eff_all_median": 0.002572987164582047,
+  "vout_nom": 0.004949967,
+  "reasons": [
+   "passthrough: output ignores duty"
+  ]
+ },
+ "d|del|C0": {
+  "netlist": "L0 OUT n13; L1 OUT n13; Sa0 0 n14; L2 OUT n15; Sa1 0 n15; Sb0 n14 n15; Sa2 n13 n15; C1 OUT 0; Sb1 IN n15",
+  "corners": [
+   {
+    "feasible": false,
+    "reason": "efficiency 0.796 below floor 0.9",
+    "duty": 0.4963,
+    "vout": 49.99989,
+    "eff": 79.61705008791348,
+    "ripple": 98.19000000000244,
+    "corner": "nominal"
+   },
+   {
+    "feasible": false,
+    "reason": "efficiency 0.880 below floor 0.9",
+    "duty": 0.4933,
+    "vout": 49.99982,
+    "eff": 87.95314878874474,
+    "ripple": 97.56000000000142,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": false,
+    "reason": "efficiency 0.665 below floor 0.9",
+    "duty": 0.4978,
+    "vout": 49.99993,
+    "eff": 66.53005795314198,
+    "ripple": 98.57999999999834,
+    "corner": "light_load"
+   },
+   {
+    "feasible": false,
+    "reason": "efficiency 0.799 below floor 0.9",
+    "duty": 0.4403,
+    "vout": 49.99889,
+    "eff": 79.86598536918558,
+    "ripple": 125.09000000000015,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 0,
+  "eff_median": null,
+  "eff_all_median": 79.74151772854952,
+  "vout_nom": 49.99989,
+  "reasons": [
+   "efficiency 0.665 below floor 0.9",
+   "efficiency 0.796 below floor 0.9",
+   "efficiency 0.799 below floor 0.9",
+   "efficiency 0.880 below floor 0.9"
+  ]
+ },
+ "d|short|C0": {
+  "netlist": "L0 OUT n14; L1 OUT n14; Sa0 0 n14; L2 OUT n15; Sa1 0 n15; Sb0 n14 n15; Sa2 n14 n15; C1 OUT 0; Sb1 IN n15",
+  "corners": [
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4986,
+    "vout": 50.00002,
+    "eff": 99.65269092781111,
+    "ripple": 95.11000000000536,
+    "corner": "nominal"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5,
+    "vout": 49.72842,
+    "eff": 99.43410525350768,
+    "ripple": 95.03000000000128,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4992,
+    "vout": 50.00001,
+    "eff": 99.6970011166055,
+    "ripple": 95.23000000000081,
+    "corner": "light_load"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4428,
+    "vout": 50.00061,
+    "eff": 99.63860012147627,
+    "ripple": 131.38999999999612,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 4,
+  "eff_median": 99.6456455246437,
+  "eff_all_median": 99.6456455246437,
+  "vout_nom": 50.00002,
+  "reasons": []
+ },
+ "d|add|C0": {
+  "netlist": "L0 OUT n13; Sa1 0 n15; Sa2 n13 n15; C1 OUT 0; Sb1 IN n15; C0 n13 n14",
+  "corners": [
+   {
+    "feasible": false,
+    "reason": "passthrough: output ignores duty",
+    "duty": 0.3,
+    "vout": 0.004783086,
+    "eff": 0.002691753752679645,
+    "ripple": 0.0019529999999998507,
+    "corner": "nominal"
+   },
+   {
+    "feasible": false,
+    "reason": "passthrough: output ignores duty",
+    "duty": 0.9,
+    "vout": 0.002074461,
+    "eff": 0.00156504124544609,
+    "ripple": 0.002888999999999843,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": false,
+    "reason": "passthrough: output ignores duty",
+    "duty": 0.1,
+    "vout": 0.009899011,
+    "eff": 0.005157930751694519,
+    "ripple": 0.0007889999999993041,
+    "corner": "light_load"
+   },
+   {
+    "feasible": false,
+    "reason": "passthrough: output ignores duty",
+    "duty": 0.3,
+    "vout": 0.004258668,
+    "eff": 0.0026343968723513507,
+    "ripple": 0.002605000000000142,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 0,
+  "eff_median": null,
+  "eff_all_median": 0.002663075312515498,
+  "vout_nom": 0.004783086,
+  "reasons": [
+   "passthrough: output ignores duty"
+  ]
+ },
+ "d|del|Sa0": {
+  "netlist": "L0 OUT n13; L1 OUT n13; C0 n13 n14; L2 OUT n15; Sa1 0 n15; Sb0 n14 n15; Sa2 n13 n15; C1 OUT 0; Sb1 IN n15",
+  "corners": [
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5,
+    "vout": 49.68908,
+    "eff": 99.34906202078479,
+    "ripple": 98.51000000000454,
+    "corner": "nominal"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5,
+    "vout": 49.39682,
+    "eff": 98.77290189297251,
+    "ripple": 94.99999999999886,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5,
+    "vout": 49.83233,
+    "eff": 99.7149008858953,
+    "ripple": 105.02999999999929,
+    "corner": "light_load"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.441,
+    "vout": 50.0003,
+    "eff": 99.31006224276547,
+    "ripple": 131.3999999999993,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 4,
+  "eff_median": 99.32956213177513,
+  "eff_all_median": 99.32956213177513,
+  "vout_nom": 49.68908,
+  "reasons": []
+ },
+ "d|short|Sa0": {
+  "netlist": "L0 OUT n13; L1 OUT n13; C0 n13 0; L2 OUT n15; Sa1 0 n15; Sb0 0 n15; Sa2 n13 n15; C1 OUT 0; Sb1 IN n15",
+  "corners": [
+   {
+    "feasible": false,
+    "reason": "Vout 38.5 misses 50.0",
+    "duty": 0.1,
+    "vout": 38.49775,
+    "eff": 0.03247767548982441,
+    "ripple": 10.719999999999175,
+    "corner": "nominal"
+   },
+   {
+    "feasible": false,
+    "reason": "Vout 38.3 misses 50.0",
+    "duty": 0.1,
+    "vout": 38.31048,
+    "eff": 0.06430418385555084,
+    "ripple": 10.690000000003863,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": false,
+    "reason": "Vout 38.6 misses 50.0",
+    "duty": 0.1,
+    "vout": 38.59207,
+    "eff": 0.016321167608046857,
+    "ripple": 10.730000000002349,
+    "corner": "light_load"
+   },
+   {
+    "feasible": false,
+    "reason": "Vout 34.7 misses 50.0",
+    "duty": 0.1,
+    "vout": 34.74539,
+    "eff": 0.032668233723988194,
+    "ripple": 17.319999999998004,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 0,
+  "eff_median": null,
+  "eff_all_median": 0.032572954606906304,
+  "vout_nom": 38.49775,
+  "reasons": [
+   "Vout 34.7 misses 50.0",
+   "Vout 38.3 misses 50.0",
+   "Vout 38.5 misses 50.0",
+   "Vout 38.6 misses 50.0"
+  ]
+ },
+ "d|add|Sa0": {
+  "netlist": "L0 OUT n13; Sa1 0 n15; Sa2 n13 n15; C1 OUT 0; Sb1 IN n15; Sa0 0 n14",
+  "corners": [
+   {
+    "feasible": false,
+    "reason": "passthrough: output ignores duty",
+    "duty": 0.3,
+    "vout": 0.004783086,
+    "eff": 0.002691753752679645,
+    "ripple": 0.0019529999999998507,
+    "corner": "nominal"
+   },
+   {
+    "feasible": false,
+    "reason": "passthrough: output ignores duty",
+    "duty": 0.9,
+    "vout": 0.002074461,
+    "eff": 0.00156504124544609,
+    "ripple": 0.002888999999999843,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": false,
+    "reason": "passthrough: output ignores duty",
+    "duty": 0.1,
+    "vout": 0.009899441,
+    "eff": 0.005158378693347357,
+    "ripple": 0.000745999999999386,
+    "corner": "light_load"
+   },
+   {
+    "feasible": false,
+    "reason": "passthrough: output ignores duty",
+    "duty": 0.3,
+    "vout": 0.004258668,
+    "eff": 0.0026343987856603333,
+    "ripple": 0.002605000000000142,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 0,
+  "eff_median": null,
+  "eff_all_median": 0.002663076269169989,
+  "vout_nom": 0.004783086,
+  "reasons": [
+   "passthrough: output ignores duty"
+  ]
+ },
+ "d|del|Sb0": {
+  "netlist": "L0 OUT n13; L1 OUT n13; C0 n13 n14; Sa0 0 n14; L2 OUT n15; Sa1 0 n15; Sa2 n13 n15; C1 OUT 0; Sb1 IN n15",
+  "corners": [
+   {
+    "feasible": false,
+    "reason": "efficiency 0.796 below floor 0.9",
+    "duty": 0.4963,
+    "vout": 49.99989,
+    "eff": 79.62267618299467,
+    "ripple": 98.17999999999927,
+    "corner": "nominal"
+   },
+   {
+    "feasible": false,
+    "reason": "efficiency 0.880 below floor 0.9",
+    "duty": 0.4933,
+    "vout": 49.99981,
+    "eff": 87.95653508567469,
+    "ripple": 97.55000000000535,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": false,
+    "reason": "efficiency 0.665 below floor 0.9",
+    "duty": 0.4978,
+    "vout": 49.99994,
+    "eff": 66.53796424295881,
+    "ripple": 98.56999999999516,
+    "corner": "light_load"
+   },
+   {
+    "feasible": false,
+    "reason": "efficiency 0.799 below floor 0.9",
+    "duty": 0.4403,
+    "vout": 49.99885,
+    "eff": 79.87144905368004,
+    "ripple": 125.0700000000009,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 0,
+  "eff_median": null,
+  "eff_all_median": 79.74706261833735,
+  "vout_nom": 49.99989,
+  "reasons": [
+   "efficiency 0.665 below floor 0.9",
+   "efficiency 0.796 below floor 0.9",
+   "efficiency 0.799 below floor 0.9",
+   "efficiency 0.880 below floor 0.9"
+  ]
+ },
+ "d|short|Sb0": {
+  "netlist": "L0 OUT n13; L1 OUT n13; C0 n13 n15; Sa0 0 n15; L2 OUT n15; Sa1 0 n15; Sa2 n13 n15; C1 OUT 0; Sb1 IN n15",
+  "corners": [
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4982,
+    "vout": 50.00012,
+    "eff": 99.54922363970702,
+    "ripple": 95.08999999999901,
+    "corner": "nominal"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5,
+    "vout": 49.64168,
+    "eff": 99.23410905655622,
+    "ripple": 94.97999999999962,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4991,
+    "vout": 50.00004,
+    "eff": 99.64153034736164,
+    "ripple": 95.15000000000384,
+    "corner": "light_load"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4423,
+    "vout": 50.00273,
+    "eff": 99.51079911500868,
+    "ripple": 131.34000000000157,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 4,
+  "eff_median": 99.53001137735785,
+  "eff_all_median": 99.53001137735785,
+  "vout_nom": 50.00012,
+  "reasons": []
+ },
+ "d|add|Sb0": {
+  "netlist": "L0 OUT n13; Sa1 0 n15; Sa2 n13 n15; C1 OUT 0; Sb1 IN n15; Sb0 n14 n15",
+  "corners": [
+   {
+    "feasible": false,
+    "reason": "passthrough: output ignores duty",
+    "duty": 0.3,
+    "vout": 0.004783086,
+    "eff": 0.002691753752679645,
+    "ripple": 0.0019529999999998507,
+    "corner": "nominal"
+   },
+   {
+    "feasible": false,
+    "reason": "passthrough: output ignores duty",
+    "duty": 0.9,
+    "vout": 0.002074461,
+    "eff": 0.00156504124544609,
+    "ripple": 0.002888999999999843,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": false,
+    "reason": "passthrough: output ignores duty",
+    "duty": 0.1,
+    "vout": 0.009899441,
+    "eff": 0.005158378693347357,
+    "ripple": 0.000745999999999386,
+    "corner": "light_load"
+   },
+   {
+    "feasible": false,
+    "reason": "passthrough: output ignores duty",
+    "duty": 0.3,
+    "vout": 0.004258668,
+    "eff": 0.0026343987856603333,
+    "ripple": 0.002605000000000142,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 0,
+  "eff_median": null,
+  "eff_all_median": 0.002663076269169989,
+  "vout_nom": 0.004783086,
+  "reasons": [
+   "passthrough: output ignores duty"
+  ]
+ },
+ "d|del|L2": {
+  "netlist": "L0 OUT n13; L1 OUT n13; C0 n13 n14; Sa0 0 n14; Sa1 0 n15; Sb0 n14 n15; Sa2 n13 n15; C1 OUT 0; Sb1 IN n15",
+  "corners": [
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5,
+    "vout": 49.54382,
+    "eff": 98.97747897234984,
+    "ripple": 63.25999999999965,
+    "corner": "nominal"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5,
+    "vout": 49.07556,
+    "eff": 98.07550504795992,
+    "ripple": 63.04000000000087,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.5,
+    "vout": 49.78132,
+    "eff": 99.38400852442369,
+    "ripple": 63.36000000000297,
+    "corner": "light_load"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4381,
+    "vout": 50.04163,
+    "eff": 98.79769908152637,
+    "ripple": 87.11000000000269,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 4,
+  "eff_median": 98.88758902693812,
+  "eff_all_median": 98.88758902693812,
+  "vout_nom": 49.54382,
+  "reasons": []
+ },
+ "d|short|L2": {
+  "netlist": "L0 OUT n13; L1 OUT n13; C0 n13 n14; Sa0 0 n14; Sa1 0 OUT; Sb0 n14 OUT; Sa2 n13 OUT; C1 OUT 0; Sb1 IN OUT",
+  "corners": [
+   {
+    "feasible": false,
+    "reason": "ripple",
+    "duty": 0.4968,
+    "vout": 50.00318,
+    "eff": 0.4027350933780499,
+    "ripple": 94943.774,
+    "corner": "nominal"
+   },
+   {
+    "feasible": false,
+    "reason": "ripple",
+    "duty": 0.4962,
+    "vout": 50.00366,
+    "eff": 0.802341714556731,
+    "ripple": 94859.145,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": false,
+    "reason": "ripple",
+    "duty": 0.497,
+    "vout": 50.00293,
+    "eff": 0.20176032559413712,
+    "ripple": 94986.11799999999,
+    "corner": "light_load"
+   },
+   {
+    "feasible": false,
+    "reason": "ripple",
+    "duty": 0.4413,
+    "vout": 50.0365,
+    "eff": 0.5891168442580553,
+    "ripple": 87195.47099999999,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 0,
+  "eff_median": null,
+  "eff_all_median": 0.4959259688180526,
+  "vout_nom": 50.00318,
+  "reasons": [
+   "ripple"
+  ]
+ },
+ "d|add|L2": {
+  "netlist": "L0 OUT n13; Sa1 0 n15; Sa2 n13 n15; C1 OUT 0; Sb1 IN n15; L2 OUT n15",
+  "corners": [
+   {
+    "feasible": false,
+    "reason": "efficiency 0.884 below floor 0.9",
+    "duty": 0.4966,
+    "vout": 49.99996,
+    "eff": 88.4025092915606,
+    "ripple": 58.24999999999392,
+    "corner": "nominal"
+   },
+   {
+    "feasible": true,
+    "reason": "",
+    "duty": 0.4936,
+    "vout": 49.99991,
+    "eff": 93.05991310036636,
+    "ripple": 57.89999999999651,
+    "corner": "heavy_load"
+   },
+   {
+    "feasible": false,
+    "reason": "efficiency 0.798 below floor 0.9",
+    "duty": 0.4981,
+    "vout": 49.99997,
+    "eff": 79.77946385604456,
+    "ripple": 58.69000000000568,
+    "corner": "light_load"
+   },
+   {
+    "feasible": false,
+    "reason": "efficiency 0.886 below floor 0.9",
+    "duty": 0.4407,
+    "vout": 49.99944,
+    "eff": 88.5531507916829,
+    "ripple": 73.39999999999947,
+    "corner": "low_line_tol"
+   }
+  ],
+  "feasible_corners": 1,
+  "eff_median": 93.05991310036636,
+  "eff_all_median": 88.47783004162176,
+  "vout_nom": 49.99996,
+  "reasons": [
+   "efficiency 0.798 below floor 0.9",
+   "efficiency 0.884 below floor 0.9",
+   "efficiency 0.886 below floor 0.9"
+  ]
+ }
+}

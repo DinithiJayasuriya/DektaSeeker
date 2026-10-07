@@ -1,0 +1,9 @@
+{
+  "calls": 23,
+  "input_tokens": 22826,
+  "output_tokens": 100926,
+  "proposed": 24,
+  "rejected": 0,
+  "model": "gpt-5-mini",
+  "enabled": true
+}

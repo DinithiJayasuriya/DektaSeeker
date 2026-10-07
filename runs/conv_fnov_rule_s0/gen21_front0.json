@@ -1,0 +1,62 @@
+[
+  {
+    "stage": "scored",
+    "feasible": true,
+    "median_gain": 99.636,
+    "novelty": 0.8032,
+    "nn_train_sim": 0.8531,
+    "obj": [
+      -99.414,
+      0.19679999999999997
+    ],
+    "cv": 0.0
+  },
+  {
+    "stage": "scored",
+    "feasible": true,
+    "median_gain": 99.423,
+    "novelty": 0.9146,
+    "nn_train_sim": 0.8444,
+    "obj": [
+      -0.9030000000000058,
+      0.08540000000000003
+    ],
+    "cv": 0.0
+  },
+  {
+    "stage": "scored",
+    "feasible": true,
+    "median_gain": 99.074,
+    "novelty": 0.9114,
+    "nn_train_sim": 0.8486,
+    "obj": [
+      -98.716,
+      0.08860000000000001
+    ],
+    "cv": 0.0
+  },
+  {
+    "stage": "scored",
+    "feasible": true,
+    "median_gain": 99.381,
+    "novelty": 0.9092,
+    "nn_train_sim": 0.8607,
+    "obj": [
+      -98.843,
+      0.09079999999999999
+    ],
+    "cv": 0.0
+  },
+  {
+    "stage": "scored",
+    "feasible": true,
+    "median_gain": 99.415,
+    "novelty": 0.91,
+    "nn_train_sim": 0.9001,
+    "obj": [
+      -98.839,
+      0.08999999999999997
+    ],
+    "cv": 0.0
+  }
+]

@@ -1,0 +1,244 @@
+\begin{table*}[t]
+\centering
+\caption{Parent--child verification of five corpus-absent converter
+discoveries: (a)--(d) add one device to a training sample, (e) adds a
+five-device subnetwork and is listed per device. $U$ is the fraction of the
+switching period for which the added element carries more than 1\% of the
+load current. Ripple is the maximum over the four corners. Ref.\ is the
+textbook buck for (a)--(d); (e) is compared with its own parent. Switches are
+ideal (no switching loss), so efficiencies are topology-level, not hardware,
+figures.}
+\label{tab:conv_parent_child}
+
+\footnotesize
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.12}
+
+\begin{tabular}{@{}
+c
+p{2.45cm}
+p{1.75cm}
+p{1.45cm}
+p{2.05cm}
+p{2.05cm}
+p{1.65cm}
+p{1.65cm}
+p{2.30cm}
+@{}}
+\toprule
+
+&
+\centering\textbf{Added device}\par
+\centering\textbf{(parent sample)}
+&
+\centering\textbf{Active?}\par
+\centering$(U,I_{\rm rms}/I_{\rm load})$
+&
+\centering\textbf{Feasible}\par
+\centering\textbf{corners}
+&
+\centering\textbf{Median $\eta$ (\%)}\par
+\centering parent $\rightarrow$ child
+&
+\centering\textbf{Worst $\eta$ (\%)}\par
+\centering parent $\rightarrow$ child
+&
+\centering\textbf{Ripple (mV)}\par
+\centering parent $\rightarrow$ child
+&
+\centering\textbf{Peak stress}\par
+\centering\textbf{added device}
+&
+\centering\textbf{Verified effect}
+\tabularnewline
+
+\midrule
+
+(a)
+&
+2nd inductor in parallel (\#9562)
+&
+\centering yes
+
+$(1.00,0.52)$
+&
+\centering $4/4 \rightarrow 4/4$
+&
+\centering $99.37 \rightarrow \mathbf{99.60}$
+
+$(+0.23)$
+&
+\centering $98.80 \rightarrow \mathbf{99.28}$
+
+$(+0.48)$
+&
+\centering $44 \rightarrow 88$
+
+$(+44)$
+&
+\centering 50\,V
+
+0.75\,A
+&
+\centering Efficiency--ripple trade-off
+\tabularnewline
+
+\midrule
+
+(b)
+&
+Input capacitor (\#19363)
+&
+\centering no
+
+$(0.00,0)$
+&
+\centering $4/4 \rightarrow 4/4$
+&
+\centering $99.37 \rightarrow 99.37$
+
+$(0)$
+&
+\centering $98.80 \rightarrow 98.80$
+
+$(0)$
+&
+\centering $72 \rightarrow 72$
+
+$(0)$
+&
+\centering 100\,V
+
+0\,A
+&
+\centering Redundant
+\tabularnewline
+
+\midrule
+
+(c)
+&
+Output capacitor (\#415)
+&
+\centering yes
+
+$(0.92,0.07)$
+&
+\centering $4/4 \rightarrow 4/4$
+&
+\centering $99.32 \rightarrow 99.32$
+
+$(0)$
+&
+\centering $98.70 \rightarrow 98.70$
+
+$(0)$
+&
+\centering $87 \rightarrow \mathbf{44}$
+
+$(-43)$
+&
+\centering 50\,V
+
+0.12\,A
+&
+\centering Ripple suppression
+\tabularnewline
+
+\midrule
+
+(d)
+&
+Capacitor across $S_{a1}$ (\#10271)
+&
+\centering yes
+
+$(0.97,1.47)$
+&
+\centering $\mathbf{0/4 \rightarrow 4/4}$
+&
+\centering $31.2 \rightarrow \mathbf{98.96}$
+
+$(+67.8)$
+&
+\centering $16.8 \rightarrow \mathbf{97.99}$
+
+$(+81.2)$
+&
+\centering $251 \rightarrow \mathbf{88}$
+
+$(-163)$
+&
+\centering 0.6\,V
+
+\textbf{6.5\,A}
+&
+\centering \textbf{New freewheel path}
+\tabularnewline
+
+\midrule
+
+(e)
+&
+2nd switch leg $S_{b1}$--$L_2$, coupling cap $C_1$, direct $L_0$, output cap $C_0$ (\#3344)
+&
+\centering all 5
+
+$S_{b1}\,(0.50,0.43)$
+
+$C_1\,(1.00,0.36)$
+
+$L_2\,(1.00,0.33)$
+
+$L_0\,(1.00,0.49)$
+
+$C_0\,(0.96,0.14)$
+&
+\centering $4/4 \rightarrow 4/4$
+&
+\centering $98.88 \rightarrow \mathbf{99.62}$
+
+$(+0.74)$
+&
+\centering $97.83 \rightarrow \mathbf{99.36}$
+
+$(+1.53)$
+&
+\centering $1.2 \rightarrow 88$
+
+$(+86)$
+&
+\centering 100\,V
+
+1.05\,A
+
+($S_{b1}$)
+&
+\centering Efficiency--ripple trade-off
+\tabularnewline
+
+\midrule
+
+Ref.
+&
+Textbook buck (\#6935)
+&
+\centering --
+&
+\centering 4/4
+&
+\centering 99.37
+&
+\centering 98.80
+&
+\centering 87
+&
+\centering --
+&
+\centering --
+\tabularnewline
+
+\bottomrule
+\end{tabular}
+
+\end{table*}

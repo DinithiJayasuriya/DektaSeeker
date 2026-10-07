@@ -1,0 +1,2900 @@
+[
+  {
+    "netlist": "L0 OUT n13\nSb0 IN n13\nL1 OUT n13\nC0 n13 n14\nSa0 0 n14\nL2 OUT n15\nSa1 0 n15\nSb1 n14 n15\nSa2 n13 n15\nC1 OUT 0\n",
+    "first_seen_gen": 5,
+    "median_gain": 99.636,
+    "novelty": 0.8032,
+    "nn_train_sim": 0.8531,
+    "robust": {
+      "median_gain": 99.636,
+      "gain_spread": 0.278,
+      "feasible_frac": 1.0,
+      "feasible": true
+    },
+    "fit": {
+      "stage": "scored",
+      "family": "converter",
+      "alive": true,
+      "feasible": true,
+      "median_gain": 99.636,
+      "worst_gain": 99.414,
+      "gain_spread": 0.278,
+      "feasible_frac": 1.0,
+      "k": 4,
+      "con_vec": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "con_names": [
+        "vout_error",
+        "ripple",
+        "duty_response",
+        "efficiency"
+      ],
+      "corners": [
+        {
+          "name": "nominal",
+          "feasible": true,
+          "reason": "",
+          "duty": 0.4985,
+          "vout": 50.00003,
+          "eff": 0.996428209868129,
+          "ripple": 0.09514000000000067,
+          "duty_response": 79.75052099999999,
+          "passthrough": false,
+          "con_vec": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sweep": [
+            [
+              0.1,
+              89.71077,
+              0.9967446134716156,
+              0.035089999999996735
+            ],
+            [
+              0.3,
+              69.79687,
+              0.9968384842035217,
+              0.08010999999999058
+            ],
+            [
+              0.5,
+              49.85294,
+              0.9964231560901566,
+              0.09513999999999356
+            ],
+            [
+              0.7,
+              29.90474,
+              0.99543408728774,
+              0.08013000000000048
+            ],
+            [
+              0.9,
+              9.960249,
+              0.9898630698749236,
+              0.03508599999999973
+            ],
+            [
+              0.4985,
+              50.00003,
+              0.996428209868129,
+              0.09514000000000067
+            ]
+          ],
+          "n_sims": 6
+        },
+        {
+          "name": "heavy_load",
+          "feasible": true,
+          "reason": "",
+          "duty": 0.4972,
+          "vout": 50.00013,
+          "eff": 0.9941425472562825,
+          "ripple": 0.09510000000000218,
+          "duty_response": 79.50103899999999,
+          "passthrough": false,
+          "con_vec": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sweep": [
+            [
+              0.1,
+              89.4322,
+              0.9937191505804217,
+              0.03503000000000611
+            ],
+            [
+              0.3,
+              69.60307,
+              0.9942581576643924,
+              0.08003999999999678
+            ],
+            [
+              0.5,
+              49.71741,
+              0.9941374051389177,
+              0.09510000000000218
+            ],
+            [
+              0.7,
+              29.82187,
+              0.993563054665298,
+              0.08011000000000124
+            ],
+            [
+              0.9,
+              9.931161,
+              0.9905423106560198,
+              0.03507699999999936
+            ],
+            [
+              0.4972,
+              50.00013,
+              0.9941425472562825,
+              0.09510000000000218
+            ]
+          ],
+          "n_sims": 6
+        },
+        {
+          "name": "light_load",
+          "feasible": true,
+          "reason": "",
+          "duty": 0.4992,
+          "vout": 50.00001,
+          "eff": 0.9969274719893513,
+          "ripple": 0.09523000000000081,
+          "duty_response": 79.875843,
+          "passthrough": false,
+          "con_vec": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sweep": [
+            [
+              0.1,
+              89.85071,
+              0.998158393035647,
+              0.03512000000000626
+            ],
+            [
+              0.3,
+              69.89418,
+              0.9978489409542362,
+              0.08016999999999541
+            ],
+            [
+              0.5,
+              49.92099,
+              0.9969229526053894,
+              0.09523000000000081
+            ],
+            [
+              0.7,
+              29.94637,
+              0.9950178424771452,
+              0.08022000000000062
+            ],
+            [
+              0.9,
+              9.974867,
+              0.9841698937175131,
+              0.03515200000000007
+            ],
+            [
+              0.4992,
+              50.00001,
+              0.9969274719893513,
+              0.09523000000000081
+            ]
+          ],
+          "n_sims": 6
+        },
+        {
+          "name": "low_line_tol",
+          "feasible": true,
+          "reason": "",
+          "duty": 0.4428,
+          "vout": 50.00076,
+          "eff": 0.9962905283242481,
+          "ripple": 0.1314300000000017,
+          "duty_response": 71.77582600000001,
+          "passthrough": false,
+          "con_vec": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sweep": [
+            [
+              0.1,
+              80.73985,
+              0.9967257053914628,
+              0.0486800000000045
+            ],
+            [
+              0.3,
+              62.81567,
+              0.9966848407463118,
+              0.11202000000000112
+            ],
+            [
+              0.5,
+              44.86545,
+              0.9960603650156059,
+              0.13315000000000055
+            ],
+            [
+              0.7,
+              26.91296,
+              0.9947850999717074,
+              0.11204000000000036
+            ],
+            [
+              0.9,
+              8.964024,
+              0.9888359935836497,
+              0.048667000000000016
+            ],
+            [
+              0.4428,
+              50.00076,
+              0.9962905283242481,
+              0.1314300000000017
+            ]
+          ],
+          "n_sims": 6
+        }
+      ],
+      "duty": 0.4985,
+      "vout": 50.00003,
+      "eff": 0.996428209868129,
+      "ripple": 0.09514000000000067,
+      "reason": "",
+      "passthrough": false,
+      "n_sims": 24,
+      "score_name": "efficiency",
+      "score_unit": "%"
+    },
+    "v5_repaired_from": null,
+    "v5_edits": null,
+    "v5_confidence": null,
+    "v5_audit": {
+      "structural_valid": true,
+      "n_strong": 0,
+      "n_weak": 1,
+      "op_converged": true,
+      "op_fault": false,
+      "repaired": false
+    },
+    "rescued_from_cv": null,
+    "rescue_ops": null,
+    "novelty_wl": 0.1469,
+    "raw_distance": 4,
+    "struct_distance": 4,
+    "functional_distance": 4,
+    "fd_ge": true,
+    "fd_extra": [
+      "L0",
+      "Sb0",
+      "C0",
+      "Sa0"
+    ],
+    "fd_nearest": 35030,
+    "redundant_count": 1,
+    "reduced_netlist": "L0 OUT n13; Sb0 IN n13; C0 n13 n14; Sa0 0 n14; L2 OUT n15; Sa1 0 n15; Sb1 n14 n15; Sa2 n13 n15; C1 OUT 0",
+    "core_netlist": "L0 OUT n13; Sb0 IN n13; C0 n13 n14; Sa0 0 n14; L2 OUT n15; Sa1 0 n15; Sb1 n14 n15; C1 OUT 0",
+    "device_classes": {
+      "L0": "performance",
+      "Sb0": "essential",
+      "C0": "essential",
+      "Sa0": "performance",
+      "L2": "performance",
+      "Sa1": "performance",
+      "Sb1": "essential",
+      "Sa2": "redundant",
+      "C1": "performance"
+    },
+    "fnov_status": "audited_k1",
+    "origin": {
+      "kind": "struct_move",
+      "op": "rewire",
+      "move": {
+        "op": "rewire",
+        "device": "C0",
+        "moved_from": "n13",
+        "to": "OUT",
+        "reduced_child": "L0 OUT n13; Sb0 IN n13; C1 n13 n14; Sa0 0 n14; L2 OUT n15; Sa1 0 n15; Sb1 n14 n15; Sa2 n13 n15; C0 0 OUT"
+      },
+      "trigger": "struct_frac",
+      "gen": 5,
+      "parent": "5d79f397",
+      "parent_fd": 4,
+      "parent_eff": 0.523,
+      "struct_frac": 0.4,
+      "last_action": "STEER"
+    }
+  },
+  {
+    "netlist": "L0 OUT n13\nL1 OUT n13\nC0 n13 n14\nSa0 0 n14\nL2 OUT n15\nSa1 0 n15\nSb0 n14 n15\nSa2 n13 n15\nC1 OUT 0\nSb1 IN n15\n",
+    "first_seen_gen": 24,
+    "median_gain": 99.451,
+    "novelty": 0.913,
+    "nn_train_sim": 0.8531,
+    "robust": {
+      "median_gain": 99.451,
+      "gain_spread": 0.513,
+      "feasible_frac": 1.0,
+      "feasible": true
+    },
+    "fit": {
+      "stage": "scored",
+      "family": "converter",
+      "alive": true,
+      "feasible": true,
+      "median_gain": 99.451,
+      "worst_gain": 99.081,
+      "gain_spread": 0.513,
+      "feasible_frac": 1.0,
+      "k": 4,
+      "con_vec": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "con_names": [
+        "vout_error",
+        "ripple",
+        "duty_response",
+        "efficiency"
+      ],
+      "corners": [
+        {
+          "name": "nominal",
+          "feasible": true,
+          "reason": "",
+          "duty": 0.4978,
+          "vout": 50.00016,
+          "eff": 0.9946866191488207,
+          "ripple": 0.09508999999999901,
+          "duty_response": 79.534457,
+          "passthrough": false,
+          "con_vec": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sweep": [
+            [
+              0.1,
+              89.49262,
+              0.9942978524766415,
+              0.035119999999992046
+            ],
+            [
+              0.3,
+              69.65645,
+              0.9946560021090224,
+              0.08008999999999844
+            ],
+            [
+              0.5,
+              49.78309,
+              0.9946855402264853,
+              0.09510000000000218
+            ],
+            [
+              0.7,
+              29.88201,
+              0.9943109723404575,
+              0.08010000000000161
+            ],
+            [
+              0.9,
+              9.958163,
+              0.9894810732657916,
+              0.03508099999999992
+            ],
+            [
+              0.4978,
+              50.00016,
+              0.9946866191488207,
+              0.09508999999999901
+            ]
+          ],
+          "n_sims": 6
+        },
+        {
+          "name": "heavy_load",
+          "feasible": true,
+          "reason": "",
+          "duty": 0.5,
+          "vout": 49.56609,
+          "eff": 0.9908137529547639,
+          "ripple": 0.09497999999999962,
+          "duty_response": 79.072517,
+          "passthrough": false,
+          "con_vec": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sweep": [
+            [
+              0.1,
+              88.99813,
+              0.9888760816091104,
+              0.03504999999999825
+            ],
+            [
+              0.3,
+              69.31545,
+              0.9899967650076859,
+              0.07998000000000616
+            ],
+            [
+              0.5,
+              49.56609,
+              0.9908137529547639,
+              0.09497999999999962
+            ],
+            [
+              0.7,
+              29.7682,
+              0.9914487671450513,
+              0.08004000000000033
+            ],
+            [
+              0.9,
+              9.925613,
+              0.9898297174701038,
+              0.03506599999999871
+            ],
+            [
+              0.4956,
+              50.00054,
+              0.9907966920007808,
+              0.09496999999999645
+            ]
+          ],
+          "n_sims": 6
+        },
+        {
+          "name": "light_load",
+          "feasible": true,
+          "reason": "",
+          "duty": 0.4989,
+          "vout": 50.00005,
+          "eff": 0.9959401592783356,
+          "ripple": 0.09515999999999991,
+          "duty_response": 79.76739799999999,
+          "passthrough": false,
+          "con_vec": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sweep": [
+            [
+              0.1,
+              89.74192,
+              0.9969216985222842,
+              0.035139999999998395
+            ],
+            [
+              0.3,
+              69.82821,
+              0.9966855361827435,
+              0.08016000000000645
+            ],
+            [
+              0.5,
+              49.8923,
+              0.9959346308159867,
+              0.09514999999999674
+            ],
+            [
+              0.7,
+              29.93925,
+              0.9943603767824751,
+              0.08013000000000048
+            ],
+            [
+              0.9,
+              9.974522,
+              0.9839674302730725,
+              0.03510800000000103
+            ],
+            [
+              0.4989,
+              50.00005,
+              0.9959401592783356,
+              0.09515999999999991
+            ]
+          ],
+          "n_sims": 6
+        },
+        {
+          "name": "low_line_tol",
+          "feasible": true,
+          "reason": "",
+          "duty": 0.4419,
+          "vout": 50.00288,
+          "eff": 0.9943299937662741,
+          "ripple": 0.13134000000000157,
+          "duty_response": 71.58167200000001,
+          "passthrough": false,
+          "con_vec": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sweep": [
+            [
+              0.1,
+              80.5443,
+              0.9942748676575619,
+              0.04871999999998877
+            ],
+            [
+              0.3,
+              62.69311,
+              0.99445669598941,
+              0.11200999999999794
+            ],
+            [
+              0.5,
+              44.80715,
+              0.9942361856513755,
+              0.13311000000000206
+            ],
+            [
+              0.7,
+              26.89542,
+              0.9935902542745374,
+              0.11200999999999794
+            ],
+            [
+              0.9,
+              8.962628,
+              0.9884310344085055,
+              0.04866399999999871
+            ],
+            [
+              0.4419,
+              50.00288,
+              0.9943299937662741,
+              0.13134000000000157
+            ]
+          ],
+          "n_sims": 6
+        }
+      ],
+      "duty": 0.4978,
+      "vout": 50.00016,
+      "eff": 0.9946866191488207,
+      "ripple": 0.09508999999999901,
+      "reason": "",
+      "passthrough": false,
+      "n_sims": 24,
+      "score_name": "efficiency",
+      "score_unit": "%"
+    },
+    "v5_repaired_from": null,
+    "v5_edits": null,
+    "v5_confidence": null,
+    "v5_audit": {
+      "structural_valid": true,
+      "n_strong": 0,
+      "n_weak": 1,
+      "op_converged": true,
+      "op_fault": false,
+      "repaired": false
+    },
+    "rescued_from_cv": null,
+    "rescue_ops": null,
+    "novelty_wl": 0.1469,
+    "raw_distance": 4,
+    "struct_distance": 4,
+    "functional_distance": 4,
+    "fd_ge": true,
+    "fd_extra": [
+      "C0",
+      "Sa0",
+      "L2",
+      "Sb0"
+    ],
+    "fd_nearest": 4143,
+    "redundant_count": 0,
+    "reduced_netlist": "L0 OUT n13; C0 n13 n14; Sa0 0 n14; L2 OUT n15; Sa1 0 n15; Sb0 n14 n15; Sa2 n13 n15; C1 OUT 0; Sb1 IN n15",
+    "core_netlist": "L0 OUT n13; C0 n13 n14; Sa0 0 n14; L2 OUT n15; Sa1 0 n15; Sb0 n14 n15; Sa2 n13 n15; C1 OUT 0; Sb1 IN n15",
+    "device_classes": {
+      "L0": "performance",
+      "C0": "essential",
+      "Sa0": "performance",
+      "L2": "performance",
+      "Sa1": "performance",
+      "Sb0": "essential",
+      "Sa2": "performance",
+      "C1": "performance",
+      "Sb1": "essential"
+    },
+    "fnov_status": "audited_k1",
+    "origin": {
+      "kind": "struct_move",
+      "op": "rewire",
+      "move": {
+        "op": "rewire",
+        "device": "Sb0",
+        "moved_from": "n13",
+        "to": "n15",
+        "reduced_child": "L0 OUT n13; C0 n13 n14; Sa0 0 n14; L2 OUT n15; Sa1 0 n15; Sb1 n14 n15; Sa2 n13 n15; C1 OUT 0; Sb0 IN n15"
+      },
+      "trigger": "struct_frac",
+      "gen": 24,
+      "parent": "634bdef4",
+      "parent_fd": 4,
+      "parent_eff": 99.636,
+      "struct_frac": 0.6,
+      "last_action": "VERIFY"
+    }
+  },
+  {
+    "netlist": "Sa0 IN n13\nSb0 IN n14\nL0 OUT n13\nSb1 0 n13\nC0 n14 n15\nL1 OUT n16\nSa1 0 n16\nSb2 n14 n16\nL2 n13 n16\nC1 0 n15\n",
+    "first_seen_gen": 19,
+    "median_gain": 99.423,
+    "novelty": 0.9146,
+    "nn_train_sim": 0.8444,
+    "robust": {
+      "median_gain": 99.423,
+      "gain_spread": 98.642,
+      "feasible_frac": 0.75,
+      "feasible": true
+    },
+    "fit": {
+      "stage": "scored",
+      "family": "converter",
+      "alive": true,
+      "feasible": true,
+      "median_gain": 99.423,
+      "worst_gain": 0.903,
+      "gain_spread": 98.642,
+      "feasible_frac": 0.75,
+      "k": 4,
+      "con_vec": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "con_names": [
+        "vout_error",
+        "ripple",
+        "duty_response",
+        "efficiency"
+      ],
+      "corners": [
+        {
+          "name": "nominal",
+          "feasible": true,
+          "reason": "",
+          "duty": 0.5,
+          "vout": 49.84562,
+          "eff": 0.9953985683900819,
+          "ripple": 1.9999999999242846e-05,
+          "duty_response": 6.8230900000000005,
+          "passthrough": false,
+          "con_vec": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sweep": [
+            [
+              0.1,
+              44.08585,
+              0.0018902714668077557,
+              0.0030099999999961824
+            ],
+            [
+              0.3,
+              47.53106,
+              0.008455043222974109,
+              0.0035499999999970555
+            ],
+            [
+              0.5,
+              49.84562,
+              0.9953985683900819,
+              1.9999999999242846e-05
+            ],
+            [
+              0.7,
+              50.90894,
+              0.009033044403847893,
+              0.0037799999999990064
+            ],
+            [
+              0.9,
+              50.58267,
+              0.0021663045019759248,
+              0.003439999999997667
+            ],
+            [
+              0.529,
+              50.08071,
+              0.29963669575928015,
+              0.0006199999999978445
+            ]
+          ],
+          "n_sims": 6
+        },
+        {
+          "name": "heavy_load",
+          "feasible": true,
+          "reason": "",
+          "duty": 0.5,
+          "vout": 49.69134,
+          "eff": 0.9930610833593992,
+          "ripple": 3.0000000002416982e-05,
+          "duty_response": 6.807549999999999,
+          "passthrough": false,
+          "con_vec": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sweep": [
+            [
+              0.1,
+              43.946,
+              0.0037495295494401437,
+              0.0030099999999961824
+            ],
+            [
+              0.3,
+              47.38206,
+              0.016663778725703626,
+              0.0035600000000002296
+            ],
+            [
+              0.5,
+              49.69134,
+              0.9930610833593992,
+              3.0000000002416982e-05
+            ],
+            [
+              0.7,
+              50.75355,
+              0.0177957110424293,
+              0.0037599999999997635
+            ],
+            [
+              0.9,
+              50.4306,
+              0.004297315872557912,
+              0.0034300000000015984
+            ],
+            [
+              0.5581,
+              50.1343,
+              0.17615963964140757,
+              0.0012299999999996203
+            ]
+          ],
+          "n_sims": 6
+        },
+        {
+          "name": "light_load",
+          "feasible": true,
+          "reason": "",
+          "duty": 0.5,
+          "vout": 49.92311,
+          "eff": 0.9954559143409697,
+          "ripple": 1.9999999999242846e-05,
+          "duty_response": 6.8308800000000005,
+          "passthrough": false,
+          "con_vec": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sweep": [
+            [
+              0.1,
+              44.15611,
+              0.0009490493015848139,
+              0.0030099999999961824
+            ],
+            [
+              0.3,
+              47.60591,
+              0.00425888007793429,
+              0.0035399999999938814
+            ],
+            [
+              0.5,
+              49.92311,
+              0.9954559143409697,
+              1.9999999999242846e-05
+            ],
+            [
+              0.7,
+              50.98699,
+              0.0045509677975026745,
+              0.003789999999995075
+            ],
+            [
+              0.9,
+              50.65904,
+              0.001087605980957967,
+              0.003439999999997667
+            ],
+            [
+              0.5145,
+              50.04357,
+              0.4613697807425994,
+              0.00030999999999892225
+            ]
+          ],
+          "n_sims": 6
+        },
+        {
+          "name": "low_line_tol",
+          "feasible": false,
+          "reason": "Vout 45.8 misses 50.0",
+          "duty": 0.7,
+          "vout": 45.81804,
+          "eff": 0.009033007182153201,
+          "ripple": 0.005289999999995132,
+          "duty_response": 6.140780000000007,
+          "passthrough": false,
+          "con_vec": [
+            3.3639,
+            0.0,
+            0.0,
+            89.0967
+          ],
+          "sweep": [
+            [
+              0.1,
+              39.67726,
+              0.0018902712480435813,
+              0.0041699999999949
+            ],
+            [
+              0.3,
+              42.77795,
+              0.00845500849680873,
+              0.004970000000000141
+            ],
+            [
+              0.5,
+              44.86105,
+              0.9947927595408611,
+              2.9999999995311555e-05
+            ],
+            [
+              0.7,
+              45.81804,
+              0.009033007182153201,
+              0.005289999999995132
+            ],
+            [
+              0.9,
+              45.5244,
+              0.002166304478485604,
+              0.004770000000000607
+            ]
+          ],
+          "n_sims": 5
+        }
+      ],
+      "duty": 0.5,
+      "vout": 49.84562,
+      "eff": 0.9953985683900819,
+      "ripple": 1.9999999999242846e-05,
+      "reason": "",
+      "passthrough": false,
+      "n_sims": 23,
+      "score_name": "efficiency",
+      "score_unit": "%"
+    },
+    "v5_repaired_from": null,
+    "v5_edits": null,
+    "v5_confidence": null,
+    "v5_audit": {
+      "structural_valid": true,
+      "n_strong": 0,
+      "n_weak": 1,
+      "op_converged": true,
+      "op_fault": false,
+      "repaired": false
+    },
+    "rescued_from_cv": null,
+    "rescue_ops": null,
+    "novelty_wl": 0.1556,
+    "raw_distance": 4,
+    "struct_distance": 4,
+    "functional_distance": 4,
+    "fd_ge": true,
+    "fd_extra": [
+      "Sa0",
+      "L0",
+      "Sb1",
+      "L2"
+    ],
+    "fd_nearest": 14063,
+    "redundant_count": 0,
+    "reduced_netlist": "Sa0 IN n13; Sb0 IN n14; L0 OUT n13; Sb1 0 n13; L1 OUT n16; Sa1 0 n16; Sb2 n14 n16; L2 n13 n16; C0 n14 0",
+    "core_netlist": "Sa0 IN n13; Sb0 IN n14; L0 OUT n13; Sb1 0 n13; L1 OUT n16; Sa1 0 n16; Sb2 n14 n16; L2 n13 n16; C0 n14 0",
+    "device_classes": {
+      "Sa0": "essential",
+      "Sb0": "performance",
+      "L0": "performance",
+      "Sb1": "essential",
+      "L1": "performance",
+      "Sa1": "essential",
+      "Sb2": "essential",
+      "L2": "performance",
+      "C0": "performance"
+    },
+    "fnov_status": "audited_k1",
+    "origin": {
+      "kind": "struct_move",
+      "op": "rewire",
+      "move": {
+        "op": "rewire",
+        "device": "C0",
+        "moved_from": "n13",
+        "to": "0",
+        "reduced_child": "Sa0 IN n13; Sb0 IN n15; L0 OUT n13; Sb1 0 n13; L1 OUT n16; Sa1 0 n16; Sb2 n15 n16; L2 n13 n16; C1 n15 0"
+      },
+      "trigger": "struct_frac",
+      "gen": 19,
+      "parent": "8e349d3c",
+      "parent_fd": 2,
+      "parent_eff": 99.397,
+      "struct_frac": 0.6,
+      "last_action": "VERIFY"
+    }
+  },
+  {
+    "netlist": "C0 n11 n12\nSa0 IN n11\nL0 OUT n11\nSb0 0 n11\nC1 n12 n13\nL1 n12 n13\nSb1 n13 n14\nC2 IN n14\n",
+    "first_seen_gen": 17,
+    "median_gain": 99.415,
+    "novelty": 0.91,
+    "nn_train_sim": 0.9001,
+    "robust": {
+      "median_gain": 99.415,
+      "gain_spread": 0.963,
+      "feasible_frac": 1.0,
+      "feasible": true
+    },
+    "fit": {
+      "stage": "scored",
+      "family": "converter",
+      "alive": true,
+      "feasible": true,
+      "median_gain": 99.415,
+      "worst_gain": 98.839,
+      "gain_spread": 0.963,
+      "feasible_frac": 1.0,
+      "k": 4,
+      "con_vec": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "con_names": [
+        "vout_error",
+        "ripple",
+        "duty_response",
+        "efficiency"
+      ],
+      "corners": [
+        {
+          "name": "nominal",
+          "feasible": true,
+          "reason": "",
+          "duty": 0.5,
+          "vout": 49.71171,
+          "eff": 0.9945410510785695,
+          "ripple": 0.0636999999999972,
+          "duty_response": 79.52290799999999,
+          "passthrough": false,
+          "con_vec": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sweep": [
+            [
+              0.1,
+              9.950252,
+              1.0508927391539475,
+              0.024207000000000534
+            ],
+            [
+              0.3,
+              29.83098,
+              0.9978101465452623,
+              0.05397000000000318
+            ],
+            [
+              0.5,
+              49.71171,
+              0.9945410510785695,
+              0.0636999999999972
+            ],
+            [
+              0.7,
+              69.59243,
+              0.9940133728056456,
+              0.05351000000000283
+            ],
+            [
+              0.9,
+              89.47316,
+              0.993925040738729,
+              0.023380000000003065
+            ],
+            [
+              0.5029,
+              50.0,
+              0.9945249423822091,
+              0.06369000000000113
+            ]
+          ],
+          "n_sims": 6
+        },
+        {
+          "name": "heavy_load",
+          "feasible": true,
+          "reason": "",
+          "duty": 0.5,
+          "vout": 49.41701,
+          "eff": 0.9883903545344924,
+          "ripple": 0.06362000000000023,
+          "duty_response": 79.051332,
+          "passthrough": false,
+          "con_vec": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sweep": [
+            [
+              0.1,
+              9.891348,
+              1.0157049976888384,
+              0.024088000000000775
+            ],
+            [
+              0.3,
+              29.65418,
+              0.9900114608277241,
+              0.05386000000000024
+            ],
+            [
+              0.5,
+              49.41701,
+              0.9883903545344924,
+              0.06362000000000023
+            ],
+            [
+              0.7,
+              69.17985,
+              0.9881300981708396,
+              0.05346000000000117
+            ],
+            [
+              0.9,
+              88.94268,
+              0.9880870115607605,
+              0.02336999999999989
+            ],
+            [
+              0.5059,
+              50.0,
+              0.9883737594673851,
+              0.06360000000000099
+            ]
+          ],
+          "n_sims": 6
+        },
+        {
+          "name": "light_load",
+          "feasible": true,
+          "reason": "",
+          "duty": 0.5,
+          "vout": 49.86037,
+          "eff": 0.998023269537877,
+          "ripple": 0.06372000000000355,
+          "duty_response": 79.760817,
+          "passthrough": false,
+          "con_vec": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sweep": [
+            [
+              0.1,
+              9.979953,
+              1.1176305173880487,
+              0.024224000000000245
+            ],
+            [
+              0.3,
+              29.92016,
+              1.0045958966290773,
+              0.05398999999999887
+            ],
+            [
+              0.5,
+              49.86037,
+              0.998023269537877,
+              0.06372000000000355
+            ],
+            [
+              0.7,
+              69.80058,
+              0.9969651840247253,
+              0.05352999999999497
+            ],
+            [
+              0.9,
+              89.74077,
+              0.9967888505882281,
+              0.023400000000009413
+            ],
+            [
+              0.5014,
+              50.0,
+              0.9980075784673165,
+              0.06371999999999645
+            ]
+          ],
+          "n_sims": 6
+        },
+        {
+          "name": "low_line_tol",
+          "feasible": true,
+          "reason": "",
+          "duty": 0.5588,
+          "vout": 50.0,
+          "eff": 0.9937607748468913,
+          "ripple": 0.087530000000001,
+          "duty_response": 71.570626,
+          "passthrough": false,
+          "con_vec": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sweep": [
+            [
+              0.1,
+              8.955214,
+              1.0145825136349318,
+              0.032602000000000686
+            ],
+            [
+              0.3,
+              26.84788,
+              0.9946459828657652,
+              0.07472999999999885
+            ],
+            [
+              0.5,
+              44.74054,
+              0.9937714191245135,
+              0.08874000000000137
+            ],
+            [
+              0.7,
+              62.6332,
+              0.9938183359388992,
+              0.07464000000000226
+            ],
+            [
+              0.9,
+              80.52584,
+              0.993910308485103,
+              0.03242000000000189
+            ],
+            [
+              0.5588,
+              50.0,
+              0.9937607748468913,
+              0.087530000000001
+            ]
+          ],
+          "n_sims": 6
+        }
+      ],
+      "duty": 0.5,
+      "vout": 49.71171,
+      "eff": 0.9945410510785695,
+      "ripple": 0.0636999999999972,
+      "reason": "",
+      "passthrough": false,
+      "n_sims": 24,
+      "score_name": "efficiency",
+      "score_unit": "%"
+    },
+    "v5_repaired_from": null,
+    "v5_edits": null,
+    "v5_confidence": null,
+    "v5_audit": {
+      "structural_valid": true,
+      "n_strong": 0,
+      "n_weak": 1,
+      "op_converged": true,
+      "op_fault": false,
+      "repaired": false
+    },
+    "rescued_from_cv": null,
+    "rescue_ops": null,
+    "novelty_wl": 0.0999,
+    "raw_distance": 4,
+    "struct_distance": 4,
+    "functional_distance": 4,
+    "fd_ge": true,
+    "fd_extra": [
+      "C0",
+      "C1",
+      "L1",
+      "Sb1"
+    ],
+    "fd_nearest": 6487,
+    "redundant_count": 0,
+    "reduced_netlist": "C0 n11 n12; Sa0 IN n11; L0 OUT n11; Sb0 0 n11; C1 n12 n13; L1 n12 n13; Sb1 n13 n14; C2 IN n14",
+    "core_netlist": "C0 n11 n12; Sa0 IN n11; L0 OUT n11; Sb0 0 n11; C1 n12 n13; L1 n12 n13; Sb1 n13 n14; C2 IN n14",
+    "device_classes": {
+      "C0": "performance",
+      "Sa0": "essential",
+      "L0": "essential",
+      "Sb0": "essential",
+      "C1": "performance",
+      "L1": "performance",
+      "Sb1": "performance",
+      "C2": "performance"
+    },
+    "fnov_status": "audited_k1",
+    "origin": {
+      "kind": "struct_move",
+      "op": "insert_series",
+      "move": {
+        "op": "insert_series",
+        "device": "Sb0",
+        "inserted": "C",
+        "at": [
+          "n12",
+          "IN"
+        ],
+        "reduced_child": "C0 n10 n11; Sa0 IN n10; L0 OUT n10; Sb1 0 n10; C1 n11 n12; L1 n11 n12; Sb0 n12 m0; C2 m0 IN"
+      },
+      "trigger": "struct_frac",
+      "gen": 17,
+      "parent": "ef7fe55a",
+      "parent_fd": 0,
+      "parent_eff": 99.362,
+      "struct_frac": 0.6,
+      "last_action": "STEER"
+    }
+  },
+  {
+    "netlist": "C0 IN 0\nSa0 IN n13\nSb0 n13 n14\nSb1 0 n14\nL0 OUT n13\nL1 n13 n15\nC1 n14 n15\nL2 n13 n16\nC2 IN n16\nSa1 n15 n16\n",
+    "first_seen_gen": 12,
+    "median_gain": 99.381,
+    "novelty": 0.9092,
+    "nn_train_sim": 0.8607,
+    "robust": {
+      "median_gain": 99.381,
+      "gain_spread": 0.762,
+      "feasible_frac": 1.0,
+      "feasible": true
+    },
+    "fit": {
+      "stage": "scored",
+      "family": "converter",
+      "alive": true,
+      "feasible": true,
+      "median_gain": 99.381,
+      "worst_gain": 98.843,
+      "gain_spread": 0.762,
+      "feasible_frac": 1.0,
+      "k": 4,
+      "con_vec": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "con_names": [
+        "vout_error",
+        "ripple",
+        "duty_response",
+        "efficiency"
+      ],
+      "corners": [
+        {
+          "name": "nominal",
+          "feasible": true,
+          "reason": "",
+          "duty": 0.5,
+          "vout": 49.68743,
+          "eff": 0.9960478278989622,
+          "ripple": 0.06414999999999793,
+          "duty_response": 79.52305700000001,
+          "passthrough": false,
+          "con_vec": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sweep": [
+            [
+              0.1,
+              9.941313,
+              0.958452719978936,
+              0.024331999999999354
+            ],
+            [
+              0.3,
+              29.81076,
+              0.9862103099739432,
+              0.05414999999999992
+            ],
+            [
+              0.5,
+              49.68743,
+              0.9960478278989622,
+              0.06414999999999793
+            ],
+            [
+              0.7,
+              69.57197,
+              0.9975496426892865,
+              0.05389999999999873
+            ],
+            [
+              0.9,
+              89.46437,
+              0.9920580816688253,
+              0.02380000000000848
+            ],
+            [
+              0.5031,
+              49.99984,
+              0.9899830890006432,
+              0.0643400000000014
+            ]
+          ],
+          "n_sims": 6
+        },
+        {
+          "name": "heavy_load",
+          "feasible": true,
+          "reason": "",
+          "duty": 0.5,
+          "vout": 49.36848,
+          "eff": 0.9884273092102368,
+          "ripple": 0.06412000000000262,
+          "duty_response": 79.051483,
+          "passthrough": false,
+          "con_vec": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sweep": [
+            [
+              0.1,
+              9.873717,
+              0.9693052773705465,
+              0.02384699999999995
+            ],
+            [
+              0.3,
+              29.61347,
+              0.9832246726163782,
+              0.054050000000000153
+            ],
+            [
+              0.5,
+              49.36848,
+              0.9884273092102368,
+              0.06412000000000262
+            ],
+            [
+              0.7,
+              69.13909,
+              0.9894631058636506,
+              0.05393999999999721
+            ],
+            [
+              0.9,
+              88.9252,
+              0.9870075729090249,
+              0.023809999999997444
+            ],
+            [
+              0.5064,
+              49.99954,
+              0.9838398397492344,
+              0.06435000000000457
+            ]
+          ],
+          "n_sims": 6
+        },
+        {
+          "name": "light_load",
+          "feasible": true,
+          "reason": "",
+          "duty": 0.5015,
+          "vout": 49.99996,
+          "eff": 0.9956490068783527,
+          "ripple": 0.06417000000000428,
+          "duty_response": 79.76115100000001,
+          "passthrough": false,
+          "con_vec": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sweep": [
+            [
+              0.1,
+              9.975259,
+              0.9265478023952877,
+              0.02505700000000033
+            ],
+            [
+              0.3,
+              29.91038,
+              0.9821969080660493,
+              0.054520000000000124
+            ],
+            [
+              0.5,
+              49.84843,
+              1.0017342823106832,
+              0.06407000000000096
+            ],
+            [
+              0.7,
+              69.79044,
+              1.0044956523191721,
+              0.05388999999999555
+            ],
+            [
+              0.9,
+              89.73641,
+              0.9932053580590925,
+              0.02379999999999427
+            ],
+            [
+              0.5015,
+              49.99996,
+              0.9956490068783527,
+              0.06417000000000428
+            ]
+          ],
+          "n_sims": 6
+        },
+        {
+          "name": "low_line_tol",
+          "feasible": true,
+          "reason": "",
+          "duty": 0.559,
+          "vout": 49.99926,
+          "eff": 0.9919689830017183,
+          "ripple": 0.0876700000000028,
+          "duty_response": 71.570573,
+          "passthrough": false,
+          "con_vec": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sweep": [
+            [
+              0.1,
+              8.947287,
+              0.9819715224265797,
+              0.032586000000000226
+            ],
+            [
+              0.3,
+              26.82931,
+              0.9902639947337251,
+              0.07479999999999976
+            ],
+            [
+              0.5,
+              44.71837,
+              0.9917792878523859,
+              0.08890999999999849
+            ],
+            [
+              0.7,
+              62.61456,
+              0.9937353306465921,
+              0.07477999999999696
+            ],
+            [
+              0.9,
+              80.51786,
+              0.9938397837907443,
+              0.03249999999999886
+            ],
+            [
+              0.559,
+              49.99926,
+              0.9919689830017183,
+              0.0876700000000028
+            ]
+          ],
+          "n_sims": 6
+        }
+      ],
+      "duty": 0.5,
+      "vout": 49.68743,
+      "eff": 0.9960478278989622,
+      "ripple": 0.06414999999999793,
+      "reason": "",
+      "passthrough": false,
+      "n_sims": 24,
+      "score_name": "efficiency",
+      "score_unit": "%"
+    },
+    "v5_repaired_from": null,
+    "v5_edits": null,
+    "v5_confidence": null,
+    "v5_audit": {
+      "structural_valid": true,
+      "n_strong": 0,
+      "n_weak": 1,
+      "op_converged": true,
+      "op_fault": false,
+      "repaired": false
+    },
+    "rescued_from_cv": null,
+    "rescue_ops": null,
+    "novelty_wl": 0.1393,
+    "raw_distance": 4,
+    "struct_distance": 4,
+    "functional_distance": 4,
+    "fd_ge": true,
+    "fd_extra": [],
+    "fd_nearest": null,
+    "redundant_count": 0,
+    "reduced_netlist": "Sa0 IN n13; Sb0 n13 n14; Sb1 0 n14; L0 OUT n13; L1 n13 n15; C1 n14 n15; L2 n13 n16; C2 IN n16; Sa1 n15 n16",
+    "core_netlist": "Sa0 IN n13; Sb0 n13 n14; Sb1 0 n14; L0 OUT n13; L1 n13 n15; C1 n14 n15; L2 n13 n16; C2 IN n16; Sa1 n15 n16",
+    "device_classes": {
+      "Sa0": "essential",
+      "Sb0": "essential",
+      "Sb1": "essential",
+      "L0": "essential",
+      "L1": "performance",
+      "C1": "essential",
+      "L2": "performance",
+      "C2": "performance",
+      "Sa1": "performance"
+    },
+    "fnov_status": "audited_k1",
+    "origin": {
+      "kind": "struct_move",
+      "op": "switch_path",
+      "move": {
+        "op": "switch_path",
+        "at": [
+          "n14",
+          "n15"
+        ],
+        "switch": "Sa",
+        "reduced_child": "Sa0 IN n12; Sb0 n12 n13; Sb1 0 n13; L0 OUT n12; L1 n12 n14; C1 n13 n14; L2 n12 n15; C2 IN n15; Sa1 n14 n15"
+      },
+      "trigger": "struct_frac",
+      "gen": 12,
+      "parent": "afb10574",
+      "parent_fd": 0,
+      "parent_eff": 98.851,
+      "struct_frac": 0.6,
+      "last_action": "STEER"
+    }
+  },
+  {
+    "netlist": "C0 n5 OUT\nSb0 n0 IN\nSa0 n0 0\nSb1 0 n5\nL0 n0 OUT\n",
+    "first_seen_gen": 4,
+    "median_gain": 99.371,
+    "novelty": 0.0,
+    "nn_train_sim": 1.0,
+    "robust": {
+      "median_gain": 99.371,
+      "gain_spread": 0.833,
+      "feasible_frac": 1.0,
+      "feasible": true
+    },
+    "fit": {
+      "stage": "scored",
+      "family": "converter",
+      "alive": true,
+      "feasible": true,
+      "median_gain": 99.371,
+      "worst_gain": 98.798,
+      "gain_spread": 0.833,
+      "feasible_frac": 1.0,
+      "k": 4,
+      "con_vec": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "con_names": [
+        "vout_error",
+        "ripple",
+        "duty_response",
+        "efficiency"
+      ],
+      "corners": [
+        {
+          "name": "nominal",
+          "feasible": true,
+          "reason": "",
+          "duty": 0.4969,
+          "vout": 50.0,
+          "eff": 0.9937032996713028,
+          "ripple": 0.050600000000002865,
+          "duty_response": 79.52285900000001,
+          "passthrough": false,
+          "con_vec": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sweep": [
+            [
+              0.1,
+              89.45328,
+              0.9939686563910441,
+              0.014390000000005898
+            ],
+            [
+              0.3,
+              69.57256,
+              0.9938845505900311,
+              0.03755999999999915
+            ],
+            [
+              0.5,
+              49.69185,
+              0.9936992366406069,
+              0.050689999999995905
+            ],
+            [
+              0.7,
+              29.81113,
+              0.9932122790302618,
+              0.047639999999997684
+            ],
+            [
+              0.9,
+              9.930421,
+              0.9886104578072651,
+              0.023025000000000517
+            ],
+            [
+              0.4969,
+              50.0,
+              0.9937032996713028,
+              0.050600000000002865
+            ]
+          ],
+          "n_sims": 6
+        },
+        {
+          "name": "heavy_load",
+          "feasible": true,
+          "reason": "",
+          "duty": 0.4939,
+          "vout": 50.0,
+          "eff": 0.9879782802854862,
+          "ripple": 0.05042999999999864,
+          "duty_response": 79.05137500000001,
+          "passthrough": false,
+          "con_vec": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sweep": [
+            [
+              0.1,
+              88.92292,
+              0.9881086342986425,
+              0.01436999999999955
+            ],
+            [
+              0.3,
+              69.16008,
+              0.988066748125601,
+              0.037520000000000664
+            ],
+            [
+              0.5,
+              49.39723,
+              0.9879740714640141,
+              0.05062000000000211
+            ],
+            [
+              0.7,
+              29.63439,
+              0.9877303753066633,
+              0.04758999999999958
+            ],
+            [
+              0.9,
+              9.871545,
+              0.9854225481543578,
+              0.023017000000001175
+            ],
+            [
+              0.4939,
+              50.0,
+              0.9879782802854862,
+              0.05042999999999864
+            ]
+          ],
+          "n_sims": 6
+        },
+        {
+          "name": "light_load",
+          "feasible": true,
+          "reason": "",
+          "duty": 0.4984,
+          "vout": 50.0,
+          "eff": 0.9963096689860755,
+          "ripple": 0.05082000000000164,
+          "duty_response": 79.760668,
+          "passthrough": false,
+          "con_vec": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sweep": [
+            [
+              0.1,
+              89.72079,
+              0.9968592658345038,
+              0.014519999999990318
+            ],
+            [
+              0.3,
+              69.78057,
+              0.9966720478010114,
+              0.037800000000004275
+            ],
+            [
+              0.5,
+              49.84042,
+              0.9963052670800179,
+              0.0508700000000033
+            ],
+            [
+              0.7,
+              29.90027,
+              0.995346061135803,
+              0.04770999999999859
+            ],
+            [
+              0.9,
+              9.960122,
+              0.9862153260689108,
+              0.02303099999999958
+            ],
+            [
+              0.4984,
+              50.0,
+              0.9963096689860755,
+              0.05082000000000164
+            ]
+          ],
+          "n_sims": 6
+        },
+        {
+          "name": "low_line_tol",
+          "feasible": true,
+          "reason": "",
+          "duty": 0.441,
+          "vout": 50.0,
+          "eff": 0.9937098193595265,
+          "ripple": 0.06655999999999551,
+          "duty_response": 71.570571,
+          "passthrough": false,
+          "con_vec": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sweep": [
+            [
+              0.1,
+              80.50795,
+              0.993965538393591,
+              0.01946000000000936
+            ],
+            [
+              0.3,
+              62.61531,
+              0.9938570215978283,
+              0.051650000000002194
+            ],
+            [
+              0.5,
+              44.72266,
+              0.9936223130615655,
+              0.07007000000000119
+            ],
+            [
+              0.7,
+              26.83002,
+              0.9930609252145699,
+              0.06614000000000075
+            ],
+            [
+              0.9,
+              8.937379,
+              0.9883632588567052,
+              0.03158900000000031
+            ],
+            [
+              0.441,
+              50.0,
+              0.9937098193595265,
+              0.06655999999999551
+            ]
+          ],
+          "n_sims": 6
+        }
+      ],
+      "duty": 0.4969,
+      "vout": 50.0,
+      "eff": 0.9937032996713028,
+      "ripple": 0.050600000000002865,
+      "reason": "",
+      "passthrough": false,
+      "n_sims": 24,
+      "score_name": "efficiency",
+      "score_unit": "%"
+    },
+    "v5_repaired_from": null,
+    "v5_edits": null,
+    "v5_confidence": null,
+    "v5_audit": {
+      "structural_valid": true,
+      "n_strong": 0,
+      "n_weak": 0,
+      "op_converged": true,
+      "op_fault": false,
+      "repaired": false
+    },
+    "rescued_from_cv": null,
+    "rescue_ops": null,
+    "novelty_wl": 0.0,
+    "raw_distance": 0,
+    "struct_distance": 0,
+    "functional_distance": 0,
+    "fd_ge": false,
+    "fd_extra": [],
+    "fd_nearest": 20676,
+    "redundant_count": null,
+    "reduced_netlist": "C0 n5 0; Sb0 n0 IN; Sa0 n0 0; Sb1 OUT n5; L0 n0 OUT",
+    "core_netlist": null,
+    "device_classes": null,
+    "fnov_status": "structural",
+    "origin": {
+      "kind": "sdedit",
+      "gen": 4,
+      "t_frac": 0.3,
+      "birth_m": 4,
+      "struct_frac": 0.25,
+      "memory_lambda": 8.0,
+      "last_action": "RESCUE",
+      "last_action_gen": 3,
+      "steer": null
+    }
+  },
+  {
+    "netlist": "C0 IN 0\nSa0 IN n13\nSb0 n13 n14\nSb1 0 n14\nL0 OUT n13\nL1 n13 n15\nC1 n14 n15\nC2 IN n16\nSa1 n15 n16\nL2 OUT n16\n",
+    "first_seen_gen": 21,
+    "median_gain": 99.352,
+    "novelty": 0.9114,
+    "nn_train_sim": 0.8486,
+    "robust": {
+      "median_gain": 99.352,
+      "gain_spread": 1.243,
+      "feasible_frac": 1.0,
+      "feasible": true
+    },
+    "fit": {
+      "stage": "scored",
+      "family": "converter",
+      "alive": true,
+      "feasible": true,
+      "median_gain": 99.352,
+      "worst_gain": 98.716,
+      "gain_spread": 1.243,
+      "feasible_frac": 1.0,
+      "k": 4,
+      "con_vec": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "con_names": [
+        "vout_error",
+        "ripple",
+        "duty_response",
+        "efficiency"
+      ],
+      "corners": [
+        {
+          "name": "nominal",
+          "feasible": true,
+          "reason": "",
+          "duty": 0.5031,
+          "vout": 49.99617,
+          "eff": 0.9943189853054984,
+          "ripple": 0.06853000000000264,
+          "duty_response": 79.51132799999999,
+          "passthrough": false,
+          "con_vec": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sweep": [
+            [
+              0.1,
+              9.942102,
+              0.986031328011412,
+              0.024773999999998964
+            ],
+            [
+              0.3,
+              29.8093,
+              0.9920820510301315,
+              0.05416999999999916
+            ],
+            [
+              0.5,
+              49.68908,
+              0.9942095176121468,
+              0.06811000000000433
+            ],
+            [
+              0.7,
+              69.57326,
+              0.9907442373690019,
+              0.06189000000000533
+            ],
+            [
+              0.9,
+              89.45343,
+              0.9950842168291892,
+              0.025099999999994793
+            ],
+            [
+              0.5031,
+              49.99617,
+              0.9943189853054984,
+              0.06853000000000264
+            ]
+          ],
+          "n_sims": 6
+        },
+        {
+          "name": "heavy_load",
+          "feasible": true,
+          "reason": "",
+          "duty": 0.5064,
+          "vout": 49.99617,
+          "eff": 0.9871608953340619,
+          "ripple": 0.06537000000000148,
+          "duty_response": 79.040549,
+          "passthrough": false,
+          "con_vec": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sweep": [
+            [
+              0.1,
+              9.874251,
+              0.9827303120618701,
+              0.024464999999999293
+            ],
+            [
+              0.3,
+              29.61316,
+              0.9861707322764538,
+              0.05345000000000155
+            ],
+            [
+              0.5,
+              49.36995,
+              0.9871372856817556,
+              0.06520000000000437
+            ],
+            [
+              0.7,
+              69.1386,
+              0.986313255348859,
+              0.06023999999999319
+            ],
+            [
+              0.9,
+              88.9148,
+              0.9885209994564027,
+              0.025230000000007635
+            ],
+            [
+              0.5064,
+              49.99617,
+              0.9871608953340619,
+              0.06537000000000148
+            ]
+          ],
+          "n_sims": 6
+        },
+        {
+          "name": "light_load",
+          "feasible": true,
+          "reason": "",
+          "duty": 0.5015,
+          "vout": 49.99737,
+          "eff": 0.9995909243589949,
+          "ripple": 0.07249999999999801,
+          "duty_response": 79.74841099999999,
+          "passthrough": false,
+          "con_vec": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sweep": [
+            [
+              0.1,
+              9.976949,
+              0.9845936233581378,
+              0.02489600000000003
+            ],
+            [
+              0.3,
+              29.90572,
+              0.9940165768662312,
+              0.056509999999999394
+            ],
+            [
+              0.5,
+              49.85006,
+              0.9993963475204402,
+              0.07224000000000075
+            ],
+            [
+              0.7,
+              69.79263,
+              0.9902981093501333,
+              0.06356999999999857
+            ],
+            [
+              0.9,
+              89.72536,
+              0.9992834280859947,
+              0.02460999999999558
+            ],
+            [
+              0.5015,
+              49.99737,
+              0.9995909243589949,
+              0.07249999999999801
+            ]
+          ],
+          "n_sims": 6
+        },
+        {
+          "name": "low_line_tol",
+          "feasible": true,
+          "reason": "",
+          "duty": 0.559,
+          "vout": 50.00063,
+          "eff": 0.9927209620726843,
+          "ripple": 0.08885999999999683,
+          "duty_response": 71.57096899999999,
+          "passthrough": false,
+          "con_vec": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sweep": [
+            [
+              0.1,
+              8.947281,
+              0.9864406529040033,
+              0.03281500000000115
+            ],
+            [
+              0.3,
+              26.82921,
+              0.9917565687044462,
+              0.07479999999999976
+            ],
+            [
+              0.5,
+              44.7193,
+              0.9927892067953721,
+              0.08901999999999788
+            ],
+            [
+              0.7,
+              62.61151,
+              0.9936417798808781,
+              0.07554000000000372
+            ],
+            [
+              0.9,
+              80.51825,
+              0.9934012691811767,
+              0.033039999999999736
+            ],
+            [
+              0.559,
+              50.00063,
+              0.9927209620726843,
+              0.08885999999999683
+            ]
+          ],
+          "n_sims": 6
+        }
+      ],
+      "duty": 0.5031,
+      "vout": 49.99617,
+      "eff": 0.9943189853054984,
+      "ripple": 0.06853000000000264,
+      "reason": "",
+      "passthrough": false,
+      "n_sims": 24,
+      "score_name": "efficiency",
+      "score_unit": "%"
+    },
+    "v5_repaired_from": null,
+    "v5_edits": null,
+    "v5_confidence": null,
+    "v5_audit": {
+      "structural_valid": true,
+      "n_strong": 0,
+      "n_weak": 1,
+      "op_converged": true,
+      "op_fault": false,
+      "repaired": false
+    },
+    "rescued_from_cv": null,
+    "rescue_ops": null,
+    "novelty_wl": 0.1514,
+    "raw_distance": 4,
+    "struct_distance": 4,
+    "functional_distance": 4,
+    "fd_ge": true,
+    "fd_extra": [
+      "Sb1",
+      "L1",
+      "C1",
+      "Sa1"
+    ],
+    "fd_nearest": 21669,
+    "redundant_count": 0,
+    "reduced_netlist": "Sa0 IN n13; Sb0 n13 n14; Sb1 0 n14; L0 OUT n13; L1 n13 n15; C1 n14 n15; C2 IN n16; Sa1 n15 n16; L2 OUT n16",
+    "core_netlist": "Sa0 IN n13; Sb0 n13 n14; Sb1 0 n14; L0 OUT n13; L1 n13 n15; C1 n14 n15; C2 IN n16; Sa1 n15 n16; L2 OUT n16",
+    "device_classes": {
+      "Sa0": "essential",
+      "Sb0": "essential",
+      "Sb1": "essential",
+      "L0": "essential",
+      "L1": "performance",
+      "C1": "essential",
+      "C2": "performance",
+      "Sa1": "performance",
+      "L2": "performance"
+    },
+    "fnov_status": "audited_k1",
+    "origin": {
+      "kind": "struct_move",
+      "op": "rewire",
+      "move": {
+        "op": "rewire",
+        "device": "L2",
+        "moved_from": "n13",
+        "to": "OUT",
+        "reduced_child": "Sa0 IN n13; Sb0 n13 n14; Sb1 0 n14; L0 OUT n13; L1 n13 n15; C1 n14 n15; C2 IN n16; Sa1 n15 n16; L2 n16 OUT"
+      },
+      "trigger": "struct_frac",
+      "gen": 21,
+      "parent": "d9ab2e59",
+      "parent_fd": 4,
+      "parent_eff": 99.381,
+      "struct_frac": 0.6,
+      "last_action": "VERIFY"
+    }
+  },
+  {
+    "netlist": "C0 0 IN\nSa0 n0 IN\nSb0 n0 n3\nSb1 n3 0\nL0 n0 OUT\n",
+    "first_seen_gen": 1,
+    "median_gain": 99.328,
+    "novelty": 0.0,
+    "nn_train_sim": 1.0,
+    "robust": {
+      "median_gain": 99.328,
+      "gain_spread": 0.914,
+      "feasible_frac": 1.0,
+      "feasible": true
+    },
+    "fit": {
+      "stage": "scored",
+      "family": "converter",
+      "alive": true,
+      "feasible": true,
+      "median_gain": 99.328,
+      "worst_gain": 98.703,
+      "gain_spread": 0.914,
+      "feasible_frac": 1.0,
+      "k": 4,
+      "con_vec": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "con_names": [
+        "vout_error",
+        "ripple",
+        "duty_response",
+        "efficiency"
+      ],
+      "corners": [
+        {
+          "name": "nominal",
+          "feasible": true,
+          "reason": "",
+          "duty": 0.5031,
+          "vout": 49.99994,
+          "eff": 0.9932514362450238,
+          "ripple": 0.0634200000000007,
+          "duty_response": 79.52286600000001,
+          "passthrough": false,
+          "con_vec": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sweep": [
+            [
+              0.1,
+              9.941414,
+              0.9879287560701084,
+              0.02341600000000099
+            ],
+            [
+              0.3,
+              29.81028,
+              0.9925751227799365,
+              0.053419999999999135
+            ],
+            [
+              0.5,
+              49.68705,
+              0.9932442735039297,
+              0.0634200000000007
+            ],
+            [
+              0.7,
+              69.57171,
+              0.9936215106682629,
+              0.05341999999998848
+            ],
+            [
+              0.9,
+              89.46428,
+              0.9938973053520427,
+              0.02339000000000624
+            ],
+            [
+              0.5031,
+              49.99994,
+              0.9932514362450238,
+              0.0634200000000007
+            ]
+          ],
+          "n_sims": 6
+        },
+        {
+          "name": "heavy_load",
+          "feasible": true,
+          "reason": "",
+          "duty": 0.5064,
+          "vout": 49.99976,
+          "eff": 0.9870347814585747,
+          "ripple": 0.06339999999999435,
+          "duty_response": 79.051377,
+          "passthrough": false,
+          "con_vec": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sweep": [
+            [
+              0.1,
+              9.873753,
+              0.9837718288050039,
+              0.023404999999998566
+            ],
+            [
+              0.3,
+              29.6132,
+              0.9863923368984168,
+              0.05339999999999989
+            ],
+            [
+              0.5,
+              49.36823,
+              0.9870181715023235,
+              0.0634200000000007
+            ],
+            [
+              0.7,
+              69.13887,
+              0.9874976824128316,
+              0.05341999999998848
+            ],
+            [
+              0.9,
+              88.92513,
+              0.9879277539225744,
+              0.023399999999995202
+            ],
+            [
+              0.5064,
+              49.99976,
+              0.9870347814585747,
+              0.06339999999999435
+            ]
+          ],
+          "n_sims": 6
+        },
+        {
+          "name": "light_load",
+          "feasible": true,
+          "reason": "",
+          "duty": 0.5015,
+          "vout": 49.99999,
+          "eff": 0.9961699243428563,
+          "ripple": 0.06342999999999677,
+          "duty_response": 79.760716,
+          "passthrough": false,
+          "con_vec": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sweep": [
+            [
+              0.1,
+              9.975594,
+              0.9861786869519718,
+              0.023423000000001082
+            ],
+            [
+              0.3,
+              29.90981,
+              0.9951237006258976,
+              0.053429999999998756
+            ],
+            [
+              0.5,
+              49.848,
+              0.996165393609417,
+              0.06342999999999677
+            ],
+            [
+              0.7,
+              69.79017,
+              0.9966244233620104,
+              0.05342000000000269
+            ],
+            [
+              0.9,
+              89.73631,
+              0.9968809576864986,
+              0.023399999999995202
+            ],
+            [
+              0.5015,
+              49.99999,
+              0.9961699243428563,
+              0.06342999999999677
+            ]
+          ],
+          "n_sims": 6
+        },
+        {
+          "name": "low_line_tol",
+          "feasible": true,
+          "reason": "",
+          "duty": 0.559,
+          "vout": 49.99926,
+          "eff": 0.9933069039811901,
+          "ripple": 0.087530000000001,
+          "duty_response": 71.570577,
+          "passthrough": false,
+          "con_vec": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sweep": [
+            [
+              0.1,
+              8.947273,
+              0.9876460656725699,
+              0.03247700000000009
+            ],
+            [
+              0.3,
+              26.82926,
+              0.992407452470749,
+              0.07469000000000037
+            ],
+            [
+              0.5,
+              44.71834,
+              0.9931609206248615,
+              0.08876000000000062
+            ],
+            [
+              0.7,
+              62.61454,
+              0.9935922795128571,
+              0.07469000000000392
+            ],
+            [
+              0.9,
+              80.51785,
+              0.9938946335630351,
+              0.032450000000011414
+            ],
+            [
+              0.559,
+              49.99926,
+              0.9933069039811901,
+              0.087530000000001
+            ]
+          ],
+          "n_sims": 6
+        }
+      ],
+      "duty": 0.5031,
+      "vout": 49.99994,
+      "eff": 0.9932514362450238,
+      "ripple": 0.0634200000000007,
+      "reason": "",
+      "passthrough": false,
+      "n_sims": 24,
+      "score_name": "efficiency",
+      "score_unit": "%"
+    },
+    "v5_repaired_from": null,
+    "v5_edits": null,
+    "v5_confidence": null,
+    "v5_audit": {
+      "structural_valid": true,
+      "n_strong": 0,
+      "n_weak": 1,
+      "op_converged": true,
+      "op_fault": false,
+      "repaired": false
+    },
+    "rescued_from_cv": 0.2472,
+    "rescue_ops": [
+      "swap_phase",
+      "rewire_pin"
+    ],
+    "novelty_wl": 0.0,
+    "raw_distance": 0,
+    "struct_distance": 0,
+    "functional_distance": 0,
+    "fd_ge": false,
+    "fd_extra": [],
+    "fd_nearest": 3901,
+    "redundant_count": null,
+    "reduced_netlist": "Sa0 n0 IN; L0 n0 OUT; Sb0 n0 0",
+    "core_netlist": null,
+    "device_classes": null,
+    "fnov_status": "structural",
+    "origin": {
+      "kind": "rescue",
+      "ops": [
+        "swap_phase",
+        "rewire_pin"
+      ],
+      "gen": 1
+    }
+  },
+  {
+    "netlist": "Sa0 IN n9\nSb0 n9 n10\nSb1 0 n10\nL0 OUT n9\nC0 0 n11\nL1 IN n11\n",
+    "first_seen_gen": 2,
+    "median_gain": 99.328,
+    "novelty": 0.0,
+    "nn_train_sim": 0.9452,
+    "robust": {
+      "median_gain": 99.328,
+      "gain_spread": 0.914,
+      "feasible_frac": 1.0,
+      "feasible": true
+    },
+    "fit": {
+      "stage": "scored",
+      "family": "converter",
+      "alive": true,
+      "feasible": true,
+      "median_gain": 99.328,
+      "worst_gain": 98.703,
+      "gain_spread": 0.914,
+      "feasible_frac": 1.0,
+      "k": 4,
+      "con_vec": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "con_names": [
+        "vout_error",
+        "ripple",
+        "duty_response",
+        "efficiency"
+      ],
+      "corners": [
+        {
+          "name": "nominal",
+          "feasible": true,
+          "reason": "",
+          "duty": 0.5031,
+          "vout": 49.99994,
+          "eff": 0.9932514362450238,
+          "ripple": 0.0634200000000007,
+          "duty_response": 79.52286600000001,
+          "passthrough": false,
+          "con_vec": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sweep": [
+            [
+              0.1,
+              9.941414,
+              0.9879287560701084,
+              0.02341600000000099
+            ],
+            [
+              0.3,
+              29.81028,
+              0.9925751227799365,
+              0.053419999999999135
+            ],
+            [
+              0.5,
+              49.68705,
+              0.9932442735039297,
+              0.0634200000000007
+            ],
+            [
+              0.7,
+              69.57171,
+              0.9936215106682629,
+              0.05341999999998848
+            ],
+            [
+              0.9,
+              89.46428,
+              0.9938973053520427,
+              0.02339000000000624
+            ],
+            [
+              0.5031,
+              49.99994,
+              0.9932514362450238,
+              0.0634200000000007
+            ]
+          ],
+          "n_sims": 6
+        },
+        {
+          "name": "heavy_load",
+          "feasible": true,
+          "reason": "",
+          "duty": 0.5064,
+          "vout": 49.99976,
+          "eff": 0.9870347814585747,
+          "ripple": 0.06339999999999435,
+          "duty_response": 79.051377,
+          "passthrough": false,
+          "con_vec": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sweep": [
+            [
+              0.1,
+              9.873753,
+              0.9837718288050039,
+              0.023404999999998566
+            ],
+            [
+              0.3,
+              29.6132,
+              0.9863923368984168,
+              0.05339999999999989
+            ],
+            [
+              0.5,
+              49.36823,
+              0.9870181715023235,
+              0.0634200000000007
+            ],
+            [
+              0.7,
+              69.13887,
+              0.9874976824128316,
+              0.05341999999998848
+            ],
+            [
+              0.9,
+              88.92513,
+              0.9879277539225744,
+              0.023399999999995202
+            ],
+            [
+              0.5064,
+              49.99976,
+              0.9870347814585747,
+              0.06339999999999435
+            ]
+          ],
+          "n_sims": 6
+        },
+        {
+          "name": "light_load",
+          "feasible": true,
+          "reason": "",
+          "duty": 0.5015,
+          "vout": 49.99999,
+          "eff": 0.9961699243428563,
+          "ripple": 0.06342999999999677,
+          "duty_response": 79.760716,
+          "passthrough": false,
+          "con_vec": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sweep": [
+            [
+              0.1,
+              9.975594,
+              0.9861786869519718,
+              0.023423000000001082
+            ],
+            [
+              0.3,
+              29.90981,
+              0.9951237006258976,
+              0.053429999999998756
+            ],
+            [
+              0.5,
+              49.848,
+              0.996165393609417,
+              0.06342999999999677
+            ],
+            [
+              0.7,
+              69.79017,
+              0.9966244233620104,
+              0.05342000000000269
+            ],
+            [
+              0.9,
+              89.73631,
+              0.9968809576864986,
+              0.023399999999995202
+            ],
+            [
+              0.5015,
+              49.99999,
+              0.9961699243428563,
+              0.06342999999999677
+            ]
+          ],
+          "n_sims": 6
+        },
+        {
+          "name": "low_line_tol",
+          "feasible": true,
+          "reason": "",
+          "duty": 0.559,
+          "vout": 49.99926,
+          "eff": 0.9933069039811901,
+          "ripple": 0.087530000000001,
+          "duty_response": 71.570577,
+          "passthrough": false,
+          "con_vec": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sweep": [
+            [
+              0.1,
+              8.947273,
+              0.9876460656725699,
+              0.03247700000000009
+            ],
+            [
+              0.3,
+              26.82926,
+              0.992407452470749,
+              0.07469000000000037
+            ],
+            [
+              0.5,
+              44.71834,
+              0.9931609206248615,
+              0.08876000000000062
+            ],
+            [
+              0.7,
+              62.61454,
+              0.9935922795128571,
+              0.07469000000000392
+            ],
+            [
+              0.9,
+              80.51785,
+              0.9938946335630351,
+              0.032450000000011414
+            ],
+            [
+              0.559,
+              49.99926,
+              0.9933069039811901,
+              0.087530000000001
+            ]
+          ],
+          "n_sims": 6
+        }
+      ],
+      "duty": 0.5031,
+      "vout": 49.99994,
+      "eff": 0.9932514362450238,
+      "ripple": 0.0634200000000007,
+      "reason": "",
+      "passthrough": false,
+      "n_sims": 24,
+      "score_name": "efficiency",
+      "score_unit": "%"
+    },
+    "v5_repaired_from": null,
+    "v5_edits": null,
+    "v5_confidence": null,
+    "v5_audit": {
+      "structural_valid": true,
+      "n_strong": 0,
+      "n_weak": 0,
+      "op_converged": true,
+      "op_fault": false,
+      "repaired": false
+    },
+    "rescued_from_cv": null,
+    "rescue_ops": null,
+    "novelty_wl": 0.0548,
+    "raw_distance": 2,
+    "struct_distance": 0,
+    "functional_distance": 0,
+    "fd_ge": false,
+    "fd_extra": [],
+    "fd_nearest": 4311,
+    "redundant_count": null,
+    "reduced_netlist": "Sa0 IN n9; L0 OUT n9; C0 0 n11; L1 IN n11; Sb0 n9 0",
+    "core_netlist": null,
+    "device_classes": null,
+    "fnov_status": "structural",
+    "origin": {
+      "kind": "struct_move",
+      "op": "insert_series",
+      "move": {
+        "op": "insert_series",
+        "device": "C0",
+        "inserted": "L",
+        "at": [
+          "0",
+          "IN"
+        ],
+        "reduced_child": "Sa0 n0 IN; L0 n0 OUT; C0 0 m0; L1 m0 IN; Sb0 n0 0"
+      },
+      "trigger": "struct_frac",
+      "gen": 2,
+      "parent": "96c9716d",
+      "parent_fd": 0,
+      "parent_eff": 99.014,
+      "struct_frac": 0.25,
+      "last_action": "RESCUE"
+    }
+  }
+]

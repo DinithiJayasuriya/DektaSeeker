@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+corpus/lamagic_graphs/
+results/conv_matched/cache/
+# over GitHub's 100 MB file limit; share separately or use Git LFS
+setup/CCT_Generation/DiGress/topology_generation/lamagic_graphs/train.pt
+# outputs of new search runs
+setup/CCT_Generation/setup_tracer/runs/*
+
+# setup is uploaded later
+setup/
