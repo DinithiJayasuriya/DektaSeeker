@@ -1,0 +1,47 @@
+* converter deck, bench.py (v90 48V->3V)
+* corner=heavy_load duty=0.2566
+* device map (netlist -> deck): Sa0->S1, Sb0->S2, L0->L1, C1->C1, Sa1->S3, Sb1->S4, L1->L2
+* nodes: IN->VIN, OUT->VOUT, 0->0, X->nX
+Vin VIN 0 DC 48.0
+Vpa PA 0 PULSE(0 1 0 1n 1n 5.132e-07 2e-06)
+Vpb PB 0 PULSE(1 0 0 1n 1n 5.132e-07 2e-06)
+.model SWMOD SW(ron=0.005 roff=1000000.0 vt=0.5 vh=0.01)
+S1 VIN nn1 PA 0 SWMOD
+S2 nn1 0 PB 0 SWMOD
+L1 nn1 lx1 2.2e-06
+RL1 lx1 nn3 0.004
+C1 nn3 cx1 4.7e-05
+RC1 cx1 0 0.002
+S3 nn3 nn4 PA 0 SWMOD
+S4 nn4 0 PB 0 SWMOD
+L2 nn4 lx2 2.2e-06
+RL2 lx2 VOUT 0.004
+Rout VOUT 0 0.15
+Cout VOUT co_x 4.7e-05
+RCo co_x 0 0.002
+.options gmin=1e-12 reltol=1e-3 abstol=1e-9 vntol=1e-6 itl1=200 itl4=100
+.control
+set noaskquit
+tran 1e-08 0.004 0.00396 1e-08
+let pout = v(VOUT)*v(VOUT)/0.15
+let pin = -48.0*i(vin)
+meas tran vout_avg AVG v(VOUT) from=0.00396 to=0.004
+meas tran pout_avg AVG pout from=0.00396 to=0.004
+meas tran pin_avg  AVG pin  from=0.00396 to=0.004
+meas tran vout_max MAX v(VOUT) from=0.00396 to=0.004
+meas tran vout_min MIN v(VOUT) from=0.00396 to=0.004
+let vs1 = v(VIN)-v(nn1)
+meas tran vs1_max MAX vs1 from=0.00396 to=0.004
+meas tran vs1_min MIN vs1 from=0.00396 to=0.004
+let vs2 = v(nn1)
+meas tran vs2_max MAX vs2 from=0.00396 to=0.004
+meas tran vs2_min MIN vs2 from=0.00396 to=0.004
+let vs3 = v(nn3)-v(nn4)
+meas tran vs3_max MAX vs3 from=0.00396 to=0.004
+meas tran vs3_min MIN vs3 from=0.00396 to=0.004
+let vs4 = v(nn4)
+meas tran vs4_max MAX vs4 from=0.00396 to=0.004
+meas tran vs4_min MIN vs4 from=0.00396 to=0.004
+quit
+.endc
+.end

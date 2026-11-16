@@ -1,0 +1,8 @@
+# textbook reference: buck_buck
+Sa0 IN n1
+Sb0 n1 0
+L0 n1 n3
+C1 n3 0
+Sa1 n3 n4
+Sb1 n4 0
+L1 n4 OUT

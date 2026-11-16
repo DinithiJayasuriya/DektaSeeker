@@ -1,0 +1,16 @@
+# textbook reference: sc4_buck
+Sa0 IN n1
+Sb0 n1 n3
+Sa1 n2 n3
+Sb1 n2 0
+C0 n1 n2
+C1 n3 0
+Sa2 n3 n5
+Sb2 n5 n7
+Sa3 n6 n7
+Sb3 n6 0
+C2 n5 n6
+C3 n7 0
+Sa4 n7 n8
+Sb4 n8 0
+L0 n8 OUT

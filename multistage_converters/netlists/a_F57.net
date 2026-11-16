@@ -1,0 +1,18 @@
+# design (a) F57: 2:1 SC -> flying-cap hybrid -> buck (3 stages)
+# found by: V90R_1/s4   record 129 of provenance/final_all48_1114.json
+# format: <device> <nodeA> <nodeB>; Sa* = phase A (on for D*T), Sb* = phase B (complement); s1/s2/s3 suffix = stage; BUS1/BUS2 = inter-stage buses
+Sa0s1 IN s1n1
+Sb0s1 s1n1 BUS1
+Sa1s1 s1n2 BUS1
+Sb1s1 s1n2 0
+C0s1 s1n1 s1n2
+C1s1 BUS1 0
+Sb0s2 BUS2 s2n8
+C0s2 s2n8 s2n9
+L0s2 BUS2 s2n9
+Sa0s2 BUS1 s2n8
+Sb1s2 0 s2n9
+Sa0s3 BUS2 s3n1
+Sb0s3 s3n1 0
+L0s3 s3n1 OUT
+Cbus2 BUS2 0

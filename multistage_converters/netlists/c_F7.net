@@ -1,0 +1,16 @@
+# design (c) F7: buck -> series-capacitor dual-inductor stage (2 stages)
+# found by: V90_8/s3   record 24 of provenance/final_all48_1114.json
+# format: <device> <nodeA> <nodeB>; Sa* = phase A (on for D*T), Sb* = phase B (complement); s1/s2/s3 suffix = stage; BUS1/BUS2 = inter-stage buses
+Sa0s1 IN s1n1
+Sb0s1 s1n1 0
+L0s1 s1n1 BUS1
+Sa0s2 BUS1 s2n12
+Sb0s2 s2n12 s2n14
+Sa1s2 s2n13 s2n14
+Sb1s2 BUS1 s2n13
+C0s2 0 s2n14
+Sb2s2 0 s2n15
+L0s2 OUT s2n15
+C1s2 s2n12 s2n15
+L1s2 OUT s2n13
+Cbus1 BUS1 0

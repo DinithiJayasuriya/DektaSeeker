@@ -1,0 +1,3315 @@
+[
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nC1s1 BUS1 0\nSa0s2 BUS1 s2n8\nSb0s2 0 s2n8\nL0s2 OUT s2n9\nSa1s2 s2n8 s2n9\nSb1s2 0 s2n9\nL1s2 OUT s2n8\n",
+  "eff": 98.076,
+  "worst": 96.364,
+  "n": 12,
+  "stress": 24.1,
+  "duty": 0.127,
+  "found": [
+   "V90_1/s3"
+  ],
+  "dup": [
+   "Sax2:BUS1-s1n2",
+   "Sbx3:0-s1n2",
+   "Lx2:OUT-s1n2"
+  ],
+  "drop": [
+   "C1s1"
+  ],
+  "match": "sc2_buck",
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nSa0s2 BUS1 s1n2\nSb0s2 0 s1n2\nL0s2 OUT s1n2\nSb1s2 0 s1n2\nL1s2 OUT s1n2"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nC1s1 BUS1 0\nSa0s2 BUS1 s2n16\nSb0s2 s2n15 s2n16\nSa1s2 s2n15 s2n17\nSb1s2 0 s2n17\nC0s2 s2n16 s2n17\nSa2s2 OUT s2n18\nC1s2 0 s2n15\nSa3s2 OUT s2n18\nL0s2 0 s2n18\nL1s2 s2n16 s2n19\nSb2s2 OUT s2n19\nC2s2 s2n18 s2n19\n",
+  "eff": 97.726,
+  "worst": 95.637,
+  "n": 18,
+  "stress": 24.1,
+  "duty": 0.8582,
+  "found": [
+   "V90_9/s7"
+  ],
+  "dup": [
+   "Sax2:OUT-s2n18"
+  ],
+  "drop": [
+   "C1s1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nSa0s2 BUS1 s2n16\nSb0s2 s2n15 s2n16\nSa1s2 s2n15 s2n17\nSb1s2 0 s2n17\nC0s2 s2n16 s2n17\nSa2s2 OUT s2n18\nC1s2 0 s2n15\nSa3s2 OUT s2n18\nL0s2 0 s2n18\nL1s2 s2n16 s2n19\nSb2s2 OUT s2n19\nC2s2 s2n18 s2n19"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nSb0s2 BUS1 s2n9\nSa0s2 s2n9 s2n10\nSa1s2 0 s2n9\nC0s2 BUS1 s2n10\nL0s2 OUT s2n9\nSb1s2 0 s2n10\n",
+  "eff": 97.633,
+  "worst": 95.43,
+  "n": 11,
+  "stress": 24.1,
+  "duty": 0.8714,
+  "found": [
+   "V90_4/s2"
+  ],
+  "dup": [
+   "Sax2:0-s2n9"
+  ],
+  "drop": [
+   "C0s2"
+  ],
+  "match": "sc2_buck_hib",
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nSb0s2 BUS1 s2n9\nSa0s2 s2n9 0\nSa1s2 0 s2n9\nL0s2 OUT s2n9"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nSa0s2 s2n0 0\nC0s2 BUS1 s2n5\nSb0s2 s2n5 0\nL0s2 s2n0 OUT\nSa1s2 s2n0 s2n5\nSb1s2 s2n0 BUS1\n",
+  "eff": 97.633,
+  "worst": 95.43,
+  "n": 11,
+  "stress": 24.1,
+  "duty": 0.8714,
+  "found": [
+   "V90_7/s3"
+  ],
+  "dup": [
+   "Sax2:0-s2n0"
+  ],
+  "drop": [
+   "C0s2"
+  ],
+  "match": "sc2_buck_hib",
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nSa0s2 s2n0 0\nL0s2 s2n0 OUT\nSa1s2 s2n0 0\nSb1s2 s2n0 BUS1"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nSb0s2 BUS1 s2n8\nC0s2 0 s2n8\nL0s2 OUT s2n9\nSa0s2 BUS1 s2n9\nSb1s2 0 s2n9\nSa1s2 s2n8 s2n9\n",
+  "eff": 97.58,
+  "worst": 95.335,
+  "n": 11,
+  "stress": 24.1,
+  "duty": 0.1277,
+  "found": [
+   "V90_1/s3"
+  ],
+  "dup": [
+   "Sax3:BUS1-s1n2",
+   "Sbx2:0-s1n2"
+  ],
+  "drop": [
+   "C0s2"
+  ],
+  "match": "sc2_buck",
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nL0s2 OUT s1n2\nSa0s2 BUS1 s1n2\nSb1s2 0 s1n2\nSa1s2 BUS1 s1n2"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nC1s1 BUS1 0\nSa0s2 s2n8 s2n9\nSb0s2 BUS1 s2n8\nC0s2 s2n8 s2n9\nL0s2 OUT s2n9\nSa1s2 0 s2n8\nSa2s2 0 s2n9\n",
+  "eff": 97.562,
+  "worst": 95.364,
+  "n": 12,
+  "stress": 24.1,
+  "duty": 0.8711,
+  "found": [
+   "V90_9/s5"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nSa0s2 s2n8 s2n9\nSb0s2 BUS1 s2n8\nC0s2 s2n8 s2n9\nL0s2 OUT s2n9\nSa1s2 0 s2n8\nSa2s2 0 s2n9"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nL0s2 OUT s2n10\nSa0s2 s2n9 s2n10\nSb0s2 BUS1 s2n9\nC1s2 OUT s2n9\nSb1s2 0 s2n10\nSa1s2 BUS1 s2n10\n",
+  "eff": 97.525,
+  "worst": 95.245,
+  "n": 11,
+  "stress": 24.1,
+  "duty": 0.1278,
+  "found": [
+   "V90_5/s4",
+   "V90_6/s4"
+  ],
+  "dup": [
+   "Sax3:BUS1-s1n2",
+   "Sbx2:0-s1n2"
+  ],
+  "drop": [
+   "C1s2"
+  ],
+  "match": "sc2_buck",
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nL0s2 OUT s1n2\nSa0s2 BUS1 s1n2\nSb1s2 0 s1n2\nSa1s2 BUS1 s1n2"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nSb0s2 s2n9 s2n10\nSa0s2 0 s2n10\nSb1s2 BUS1 s2n10\nL0s2 OUT s2n10\nSa1s2 BUS1 s2n9\nC1s2 OUT s2n9\n",
+  "eff": 97.525,
+  "worst": 95.245,
+  "n": 11,
+  "stress": 24.1,
+  "duty": 0.8712,
+  "found": [
+   "V90_8/s2"
+  ],
+  "dup": [
+   "Sbx2:BUS1-s2n10"
+  ],
+  "drop": [
+   "C1s2"
+  ],
+  "match": "sc2_buck_hib",
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nSb0s2 BUS1 s2n10\nSa0s2 0 s2n10\nSb1s2 BUS1 s2n10\nL0s2 OUT s2n10"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nC1s1 BUS1 0\nL0s2 OUT s2n10\nSb0s2 BUS1 s2n10\nC0s2 OUT s2n9\nSa0s2 0 s2n10\nSa2s2 s2n9 s2n10\n",
+  "eff": 97.481,
+  "worst": 95.142,
+  "n": 11,
+  "stress": 24.1,
+  "duty": 0.8712,
+  "found": [
+   "STAGE_2/s2"
+  ],
+  "dup": [],
+  "drop": [
+   "C0s2",
+   "C1s1",
+   "Sa2s2"
+  ],
+  "match": "sc2_buck_hib",
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nL0s2 OUT s2n10\nSb0s2 BUS1 s2n10\nSa0s2 0 s2n10"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nC1s1 BUS1 0\nSa0s2 0 s2n9\nSa1s2 0 s2n10\nSb0s2 BUS1 s2n10\nL0s2 OUT s2n10\nC0s2 s2n9 s2n10\n",
+  "eff": 97.478,
+  "worst": 95.14,
+  "n": 11,
+  "stress": 24.1,
+  "duty": 0.8712,
+  "found": [
+   "STAGE_2/s3"
+  ],
+  "dup": [],
+  "drop": [
+   "C0s2",
+   "C1s1",
+   "Sa0s2"
+  ],
+  "match": "sc2_buck_hib",
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nSa1s2 0 s2n10\nSb0s2 BUS1 s2n10\nL0s2 OUT s2n10"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nC1s1 BUS1 0\nSa0s2 s2n8 s2n9\nSb0s2 BUS1 s2n8\nL1s2 OUT s2n8\nC0s2 0 s2n9\nSa1s2 0 s2n8\n",
+  "eff": 97.478,
+  "worst": 95.14,
+  "n": 11,
+  "stress": 24.1,
+  "duty": 0.8712,
+  "found": [
+   "V90_9/s3"
+  ],
+  "dup": [],
+  "drop": [
+   "C0s2",
+   "C1s1",
+   "Sa0s2"
+  ],
+  "match": "sc2_buck_hib",
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nSb0s2 BUS1 s2n8\nL1s2 OUT s2n8\nSa1s2 0 s2n8"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nC1s1 BUS1 0\nC0s2 BUS1 s2n10\nSa0s2 BUS1 s2n9\nL1s2 OUT s2n9\nSb0s2 0 s2n9\nSb1s2 OUT s2n10\n",
+  "eff": 97.475,
+  "worst": 95.139,
+  "n": 11,
+  "stress": 24.1,
+  "duty": 0.1278,
+  "found": [
+   "V90_4/s7"
+  ],
+  "dup": [
+   "Sax2:BUS1-s1n2",
+   "Sbx2:0-s1n2"
+  ],
+  "drop": [
+   "C0s2",
+   "C1s1",
+   "Sb1s2"
+  ],
+  "match": "sc2_buck",
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nSa0s2 BUS1 s1n2\nL1s2 OUT s1n2\nSb0s2 0 s1n2"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nC1s1 BUS1 0\nL0s2 OUT s2n11\nSb0s2 0 s2n10\nC0s2 BUS1 s2n9\nSa0s2 0 s2n11\nSb1s2 BUS1 s2n11\nSa1s2 s2n9 s2n10\n",
+  "eff": 97.473,
+  "worst": 95.139,
+  "n": 12,
+  "stress": 24.1,
+  "duty": 0.8712,
+  "found": [
+   "V90_5/s4"
+  ],
+  "dup": [],
+  "drop": [
+   "C0s2",
+   "C1s1",
+   "Sa1s2",
+   "Sb0s2"
+  ],
+  "match": "sc2_buck_hib",
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nL0s2 OUT s2n11\nSa0s2 0 s2n11\nSb1s2 BUS1 s2n11"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nC1s1 BUS1 0\nC0s2 s2n9 s2n10\nSb0s2 OUT s2n10\nSa0s2 BUS1 s2n10\nL0s2 OUT s2n9\nSb1s2 0 s2n9\n",
+  "eff": 97.453,
+  "worst": 95.121,
+  "n": 11,
+  "stress": 24.1,
+  "duty": 0.153,
+  "found": [
+   "V90_9/s5"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nC0s2 s2n9 s2n10\nSb0s2 OUT s2n10\nSa0s2 BUS1 s2n10\nL0s2 OUT s2n9\nSb1s2 0 s2n9"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nC1s1 BUS1 0\nC0s2 s2n3 s2n9\nSb0s2 BUS1 s2n9\nSa0s2 s2n3 0\nL0s2 s2n3 OUT\nSa1s2 OUT s2n9\n",
+  "eff": 97.452,
+  "worst": 95.121,
+  "n": 11,
+  "stress": 24.1,
+  "duty": 0.8459,
+  "found": [
+   "V90_1/s4"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nC0s2 s2n3 s2n9\nSb0s2 BUS1 s2n9\nSa0s2 s2n3 0\nL0s2 s2n3 OUT\nSa1s2 OUT s2n9"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nC1s1 BUS1 0\nSb0s2 BUS1 s2n5\nL0s2 OUT s2n10\nSa0s2 s2n5 OUT\nC1s2 s2n5 s2n10\nSa1s2 0 s2n10\n",
+  "eff": 97.452,
+  "worst": 95.121,
+  "n": 11,
+  "stress": 24.1,
+  "duty": 0.8459,
+  "found": [
+   "V90_2/s2"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nSb0s2 BUS1 s2n5\nL0s2 OUT s2n10\nSa0s2 s2n5 OUT\nC1s2 s2n5 s2n10\nSa1s2 0 s2n10"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nSb0s2 0 s2n9\nSa1s2 BUS1 s2n9\nC0s2 OUT s2n10\nL0s2 OUT s2n9\nSb1s2 s2n9 s2n10\nC1s2 BUS1 s2n10\n",
+  "eff": 97.359,
+  "worst": 94.942,
+  "n": 11,
+  "stress": 24.1,
+  "duty": 0.1281,
+  "found": [
+   "V90_5/s6"
+  ],
+  "dup": [
+   "Sax2:BUS1-s1n2",
+   "Sbx2:0-s1n2"
+  ],
+  "drop": [],
+  "match": null,
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nSb0s2 0 s1n2\nSa1s2 BUS1 s1n2\nC0s2 OUT s2n10\nL0s2 OUT s1n2\nSb1s2 s1n2 s2n10\nC1s2 BUS1 s2n10"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nC1s1 BUS1 0\nSb0s2 BUS1 s2n10\nSb1s2 0 s2n9\nSa0s2 s2n9 s2n10\nL0s2 OUT s2n9\nC1s2 BUS1 s2n10\n",
+  "eff": 97.244,
+  "worst": 94.748,
+  "n": 11,
+  "stress": 24.1,
+  "duty": 0.1283,
+  "found": [
+   "V90_3/s4"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nSb0s2 BUS1 s2n10\nSb1s2 0 s2n9\nSa0s2 s2n9 s2n10\nL0s2 OUT s2n9\nC1s2 BUS1 s2n10"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nC1s1 BUS1 0\nL0s2 OUT s2n10\nSa0s2 s2n9 s2n10\nSb0s2 BUS1 s2n9\nC0s2 0 s2n9\nSb1s2 0 s2n10\n",
+  "eff": 97.231,
+  "worst": 94.728,
+  "n": 11,
+  "stress": 24.1,
+  "duty": 0.1283,
+  "found": [
+   "V90_5/s4"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nL0s2 OUT s2n10\nSa0s2 s2n9 s2n10\nSb0s2 BUS1 s2n9\nC0s2 0 s2n9\nSb1s2 0 s2n10"
+ },
+ {
+  "core": "Sa0s1 IN s1n6\nSb0s1 0 s1n6\nL0s1 BUS1 s1n6\nC0s1 IN BUS1\nSa0s2 BUS1 s2n8\nSb0s2 0 s2n8\nL0s2 OUT s2n9\nSa1s2 s2n8 s2n9\nSb1s2 0 s2n9\nL1s2 OUT s2n8\n",
+  "eff": 97.211,
+  "worst": 95.083,
+  "n": 10,
+  "stress": 48.0,
+  "duty": 0.2513,
+  "found": [
+   "V90_1/s3"
+  ],
+  "dup": [
+   "Sbx2:0-s2n8",
+   "Lx2:OUT-s2n8"
+  ],
+  "drop": [
+   "C0s1"
+  ],
+  "match": "buckcap_buck_hia",
+  "kept": "Sa0s1 IN s1n6\nSb0s1 0 s1n6\nL0s1 BUS1 s1n6\nSa0s2 BUS1 s2n8\nSb0s2 0 s2n8\nL0s2 OUT s2n8\nSb1s2 0 s2n8\nL1s2 OUT s2n8"
+ },
+ {
+  "core": "L0s1 BUS1 s1n9\nSa0s1 IN s1n9\nSb0s1 0 s1n9\nSa0s2 BUS1 s2n9\nSb0s2 0 s2n9\nL0s2 OUT s2n10\nSb1s2 0 s2n10\nL1s2 OUT s2n9\nSa2s2 s2n9 s2n10\nCbus1 BUS1 0\n",
+  "eff": 97.211,
+  "worst": 95.083,
+  "n": 10,
+  "stress": 48.0,
+  "duty": 0.2513,
+  "found": [
+   "V90_5/s6"
+  ],
+  "dup": [
+   "Sbx2:0-s2n10",
+   "Lx2:OUT-s2n10"
+  ],
+  "drop": [
+   "Cbus1"
+  ],
+  "match": "buckcap_buck_hia",
+  "kept": "L0s1 BUS1 s1n9\nSa0s1 IN s1n9\nSb0s1 0 s1n9\nSa0s2 BUS1 s2n10\nSb0s2 0 s2n10\nL0s2 OUT s2n10\nSb1s2 0 s2n10\nL1s2 OUT s2n10"
+ },
+ {
+  "core": "C0s1 s1n3 s1n5\nC1s1 BUS1 0\nSa0s1 IN s1n3\nSb0s1 s1n3 BUS1\nL0s1 s1n5 BUS1\nSb1s1 s1n5 0\nL0s2 OUT s2n10\nSb0s2 BUS1 s2n10\nSa0s2 0 s2n10\nL1s2 OUT s2n10\n",
+  "eff": 97.089,
+  "worst": 94.535,
+  "n": 10,
+  "stress": 26.0,
+  "duty": 0.855,
+  "found": [
+   "V90_9/s3"
+  ],
+  "dup": [
+   "Lx2:OUT-s2n10"
+  ],
+  "drop": [
+   "C1s1"
+  ],
+  "match": null,
+  "kept": "C0s1 s1n3 s1n5\nSa0s1 IN s1n3\nSb0s1 s1n3 BUS1\nL0s1 s1n5 BUS1\nSb1s1 s1n5 0\nL0s2 OUT s2n10\nSb0s2 BUS1 s2n10\nSa0s2 0 s2n10\nL1s2 OUT s2n10"
+ },
+ {
+  "core": "Sa0s1 IN s1n10\nSb0s1 s1n10 s1n11\nC0s1 IN s1n11\nSa1s1 s1n11 s1n12\nSb1s1 0 s1n12\nC1s1 s1n10 s1n12\nSb3s1 BUS1 s1n10\nL0s2 OUT s2n9\nSb0s2 0 s2n9\nSa0s2 s2n8 s2n9\nSa1s2 BUS1 s2n8\nCbus1 BUS1 0\n",
+  "eff": 97.015,
+  "worst": 94.329,
+  "n": 12,
+  "stress": 24.2,
+  "duty": 0.1287,
+  "found": [
+   "V90_7/s2"
+  ],
+  "dup": [],
+  "drop": [
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 IN s1n10\nSb0s1 s1n10 s1n11\nC0s1 IN s1n11\nSa1s1 s1n11 s1n12\nSb1s1 0 s1n12\nC1s1 s1n10 s1n12\nSb3s1 BUS1 s1n10\nL0s2 OUT s2n9\nSb0s2 0 s2n9\nSa0s2 s2n8 s2n9\nSa1s2 BUS1 s2n8"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nC1s1 BUS1 0\nSa0s2 BUS1 s2n4\nL0s2 OUT s2n9\nSb0s2 0 s2n9\nL1s2 OUT s2n4\nC0s2 s2n4 s2n9\n",
+  "eff": 97.007,
+  "worst": 94.329,
+  "n": 11,
+  "stress": 24.1,
+  "duty": 0.1283,
+  "found": [
+   "V90_1/s4"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nSa0s2 BUS1 s2n4\nL0s2 OUT s2n9\nSb0s2 0 s2n9\nL1s2 OUT s2n4\nC0s2 s2n4 s2n9"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 0\nL0s1 s1n1 BUS1\nSa0s2 BUS1 s2n12\nSb0s2 s2n12 s2n14\nSa1s2 s2n13 s2n14\nSb1s2 BUS1 s2n13\nC0s2 0 s2n14\nSb2s2 0 s2n15\nL0s2 OUT s2n15\nC1s2 s2n12 s2n15\nL1s2 OUT s2n13\nCbus1 BUS1 0\n",
+  "eff": 96.941,
+  "worst": 94.319,
+  "n": 13,
+  "stress": 48.1,
+  "duty": 0.1283,
+  "found": [
+   "V90_8/s3"
+  ],
+  "dup": [],
+  "drop": [
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 0\nL0s1 s1n1 BUS1\nSa0s2 BUS1 s2n12\nSb0s2 s2n12 s2n14\nSa1s2 s2n13 s2n14\nSb1s2 BUS1 s2n13\nC0s2 0 s2n14\nSb2s2 0 s2n15\nL0s2 OUT s2n15\nC1s2 s2n12 s2n15\nL1s2 OUT s2n13"
+ },
+ {
+  "core": "C0s1 IN s1n14\nL0s1 s1n13 s1n14\nC1s1 s1n13 s1n14\nSa0s1 IN s1n13\nSb0s1 s1n12 s1n14\nSa1s1 s1n12 s1n15\nSb1s1 0 s1n15\nL1s1 BUS1 s1n15\nC2s1 0 s1n12\nSa0s2 BUS1 s2n9\nSb0s2 0 s2n9\nSa1s2 BUS1 s2n10\nL0s2 OUT s2n9\nL1s2 OUT s2n10\nSb1s2 0 s2n10\nCbus1 BUS1 0\n",
+  "eff": 96.938,
+  "worst": 94.676,
+  "n": 16,
+  "stress": 48.0,
+  "duty": 0.2515,
+  "found": [
+   "V90_5/s3"
+  ],
+  "dup": [
+   "Sax2:BUS1-s2n10",
+   "Sbx2:0-s2n10",
+   "Lx2:OUT-s2n10"
+  ],
+  "drop": [
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "C0s1 IN s1n14\nL0s1 s1n13 s1n14\nC1s1 s1n13 s1n14\nSa0s1 IN s1n13\nSb0s1 s1n12 s1n14\nSa1s1 s1n12 s1n15\nSb1s1 0 s1n15\nL1s1 BUS1 s1n15\nC2s1 0 s1n12\nSa0s2 BUS1 s2n10\nSb0s2 0 s2n10\nSa1s2 BUS1 s2n10\nL0s2 OUT s2n10\nL1s2 OUT s2n10\nSb1s2 0 s2n10"
+ },
+ {
+  "core": "Sa0s1 BUS1 s1n2\nL0s1 s1n2 0\nSa1s1 s1n5 IN\nSb0s1 BUS1 s1n5\nC0s1 s1n2 s1n5\nSa0s2 BUS1 s2n21\nC4s2 0 s2n17\nSa1s2 s2n17 s2n21\nL0s2 OUT s2n21\nSb2s2 0 s2n21\nSb3s2 BUS1 s2n17\n",
+  "eff": 96.938,
+  "worst": 94.171,
+  "n": 11,
+  "stress": 26.0,
+  "duty": 0.1442,
+  "found": [
+   "V90_7/s2"
+  ],
+  "dup": [
+   "Sax2:BUS1-s2n21"
+  ],
+  "drop": [
+   "C4s2"
+  ],
+  "match": "known-comp:V90_5/s2",
+  "kept": "Sa0s1 BUS1 s1n2\nL0s1 s1n2 0\nSa1s1 s1n5 IN\nSb0s1 BUS1 s1n5\nC0s1 s1n2 s1n5\nSa0s2 BUS1 s2n21\nSa1s2 BUS1 s2n21\nL0s2 OUT s2n21\nSb2s2 0 s2n21"
+ },
+ {
+  "core": "Sa0s1 0 s1n10\nSa1s1 BUS1 s1n9\nL0s1 IN s1n9\nC0s1 0 BUS1\nC1s1 s1n9 s1n10\nSb0s1 BUS1 s1n10\nSb0s2 0 s2n9\nSa1s2 BUS1 s2n9\nL0s2 OUT s2n9\n",
+  "eff": 96.885,
+  "worst": 94.044,
+  "n": 9,
+  "stress": 25.6,
+  "duty": 0.1187,
+  "found": [
+   "V90_3/s2"
+  ],
+  "dup": [],
+  "drop": [
+   "C0s1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 0 s1n10\nSa1s1 BUS1 s1n9\nL0s1 IN s1n9\nC1s1 s1n9 s1n10\nSb0s1 BUS1 s1n10\nSb0s2 0 s2n9\nSa1s2 BUS1 s2n9\nL0s2 OUT s2n9"
+ },
+ {
+  "core": "Sa0s1 0 s1n10\nSa1s1 BUS1 s1n9\nSb0s1 IN s1n9\nC0s1 0 BUS1\nC1s1 s1n9 s1n10\nL0s1 BUS1 s1n10\nSb0s2 0 s2n9\nSa1s2 BUS1 s2n9\nL0s2 OUT s2n9\n",
+  "eff": 96.841,
+  "worst": 93.971,
+  "n": 9,
+  "stress": 26.0,
+  "duty": 0.1445,
+  "found": [
+   "V90_3/s2"
+  ],
+  "dup": [],
+  "drop": [
+   "C0s1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 0 s1n10\nSa1s1 BUS1 s1n9\nSb0s1 IN s1n9\nC1s1 s1n9 s1n10\nL0s1 BUS1 s1n10\nSb0s2 0 s2n9\nSa1s2 BUS1 s2n9\nL0s2 OUT s2n9"
+ },
+ {
+  "core": "Sa0s1 0 s1n10\nSa1s1 BUS1 s1n9\nSb0s1 IN s1n9\nC0s1 0 BUS1\nC1s1 s1n9 s1n10\nL0s1 BUS1 s1n10\nSa0s2 BUS1 s2n7\nSb0s2 0 s2n7\nL0s2 OUT s2n7\n",
+  "eff": 96.841,
+  "worst": 93.971,
+  "n": 9,
+  "stress": 26.0,
+  "duty": 0.1445,
+  "found": [
+   "V90_4/s2"
+  ],
+  "dup": [],
+  "drop": [
+   "C0s1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 0 s1n10\nSa1s1 BUS1 s1n9\nSb0s1 IN s1n9\nC1s1 s1n9 s1n10\nL0s1 BUS1 s1n10\nSa0s2 BUS1 s2n7\nSb0s2 0 s2n7\nL0s2 OUT s2n7"
+ },
+ {
+  "core": "Sb0s1 IN s1n9\nSa0s1 BUS1 s1n9\nC0s1 s1n9 s1n10\nL0s1 0 s1n10\nSb1s1 BUS1 s1n10\nC1s1 0 BUS1\nSb0s2 BUS1 s2n9\nSa0s2 0 s2n9\nL0s2 OUT s2n9\n",
+  "eff": 96.841,
+  "worst": 93.971,
+  "n": 9,
+  "stress": 26.0,
+  "duty": 0.8545,
+  "found": [
+   "V90_9/s3"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s1"
+  ],
+  "match": "known-comp:V90_7/s4",
+  "kept": "Sb0s1 IN s1n9\nSa0s1 BUS1 s1n9\nC0s1 s1n9 s1n10\nL0s1 0 s1n10\nSb1s1 BUS1 s1n10\nSb0s2 BUS1 s2n9\nSa0s2 0 s2n9\nL0s2 OUT s2n9"
+ },
+ {
+  "core": "Sb2s1 0 s1n15\nSa1s1 IN s1n15\nL1s1 BUS1 s1n15\nSb0s2 s2n8 s2n9\nSa0s2 0 s2n8\nL0s2 OUT s2n9\nC0s2 BUS1 s2n8\nSa1s2 BUS1 s2n9\nSb1s2 0 s2n9\nCbus1 BUS1 0\n",
+  "eff": 96.805,
+  "worst": 94.183,
+  "n": 10,
+  "stress": 48.0,
+  "duty": 0.2518,
+  "found": [
+   "V90_8/s4"
+  ],
+  "dup": [
+   "Sbx2:0-s2n9",
+   "Cx2:0-BUS1"
+  ],
+  "drop": [
+   "C0s2",
+   "Cbus1"
+  ],
+  "match": "buckcap_buck_hia",
+  "kept": "Sb2s1 0 s1n15\nSa1s1 IN s1n15\nL1s1 BUS1 s1n15\nSb0s2 0 s2n9\nL0s2 OUT s2n9\nSa1s2 BUS1 s2n9\nSb1s2 0 s2n9"
+ },
+ {
+  "core": "C0s1 s1n3 s1n5\nC1s1 BUS1 0\nSa0s1 IN s1n3\nSb0s1 s1n3 BUS1\nSa1s1 s1n5 BUS1\nSb1s1 s1n5 0\nL1s2 BUS1 s2n13\nL2s2 OUT s2n16\nSb2s2 0 s2n16\nSa1s2 s2n13 s2n16\nC1s2 0 s2n13\n",
+  "eff": 96.792,
+  "worst": 93.84,
+  "n": 11,
+  "stress": 24.1,
+  "duty": 0.1287,
+  "found": [
+   "V90_9/s3"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s1"
+  ],
+  "match": null,
+  "kept": "C0s1 s1n3 s1n5\nSa0s1 IN s1n3\nSb0s1 s1n3 BUS1\nSa1s1 s1n5 BUS1\nSb1s1 s1n5 0\nL1s2 BUS1 s2n13\nL2s2 OUT s2n16\nSb2s2 0 s2n16\nSa1s2 s2n13 s2n16\nC1s2 0 s2n13"
+ },
+ {
+  "core": "C0s1 BUS1 0\nSb0s1 s1n3 0\nSa0s1 IN s1n3\nL0s1 s1n3 BUS1\nSa0s2 BUS1 s2n21\nC4s2 0 s2n17\nSa1s2 s2n17 s2n21\nL0s2 OUT s2n21\nSb2s2 0 s2n21\nSb3s2 BUS1 s2n17\n",
+  "eff": 96.752,
+  "worst": 94.092,
+  "n": 10,
+  "stress": 48.0,
+  "duty": 0.2519,
+  "found": [
+   "V90_7/s2"
+  ],
+  "dup": [
+   "Cx2:0-BUS1",
+   "Sax2:BUS1-s2n21"
+  ],
+  "drop": [
+   "C0s1",
+   "C4s2"
+  ],
+  "match": "buckcap_buck_hia",
+  "kept": "Sb0s1 s1n3 0\nSa0s1 IN s1n3\nL0s1 s1n3 BUS1\nSa0s2 BUS1 s2n21\nSa1s2 BUS1 s2n21\nL0s2 OUT s2n21\nSb2s2 0 s2n21"
+ },
+ {
+  "core": "Sa0s1 IN s1n12\nSb0s1 s1n12 s1n14\nSb1s1 0 s1n13\nC0s1 s1n12 s1n13\nC1s1 0 s1n14\nSa1s1 s1n14 s1n15\nSb2s1 0 s1n15\nL0s1 BUS1 s1n15\nSa2s1 s1n13 s1n15\nC2s1 0 BUS1\nSb0s2 BUS1 s2n9\nSa1s2 0 s2n9\nL0s2 OUT s2n9\n",
+  "eff": 96.731,
+  "worst": 93.776,
+  "n": 13,
+  "stress": 24.1,
+  "duty": 0.8463,
+  "found": [
+   "V90_7/s4"
+  ],
+  "dup": [
+   "Sbx2:0-s1n13"
+  ],
+  "drop": [
+   "C2s1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 IN s1n12\nSb0s1 s1n12 s1n14\nSb1s1 0 s1n13\nC0s1 s1n12 s1n13\nC1s1 0 s1n14\nSa1s1 s1n14 s1n13\nSb2s1 0 s1n13\nL0s1 BUS1 s1n13\nSb0s2 BUS1 s2n9\nSa1s2 0 s2n9\nL0s2 OUT s2n9"
+ },
+ {
+  "core": "Sb0s1 s1n8 0\nC1s1 IN BUS1\nSa0s1 IN s1n8\nL0s1 BUS1 s1n8\nL0s2 OUT s2n10\nSa0s2 s2n9 s2n10\nSb0s2 BUS1 s2n9\nC1s2 OUT s2n9\nSb1s2 0 s2n10\nSa1s2 BUS1 s2n10\n",
+  "eff": 96.717,
+  "worst": 94.023,
+  "n": 10,
+  "stress": 48.0,
+  "duty": 0.252,
+  "found": [
+   "V90_6/s4"
+  ],
+  "dup": [
+   "Sax2:BUS1-s2n10"
+  ],
+  "drop": [
+   "C1s1",
+   "C1s2"
+  ],
+  "match": "buckcap_buck_hia",
+  "kept": "Sb0s1 s1n8 0\nSa0s1 IN s1n8\nL0s1 BUS1 s1n8\nL0s2 OUT s2n10\nSa0s2 BUS1 s2n10\nSb1s2 0 s2n10\nSa1s2 BUS1 s2n10"
+ },
+ {
+  "core": "Sa0s1 0 s1n10\nSb1s1 IN s1n10\nL0s1 BUS1 s1n10\nC0s1 0 BUS1\nSb0s2 s2n9 s2n10\nSa0s2 0 s2n10\nSb1s2 BUS1 s2n10\nL0s2 OUT s2n10\nSa1s2 BUS1 s2n9\nC1s2 OUT s2n9\n",
+  "eff": 96.717,
+  "worst": 94.022,
+  "n": 10,
+  "stress": 48.0,
+  "duty": 0.747,
+  "found": [
+   "V90_8/s2"
+  ],
+  "dup": [
+   "Sbx2:BUS1-s2n10"
+  ],
+  "drop": [
+   "C0s1",
+   "C1s2"
+  ],
+  "match": "buckcap_buck_hib",
+  "kept": "Sa0s1 0 s1n10\nSb1s1 IN s1n10\nL0s1 BUS1 s1n10\nSb0s2 BUS1 s2n10\nSa0s2 0 s2n10\nSb1s2 BUS1 s2n10\nL0s2 OUT s2n10"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nC1s1 BUS1 0\nSa0s2 BUS1 s2n1\nSb0s2 s2n1 BUS2\nSa1s2 s2n2 BUS2\nSb1s2 s2n2 0\nC0s2 s2n1 s2n2\nC1s2 BUS2 0\nC0s3 s3n6 BUS2\nL0s3 OUT s3n8\nSb0s3 0 s3n8\nSa0s3 s3n6 s3n8\nSb1s3 0 s3n8\nL1s3 s3n6 BUS2\n",
+  "eff": 96.681,
+  "worst": 93.742,
+  "n": 18,
+  "stress": 24.1,
+  "duty": 0.2581,
+  "found": [
+   "V90R_2/s3"
+  ],
+  "dup": [
+   "Sbx2:0-s3n8"
+  ],
+  "drop": [
+   "C1s1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nSa0s2 BUS1 s2n1\nSb0s2 s2n1 BUS2\nSa1s2 s2n2 BUS2\nSb1s2 s2n2 0\nC0s2 s2n1 s2n2\nC1s2 BUS2 0\nC0s3 s3n6 BUS2\nL0s3 OUT s3n8\nSb0s3 0 s3n8\nSa0s3 s3n6 s3n8\nSb1s3 0 s3n8\nL1s3 s3n6 BUS2"
+ },
+ {
+  "core": "C0s1 IN BUS1\nL0s1 BUS1 s1n9\nSa0s1 IN s1n9\nSb0s1 s1n9 0\nSa0s2 BUS1 s2n8\nSb0s2 0 s2n9\nC0s2 s2n8 s2n9\nL0s2 OUT s2n8\nSa1s2 s2n8 s2n9\nSb1s2 0 s2n8\n",
+  "eff": 96.655,
+  "worst": 93.918,
+  "n": 10,
+  "stress": 48.0,
+  "duty": 0.2521,
+  "found": [
+   "V90_6/s3"
+  ],
+  "dup": [
+   "Sbx2:0-s2n8"
+  ],
+  "drop": [
+   "C0s1"
+  ],
+  "match": "buckcap_buck_hia",
+  "kept": "L0s1 BUS1 s1n9\nSa0s1 IN s1n9\nSb0s1 s1n9 0\nSa0s2 BUS1 s2n8\nSb0s2 0 s2n8\nL0s2 OUT s2n8\nSb1s2 0 s2n8"
+ },
+ {
+  "core": "L0s1 0 s1n10\nSa0s1 s1n9 s1n10\nSb0s1 IN s1n9\nL1s1 BUS1 s1n9\nC0s1 0 BUS1\nC1s1 IN s1n10\nL0s2 OUT s2n10\nSa0s2 0 s2n9\nC0s2 s2n9 s2n10\nL1s2 OUT s2n9\nSb0s2 BUS1 s2n9\nSa2s2 0 s2n10\n",
+  "eff": 96.646,
+  "worst": 94.145,
+  "n": 12,
+  "stress": 48.1,
+  "duty": 0.747,
+  "found": [
+   "V90_8/s3"
+  ],
+  "dup": [],
+  "drop": [
+   "C0s1"
+  ],
+  "match": null,
+  "kept": "L0s1 0 s1n10\nSa0s1 s1n9 s1n10\nSb0s1 IN s1n9\nL1s1 BUS1 s1n9\nC1s1 IN s1n10\nL0s2 OUT s2n10\nSa0s2 0 s2n9\nC0s2 s2n9 s2n10\nL1s2 OUT s2n9\nSb0s2 BUS1 s2n9\nSa2s2 0 s2n10"
+ },
+ {
+  "core": "L0s1 s1n4 BUS1\nSb0s1 s1n4 0\nSa0s1 s1n4 IN\nSa0s2 0 s2n9\nSb0s2 s2n2 0\nSa1s2 s2n2 BUS1\nC0s2 OUT s2n9\nL0s2 s2n2 OUT\nC1s2 OUT BUS1\nSb1s2 s2n2 s2n9\n",
+  "eff": 96.622,
+  "worst": 93.931,
+  "n": 10,
+  "stress": 48.0,
+  "duty": 0.2522,
+  "found": [
+   "V90_1/s2"
+  ],
+  "dup": [
+   "Sbx2:0-s2n2"
+  ],
+  "drop": [
+   "C0s2",
+   "C1s2"
+  ],
+  "match": "buckcap_buck_hia",
+  "kept": "L0s1 s1n4 BUS1\nSb0s1 s1n4 0\nSa0s1 s1n4 IN\nSb0s2 s2n2 0\nSa1s2 s2n2 BUS1\nL0s2 s2n2 OUT\nSb1s2 s2n2 0"
+ },
+ {
+  "core": "Sa0s1 0 s1n10\nSb0s1 IN s1n10\nL1s1 BUS1 s1n10\nSa0s2 s2n0 0\nC0s2 BUS1 s2n5\nSb0s2 s2n5 0\nL0s2 s2n0 OUT\nSa1s2 s2n0 s2n5\nSb1s2 s2n0 BUS1\n",
+  "eff": 96.616,
+  "worst": 94.024,
+  "n": 9,
+  "stress": 48.0,
+  "duty": 0.7469,
+  "found": [
+   "V90_7/s3"
+  ],
+  "dup": [
+   "Sax2:0-s2n0"
+  ],
+  "drop": [
+   "C0s2"
+  ],
+  "match": "buckcap_buck_hib",
+  "kept": "Sa0s1 0 s1n10\nSb0s1 IN s1n10\nL1s1 BUS1 s1n10\nSa0s2 s2n0 0\nL0s2 s2n0 OUT\nSa1s2 s2n0 0\nSb1s2 s2n0 BUS1"
+ },
+ {
+  "core": "Sb0s1 0 s1n9\nSa1s1 IN s1n9\nL0s1 BUS1 s1n9\nSb0s2 s2n8 s2n9\nSa0s2 0 s2n8\nL0s2 OUT s2n9\nC0s2 BUS1 s2n8\nSa1s2 BUS1 s2n9\nSb1s2 0 s2n9\n",
+  "eff": 96.616,
+  "worst": 94.024,
+  "n": 9,
+  "stress": 48.0,
+  "duty": 0.252,
+  "found": [
+   "V90_8/s4"
+  ],
+  "dup": [
+   "Sbx2:0-s2n9"
+  ],
+  "drop": [
+   "C0s2"
+  ],
+  "match": "buckcap_buck_hia",
+  "kept": "Sb0s1 0 s1n9\nSa1s1 IN s1n9\nL0s1 BUS1 s1n9\nSb0s2 0 s2n9\nL0s2 OUT s2n9\nSa1s2 BUS1 s2n9\nSb1s2 0 s2n9"
+ },
+ {
+  "core": "Sa1s1 IN s1n9\nSb0s1 0 s1n9\nL0s1 BUS1 s1n9\nL0s2 OUT s2n10\nSb0s2 s2n9 s2n10\nSa0s2 BUS1 s2n10\nC0s2 BUS1 s2n9\nSb1s2 0 s2n10\nSa1s2 0 s2n9\n",
+  "eff": 96.616,
+  "worst": 94.024,
+  "n": 9,
+  "stress": 48.0,
+  "duty": 0.252,
+  "found": [
+   "V90_5/s6"
+  ],
+  "dup": [
+   "Sbx2:0-s2n10"
+  ],
+  "drop": [
+   "C0s2"
+  ],
+  "match": "buckcap_buck_hia",
+  "kept": "Sa1s1 IN s1n9\nSb0s1 0 s1n9\nL0s1 BUS1 s1n9\nL0s2 OUT s2n10\nSb0s2 0 s2n10\nSa0s2 BUS1 s2n10\nSb1s2 0 s2n10"
+ },
+ {
+  "core": "Sa0s1 s1n6 0\nSb0s1 IN s1n9\nC0s1 s1n6 s1n9\nSa1s1 s1n9 BUS1\nC1s1 IN BUS1\nL0s1 s1n6 BUS1\nSa0s2 BUS1 s2n9\nL0s2 OUT s2n10\nSa1s2 s2n9 s2n10\nSb0s2 0 s2n10\nC1s2 0 s2n9\n",
+  "eff": 96.593,
+  "worst": 93.518,
+  "n": 11,
+  "stress": 26.0,
+  "duty": 0.145,
+  "found": [
+   "V90_5/s2"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s1",
+   "C1s2"
+  ],
+  "match": null,
+  "kept": "Sa0s1 s1n6 0\nSb0s1 IN s1n9\nC0s1 s1n6 s1n9\nSa1s1 s1n9 BUS1\nL0s1 s1n6 BUS1\nSa0s2 BUS1 s2n9\nL0s2 OUT s2n10\nSa1s2 s2n9 s2n10\nSb0s2 0 s2n10"
+ },
+ {
+  "core": "L0s1 BUS1 s1n10\nSb0s1 s1n9 s1n10\nSa0s1 IN s1n10\nC1s1 BUS1 s1n9\nSb1s1 0 s1n9\nL0s2 OUT s2n10\nSb0s2 s2n9 s2n10\nSa0s2 BUS1 s2n10\nC0s2 BUS1 s2n9\nSb1s2 0 s2n10\nSa1s2 0 s2n9\n",
+  "eff": 96.586,
+  "worst": 93.821,
+  "n": 11,
+  "stress": 48.1,
+  "duty": 0.2521,
+  "found": [
+   "V90_5/s6"
+  ],
+  "dup": [
+   "Sbx2:0-s2n10"
+  ],
+  "drop": [
+   "C0s2",
+   "C1s1"
+  ],
+  "match": "known-comp:STAGE_2/s3",
+  "kept": "L0s1 BUS1 s1n10\nSb0s1 s1n9 s1n10\nSa0s1 IN s1n10\nSb1s1 0 s1n9\nL0s2 OUT s2n10\nSb0s2 0 s2n10\nSa0s2 BUS1 s2n10\nSb1s2 0 s2n10"
+ },
+ {
+  "core": "Sb0s1 IN s1n9\nL0s1 s1n8 s1n11\nSa0s1 0 s1n8\nC0s1 s1n8 s1n9\nSa1s1 s1n9 s1n11\nC1s1 BUS1 s1n11\nSa2s1 BUS1 s1n11\nSa0s2 s2n8 BUS1\nSb0s2 s2n1 s2n8\nC0s2 s2n1 s2n8\nL0s2 OUT s2n8\nL1s2 s2n1 OUT\nSb1s2 s2n1 0\nCbus1 BUS1 0\n",
+  "eff": 96.57,
+  "worst": 93.598,
+  "n": 14,
+  "stress": 26.1,
+  "duty": 0.1449,
+  "found": [
+   "V90_5/s4"
+  ],
+  "dup": [],
+  "drop": [
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "Sb0s1 IN s1n9\nL0s1 s1n8 s1n11\nSa0s1 0 s1n8\nC0s1 s1n8 s1n9\nSa1s1 s1n9 s1n11\nC1s1 BUS1 s1n11\nSa2s1 BUS1 s1n11\nSa0s2 s2n8 BUS1\nSb0s2 s2n1 s2n8\nC0s2 s2n1 s2n8\nL0s2 OUT s2n8\nL1s2 s2n1 OUT\nSb1s2 s2n1 0"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nC1s1 BUS1 0\nSa0s2 BUS1 s2n1\nSb0s2 s2n1 BUS2\nSa1s2 s2n2 BUS2\nSb1s2 s2n2 0\nC0s2 s2n1 s2n2\nL0s3 OUT s3n10\nSa0s3 s3n9 s3n10\nSb0s3 BUS2 s3n9\nC1s3 OUT s3n9\nSb1s3 0 s3n10\nC2s3 BUS2 s3n9\n",
+  "eff": 96.565,
+  "worst": 93.581,
+  "n": 17,
+  "stress": 24.1,
+  "duty": 0.2584,
+  "found": [
+   "V90R_2/s3"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nSa0s2 BUS1 s2n1\nSb0s2 s2n1 BUS2\nSa1s2 s2n2 BUS2\nSb1s2 s2n2 0\nC0s2 s2n1 s2n2\nL0s3 OUT s3n10\nSa0s3 s3n9 s3n10\nSb0s3 BUS2 s3n9\nC1s3 OUT s3n9\nSb1s3 0 s3n10\nC2s3 BUS2 s3n9"
+ },
+ {
+  "core": "Sb0s1 0 s1n9\nSa0s1 IN s1n8\nL0s1 BUS1 s1n8\nSb1s1 s1n8 s1n9\nL0s2 OUT s2n10\nSa0s2 s2n9 s2n10\nSb0s2 BUS1 s2n9\nC1s2 OUT s2n9\nSb1s2 0 s2n10\nSa1s2 BUS1 s2n10\nCbus1 BUS1 0\n",
+  "eff": 96.561,
+  "worst": 93.846,
+  "n": 11,
+  "stress": 48.1,
+  "duty": 0.2521,
+  "found": [
+   "V90_6/s3"
+  ],
+  "dup": [
+   "Sax2:BUS1-s2n10"
+  ],
+  "drop": [
+   "C1s2",
+   "Cbus1"
+  ],
+  "match": "known-comp:STAGE_2/s3",
+  "kept": "Sb0s1 0 s1n9\nSa0s1 IN s1n8\nL0s1 BUS1 s1n8\nSb1s1 s1n8 s1n9\nL0s2 OUT s2n10\nSa0s2 BUS1 s2n10\nSb1s2 0 s2n10\nSa1s2 BUS1 s2n10"
+ },
+ {
+  "core": "Sa0s1 0 s1n11\nSb0s1 0 s1n10\nSa1s1 IN s1n10\nC0s1 BUS1 s1n11\nL0s1 BUS1 s1n10\nSb1s1 s1n10 s1n11\nSb0s2 0 s2n10\nL0s2 OUT s2n10\nC0s2 BUS1 OUT\nSa0s2 BUS1 s2n10\n",
+  "eff": 96.548,
+  "worst": 93.666,
+  "n": 10,
+  "stress": 48.0,
+  "duty": 0.2523,
+  "found": [
+   "V90_3/s2"
+  ],
+  "dup": [
+   "Sbx2:0-s1n10"
+  ],
+  "drop": [
+   "C0s1",
+   "C0s2"
+  ],
+  "match": "buckcap_buck_hia",
+  "kept": "Sb0s1 0 s1n10\nSa1s1 IN s1n10\nL0s1 BUS1 s1n10\nSb1s1 s1n10 0\nSb0s2 0 s2n10\nL0s2 OUT s2n10\nSa0s2 BUS1 s2n10"
+ },
+ {
+  "core": "Sa0s1 0 s1n11\nSb0s1 IN s1n10\nSb1s1 s1n9 s1n10\nC0s1 s1n9 s1n11\nSa1s1 0 s1n10\nL0s1 BUS1 s1n10\nC1s1 0 BUS1\nL0s2 OUT s2n11\nSa0s2 0 s2n11\nSb1s2 BUS1 s2n11\n",
+  "eff": 96.524,
+  "worst": 93.66,
+  "n": 10,
+  "stress": 48.0,
+  "duty": 0.7466,
+  "found": [
+   "V90_7/s4"
+  ],
+  "dup": [],
+  "drop": [
+   "C0s1",
+   "C1s1",
+   "Sa0s1",
+   "Sb1s1"
+  ],
+  "match": "buckcap_buck_hib",
+  "kept": "Sb0s1 IN s1n10\nSa1s1 0 s1n10\nL0s1 BUS1 s1n10\nL0s2 OUT s2n11\nSa0s2 0 s2n11\nSb1s2 BUS1 s2n11"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nC1s1 BUS1 0\nSb0s2 0 s2n11\nC0s2 OUT s2n9\nSa0s2 s2n9 s2n10\nL0s2 BUS1 s2n9\nL1s2 OUT s2n11\nSa1s2 s2n10 s2n11\n",
+  "eff": 96.505,
+  "worst": 93.311,
+  "n": 12,
+  "stress": 24.1,
+  "duty": 0.1292,
+  "found": [
+   "V90_9/s2"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nSb0s2 0 s2n11\nC0s2 OUT s2n9\nSa0s2 s2n9 s2n10\nL0s2 BUS1 s2n9\nL1s2 OUT s2n11\nSa1s2 s2n10 s2n11"
+ },
+ {
+  "core": "L1s1 BUS1 s1n12\nSa1s1 IN s1n12\nSb0s1 0 s1n12\nSa0s2 BUS1 s2n21\nC4s2 0 s2n17\nSa1s2 s2n17 s2n21\nL0s2 OUT s2n21\nSb2s2 0 s2n21\nSb3s2 BUS1 s2n17\n",
+  "eff": 96.483,
+  "worst": 93.755,
+  "n": 9,
+  "stress": 48.0,
+  "duty": 0.2522,
+  "found": [
+   "V90_7/s2"
+  ],
+  "dup": [
+   "Sax2:BUS1-s2n21"
+  ],
+  "drop": [
+   "C4s2"
+  ],
+  "match": "buckcap_buck_hia",
+  "kept": "L1s1 BUS1 s1n12\nSa1s1 IN s1n12\nSb0s1 0 s1n12\nSa0s2 BUS1 s2n21\nSa1s2 BUS1 s2n21\nL0s2 OUT s2n21\nSb2s2 0 s2n21"
+ },
+ {
+  "core": "Sb0s1 IN s1n9\nL0s1 BUS1 s1n9\nSa1s1 0 s1n9\nC0s1 0 BUS1\nSa0s2 BUS1 s2n16\nL0s2 s2n14 s2n16\nSb0s2 0 s2n15\nSb1s2 s2n15 s2n16\nSa1s2 s2n14 s2n18\nSb2s2 0 s2n18\nSa2s2 s2n14 s2n17\nL1s2 OUT s2n18\nL2s2 OUT s2n17\nSb3s2 0 s2n17\nC0s2 0 s2n14\n",
+  "eff": 96.476,
+  "worst": 94.296,
+  "n": 15,
+  "stress": 48.0,
+  "duty": 0.3038,
+  "found": [
+   "V90_8/s3"
+  ],
+  "dup": [
+   "Sax2:s2n14-s2n17",
+   "Sbx2:0-s2n17",
+   "Lx2:OUT-s2n17"
+  ],
+  "drop": [
+   "C0s1"
+  ],
+  "match": null,
+  "kept": "Sb0s1 IN s1n9\nL0s1 BUS1 s1n9\nSa1s1 0 s1n9\nSa0s2 BUS1 s2n16\nL0s2 s2n14 s2n16\nSb0s2 0 s2n15\nSb1s2 s2n15 s2n16\nSa1s2 s2n14 s2n17\nSb2s2 0 s2n17\nSa2s2 s2n14 s2n17\nL1s2 OUT s2n17\nL2s2 OUT s2n17\nSb3s2 0 s2n17\nC0s2 0 s2n14"
+ },
+ {
+  "core": "Sb0s1 s1n9 s1n10\nSa0s1 0 s1n9\nL1s1 BUS1 s1n10\nSb1s1 IN s1n9\nSa1s1 0 s1n10\nC0s1 0 BUS1\nL0s2 OUT s2n11\nSa0s2 0 s2n11\nSb1s2 BUS1 s2n11\n",
+  "eff": 96.468,
+  "worst": 93.598,
+  "n": 9,
+  "stress": 48.0,
+  "duty": 0.7466,
+  "found": [
+   "STAGE_2/s2"
+  ],
+  "dup": [
+   "Sax2:0-s1n10"
+  ],
+  "drop": [
+   "C0s1"
+  ],
+  "match": "buckcap_buck_hib",
+  "kept": "Sa0s1 0 s1n10\nL1s1 BUS1 s1n10\nSb1s1 IN s1n10\nSa1s1 0 s1n10\nL0s2 OUT s2n11\nSa0s2 0 s2n11\nSb1s2 BUS1 s2n11"
+ },
+ {
+  "core": "C0s1 0 BUS1\nSb0s1 IN s1n10\nL1s1 BUS1 s1n9\nSa0s1 0 s1n10\nSb1s1 s1n9 s1n10\nSa1s1 0 s1n9\nSa0s2 0 s2n9\nL0s2 s2n9 OUT\nSb1s2 BUS1 s2n9\n",
+  "eff": 96.468,
+  "worst": 93.598,
+  "n": 9,
+  "stress": 48.0,
+  "duty": 0.7466,
+  "found": [
+   "V90_6/s2"
+  ],
+  "dup": [
+   "Sax2:0-s1n10"
+  ],
+  "drop": [
+   "C0s1"
+  ],
+  "match": "buckcap_buck_hib",
+  "kept": "Sb0s1 IN s1n10\nL1s1 BUS1 s1n10\nSa0s1 0 s1n10\nSa1s1 0 s1n10\nSa0s2 0 s2n9\nL0s2 s2n9 OUT\nSb1s2 BUS1 s2n9"
+ },
+ {
+  "core": "Sa0s1 s1n5 s1n9\nL0s1 BUS1 s1n5\nSb0s1 0 s1n5\nC0s1 BUS1 IN\nC1s1 0 s1n9\nSb1s1 s1n9 IN\nSb0s2 0 s2n10\nL0s2 OUT s2n10\nSa1s2 BUS1 s2n10\n",
+  "eff": 96.467,
+  "worst": 93.58,
+  "n": 9,
+  "stress": 48.0,
+  "duty": 0.2524,
+  "found": [
+   "V90_1/s2"
+  ],
+  "dup": [],
+  "drop": [
+   "C0s1"
+  ],
+  "match": "known-comp:V90_7/s2",
+  "kept": "Sa0s1 s1n5 s1n9\nL0s1 BUS1 s1n5\nSb0s1 0 s1n5\nC1s1 0 s1n9\nSb1s1 s1n9 IN\nSb0s2 0 s2n10\nL0s2 OUT s2n10\nSa1s2 BUS1 s2n10"
+ },
+ {
+  "core": "Sa0s1 0 s1n9\nC0s1 IN BUS1\nSa1s1 IN s1n3\nC1s1 0 s1n3\nSb0s1 s1n3 s1n9\nL0s1 BUS1 s1n9\nSb1s2 BUS1 s2n9\nL0s2 OUT s2n9\nSa0s2 0 s2n9\n",
+  "eff": 96.467,
+  "worst": 93.58,
+  "n": 9,
+  "stress": 48.0,
+  "duty": 0.7466,
+  "found": [
+   "V90_4/s3"
+  ],
+  "dup": [],
+  "drop": [
+   "C0s1"
+  ],
+  "match": "known-comp:V90_6/s2",
+  "kept": "Sa0s1 0 s1n9\nSa1s1 IN s1n3\nC1s1 0 s1n3\nSb0s1 s1n3 s1n9\nL0s1 BUS1 s1n9\nSb1s2 BUS1 s2n9\nL0s2 OUT s2n9\nSa0s2 0 s2n9"
+ },
+ {
+  "core": "L0s1 BUS1 s1n10\nSb0s1 0 s1n10\nSa0s1 IN s1n9\nC0s1 0 BUS1\nC1s1 s1n9 s1n10\nSb1s1 s1n9 s1n10\nL0s2 s2n1 OUT\nSb0s2 s2n1 0\nSa0s2 BUS1 s2n1\n",
+  "eff": 96.467,
+  "worst": 93.58,
+  "n": 9,
+  "stress": 48.0,
+  "duty": 0.2524,
+  "found": [
+   "V90_3/s3"
+  ],
+  "dup": [],
+  "drop": [
+   "C0s1"
+  ],
+  "match": null,
+  "kept": "L0s1 BUS1 s1n10\nSb0s1 0 s1n10\nSa0s1 IN s1n9\nC1s1 s1n9 s1n10\nSb1s1 s1n9 s1n10\nL0s2 s2n1 OUT\nSb0s2 s2n1 0\nSa0s2 BUS1 s2n1"
+ },
+ {
+  "core": "Sa0s1 s1n9 s1n10\nL0s1 BUS1 s1n9\nSb0s1 0 s1n9\nC0s1 IN BUS1\nC1s1 0 s1n10\nSb1s1 IN s1n10\nL0s2 s2n1 OUT\nSa0s2 s2n1 BUS1\nSb0s2 s2n1 0\n",
+  "eff": 96.467,
+  "worst": 93.58,
+  "n": 9,
+  "stress": 48.0,
+  "duty": 0.2524,
+  "found": [
+   "V90_5/s2"
+  ],
+  "dup": [],
+  "drop": [
+   "C0s1"
+  ],
+  "match": "known-comp:V90_7/s2",
+  "kept": "Sa0s1 s1n9 s1n10\nL0s1 BUS1 s1n9\nSb0s1 0 s1n9\nC1s1 0 s1n10\nSb1s1 IN s1n10\nL0s2 s2n1 OUT\nSa0s2 s2n1 BUS1\nSb0s2 s2n1 0"
+ },
+ {
+  "core": "C0s1 0 s1n10\nSb0s1 s1n9 s1n10\nSa0s1 IN s1n10\nL0s1 BUS1 s1n9\nSa1s1 0 s1n9\nC1s1 0 BUS1\nL0s2 OUT s2n10\nSb0s2 BUS1 s2n10\nSa0s2 0 s2n10\n",
+  "eff": 96.467,
+  "worst": 93.58,
+  "n": 9,
+  "stress": 48.0,
+  "duty": 0.7466,
+  "found": [
+   "V90_8/s3"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s1"
+  ],
+  "match": "known-comp:V90_6/s2",
+  "kept": "C0s1 0 s1n10\nSb0s1 s1n9 s1n10\nSa0s1 IN s1n10\nL0s1 BUS1 s1n9\nSa1s1 0 s1n9\nL0s2 OUT s2n10\nSb0s2 BUS1 s2n10\nSa0s2 0 s2n10"
+ },
+ {
+  "core": "Sb0s1 s1n9 s1n10\nSa0s1 IN s1n10\nC0s1 0 BUS1\nSa1s1 0 s1n9\nC1s1 IN s1n10\nL0s1 BUS1 s1n9\nSb0s2 BUS1 s2n9\nSa0s2 0 s2n9\nL0s2 OUT s2n9\n",
+  "eff": 96.467,
+  "worst": 93.58,
+  "n": 9,
+  "stress": 48.0,
+  "duty": 0.7466,
+  "found": [
+   "V90_9/s3"
+  ],
+  "dup": [],
+  "drop": [
+   "C0s1"
+  ],
+  "match": null,
+  "kept": "Sb0s1 s1n9 s1n10\nSa0s1 IN s1n10\nSa1s1 0 s1n9\nC1s1 IN s1n10\nL0s1 BUS1 s1n9\nSb0s2 BUS1 s2n9\nSa0s2 0 s2n9\nL0s2 OUT s2n9"
+ },
+ {
+  "core": "L0s1 BUS1 s1n10\nSa0s1 0 s1n10\nC0s1 IN BUS1\nSa1s1 IN s1n3\nSb0s1 s1n3 s1n10\nC1s1 s1n3 0\nSb0s2 BUS1 s2n9\nL0s2 OUT s2n9\nSa0s2 0 s2n9\n",
+  "eff": 96.467,
+  "worst": 93.58,
+  "n": 9,
+  "stress": 48.0,
+  "duty": 0.7466,
+  "found": [
+   "V90_4/s7"
+  ],
+  "dup": [],
+  "drop": [
+   "C0s1"
+  ],
+  "match": "known-comp:V90_6/s2",
+  "kept": "L0s1 BUS1 s1n10\nSa0s1 0 s1n10\nSa1s1 IN s1n3\nSb0s1 s1n3 s1n10\nC1s1 s1n3 0\nSb0s2 BUS1 s2n9\nL0s2 OUT s2n9\nSa0s2 0 s2n9"
+ },
+ {
+  "core": "C0s1 s1n9 s1n10\nSb0s1 0 s1n9\nC1s1 0 BUS1\nL0s1 BUS1 s1n9\nSb1s1 s1n9 s1n10\nSa0s1 IN s1n10\nL0s2 OUT s2n10\nSa0s2 BUS1 s2n10\nSb0s2 0 s2n10\n",
+  "eff": 96.467,
+  "worst": 93.58,
+  "n": 9,
+  "stress": 48.0,
+  "duty": 0.2524,
+  "found": [
+   "V90_4/s7"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s1"
+  ],
+  "match": null,
+  "kept": "C0s1 s1n9 s1n10\nSb0s1 0 s1n9\nL0s1 BUS1 s1n9\nSb1s1 s1n9 s1n10\nSa0s1 IN s1n10\nL0s2 OUT s2n10\nSa0s2 BUS1 s2n10\nSb0s2 0 s2n10"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nC1s1 BUS1 0\nSa0s2 0 s2n10\nC1s2 s2n10 s2n11\nL0s2 OUT s2n10\nL1s2 OUT s2n10\nSb0s2 BUS1 s2n11\nL2s2 0 s2n11\n",
+  "eff": 96.454,
+  "worst": 93.428,
+  "n": 12,
+  "stress": 27.0,
+  "duty": 0.8877,
+  "found": [
+   "V90_4/s4"
+  ],
+  "dup": [
+   "Lx2:OUT-s2n10"
+  ],
+  "drop": [
+   "C1s1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nSa0s2 0 s2n10\nC1s2 s2n10 s2n11\nL0s2 OUT s2n10\nL1s2 OUT s2n10\nSb0s2 BUS1 s2n11\nL2s2 0 s2n11"
+ },
+ {
+  "core": "Sb0s1 IN s1n9\nC0s1 0 BUS1\nSa0s1 0 s1n9\nL0s1 BUS1 s1n10\nC1s1 s1n9 s1n10\nSa1s1 0 s1n10\nSb0s2 BUS1 s2n9\nSa0s2 0 s2n9\nL0s2 OUT s2n9\n",
+  "eff": 96.436,
+  "worst": 93.483,
+  "n": 9,
+  "stress": 48.0,
+  "duty": 0.7465,
+  "found": [
+   "V90_4/s3"
+  ],
+  "dup": [],
+  "drop": [
+   "C0s1"
+  ],
+  "match": null,
+  "kept": "Sb0s1 IN s1n9\nSa0s1 0 s1n9\nL0s1 BUS1 s1n10\nC1s1 s1n9 s1n10\nSa1s1 0 s1n10\nSb0s2 BUS1 s2n9\nSa0s2 0 s2n9\nL0s2 OUT s2n9"
+ },
+ {
+  "core": "Sb0s1 IN s1n7\nC0s1 BUS1 0\nSa0s1 0 s1n7\nC1s1 s1n5 s1n7\nSa1s1 0 s1n5\nL0s1 BUS1 s1n5\nSa1s2 s2n3 0\nSb0s2 BUS1 s2n3\nL0s2 OUT s2n3\n",
+  "eff": 96.436,
+  "worst": 93.483,
+  "n": 9,
+  "stress": 48.0,
+  "duty": 0.7465,
+  "found": [
+   "V90_6/s2"
+  ],
+  "dup": [],
+  "drop": [
+   "C0s1"
+  ],
+  "match": null,
+  "kept": "Sb0s1 IN s1n7\nSa0s1 0 s1n7\nC1s1 s1n5 s1n7\nSa1s1 0 s1n5\nL0s1 BUS1 s1n5\nSa1s2 s2n3 0\nSb0s2 BUS1 s2n3\nL0s2 OUT s2n3"
+ },
+ {
+  "core": "L0s1 s1n5 s1n8\nSb0s1 BUS1 s1n8\nSa0s1 s1n5 IN\nC0s1 IN s1n8\nSb1s1 0 s1n5\nSa0s2 BUS1 s2n21\nC4s2 0 s2n17\nSa1s2 s2n17 s2n21\nL0s2 OUT s2n21\nSb2s2 0 s2n21\nSb3s2 BUS1 s2n17\nCbus1 BUS1 0\n",
+  "eff": 96.409,
+  "worst": 93.507,
+  "n": 12,
+  "stress": 48.0,
+  "duty": 0.2522,
+  "found": [
+   "V90_7/s2"
+  ],
+  "dup": [
+   "Sax2:BUS1-s2n21",
+   "Cx2:0-BUS1"
+  ],
+  "drop": [
+   "C4s2",
+   "Cbus1"
+  ],
+  "match": "known-comp:V90_3/s2",
+  "kept": "L0s1 s1n5 s1n8\nSb0s1 BUS1 s1n8\nSa0s1 s1n5 IN\nC0s1 IN s1n8\nSb1s1 0 s1n5\nSa0s2 BUS1 s2n21\nSa1s2 BUS1 s2n21\nL0s2 OUT s2n21\nSb2s2 0 s2n21"
+ },
+ {
+  "core": "Sb0s1 s1n0 IN\nC0s1 0 BUS1\nSa0s1 s1n0 BUS1\nC1s1 s1n0 s1n3\nSa1s1 s1n3 0\nL0s1 s1n3 BUS1\nL0s2 OUT s2n11\nSa0s2 0 s2n11\nSb1s2 BUS1 s2n11\n",
+  "eff": 96.359,
+  "worst": 93.265,
+  "n": 9,
+  "stress": 37.5,
+  "duty": 0.7141,
+  "found": [
+   "V90_7/s4"
+  ],
+  "dup": [],
+  "drop": [
+   "C0s1"
+  ],
+  "match": null,
+  "kept": "Sb0s1 s1n0 IN\nSa0s1 s1n0 BUS1\nC1s1 s1n0 s1n3\nSa1s1 s1n3 0\nL0s1 s1n3 BUS1\nL0s2 OUT s2n11\nSa0s2 0 s2n11\nSb1s2 BUS1 s2n11"
+ },
+ {
+  "core": "Sb0s1 s1n12 s1n14\nSb1s1 0 s1n13\nC0s1 s1n14 s1n15\nL0s1 s1n13 s1n14\nSa0s1 IN s1n13\nC1s1 IN s1n12\nSa1s1 s1n12 s1n15\nSb2s1 0 s1n15\nL1s1 BUS1 s1n15\nSb0s2 BUS1 s2n9\nL0s2 OUT s2n9\nSa0s2 s2n9 s2n10\nSa1s2 0 s2n9\nSa2s2 0 s2n10\nCbus1 BUS1 0\n",
+  "eff": 96.34,
+  "worst": 93.145,
+  "n": 15,
+  "stress": 48.0,
+  "duty": 0.8216,
+  "found": [
+   "V90_9/s3"
+  ],
+  "dup": [],
+  "drop": [
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "Sb0s1 s1n12 s1n14\nSb1s1 0 s1n13\nC0s1 s1n14 s1n15\nL0s1 s1n13 s1n14\nSa0s1 IN s1n13\nC1s1 IN s1n12\nSa1s1 s1n12 s1n15\nSb2s1 0 s1n15\nL1s1 BUS1 s1n15\nSb0s2 BUS1 s2n9\nL0s2 OUT s2n9\nSa0s2 s2n9 s2n10\nSa1s2 0 s2n9\nSa2s2 0 s2n10"
+ },
+ {
+  "core": "Sa0s1 0 s1n17\nSb0s1 IN s1n14\nSb1s1 s1n14 s1n16\nC0s1 s1n14 s1n16\nC1s1 s1n13 s1n14\nL1s1 BUS1 s1n17\nSb2s1 s1n13 s1n17\nSa3s1 s1n13 s1n16\nSa0s2 0 s2n10\nSb0s2 BUS1 s2n10\nL0s2 OUT s2n10\nCbus1 BUS1 0\n",
+  "eff": 96.332,
+  "worst": 93.382,
+  "n": 12,
+  "stress": 48.0,
+  "duty": 0.7464,
+  "found": [
+   "V90_9/s6"
+  ],
+  "dup": [],
+  "drop": [
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 0 s1n17\nSb0s1 IN s1n14\nSb1s1 s1n14 s1n16\nC0s1 s1n14 s1n16\nC1s1 s1n13 s1n14\nL1s1 BUS1 s1n17\nSb2s1 s1n13 s1n17\nSa3s1 s1n13 s1n16\nSa0s2 0 s2n10\nSb0s2 BUS1 s2n10\nL0s2 OUT s2n10"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nC1s1 BUS1 0\nSa0s2 BUS1 s2n13\nSb0s2 0 s2n13\nL0s2 s2n12 s2n13\nSb1s2 0 s2n14\nSa1s2 s2n12 s2n14\nL1s2 OUT s2n14\nC1s2 0 s2n12\n",
+  "eff": 96.331,
+  "worst": 93.108,
+  "n": 13,
+  "stress": 24.1,
+  "duty": 0.358,
+  "found": [
+   "V90_5/s5"
+  ],
+  "dup": [
+   "Sax2:BUS1-s1n2",
+   "Sbx2:0-s1n2"
+  ],
+  "drop": [
+   "C1s1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nSa0s2 BUS1 s1n2\nSb0s2 0 s1n2\nL0s2 s2n12 s1n2\nSb1s2 0 s2n14\nSa1s2 s2n12 s2n14\nL1s2 OUT s2n14\nC1s2 0 s2n12"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nC1s1 BUS1 0\nSb0s2 BUS1 s2n9\nL0s2 BUS2 s2n9\nSa0s2 0 s2n9\nC3s2 0 BUS2\nSb0s3 BUS2 s3n9\nL1s3 OUT s3n9\nSa0s3 0 s3n9\n",
+  "eff": 96.331,
+  "worst": 93.108,
+  "n": 13,
+  "stress": 24.1,
+  "duty": 0.641,
+  "found": [
+   "V90R_2/s2"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nSb0s2 BUS1 s2n9\nL0s2 BUS2 s2n9\nSa0s2 0 s2n9\nC3s2 0 BUS2\nSb0s3 BUS2 s3n9\nL1s3 OUT s3n9\nSa0s3 0 s3n9"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nC0s2 OUT BUS1\nSb0s2 s2n7 BUS1\nSb1s2 OUT s2n9\nC1s2 s2n7 s2n9\nSa0s2 0 s2n7\nL0s2 0 s2n9\nCbus1 BUS1 0\n",
+  "eff": 96.322,
+  "worst": 94.482,
+  "n": 12,
+  "stress": 24.1,
+  "duty": 0.1277,
+  "found": [
+   "_V95N_CTL/s2"
+  ],
+  "dup": [],
+  "drop": [
+   "C0s2",
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nSb0s2 s2n7 BUS1\nSb1s2 OUT s2n9\nC1s2 s2n7 s2n9\nSa0s2 0 s2n7\nL0s2 0 s2n9"
+ },
+ {
+  "core": "Sb0s1 s1n9 s1n10\nC0s1 s1n9 s1n10\nL0s1 BUS1 s1n10\nSb1s1 0 s1n9\nC1s1 BUS1 0\nSa0s1 IN s1n9\nL0s2 OUT s2n10\nSb0s2 0 s2n10\nSa0s2 BUS1 s2n10\nSb1s2 s2n9 s2n10\nC1s2 0 s2n9\n",
+  "eff": 96.299,
+  "worst": 93.321,
+  "n": 11,
+  "stress": 48.0,
+  "duty": 0.2525,
+  "found": [
+   "V90_8/s2"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s1",
+   "C1s2",
+   "Sb1s2"
+  ],
+  "match": null,
+  "kept": "Sb0s1 s1n9 s1n10\nC0s1 s1n9 s1n10\nL0s1 BUS1 s1n10\nSb1s1 0 s1n9\nSa0s1 IN s1n9\nL0s2 OUT s2n10\nSb0s2 0 s2n10\nSa0s2 BUS1 s2n10"
+ },
+ {
+  "core": "Sa0s1 IN s1n9\nSb1s1 0 s1n9\nL1s1 BUS1 s1n9\nSb0s2 0 s2n9\nSa0s2 s2n9 s2n10\nSb1s2 BUS1 s2n10\nC0s2 BUS1 s2n10\nL0s2 OUT s2n9\nC2s2 0 s2n10\n",
+  "eff": 96.297,
+  "worst": 93.321,
+  "n": 9,
+  "stress": 48.0,
+  "duty": 0.2525,
+  "found": [
+   "V90_3/s3"
+  ],
+  "dup": [],
+  "drop": [],
+  "match": null,
+  "kept": "Sa0s1 IN s1n9\nSb1s1 0 s1n9\nL1s1 BUS1 s1n9\nSb0s2 0 s2n9\nSa0s2 s2n9 s2n10\nSb1s2 BUS1 s2n10\nC0s2 BUS1 s2n10\nL0s2 OUT s2n9\nC2s2 0 s2n10"
+ },
+ {
+  "core": "L0s1 BUS1 s1n10\nSa0s1 IN s1n10\nSb0s1 0 s1n10\nSa0s2 s2n9 s2n10\nSb0s2 0 s2n10\nL0s2 OUT s2n10\nSb1s2 BUS1 s2n9\nC1s2 BUS1 s2n9\nC2s2 0 s2n9\n",
+  "eff": 96.297,
+  "worst": 93.321,
+  "n": 9,
+  "stress": 48.0,
+  "duty": 0.2525,
+  "found": [
+   "V90_5/s3"
+  ],
+  "dup": [],
+  "drop": [],
+  "match": null,
+  "kept": "L0s1 BUS1 s1n10\nSa0s1 IN s1n10\nSb0s1 0 s1n10\nSa0s2 s2n9 s2n10\nSb0s2 0 s2n10\nL0s2 OUT s2n10\nSb1s2 BUS1 s2n9\nC1s2 BUS1 s2n9\nC2s2 0 s2n9"
+ },
+ {
+  "core": "Sb0s1 s1n9 s1n10\nC0s1 s1n9 s1n10\nL0s1 BUS1 s1n10\nSb1s1 0 s1n9\nC1s1 BUS1 0\nSa0s1 IN s1n9\nSa0s2 BUS1 s2n9\nL0s2 OUT s2n9\nSb0s2 0 s2n9\n",
+  "eff": 96.297,
+  "worst": 93.321,
+  "n": 9,
+  "stress": 48.0,
+  "duty": 0.2525,
+  "found": [
+   "V90_8/s2"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s1"
+  ],
+  "match": null,
+  "kept": "Sb0s1 s1n9 s1n10\nC0s1 s1n9 s1n10\nL0s1 BUS1 s1n10\nSb1s1 0 s1n9\nSa0s1 IN s1n9\nSa0s2 BUS1 s2n9\nL0s2 OUT s2n9\nSb0s2 0 s2n9"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 0\nL0s1 s1n1 BUS1\nSb0s2 BUS1 s2n9\nL0s2 OUT s2n10\nSb1s2 0 s2n10\nSa0s2 s2n9 s2n10\nC1s2 0 s2n9\nC2s2 BUS1 s2n9\n",
+  "eff": 96.297,
+  "worst": 93.321,
+  "n": 9,
+  "stress": 48.0,
+  "duty": 0.2525,
+  "found": [
+   "V90_8/s4"
+  ],
+  "dup": [],
+  "drop": [],
+  "match": null,
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 0\nL0s1 s1n1 BUS1\nSb0s2 BUS1 s2n9\nL0s2 OUT s2n10\nSb1s2 0 s2n10\nSa0s2 s2n9 s2n10\nC1s2 0 s2n9\nC2s2 BUS1 s2n9"
+ },
+ {
+  "core": "Sa0s1 IN s1n9\nC0s1 BUS1 s1n8\nSb0s1 BUS1 s1n8\nL0s1 s1n8 s1n9\nSb1s1 0 s1n9\nC1s1 IN BUS1\nSb0s2 s2n9 0\nL0s2 OUT s2n9\nSa0s2 BUS1 s2n9\n",
+  "eff": 96.297,
+  "worst": 93.321,
+  "n": 9,
+  "stress": 48.0,
+  "duty": 0.2525,
+  "found": [
+   "V90_5/s5"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s1"
+  ],
+  "match": "known-comp:STAGE_2/s3",
+  "kept": "Sa0s1 IN s1n9\nC0s1 BUS1 s1n8\nSb0s1 BUS1 s1n8\nL0s1 s1n8 s1n9\nSb1s1 0 s1n9\nSb0s2 s2n9 0\nL0s2 OUT s2n9\nSa0s2 BUS1 s2n9"
+ },
+ {
+  "core": "Sb0s1 0 s1n9\nC0s1 BUS1 s1n10\nSb1s1 s1n10 s1n11\nSa0s1 IN s1n9\nL1s1 BUS1 s1n9\nSa1s1 s1n9 s1n11\nSb0s2 BUS1 s2n9\nL0s2 OUT s2n10\nSb1s2 0 s2n10\nSa0s2 s2n9 s2n10\nC1s2 0 s2n9\nC2s2 BUS1 s2n9\n",
+  "eff": 96.295,
+  "worst": 93.32,
+  "n": 12,
+  "stress": 48.0,
+  "duty": 0.2525,
+  "found": [
+   "V90_8/s4"
+  ],
+  "dup": [],
+  "drop": [
+   "C0s1",
+   "Sa1s1",
+   "Sb1s1"
+  ],
+  "match": null,
+  "kept": "Sb0s1 0 s1n9\nSa0s1 IN s1n9\nL1s1 BUS1 s1n9\nSb0s2 BUS1 s2n9\nL0s2 OUT s2n10\nSb1s2 0 s2n10\nSa0s2 s2n9 s2n10\nC1s2 0 s2n9\nC2s2 BUS1 s2n9"
+ },
+ {
+  "core": "C0s1 IN BUS1\nSb0s1 0 s1n9\nC1s1 s1n9 s1n10\nSa0s1 IN s1n10\nSb1s1 0 s1n10\nL0s1 BUS1 s1n9\nSa0s2 s2n8 BUS1\nC0s2 s2n1 s2n8\nL0s2 OUT s2n8\nL1s2 s2n1 OUT\nSb1s2 s2n1 0\n",
+  "eff": 96.287,
+  "worst": 93.321,
+  "n": 11,
+  "stress": 48.0,
+  "duty": 0.2525,
+  "found": [
+   "V90_5/s4"
+  ],
+  "dup": [],
+  "drop": [
+   "C0s1"
+  ],
+  "match": null,
+  "kept": "Sb0s1 0 s1n9\nC1s1 s1n9 s1n10\nSa0s1 IN s1n10\nSb1s1 0 s1n10\nL0s1 BUS1 s1n9\nSa0s2 s2n8 BUS1\nC0s2 s2n1 s2n8\nL0s2 OUT s2n8\nL1s2 s2n1 OUT\nSb1s2 s2n1 0"
+ },
+ {
+  "core": "L0s1 BUS1 s1n8\nSb0s1 IN s1n8\nC0s1 BUS1 s1n9\nSa0s1 0 s1n8\nSa1s1 s1n8 s1n9\nSb1s1 0 s1n9\nSa0s2 0 s2n11\nL1s2 OUT s2n11\nSb1s2 BUS1 s2n11\n",
+  "eff": 96.286,
+  "worst": 93.237,
+  "n": 9,
+  "stress": 48.1,
+  "duty": 0.7463,
+  "found": [
+   "V90_9/s2"
+  ],
+  "dup": [
+   "Sax2:0-s1n8"
+  ],
+  "drop": [
+   "C0s1"
+  ],
+  "match": "buckcap_buck_hib",
+  "kept": "L0s1 BUS1 s1n8\nSb0s1 IN s1n8\nSa0s1 0 s1n8\nSa1s1 s1n8 0\nSa0s2 0 s2n11\nL1s2 OUT s2n11\nSb1s2 BUS1 s2n11"
+ },
+ {
+  "core": "Sb0s1 IN s1n9\nL0s1 BUS1 s1n9\nSa1s1 0 s1n9\nL0s2 OUT s2n10\nSa0s2 0 s2n9\nC0s2 s2n9 s2n10\nL1s2 OUT s2n9\nC1s2 0 OUT\nSb0s2 BUS1 s2n10\nC2s2 BUS1 OUT\n",
+  "eff": 96.285,
+  "worst": 93.374,
+  "n": 10,
+  "stress": 48.0,
+  "duty": 0.7463,
+  "found": [
+   "V90_8/s3"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s2",
+   "C2s2"
+  ],
+  "match": "known-comp:V90_8/s3",
+  "kept": "Sb0s1 IN s1n9\nL0s1 BUS1 s1n9\nSa1s1 0 s1n9\nL0s2 OUT s2n10\nSa0s2 0 s2n9\nC0s2 s2n9 s2n10\nL1s2 OUT s2n9\nSb0s2 BUS1 s2n10"
+ },
+ {
+  "core": "Sb0s1 s1n8 BUS1\nSb1s1 0 s1n10\nC0s1 0 s1n8\nL0s1 s1n8 s1n10\nSa0s1 IN s1n10\nC1s1 IN BUS1\nL0s2 OUT s2n9\nSb0s2 0 s2n9\nSa0s2 BUS1 s2n9\nCbus1 BUS1 0\n",
+  "eff": 96.235,
+  "worst": 93.18,
+  "n": 10,
+  "stress": 48.0,
+  "duty": 0.2525,
+  "found": [
+   "V90_5/s3"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s1",
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "Sb0s1 s1n8 BUS1\nSb1s1 0 s1n10\nC0s1 0 s1n8\nL0s1 s1n8 s1n10\nSa0s1 IN s1n10\nL0s2 OUT s2n9\nSb0s2 0 s2n9\nSa0s2 BUS1 s2n9"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nC1s1 BUS1 0\nSa0s2 s2n0 0\nC0s2 0 s2n7\nL0s2 s2n0 OUT\nL1s2 BUS1 s2n7\nSb0s2 s2n0 s2n7\n",
+  "eff": 96.232,
+  "worst": 94.165,
+  "n": 11,
+  "stress": 24.1,
+  "duty": 0.8713,
+  "found": [
+   "_STAGE_2/s2"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nSa0s2 s2n0 0\nC0s2 0 s2n7\nL0s2 s2n0 OUT\nL1s2 BUS1 s2n7\nSb0s2 s2n0 s2n7"
+ },
+ {
+  "core": "Sb1s1 0 s1n9\nSa1s1 IN s1n9\nL0s1 BUS1 s1n9\nSb0s2 0 s2n9\nSa0s2 s2n9 s2n10\nSb1s2 BUS1 s2n10\nC0s2 BUS1 s2n10\nC1s2 OUT s2n10\nL0s2 OUT s2n9\nCbus1 BUS1 0\n",
+  "eff": 96.216,
+  "worst": 93.131,
+  "n": 10,
+  "stress": 48.0,
+  "duty": 0.2527,
+  "found": [
+   "V90_3/s3"
+  ],
+  "dup": [],
+  "drop": [
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "Sb1s1 0 s1n9\nSa1s1 IN s1n9\nL0s1 BUS1 s1n9\nSb0s2 0 s2n9\nSa0s2 s2n9 s2n10\nSb1s2 BUS1 s2n10\nC0s2 BUS1 s2n10\nC1s2 OUT s2n10\nL0s2 OUT s2n9"
+ },
+ {
+  "core": "L0s1 BUS1 s1n9\nSb0s1 0 s1n9\nSa1s1 IN s1n9\nSb0s2 0 s2n9\nSa0s2 s2n9 s2n10\nSb1s2 BUS1 s2n10\nC0s2 BUS1 s2n10\nC1s2 OUT s2n10\nL0s2 OUT s2n9\nCbus1 BUS1 0\n",
+  "eff": 96.216,
+  "worst": 93.131,
+  "n": 10,
+  "stress": 48.0,
+  "duty": 0.2527,
+  "found": [
+   "V90_4/s5"
+  ],
+  "dup": [],
+  "drop": [
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "L0s1 BUS1 s1n9\nSb0s1 0 s1n9\nSa1s1 IN s1n9\nSb0s2 0 s2n9\nSa0s2 s2n9 s2n10\nSb1s2 BUS1 s2n10\nC0s2 BUS1 s2n10\nC1s2 OUT s2n10\nL0s2 OUT s2n9"
+ },
+ {
+  "core": "Sa0s1 IN s1n15\nSb0s1 s1n14 s1n15\nSa1s1 s1n14 s1n16\nSb1s1 0 s1n16\nC0s1 s1n15 s1n16\nSb2s1 0 s1n14\nSa2s1 s1n14 s1n17\nSb3s1 s1n16 s1n17\nL0s1 BUS1 s1n17\nSa0s2 BUS1 s2n10\nSb0s2 0 s2n10\nL1s2 OUT s2n10\nCbus1 BUS1 0\n",
+  "eff": 96.157,
+  "worst": 93.169,
+  "n": 13,
+  "stress": 48.0,
+  "duty": 0.2526,
+  "found": [
+   "V90_8/s4"
+  ],
+  "dup": [
+   "Sbx2:0-s1n14"
+  ],
+  "drop": [
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 IN s1n15\nSb0s1 s1n14 s1n15\nSb1s1 0 s1n14\nC0s1 s1n15 s1n14\nSb2s1 0 s1n14\nL0s1 BUS1 s1n14\nSa0s2 BUS1 s2n10\nSb0s2 0 s2n10\nL1s2 OUT s2n10"
+ },
+ {
+  "core": "Sa0s1 IN s1n14\nSa1s1 s1n13 s1n14\nSb1s1 0 s1n16\nSa2s1 s1n15 s1n16\nSb2s1 s1n13 s1n15\nC0s1 s1n13 s1n15\nL0s1 BUS1 s1n16\nSa0s2 s2n9 s2n10\nSb0s2 0 s2n10\nL0s2 OUT s2n10\nSb1s2 BUS1 s2n9\nC1s2 BUS1 s2n9\nC2s2 0 s2n9\n",
+  "eff": 96.133,
+  "worst": 93.119,
+  "n": 13,
+  "stress": 48.0,
+  "duty": 0.2527,
+  "found": [
+   "V90_5/s3"
+  ],
+  "dup": [],
+  "drop": [],
+  "match": null,
+  "kept": "Sa0s1 IN s1n14\nSa1s1 s1n13 s1n14\nSb1s1 0 s1n16\nSa2s1 s1n15 s1n16\nSb2s1 s1n13 s1n15\nC0s1 s1n13 s1n15\nL0s1 BUS1 s1n16\nSa0s2 s2n9 s2n10\nSb0s2 0 s2n10\nL0s2 OUT s2n10\nSb1s2 BUS1 s2n9\nC1s2 BUS1 s2n9\nC2s2 0 s2n9"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nC1s1 BUS1 0\nL0s2 s2n13 s2n14\nSb0s2 0 s2n14\nSa0s2 BUS1 s2n14\nSb1s2 0 s2n15\nSa2s2 s2n13 s2n15\nL1s2 OUT s2n15\nC1s2 BUS1 s2n13\nCbus1 BUS1 0\n",
+  "eff": 96.132,
+  "worst": 92.772,
+  "n": 14,
+  "stress": 24.1,
+  "duty": 0.3584,
+  "found": [
+   "V90_4/s2"
+  ],
+  "dup": [
+   "Sax2:BUS1-s1n2",
+   "Sbx2:0-s1n2",
+   "Cx2:0-BUS1"
+  ],
+  "drop": [
+   "C1s1",
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nL0s2 s2n13 s1n2\nSb0s2 0 s1n2\nSa0s2 BUS1 s1n2\nSb1s2 0 s2n15\nSa2s2 s2n13 s2n15\nL1s2 OUT s2n15\nC1s2 BUS1 s2n13"
+ },
+ {
+  "core": "Sa0s1 IN s1n14\nL0s1 s1n13 s1n14\nC0s1 s1n15 s1n16\nSb1s1 BUS1 s1n16\nSa1s1 s1n13 s1n16\nSb2s1 0 s1n15\nL1s1 BUS1 s1n15\nC2s1 s1n13 s1n14\nSb0s2 BUS1 s2n9\nSa0s2 0 s2n9\nL0s2 OUT s2n9\nCbus1 BUS1 0\n",
+  "eff": 96.128,
+  "worst": 92.851,
+  "n": 12,
+  "stress": 26.1,
+  "duty": 0.8533,
+  "found": [
+   "V90_9/s3"
+  ],
+  "dup": [],
+  "drop": [
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 IN s1n14\nL0s1 s1n13 s1n14\nC0s1 s1n15 s1n16\nSb1s1 BUS1 s1n16\nSa1s1 s1n13 s1n16\nSb2s1 0 s1n15\nL1s1 BUS1 s1n15\nC2s1 s1n13 s1n14\nSb0s2 BUS1 s2n9\nSa0s2 0 s2n9\nL0s2 OUT s2n9"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 0\nL0s1 s1n1 BUS1\nSb0s2 BUS1 s2n14\nL0s2 s2n13 s2n14\nSa0s2 0 s2n14\nL1s2 OUT s2n15\nSa1s2 0 s2n16\nC0s2 s2n15 s2n16\nL2s2 OUT s2n16\nC1s2 0 OUT\nSb1s2 s2n13 s2n15\nC2s2 OUT s2n13\nSa2s2 0 s2n15\nCbus1 BUS1 0\n",
+  "eff": 96.126,
+  "worst": 93.576,
+  "n": 15,
+  "stress": 48.0,
+  "duty": 0.7,
+  "found": [
+   "V90_9/s7"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s2",
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 0\nL0s1 s1n1 BUS1\nSb0s2 BUS1 s2n14\nL0s2 s2n13 s2n14\nSa0s2 0 s2n14\nL1s2 OUT s2n15\nSa1s2 0 s2n16\nC0s2 s2n15 s2n16\nL2s2 OUT s2n16\nSb1s2 s2n13 s2n15\nC2s2 OUT s2n13\nSa2s2 0 s2n15"
+ },
+ {
+  "core": "Sa0s1 IN s1n9\nSb0s1 0 s1n9\nL0s1 BUS1 s1n9\nC1s1 0 BUS1\nSb0s2 0 s2n9\nC0s2 s2n10 s2n11\nL1s2 OUT s2n9\nSa0s2 BUS1 s2n10\nSa1s2 s2n9 s2n10\nSb1s2 BUS1 s2n11\n",
+  "eff": 96.118,
+  "worst": 92.906,
+  "n": 10,
+  "stress": 48.0,
+  "duty": 0.2529,
+  "found": [
+   "V90_3/s2"
+  ],
+  "dup": [],
+  "drop": [
+   "C0s2",
+   "C1s1",
+   "Sb1s2"
+  ],
+  "match": "known-comp:V90_5/s2",
+  "kept": "Sa0s1 IN s1n9\nSb0s1 0 s1n9\nL0s1 BUS1 s1n9\nSb0s2 0 s2n9\nL1s2 OUT s2n9\nSa0s2 BUS1 s2n10\nSa1s2 s2n9 s2n10"
+ },
+ {
+  "core": "Sa0s1 s1n7 IN\nSb0s1 s1n7 s1n8\nSb1s1 0 s1n8\nL0s1 s1n7 BUS1\nC0s1 IN BUS1\nSb0s2 BUS1 s2n14\nL0s2 s2n13 s2n14\nSa0s2 0 s2n14\nL1s2 OUT s2n15\nSa1s2 0 s2n16\nC0s2 s2n15 s2n16\nL2s2 OUT s2n16\nC1s2 0 OUT\nSb1s2 s2n13 s2n15\nC2s2 OUT s2n13\nSa2s2 0 s2n15\n",
+  "eff": 96.082,
+  "worst": 93.551,
+  "n": 16,
+  "stress": 48.1,
+  "duty": 0.7,
+  "found": [
+   "V90_9/s7"
+  ],
+  "dup": [],
+  "drop": [
+   "C0s1",
+   "C1s2"
+  ],
+  "match": null,
+  "kept": "Sa0s1 s1n7 IN\nSb0s1 s1n7 s1n8\nSb1s1 0 s1n8\nL0s1 s1n7 BUS1\nSb0s2 BUS1 s2n14\nL0s2 s2n13 s2n14\nSa0s2 0 s2n14\nL1s2 OUT s2n15\nSa1s2 0 s2n16\nC0s2 s2n15 s2n16\nL2s2 OUT s2n16\nSb1s2 s2n13 s2n15\nC2s2 OUT s2n13\nSa2s2 0 s2n15"
+ },
+ {
+  "core": "Sb0s1 s1n9 s1n10\nC0s1 IN s1n10\nSa0s1 IN s1n9\nL0s1 BUS1 s1n9\nC1s1 0 BUS1\nSa1s1 0 s1n10\nSb0s2 s2n7 0\nSa0s2 BUS1 s2n7\nL0s2 OUT s2n7\n",
+  "eff": 96.07,
+  "worst": 92.892,
+  "n": 9,
+  "stress": 48.2,
+  "duty": 0.2531,
+  "found": [
+   "V90_6/s3"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s1"
+  ],
+  "match": null,
+  "kept": "Sb0s1 s1n9 s1n10\nC0s1 IN s1n10\nSa0s1 IN s1n9\nL0s1 BUS1 s1n9\nSa1s1 0 s1n10\nSb0s2 s2n7 0\nSa0s2 BUS1 s2n7\nL0s2 OUT s2n7"
+ },
+ {
+  "core": "Sb0s1 0 s1n9\nC0s1 0 s1n9\nL0s1 BUS1 s1n10\nSb1s1 IN s1n10\nSa0s1 s1n9 s1n10\nC1s1 BUS1 0\nSb0s2 BUS1 s2n9\nL0s2 OUT s2n9\nSa0s2 0 s2n9\n",
+  "eff": 96.07,
+  "worst": 92.891,
+  "n": 9,
+  "stress": 48.2,
+  "duty": 0.7459,
+  "found": [
+   "V90_7/s4"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s1"
+  ],
+  "match": null,
+  "kept": "Sb0s1 0 s1n9\nC0s1 0 s1n9\nL0s1 BUS1 s1n10\nSb1s1 IN s1n10\nSa0s1 s1n9 s1n10\nSb0s2 BUS1 s2n9\nL0s2 OUT s2n9\nSa0s2 0 s2n9"
+ },
+ {
+  "core": "L0s1 BUS1 s1n8\nSa0s1 s1n8 IN\nSb0s1 s1n2 s1n8\nSa1s1 s1n2 0\nC0s1 BUS1 0\nC1s1 s1n2 0\nL0s2 OUT s2n9\nSb0s2 0 s2n9\nSa1s2 BUS1 s2n9\n",
+  "eff": 96.07,
+  "worst": 92.892,
+  "n": 9,
+  "stress": 48.2,
+  "duty": 0.2531,
+  "found": [
+   "V90_5/s5"
+  ],
+  "dup": [],
+  "drop": [
+   "C0s1"
+  ],
+  "match": null,
+  "kept": "L0s1 BUS1 s1n8\nSa0s1 s1n8 IN\nSb0s1 s1n2 s1n8\nSa1s1 s1n2 0\nC1s1 s1n2 0\nL0s2 OUT s2n9\nSb0s2 0 s2n9\nSa1s2 BUS1 s2n9"
+ },
+ {
+  "core": "Sb0s1 IN s1n9\nC0s1 0 BUS1\nSa0s1 0 s1n10\nL1s1 BUS1 s1n10\nC1s1 s1n9 s1n10\nSa1s1 s1n9 s1n10\nSa0s2 0 s2n10\nSb0s2 BUS1 s2n9\nSb1s2 s2n9 s2n10\nL0s2 OUT s2n10\n",
+  "eff": 96.06,
+  "worst": 94.693,
+  "n": 10,
+  "stress": 48.1,
+  "duty": 0.7481,
+  "found": [
+   "_V95N_CTL/s2"
+  ],
+  "dup": [],
+  "drop": [
+   "C0s1"
+  ],
+  "match": null,
+  "kept": "Sb0s1 IN s1n9\nSa0s1 0 s1n10\nL1s1 BUS1 s1n10\nC1s1 s1n9 s1n10\nSa1s1 s1n9 s1n10\nSa0s2 0 s2n10\nSb0s2 BUS1 s2n9\nSb1s2 s2n9 s2n10\nL0s2 OUT s2n10"
+ },
+ {
+  "core": "Sb0s1 IN s1n9\nSa0s1 BUS1 s1n9\nC0s1 s1n9 s1n10\nL0s1 0 s1n10\nSb1s1 BUS1 s1n10\nC1s1 0 BUS1\nC0s2 s2n1 s2n7\nSb0s2 BUS1 s2n7\nSa0s2 s2n1 0\nL0s2 s2n1 OUT\nSa1s2 s2n7 0\n",
+  "eff": 96.058,
+  "worst": 92.563,
+  "n": 11,
+  "stress": 26.1,
+  "duty": 0.8526,
+  "found": [
+   "V90_9/s3"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s1"
+  ],
+  "match": null,
+  "kept": "Sb0s1 IN s1n9\nSa0s1 BUS1 s1n9\nC0s1 s1n9 s1n10\nL0s1 0 s1n10\nSb1s1 BUS1 s1n10\nC0s2 s2n1 s2n7\nSb0s2 BUS1 s2n7\nSa0s2 s2n1 0\nL0s2 s2n1 OUT\nSa1s2 s2n7 0"
+ },
+ {
+  "core": "Sa0s1 s1n9 s1n10\nL0s1 IN s1n10\nL1s1 BUS1 s1n9\nSb0s1 0 s1n9\nC0s1 BUS1 s1n10\nSa0s2 0 s2n10\nSb0s2 0 s2n9\nSa1s2 BUS1 s2n9\nL0s2 OUT s2n9\nSb1s2 s2n9 s2n10\nC1s2 BUS1 s2n10\nCbus1 BUS1 0\n",
+  "eff": 96.055,
+  "worst": 92.847,
+  "n": 12,
+  "stress": 48.1,
+  "duty": 0.2528,
+  "found": [
+   "V90_5/s6"
+  ],
+  "dup": [
+   "Sbx2:0-s2n9",
+   "Cx2:0-BUS1"
+  ],
+  "drop": [
+   "C1s2",
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 s1n9 s1n10\nL0s1 IN s1n10\nL1s1 BUS1 s1n9\nSb0s1 0 s1n9\nC0s1 BUS1 s1n10\nSb0s2 0 s2n9\nSa1s2 BUS1 s2n9\nL0s2 OUT s2n9\nSb1s2 s2n9 0"
+ },
+ {
+  "core": "Sa0s1 0 s1n9\nC0s1 IN BUS1\nSa1s1 IN s1n3\nC1s1 0 s1n3\nSb0s1 s1n3 s1n9\nL0s1 BUS1 s1n9\nL0s2 OUT s2n10\nSb0s2 s2n4 s2n10\nSa0s2 0 s2n10\nC0s2 0 s2n4\nSb1s2 s2n4 BUS1\n",
+  "eff": 96.002,
+  "worst": 92.74,
+  "n": 11,
+  "stress": 48.0,
+  "duty": 0.746,
+  "found": [
+   "V90_4/s3"
+  ],
+  "dup": [],
+  "drop": [
+   "C0s1",
+   "C0s2"
+  ],
+  "match": null,
+  "kept": "Sa0s1 0 s1n9\nSa1s1 IN s1n3\nC1s1 0 s1n3\nSb0s1 s1n3 s1n9\nL0s1 BUS1 s1n9\nL0s2 OUT s2n10\nSb0s2 s2n4 s2n10\nSa0s2 0 s2n10\nSb1s2 s2n4 BUS1"
+ },
+ {
+  "core": "Sa0s1 IN s1n15\nSb0s1 s1n14 s1n15\nSa1s1 s1n14 s1n16\nSb1s1 s1n16 s1n18\nC0s1 s1n15 s1n16\nSb2s1 s1n17 s1n18\nC1s1 BUS1 s1n18\nL0s1 BUS1 s1n17\nL1s1 0 s1n18\nC2s1 s1n14 s1n18\nSa2s1 s1n14 s1n17\nSa0s2 s2n1 0\nSb0s2 s2n1 BUS1\nL0s2 s2n1 OUT\nCbus1 BUS1 0\n",
+  "eff": 95.983,
+  "worst": 92.412,
+  "n": 15,
+  "stress": 24.2,
+  "duty": 0.8448,
+  "found": [
+   "V90_4/s4"
+  ],
+  "dup": [
+   "Sax2:s1n14-s1n16",
+   "Sbx2:s1n16-s1n18"
+  ],
+  "drop": [
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 IN s1n15\nSb0s1 s1n14 s1n15\nSa1s1 s1n14 s1n16\nSb1s1 s1n16 s1n18\nC0s1 s1n15 s1n16\nSb2s1 s1n16 s1n18\nC1s1 BUS1 s1n18\nL0s1 BUS1 s1n16\nL1s1 0 s1n18\nC2s1 s1n14 s1n18\nSa2s1 s1n14 s1n16\nSa0s2 s2n1 0\nSb0s2 s2n1 BUS1\nL0s2 s2n1 OUT"
+ },
+ {
+  "core": "L0s1 s1n3 0\nSa0s1 0 s1n10\nC0s1 0 BUS1\nC1s1 s1n3 s1n10\nSb0s1 IN s1n10\nSb1s1 s1n3 BUS1\nSa0s2 BUS1 s2n8\nL0s2 OUT s2n9\nSa1s2 s2n8 s2n9\nSb0s2 0 s2n9\nCbus1 BUS1 0\n",
+  "eff": 95.983,
+  "worst": 92.626,
+  "n": 11,
+  "stress": 48.0,
+  "duty": 0.2529,
+  "found": [
+   "V90_7/s2"
+  ],
+  "dup": [
+   "Cx2:0-BUS1"
+  ],
+  "drop": [
+   "C0s1",
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "L0s1 s1n3 0\nSa0s1 0 s1n10\nC1s1 s1n3 s1n10\nSb0s1 IN s1n10\nSb1s1 s1n3 BUS1\nSa0s2 BUS1 s2n8\nL0s2 OUT s2n9\nSa1s2 s2n8 s2n9\nSb0s2 0 s2n9"
+ },
+ {
+  "core": "Sb0s1 s1n8 BUS1\nSb1s1 0 s1n10\nC0s1 0 s1n8\nL0s1 s1n8 s1n10\nSa0s1 IN s1n10\nC1s1 IN BUS1\nSa0s2 BUS1 s2n9\nSb0s2 0 s2n9\nL0s2 OUT s2n9\n",
+  "eff": 95.962,
+  "worst": 92.718,
+  "n": 9,
+  "stress": 48.0,
+  "duty": 0.2528,
+  "found": [
+   "V90_5/s3"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s1"
+  ],
+  "match": null,
+  "kept": "Sb0s1 s1n8 BUS1\nSb1s1 0 s1n10\nC0s1 0 s1n8\nL0s1 s1n8 s1n10\nSa0s1 IN s1n10\nSa0s2 BUS1 s2n9\nSb0s2 0 s2n9\nL0s2 OUT s2n9"
+ },
+ {
+  "core": "C0s1 IN BUS1\nSa0s1 BUS1 s1n10\nSa1s1 0 s1n9\nL0s1 s1n9 s1n10\nC1s1 0 s1n10\nSb0s1 IN s1n9\nSa1s2 0 s2n10\nL0s2 OUT s2n10\nSb0s2 BUS1 s2n10\n",
+  "eff": 95.962,
+  "worst": 92.718,
+  "n": 9,
+  "stress": 48.0,
+  "duty": 0.7461,
+  "found": [
+   "V90_6/s2"
+  ],
+  "dup": [],
+  "drop": [
+   "C0s1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 BUS1 s1n10\nSa1s1 0 s1n9\nL0s1 s1n9 s1n10\nC1s1 0 s1n10\nSb0s1 IN s1n9\nSa1s2 0 s2n10\nL0s2 OUT s2n10\nSb0s2 BUS1 s2n10"
+ },
+ {
+  "core": "Sa0s1 IN s1n16\nSb0s1 s1n16 s1n17\nC0s1 BUS1 s1n17\nSa1s1 s1n17 s1n18\nSb1s1 0 s1n18\nC1s1 s1n16 s1n18\nSb2s1 s1n15 s1n16\nL0s1 BUS1 s1n20\nC2s1 0 s1n20\nSa2s1 s1n19 s1n20\nSa3s1 s1n15 s1n19\nC3s1 0 s1n15\nSa0s2 0 s2n11\nL1s2 OUT s2n11\nSb1s2 BUS1 s2n11\nCbus1 BUS1 0\n",
+  "eff": 95.939,
+  "worst": 92.382,
+  "n": 16,
+  "stress": 24.4,
+  "duty": 0.8685,
+  "found": [
+   "V90_9/s2"
+  ],
+  "dup": [],
+  "drop": [
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 IN s1n16\nSb0s1 s1n16 s1n17\nC0s1 BUS1 s1n17\nSa1s1 s1n17 s1n18\nSb1s1 0 s1n18\nC1s1 s1n16 s1n18\nSb2s1 s1n15 s1n16\nL0s1 BUS1 s1n20\nC2s1 0 s1n20\nSa2s1 s1n19 s1n20\nSa3s1 s1n15 s1n19\nC3s1 0 s1n15\nSa0s2 0 s2n11\nL1s2 OUT s2n11\nSb1s2 BUS1 s2n11"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nSb0s2 s2n9 s2n10\nC0s2 OUT s2n9\nL0s2 OUT s2n10\nL1s2 0 s2n9\nC1s2 BUS1 s2n9\nSa0s2 BUS1 s2n10\n",
+  "eff": 95.931,
+  "worst": 92.219,
+  "n": 11,
+  "stress": 24.1,
+  "duty": 0.1298,
+  "found": [
+   "V90_1/s2"
+  ],
+  "dup": [],
+  "drop": [],
+  "match": null,
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nSb0s2 s2n9 s2n10\nC0s2 OUT s2n9\nL0s2 OUT s2n10\nL1s2 0 s2n9\nC1s2 BUS1 s2n9\nSa0s2 BUS1 s2n10"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nSb0s2 s2n9 s2n10\nL0s2 OUT s2n9\nL1s2 0 s2n10\nC1s2 BUS1 s2n10\nSa0s2 BUS1 s2n9\nC3s2 0 s2n10\n",
+  "eff": 95.93,
+  "worst": 92.227,
+  "n": 11,
+  "stress": 24.1,
+  "duty": 0.1298,
+  "found": [
+   "V90_3/s4"
+  ],
+  "dup": [],
+  "drop": [],
+  "match": null,
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nSb0s2 s2n9 s2n10\nL0s2 OUT s2n9\nL1s2 0 s2n10\nC1s2 BUS1 s2n10\nSa0s2 BUS1 s2n9\nC3s2 0 s2n10"
+ },
+ {
+  "core": "Sa0s1 IN s1n15\nSb0s1 s1n14 s1n15\nSa1s1 s1n14 s1n16\nL0s1 0 s1n16\nC0s1 s1n15 s1n16\nC1s1 0 s1n14\nL1s1 BUS1 s1n17\nSb1s1 s1n14 s1n17\nSa2s1 0 s1n17\nSa0s2 BUS1 s2n10\nSb0s2 0 s2n10\nL1s2 OUT s2n10\nCbus1 BUS1 0\n",
+  "eff": 95.925,
+  "worst": 92.374,
+  "n": 13,
+  "stress": 26.6,
+  "duty": 0.1785,
+  "found": [
+   "V90_9/s5"
+  ],
+  "dup": [],
+  "drop": [
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 IN s1n15\nSb0s1 s1n14 s1n15\nSa1s1 s1n14 s1n16\nL0s1 0 s1n16\nC0s1 s1n15 s1n16\nC1s1 0 s1n14\nL1s1 BUS1 s1n17\nSb1s1 s1n14 s1n17\nSa2s1 0 s1n17\nSa0s2 BUS1 s2n10\nSb0s2 0 s2n10\nL1s2 OUT s2n10"
+ },
+ {
+  "core": "C0s1 IN BUS1\nSb0s1 s1n9 s1n10\nSa0s1 IN s1n9\nSa1s1 0 s1n10\nC1s1 0 s1n10\nL0s1 BUS1 s1n9\nSa0s2 s2n8 BUS1\nC0s2 s2n1 s2n8\nL0s2 OUT s2n8\nL1s2 s2n1 OUT\nSb1s2 s2n1 0\n",
+  "eff": 95.923,
+  "worst": 92.733,
+  "n": 11,
+  "stress": 48.2,
+  "duty": 0.2532,
+  "found": [
+   "V90_5/s4"
+  ],
+  "dup": [],
+  "drop": [
+   "C0s1"
+  ],
+  "match": null,
+  "kept": "Sb0s1 s1n9 s1n10\nSa0s1 IN s1n9\nSa1s1 0 s1n10\nC1s1 0 s1n10\nL0s1 BUS1 s1n9\nSa0s2 s2n8 BUS1\nC0s2 s2n1 s2n8\nL0s2 OUT s2n8\nL1s2 s2n1 OUT\nSb1s2 s2n1 0"
+ },
+ {
+  "core": "L0s1 BUS1 s1n10\nSa0s1 0 s1n10\nC0s1 IN BUS1\nSa1s1 IN s1n3\nSb0s1 s1n3 s1n10\nC1s1 s1n3 0\nC1s2 0 s2n9\nSa0s2 0 s2n10\nL0s2 OUT s2n10\nSb0s2 s2n9 s2n10\nSa1s2 BUS1 s2n9\n",
+  "eff": 95.905,
+  "worst": 92.637,
+  "n": 11,
+  "stress": 48.0,
+  "duty": 0.7461,
+  "found": [
+   "V90_4/s7"
+  ],
+  "dup": [],
+  "drop": [
+   "C0s1"
+  ],
+  "match": null,
+  "kept": "L0s1 BUS1 s1n10\nSa0s1 0 s1n10\nSa1s1 IN s1n3\nSb0s1 s1n3 s1n10\nC1s1 s1n3 0\nC1s2 0 s2n9\nSa0s2 0 s2n10\nL0s2 OUT s2n10\nSb0s2 s2n9 s2n10\nSa1s2 BUS1 s2n9"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nC1s1 BUS1 0\nSb0s2 BUS1 s2n5\nSa0s2 OUT s2n9\nSb1s2 OUT s2n9\nSa1s2 0 s2n5\nL0s2 s2n5 s2n9\n",
+  "eff": 95.902,
+  "worst": 92.195,
+  "n": 11,
+  "stress": 24.1,
+  "duty": 0.8691,
+  "found": [
+   "V90_2/s4"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s1"
+  ],
+  "match": "sc2_buck_hib",
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nSb0s2 BUS1 s2n5\nSa1s2 0 s2n5\nL0s2 s2n5 OUT"
+ },
+ {
+  "core": "Sb0s1 s1n14 s1n16\nC0s1 s1n15 s1n16\nL0s1 IN s1n16\nSb2s1 s1n14 s1n18\nL1s1 BUS1 s1n17\nSa1s1 BUS1 s1n18\nC1s1 s1n17 s1n18\nSa2s1 0 s1n17\nC2s1 0 s1n15\nSa0s2 s2n8 BUS1\nSa1s2 s2n4 s2n8\nL0s2 OUT s2n4\nSb0s2 s2n4 0\nCbus1 BUS1 0\n",
+  "eff": 95.894,
+  "worst": 92.304,
+  "n": 14,
+  "stress": 26.1,
+  "duty": 0.1461,
+  "found": [
+   "V90_8/s4"
+  ],
+  "dup": [],
+  "drop": [
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "Sb0s1 s1n14 s1n16\nC0s1 s1n15 s1n16\nL0s1 IN s1n16\nSb2s1 s1n14 s1n18\nL1s1 BUS1 s1n17\nSa1s1 BUS1 s1n18\nC1s1 s1n17 s1n18\nSa2s1 0 s1n17\nC2s1 0 s1n15\nSa0s2 s2n8 BUS1\nSa1s2 s2n4 s2n8\nL0s2 OUT s2n4\nSb0s2 s2n4 0"
+ },
+ {
+  "core": "Sb0s1 s1n14 s1n16\nC0s1 s1n15 s1n16\nL0s1 IN s1n16\nSb2s1 s1n14 s1n18\nL1s1 BUS1 s1n17\nSa1s1 BUS1 s1n18\nC1s1 s1n17 s1n18\nSa2s1 0 s1n17\nC2s1 0 s1n15\nSa0s2 s2n9 s2n11\nSb0s2 0 s2n11\nL0s2 OUT s2n11\nSa1s2 BUS1 s2n9\nC0s2 s2n9 s2n10\nSb1s2 s2n10 s2n11\nCbus1 BUS1 0\n",
+  "eff": 95.893,
+  "worst": 92.303,
+  "n": 16,
+  "stress": 26.1,
+  "duty": 0.1461,
+  "found": [
+   "V90_8/s4"
+  ],
+  "dup": [],
+  "drop": [
+   "C0s2",
+   "Cbus1",
+   "Sb1s2"
+  ],
+  "match": null,
+  "kept": "Sb0s1 s1n14 s1n16\nC0s1 s1n15 s1n16\nL0s1 IN s1n16\nSb2s1 s1n14 s1n18\nL1s1 BUS1 s1n17\nSa1s1 BUS1 s1n18\nC1s1 s1n17 s1n18\nSa2s1 0 s1n17\nC2s1 0 s1n15\nSa0s2 s2n9 s2n11\nSb0s2 0 s2n11\nL0s2 OUT s2n11\nSa1s2 BUS1 s2n9"
+ },
+ {
+  "core": "Sa0s1 s1n14 s1n15\nSb0s1 s1n14 s1n16\nSa1s1 s1n15 s1n16\nL0s1 IN s1n16\nSb2s1 s1n14 s1n18\nL1s1 BUS1 s1n17\nSa2s1 BUS1 s1n18\nC0s1 s1n17 s1n18\nSa3s1 0 s1n17\nC1s1 0 s1n14\nSb0s2 BUS1 s2n9\nSa0s2 s2n9 s2n10\nSa1s2 0 s2n9\nC0s2 BUS1 s2n10\nL0s2 OUT s2n9\nSb1s2 0 s2n10\n",
+  "eff": 95.886,
+  "worst": 92.45,
+  "n": 16,
+  "stress": 37.5,
+  "duty": 0.7132,
+  "found": [
+   "V90_4/s2"
+  ],
+  "dup": [
+   "Sax2:s1n14-s1n15",
+   "Sax2:0-s2n9"
+  ],
+  "drop": [
+   "C0s2"
+  ],
+  "match": null,
+  "kept": "Sa0s1 s1n14 s1n15\nSa1s1 s1n15 s1n14\nL0s1 IN s1n14\nSb2s1 s1n14 s1n18\nL1s1 BUS1 s1n17\nSa2s1 BUS1 s1n18\nC0s1 s1n17 s1n18\nSa3s1 0 s1n17\nC1s1 0 s1n14\nSb0s2 BUS1 s2n9\nSa0s2 s2n9 0\nSa1s2 0 s2n9\nL0s2 OUT s2n9"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nC1s1 BUS1 0\nSa0s2 BUS1 s2n10\nC1s2 BUS1 s2n11\nSb0s2 s2n10 s2n11\nL0s2 OUT s2n10\nL1s2 0 s2n11\n",
+  "eff": 95.885,
+  "worst": 92.148,
+  "n": 11,
+  "stress": 24.1,
+  "duty": 0.1299,
+  "found": [
+   "V90_4/s4"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nSa0s2 BUS1 s2n10\nC1s2 BUS1 s2n11\nSb0s2 s2n10 s2n11\nL0s2 OUT s2n10\nL1s2 0 s2n11"
+ },
+ {
+  "core": "Sa0s1 s1n9 IN\nC0s1 BUS1 s1n6\nC1s1 BUS1 IN\nSb0s1 0 s1n9\nSa1s1 BUS1 s1n6\nL0s1 s1n6 s1n9\nL0s2 OUT s2n10\nSa0s2 BUS1 s2n10\nSb0s2 0 s2n10\n",
+  "eff": 95.878,
+  "worst": 92.551,
+  "n": 9,
+  "stress": 48.0,
+  "duty": 0.2534,
+  "found": [
+   "STAGE_2/s4"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 s1n9 IN\nC0s1 BUS1 s1n6\nSb0s1 0 s1n9\nSa1s1 BUS1 s1n6\nL0s1 s1n6 s1n9\nL0s2 OUT s2n10\nSa0s2 BUS1 s2n10\nSb0s2 0 s2n10"
+ },
+ {
+  "core": "L0s1 BUS1 s1n10\nSa0s1 0 s1n9\nC0s1 s1n9 s1n10\nC1s1 0 BUS1\nSb0s1 IN s1n9\nSa1s1 0 s1n10\nC1s2 0 s2n9\nSa0s2 0 s2n10\nL0s2 OUT s2n10\nSb0s2 s2n9 s2n10\nSa1s2 BUS1 s2n9\n",
+  "eff": 95.873,
+  "worst": 92.539,
+  "n": 11,
+  "stress": 48.0,
+  "duty": 0.746,
+  "found": [
+   "V90_4/s7"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s1"
+  ],
+  "match": null,
+  "kept": "L0s1 BUS1 s1n10\nSa0s1 0 s1n9\nC0s1 s1n9 s1n10\nSb0s1 IN s1n9\nSa1s1 0 s1n10\nC1s2 0 s2n9\nSa0s2 0 s2n10\nL0s2 OUT s2n10\nSb0s2 s2n9 s2n10\nSa1s2 BUS1 s2n9"
+ },
+ {
+  "core": "Sa0s1 IN s1n9\nL0s1 BUS1 s1n9\nC1s1 0 BUS1\nSb1s1 0 s1n9\nSa0s2 BUS1 s2n9\nSb0s2 0 s2n9\nC0s2 BUS1 OUT\nC1s2 BUS1 s2n10\nL0s2 s2n9 s2n10\nL1s2 OUT s2n9\nCbus1 BUS1 0\n",
+  "eff": 95.867,
+  "worst": 92.517,
+  "n": 11,
+  "stress": 48.0,
+  "duty": 0.2531,
+  "found": [
+   "V90_5/s6"
+  ],
+  "dup": [
+   "Cx2:0-BUS1"
+  ],
+  "drop": [
+   "C0s2",
+   "C1s1",
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 IN s1n9\nL0s1 BUS1 s1n9\nSb1s1 0 s1n9\nSa0s2 BUS1 s2n9\nSb0s2 0 s2n9\nC1s2 BUS1 s2n10\nL0s2 s2n9 s2n10\nL1s2 OUT s2n9"
+ },
+ {
+  "core": "C0s1 BUS1 s1n10\nL0s1 BUS1 s1n9\nSa0s1 s1n9 s1n10\nC1s1 IN s1n10\nSa1s1 0 s1n10\nSb0s1 IN s1n9\nL0s2 OUT s2n9\nC0s2 0 s2n10\nSb0s2 s2n9 s2n10\nSa0s2 0 s2n9\nSa1s2 BUS1 s2n10\n",
+  "eff": 95.845,
+  "worst": 92.522,
+  "n": 11,
+  "stress": 48.1,
+  "duty": 0.746,
+  "found": [
+   "V90_9/s7"
+  ],
+  "dup": [],
+  "drop": [],
+  "match": null,
+  "kept": "C0s1 BUS1 s1n10\nL0s1 BUS1 s1n9\nSa0s1 s1n9 s1n10\nC1s1 IN s1n10\nSa1s1 0 s1n10\nSb0s1 IN s1n9\nL0s2 OUT s2n9\nC0s2 0 s2n10\nSb0s2 s2n9 s2n10\nSa0s2 0 s2n9\nSa1s2 BUS1 s2n10"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nC1s1 BUS1 0\nSa0s2 s2n9 s2n10\nSb0s2 BUS1 s2n10\nL0s2 OUT s2n10\nL1s2 0 s2n9\nC1s2 0 s2n9\n",
+  "eff": 95.839,
+  "worst": 92.071,
+  "n": 11,
+  "stress": 24.2,
+  "duty": 0.869,
+  "found": [
+   "V90_3/s4"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nSa0s2 s2n9 s2n10\nSb0s2 BUS1 s2n10\nL0s2 OUT s2n10\nL1s2 0 s2n9\nC1s2 0 s2n9"
+ },
+ {
+  "core": "Sb0s1 0 s1n10\nSa0s1 IN s1n10\nSb1s1 BUS1 s1n9\nC0s1 0 BUS1\nL0s1 s1n9 s1n10\nC1s1 IN s1n9\nSa0s2 s2n9 s2n11\nSb0s2 0 s2n11\nL0s2 OUT s2n11\nSa1s2 BUS1 s2n9\nC0s2 s2n9 s2n10\nSb1s2 s2n10 s2n11\nCbus1 BUS1 0\n",
+  "eff": 95.828,
+  "worst": 92.426,
+  "n": 13,
+  "stress": 48.0,
+  "duty": 0.253,
+  "found": [
+   "V90_8/s4"
+  ],
+  "dup": [
+   "Cx2:0-BUS1"
+  ],
+  "drop": [
+   "C0s1",
+   "C0s2",
+   "Cbus1",
+   "Sb1s2"
+  ],
+  "match": null,
+  "kept": "Sb0s1 0 s1n10\nSa0s1 IN s1n10\nSb1s1 BUS1 s1n9\nL0s1 s1n9 s1n10\nC1s1 IN s1n9\nSa0s2 s2n9 s2n11\nSb0s2 0 s2n11\nL0s2 OUT s2n11\nSa1s2 BUS1 s2n9"
+ },
+ {
+  "core": "L0s1 s1n9 s1n11\nL1s1 BUS1 s1n10\nSa0s1 0 s1n10\nC0s1 BUS1 s1n9\nSb1s1 IN s1n10\nC1s1 IN s1n11\nL1s2 OUT s2n10\nSa0s2 0 s2n10\nSb1s2 BUS1 s2n10\nCbus1 BUS1 0\n",
+  "eff": 95.821,
+  "worst": 92.404,
+  "n": 10,
+  "stress": 48.0,
+  "duty": 0.7457,
+  "found": [
+   "V90_9/s7"
+  ],
+  "dup": [],
+  "drop": [
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "L0s1 s1n9 s1n11\nL1s1 BUS1 s1n10\nSa0s1 0 s1n10\nC0s1 BUS1 s1n9\nSb1s1 IN s1n10\nC1s1 IN s1n11\nL1s2 OUT s2n10\nSa0s2 0 s2n10\nSb1s2 BUS1 s2n10"
+ },
+ {
+  "core": "Sb0s1 0 s1n8\nSa0s1 IN s1n8\nL0s1 BUS1 s1n8\nL0s2 OUT s2n9\nL1s2 BUS1 s2n10\nSb0s2 0 s2n9\nSa0s2 s2n9 s2n10\nC0s2 OUT s2n10\nC1s2 0 s2n10\nCbus1 BUS1 0\n",
+  "eff": 95.804,
+  "worst": 92.256,
+  "n": 10,
+  "stress": 48.0,
+  "duty": 0.2532,
+  "found": [
+   "V90_6/s3"
+  ],
+  "dup": [],
+  "drop": [
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "Sb0s1 0 s1n8\nSa0s1 IN s1n8\nL0s1 BUS1 s1n8\nL0s2 OUT s2n9\nL1s2 BUS1 s2n10\nSb0s2 0 s2n9\nSa0s2 s2n9 s2n10\nC0s2 OUT s2n10\nC1s2 0 s2n10"
+ },
+ {
+  "core": "Sb0s1 s1n14 s1n16\nC0s1 s1n15 s1n16\nL0s1 IN s1n16\nSb2s1 s1n14 s1n18\nL1s1 BUS1 s1n17\nSa1s1 BUS1 s1n18\nC1s1 s1n17 s1n18\nSa2s1 0 s1n17\nC2s1 0 s1n15\nSb0s2 BUS1 s2n8\nSa0s2 s2n8 s2n9\nL0s2 OUT s2n9\nSb1s2 0 s2n9\nC1s2 0 s2n8\nCbus1 BUS1 0\n",
+  "eff": 95.804,
+  "worst": 92.151,
+  "n": 15,
+  "stress": 26.1,
+  "duty": 0.1467,
+  "found": [
+   "V90_8/s4"
+  ],
+  "dup": [],
+  "drop": [
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "Sb0s1 s1n14 s1n16\nC0s1 s1n15 s1n16\nL0s1 IN s1n16\nSb2s1 s1n14 s1n18\nL1s1 BUS1 s1n17\nSa1s1 BUS1 s1n18\nC1s1 s1n17 s1n18\nSa2s1 0 s1n17\nC2s1 0 s1n15\nSb0s2 BUS1 s2n8\nSa0s2 s2n8 s2n9\nL0s2 OUT s2n9\nSb1s2 0 s2n9\nC1s2 0 s2n8"
+ },
+ {
+  "core": "L0s1 BUS1 s1n7\nL1s1 s1n7 s1n8\nSb0s1 0 s1n8\nSa0s1 s1n7 IN\nC0s1 s1n7 s1n8\nC1s1 0 BUS1\nL0s2 OUT s2n10\nSb1s2 0 s2n10\nSa1s2 BUS1 s2n10\nCbus1 BUS1 0\n",
+  "eff": 95.789,
+  "worst": 92.368,
+  "n": 10,
+  "stress": 48.1,
+  "duty": 0.2532,
+  "found": [
+   "V90_6/s3"
+  ],
+  "dup": [
+   "Cx2:0-BUS1"
+  ],
+  "drop": [
+   "C1s1",
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "L0s1 BUS1 s1n7\nL1s1 s1n7 s1n8\nSb0s1 0 s1n8\nSa0s1 s1n7 IN\nC0s1 s1n7 s1n8\nL0s2 OUT s2n10\nSb1s2 0 s2n10\nSa1s2 BUS1 s2n10"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nC1s1 BUS1 0\nSb0s2 0 s2n9\nSa1s2 BUS1 s2n9\nL0s2 BUS2 s2n9\nL0s3 OUT s3n10\nSa0s3 s3n9 s3n10\nSb0s3 BUS2 s3n9\nC0s3 0 OUT\nC1s3 OUT s3n9\nSb1s3 0 s3n10\nC2s3 BUS2 s3n9\n",
+  "eff": 95.767,
+  "worst": 92.139,
+  "n": 16,
+  "stress": 24.1,
+  "duty": 0.3591,
+  "found": [
+   "V90R_2/s3"
+  ],
+  "dup": [
+   "Sax2:BUS1-s1n2",
+   "Sbx2:0-s1n2"
+  ],
+  "drop": [
+   "C0s3",
+   "C1s1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nSb0s2 0 s1n2\nSa1s2 BUS1 s1n2\nL0s2 BUS2 s1n2\nL0s3 OUT s3n10\nSa0s3 s3n9 s3n10\nSb0s3 BUS2 s3n9\nC1s3 OUT s3n9\nSb1s3 0 s3n10\nC2s3 BUS2 s3n9"
+ },
+ {
+  "core": "L0s1 BUS1 s1n9\nSa0s1 s1n9 s1n10\nSa1s1 IN s1n10\nSb0s1 0 s1n9\nC0s2 OUT s2n9\nL0s2 BUS1 s2n9\nC1s2 0 OUT\nSa0s2 s2n9 s2n10\nSb0s2 0 s2n10\nL1s2 OUT s2n10\n",
+  "eff": 95.764,
+  "worst": 92.08,
+  "n": 10,
+  "stress": 48.0,
+  "duty": 0.2535,
+  "found": [
+   "V90_5/s5"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s2"
+  ],
+  "match": null,
+  "kept": "L0s1 BUS1 s1n9\nSa0s1 s1n9 s1n10\nSa1s1 IN s1n10\nSb0s1 0 s1n9\nC0s2 OUT s2n9\nL0s2 BUS1 s2n9\nSa0s2 s2n9 s2n10\nSb0s2 0 s2n10\nL1s2 OUT s2n10"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nC1s1 BUS1 0\nSb0s2 BUS2 s2n8\nC0s2 s2n8 s2n9\nL0s2 BUS2 s2n9\nSa0s2 BUS1 s2n8\nSb1s2 0 s2n9\nSa0s3 BUS2 s3n1\nSb0s3 s3n1 0\nL0s3 s3n1 OUT\nCbus2 BUS2 0\n",
+  "eff": 95.758,
+  "worst": 92.127,
+  "n": 15,
+  "stress": 24.1,
+  "duty": 0.4254,
+  "found": [
+   "V90R_1/s4"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nSb0s2 BUS2 s2n8\nC0s2 s2n8 s2n9\nL0s2 BUS2 s2n9\nSa0s2 BUS1 s2n8\nSb1s2 0 s2n9\nSa0s3 BUS2 s3n1\nSb0s3 s3n1 0\nL0s3 s3n1 OUT\nCbus2 BUS2 0"
+ },
+ {
+  "core": "Sa0s1 s1n1 s1n8\nSb0s1 s1n1 0\nL0s1 IN s1n8\nC0s1 s1n8 0\nL1s1 s1n1 BUS1\nSa0s2 BUS1 s2n21\nC4s2 0 s2n17\nSa1s2 s2n17 s2n21\nL0s2 OUT s2n21\nSb2s2 0 s2n21\nSb3s2 BUS1 s2n17\n",
+  "eff": 95.75,
+  "worst": 92.463,
+  "n": 11,
+  "stress": 48.0,
+  "duty": 0.2532,
+  "found": [
+   "V90_7/s2"
+  ],
+  "dup": [
+   "Sax2:BUS1-s2n21"
+  ],
+  "drop": [
+   "C4s2"
+  ],
+  "match": null,
+  "kept": "Sa0s1 s1n1 s1n8\nSb0s1 s1n1 0\nL0s1 IN s1n8\nC0s1 s1n8 0\nL1s1 s1n1 BUS1\nSa0s2 BUS1 s2n21\nSa1s2 BUS1 s2n21\nL0s2 OUT s2n21\nSb2s2 0 s2n21"
+ },
+ {
+  "core": "Sa0s1 0 s1n15\nSb0s1 0 s1n14\nSa1s1 IN s1n14\nC0s1 s1n13 s1n15\nL0s1 s1n13 s1n14\nSb1s1 s1n14 s1n15\nSa2s1 BUS1 s1n16\nC1s1 BUS1 s1n13\nSa3s1 s1n13 s1n16\nSa0s2 BUS1 s2n4\nSb0s2 s2n4 0\nL0s2 OUT s2n4\nCbus1 BUS1 0\n",
+  "eff": 95.742,
+  "worst": 92.156,
+  "n": 13,
+  "stress": 48.0,
+  "duty": 0.2534,
+  "found": [
+   "V90_9/s4"
+  ],
+  "dup": [
+   "Sbx2:0-s1n14"
+  ],
+  "drop": [
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "Sb0s1 0 s1n14\nSa1s1 IN s1n14\nC0s1 s1n13 0\nL0s1 s1n13 s1n14\nSb1s1 s1n14 0\nSa2s1 BUS1 s1n16\nC1s1 BUS1 s1n13\nSa3s1 s1n13 s1n16\nSa0s2 BUS1 s2n4\nSb0s2 s2n4 0\nL0s2 OUT s2n4"
+ },
+ {
+  "core": "Sa0s1 0 s1n9\nSb1s1 IN s1n9\nL0s1 BUS1 s1n9\nSa0s2 OUT s2n10\nSb0s2 BUS1 s2n9\nC0s2 BUS1 s2n10\nL0s2 s2n9 s2n10\nSa1s2 0 s2n9\nC1s2 0 OUT\nC2s2 OUT s2n10\n",
+  "eff": 95.742,
+  "worst": 94.128,
+  "n": 10,
+  "stress": 48.1,
+  "duty": 0.7477,
+  "found": [
+   "_V95N_CTL/s2"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s2"
+  ],
+  "match": null,
+  "kept": "Sa0s1 0 s1n9\nSb1s1 IN s1n9\nL0s1 BUS1 s1n9\nSa0s2 OUT s2n10\nSb0s2 BUS1 s2n9\nC0s2 BUS1 s2n10\nL0s2 s2n9 s2n10\nSa1s2 0 s2n9\nC2s2 OUT s2n10"
+ },
+ {
+  "core": "Sb0s1 s1n3 IN\nSa0s1 s1n3 0\nSb1s1 IN s1n10\nC0s1 0 BUS1\nC1s1 s1n3 s1n10\nL0s1 BUS1 s1n10\nL0s2 OUT s2n10\nSa0s2 0 s2n10\nSb0s2 BUS1 s2n10\n",
+  "eff": 95.732,
+  "worst": 92.242,
+  "n": 9,
+  "stress": 48.3,
+  "duty": 0.7454,
+  "found": [
+   "V90_7/s3"
+  ],
+  "dup": [],
+  "drop": [
+   "C0s1"
+  ],
+  "match": null,
+  "kept": "Sb0s1 s1n3 IN\nSa0s1 s1n3 0\nSb1s1 IN s1n10\nC1s1 s1n3 s1n10\nL0s1 BUS1 s1n10\nL0s2 OUT s2n10\nSa0s2 0 s2n10\nSb0s2 BUS1 s2n10"
+ },
+ {
+  "core": "L0s1 BUS1 s1n10\nSa0s1 IN s1n10\nSb1s1 0 s1n10\nC2s1 IN BUS1\nC0s2 OUT s2n10\nSb0s2 0 s2n9\nSa0s2 s2n9 s2n10\nL0s2 OUT s2n9\nSb1s2 BUS1 s2n10\nC1s2 BUS1 OUT\n",
+  "eff": 95.731,
+  "worst": 92.325,
+  "n": 10,
+  "stress": 48.0,
+  "duty": 0.2533,
+  "found": [
+   "V90_5/s6"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s2",
+   "C2s1"
+  ],
+  "match": null,
+  "kept": "L0s1 BUS1 s1n10\nSa0s1 IN s1n10\nSb1s1 0 s1n10\nC0s2 OUT s2n10\nSb0s2 0 s2n9\nSa0s2 s2n9 s2n10\nL0s2 OUT s2n9\nSb1s2 BUS1 s2n10"
+ },
+ {
+  "core": "Sb1s1 0 s1n9\nL0s1 BUS1 s1n9\nSa0s1 IN s1n9\nC0s2 OUT s2n10\nSb0s2 0 s2n9\nSa0s2 s2n9 s2n10\nL0s2 OUT s2n9\nSb1s2 BUS1 s2n10\nC1s2 BUS1 OUT\nCbus1 BUS1 0\n",
+  "eff": 95.731,
+  "worst": 92.325,
+  "n": 10,
+  "stress": 48.0,
+  "duty": 0.2533,
+  "found": [
+   "V90_5/s6"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s2",
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "Sb1s1 0 s1n9\nL0s1 BUS1 s1n9\nSa0s1 IN s1n9\nC0s2 OUT s2n10\nSb0s2 0 s2n9\nSa0s2 s2n9 s2n10\nL0s2 OUT s2n9\nSb1s2 BUS1 s2n10"
+ },
+ {
+  "core": "C0s1 0 s1n14\nL0s1 s1n13 s1n14\nSa0s1 s1n13 s1n14\nSa1s1 IN s1n14\nSb0s1 s1n12 s1n13\nSa2s1 s1n12 s1n15\nSb1s1 0 s1n15\nL1s1 BUS1 s1n15\nC1s1 0 s1n12\nSa0s2 BUS1 s2n11\nL0s2 OUT s2n11\nSb1s2 0 s2n11\nCbus1 BUS1 0\n",
+  "eff": 95.711,
+  "worst": 92.23,
+  "n": 13,
+  "stress": 48.0,
+  "duty": 0.2534,
+  "found": [
+   "V90_5/s3"
+  ],
+  "dup": [],
+  "drop": [
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "C0s1 0 s1n14\nL0s1 s1n13 s1n14\nSa0s1 s1n13 s1n14\nSa1s1 IN s1n14\nSb0s1 s1n12 s1n13\nSa2s1 s1n12 s1n15\nSb1s1 0 s1n15\nL1s1 BUS1 s1n15\nC1s1 0 s1n12\nSa0s2 BUS1 s2n11\nL0s2 OUT s2n11\nSb1s2 0 s2n11"
+ },
+ {
+  "core": "C0s1 0 BUS1\nSb0s1 IN s1n9\nL0s1 s1n9 s1n10\nL1s1 BUS1 s1n9\nSa0s1 0 s1n10\nC1s1 s1n9 s1n10\nSa0s2 0 s2n9\nL0s2 s2n9 OUT\nSb1s2 BUS1 s2n9\n",
+  "eff": 95.71,
+  "worst": 92.249,
+  "n": 9,
+  "stress": 48.1,
+  "duty": 0.7455,
+  "found": [
+   "V90_6/s2"
+  ],
+  "dup": [],
+  "drop": [
+   "C0s1"
+  ],
+  "match": null,
+  "kept": "Sb0s1 IN s1n9\nL0s1 s1n9 s1n10\nL1s1 BUS1 s1n9\nSa0s1 0 s1n10\nC1s1 s1n9 s1n10\nSa0s2 0 s2n9\nL0s2 s2n9 OUT\nSb1s2 BUS1 s2n9"
+ },
+ {
+  "core": "Sa0s1 0 s1n9\nSb0s1 IN s1n9\nL0s1 BUS1 s1n9\nC1s1 0 BUS1\nSb0s2 s2n9 s2n10\nC0s2 0 OUT\nSa0s2 0 s2n9\nC1s2 0 s2n10\nL0s2 OUT s2n9\nL1s2 BUS1 s2n10\nCbus1 BUS1 0\n",
+  "eff": 95.708,
+  "worst": 92.178,
+  "n": 11,
+  "stress": 48.0,
+  "duty": 0.7458,
+  "found": [
+   "V90_6/s4"
+  ],
+  "dup": [
+   "Cx2:0-BUS1"
+  ],
+  "drop": [
+   "C0s2",
+   "C1s1",
+   "Cbus1"
+  ],
+  "match": "known-comp:V90_6/s4",
+  "kept": "Sa0s1 0 s1n9\nSb0s1 IN s1n9\nL0s1 BUS1 s1n9\nSb0s2 s2n9 s2n10\nSa0s2 0 s2n9\nC1s2 0 s2n10\nL0s2 OUT s2n9\nL1s2 BUS1 s2n10"
+ },
+ {
+  "core": "Sb0s1 IN s1n9\nSa0s1 s1n9 s1n10\nL0s1 BUS1 s1n9\nSa1s1 0 s1n10\nSb0s2 s2n9 s2n10\nC0s2 0 OUT\nSa0s2 0 s2n10\nC1s2 OUT s2n9\nL0s2 OUT s2n10\nL1s2 BUS1 s2n9\n",
+  "eff": 95.7,
+  "worst": 91.981,
+  "n": 10,
+  "stress": 48.1,
+  "duty": 0.7454,
+  "found": [
+   "V90_9/s6"
+  ],
+  "dup": [],
+  "drop": [
+   "C0s2"
+  ],
+  "match": null,
+  "kept": "Sb0s1 IN s1n9\nSa0s1 s1n9 s1n10\nL0s1 BUS1 s1n9\nSa1s1 0 s1n10\nSb0s2 s2n9 s2n10\nSa0s2 0 s2n10\nC1s2 OUT s2n9\nL0s2 OUT s2n10\nL1s2 BUS1 s2n9"
+ },
+ {
+  "core": "L0s1 BUS1 s1n9\nSa0s1 IN s1n9\nSb0s1 s1n9 s1n10\nSa1s1 0 s1n10\nC0s1 0 s1n10\nC0s2 s2n0 0\nSb0s2 s2n4 0\nSb1s2 s2n0 BUS1\nSa0s2 s2n0 s2n4\nC1s2 s2n0 OUT\nL0s2 s2n4 OUT\nCbus1 BUS1 0\n",
+  "eff": 95.698,
+  "worst": 92.272,
+  "n": 12,
+  "stress": 48.2,
+  "duty": 0.2534,
+  "found": [
+   "V90_5/s6"
+  ],
+  "dup": [],
+  "drop": [
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "L0s1 BUS1 s1n9\nSa0s1 IN s1n9\nSb0s1 s1n9 s1n10\nSa1s1 0 s1n10\nC0s1 0 s1n10\nC0s2 s2n0 0\nSb0s2 s2n4 0\nSb1s2 s2n0 BUS1\nSa0s2 s2n0 s2n4\nC1s2 s2n0 OUT\nL0s2 s2n4 OUT"
+ },
+ {
+  "core": "Sa0s1 IN s1n15\nSa1s1 s1n14 s1n16\nSa2s1 s1n15 s1n16\nC1s1 0 s1n14\nSa3s1 s1n14 s1n17\nL0s1 BUS1 s1n18\nSb1s1 0 s1n18\nL1s1 BUS1 s1n17\nC2s1 s1n17 s1n18\nSb0s2 s2n3 0\nL0s2 OUT s2n3\nSb1s2 s2n3 0\nSa0s2 s2n3 BUS1\nCbus1 BUS1 0\n",
+  "eff": 95.689,
+  "worst": 93.142,
+  "n": 14,
+  "stress": 48.0,
+  "duty": 0.2528,
+  "found": [
+   "V90_5/s5"
+  ],
+  "dup": [
+   "Sbx2:0-s2n3"
+  ],
+  "drop": [
+   "C1s1",
+   "Cbus1"
+  ],
+  "match": "known-comp:V90_5/s5",
+  "kept": "Sa0s1 IN s1n15\nSa1s1 s1n14 s1n16\nSa2s1 s1n15 s1n16\nSa3s1 s1n14 s1n17\nL0s1 BUS1 s1n18\nSb1s1 0 s1n18\nL1s1 BUS1 s1n17\nC2s1 s1n17 s1n18\nSb0s2 s2n3 0\nL0s2 OUT s2n3\nSb1s2 s2n3 0\nSa0s2 s2n3 BUS1"
+ },
+ {
+  "core": "C0s1 0 s1n12\nSb0s1 IN s1n14\nSb1s1 s1n13 s1n14\nL0s1 s1n12 s1n14\nSa0s1 0 s1n13\nC1s1 s1n13 s1n14\nSa1s1 0 s1n15\nL1s1 BUS1 s1n15\nSb2s1 s1n12 s1n15\nC0s2 s2n9 s2n10\nSb0s2 OUT s2n10\nSa0s2 BUS1 s2n10\nL0s2 OUT s2n9\nC1s2 0 OUT\nSb1s2 0 s2n9\nCbus1 BUS1 0\n",
+  "eff": 95.687,
+  "worst": 91.124,
+  "n": 16,
+  "stress": 48.1,
+  "duty": 0.5768,
+  "found": [
+   "V90_9/s5"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s2",
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "C0s1 0 s1n12\nSb0s1 IN s1n14\nSb1s1 s1n13 s1n14\nL0s1 s1n12 s1n14\nSa0s1 0 s1n13\nC1s1 s1n13 s1n14\nSa1s1 0 s1n15\nL1s1 BUS1 s1n15\nSb2s1 s1n12 s1n15\nC0s2 s2n9 s2n10\nSb0s2 OUT s2n10\nSa0s2 BUS1 s2n10\nL0s2 OUT s2n9\nSb1s2 0 s2n9"
+ },
+ {
+  "core": "L0s1 s1n10 s1n11\nSa0s1 0 s1n10\nSa1s1 s1n9 s1n11\nL1s1 BUS1 s1n9\nSb0s1 IN s1n10\nC1s1 s1n9 s1n11\nL0s2 OUT s2n11\nSa1s2 0 s2n11\nSb1s2 BUS1 s2n11\nCbus1 BUS1 0\n",
+  "eff": 95.672,
+  "worst": 91.919,
+  "n": 10,
+  "stress": 48.0,
+  "duty": 0.7454,
+  "found": [
+   "V90_6/s4"
+  ],
+  "dup": [],
+  "drop": [
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "L0s1 s1n10 s1n11\nSa0s1 0 s1n10\nSa1s1 s1n9 s1n11\nL1s1 BUS1 s1n9\nSb0s1 IN s1n10\nC1s1 s1n9 s1n11\nL0s2 OUT s2n11\nSa1s2 0 s2n11\nSb1s2 BUS1 s2n11"
+ },
+ {
+  "core": "Sb0s1 IN s1n9\nL0s1 BUS1 s1n9\nSa0s1 0 s1n9\nC2s1 0 BUS1\nC0s2 OUT s2n10\nL0s2 OUT s2n9\nSa0s2 0 s2n9\nSb0s2 s2n9 s2n10\nSa1s2 BUS1 s2n10\nC1s2 0 OUT\n",
+  "eff": 95.672,
+  "worst": 92.233,
+  "n": 10,
+  "stress": 48.0,
+  "duty": 0.7457,
+  "found": [
+   "V90_9/s6"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s2",
+   "C2s1"
+  ],
+  "match": null,
+  "kept": "Sb0s1 IN s1n9\nL0s1 BUS1 s1n9\nSa0s1 0 s1n9\nC0s2 OUT s2n10\nL0s2 OUT s2n9\nSa0s2 0 s2n9\nSb0s2 s2n9 s2n10\nSa1s2 BUS1 s2n10"
+ },
+ {
+  "core": "Sa0s1 IN s1n15\nSb0s1 s1n14 s1n15\nSa1s1 s1n14 s1n16\nSb1s1 0 s1n16\nC0s1 s1n15 s1n16\nC1s1 0 s1n14\nL0s1 s1n14 s1n17\nSb2s1 0 s1n18\nSa2s1 s1n17 s1n18\nL1s1 BUS1 s1n18\nC2s1 s1n14 s1n17\nC0s2 OUT s2n10\nL0s2 OUT s2n9\nSa0s2 0 s2n9\nSb0s2 s2n9 s2n10\nSa1s2 BUS1 s2n10\nC1s2 0 OUT\nCbus1 BUS1 0\n",
+  "eff": 95.67,
+  "worst": 91.901,
+  "n": 18,
+  "stress": 24.1,
+  "duty": 0.8442,
+  "found": [
+   "V90_9/s6"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s2",
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 IN s1n15\nSb0s1 s1n14 s1n15\nSa1s1 s1n14 s1n16\nSb1s1 0 s1n16\nC0s1 s1n15 s1n16\nC1s1 0 s1n14\nL0s1 s1n14 s1n17\nSb2s1 0 s1n18\nSa2s1 s1n17 s1n18\nL1s1 BUS1 s1n18\nC2s1 s1n14 s1n17\nC0s2 OUT s2n10\nL0s2 OUT s2n9\nSa0s2 0 s2n9\nSb0s2 s2n9 s2n10\nSa1s2 BUS1 s2n10"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nC1s1 BUS1 0\nSa0s2 BUS1 s2n15\nSb0s2 s2n14 s2n15\nSa1s2 s2n14 s2n16\nSb1s2 0 s2n16\nC0s2 s2n15 s2n16\nSb2s2 s2n17 s2n18\nC1s2 OUT s2n18\nL0s2 OUT s2n17\nL1s2 0 s2n18\nC2s2 OUT s2n14\nSa2s2 s2n14 s2n17\n",
+  "eff": 95.627,
+  "worst": 91.707,
+  "n": 17,
+  "stress": 24.1,
+  "duty": 0.261,
+  "found": [
+   "V90_6/s3"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nSa0s2 BUS1 s2n15\nSb0s2 s2n14 s2n15\nSa1s2 s2n14 s2n16\nSb1s2 0 s2n16\nC0s2 s2n15 s2n16\nSb2s2 s2n17 s2n18\nC1s2 OUT s2n18\nL0s2 OUT s2n17\nL1s2 0 s2n18\nC2s2 OUT s2n14\nSa2s2 s2n14 s2n17"
+ },
+ {
+  "core": "C0s1 s1n9 s1n10\nSb0s1 0 s1n9\nC1s1 0 BUS1\nL0s1 BUS1 s1n9\nSb1s1 0 s1n9\nSa0s1 IN s1n10\nL1s1 BUS1 s1n10\nL0s2 OUT s2n10\nSa0s2 BUS1 s2n10\nSb0s2 0 s2n10\nCbus1 BUS1 0\n",
+  "eff": 95.573,
+  "worst": 92.481,
+  "n": 11,
+  "stress": 48.0,
+  "duty": 0.2531,
+  "found": [
+   "V90_4/s7"
+  ],
+  "dup": [
+   "Sbx2:0-s1n9",
+   "Cx2:0-BUS1"
+  ],
+  "drop": [
+   "C1s1",
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "C0s1 s1n9 s1n10\nSb0s1 0 s1n9\nL0s1 BUS1 s1n9\nSb1s1 0 s1n9\nSa0s1 IN s1n10\nL1s1 BUS1 s1n10\nL0s2 OUT s2n10\nSa0s2 BUS1 s2n10\nSb0s2 0 s2n10"
+ },
+ {
+  "core": "L0s1 s1n7 IN\nL1s1 s1n10 BUS1\nSa0s1 s1n7 s1n10\nSb0s1 s1n10 0\nC2s1 s1n7 IN\nSb0s2 BUS1 s2n9\nL0s2 OUT s2n10\nSb1s2 0 s2n10\nSa0s2 s2n9 s2n10\nC1s2 0 s2n9\nC2s2 BUS1 s2n9\n",
+  "eff": 95.564,
+  "worst": 92.032,
+  "n": 11,
+  "stress": 48.0,
+  "duty": 0.2535,
+  "found": [
+   "V90_8/s4"
+  ],
+  "dup": [],
+  "drop": [],
+  "match": null,
+  "kept": "L0s1 s1n7 IN\nL1s1 s1n10 BUS1\nSa0s1 s1n7 s1n10\nSb0s1 s1n10 0\nC2s1 s1n7 IN\nSb0s2 BUS1 s2n9\nL0s2 OUT s2n10\nSb1s2 0 s2n10\nSa0s2 s2n9 s2n10\nC1s2 0 s2n9\nC2s2 BUS1 s2n9"
+ },
+ {
+  "core": "L0s1 IN s1n15\nSb0s1 s1n14 s1n15\nSa0s1 s1n11 0\nSb1s1 s1n11 0\nC0s1 s1n15 0\nC1s1 s1n11 s1n14\nSb2s1 s1n14 s1n17\nSb3s1 s1n11 s1n18\nSa1s1 s1n17 s1n18\nL1s1 BUS1 s1n18\nC2s1 s1n14 s1n17\nSb0s2 0 s2n5\nSa0s2 BUS1 s2n5\nL0s2 OUT s2n5\nCbus1 BUS1 0\n",
+  "eff": 95.563,
+  "worst": 92.095,
+  "n": 15,
+  "stress": 48.0,
+  "duty": 0.2535,
+  "found": [
+   "V90_5/s4"
+  ],
+  "dup": [],
+  "drop": [
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "L0s1 IN s1n15\nSb0s1 s1n14 s1n15\nC0s1 s1n15 0\nC1s1 0 s1n14\nSb2s1 s1n14 s1n17\nSb3s1 0 s1n18\nSa1s1 s1n17 s1n18\nL1s1 BUS1 s1n18\nC2s1 s1n14 s1n17\nSb0s2 0 s2n5\nSa0s2 BUS1 s2n5\nL0s2 OUT s2n5"
+ },
+ {
+  "core": "L0s1 IN s1n17\nSb1s1 s1n13 s1n17\nL1s1 BUS1 s1n16\nSa2s1 BUS1 s1n17\nC0s1 s1n16 s1n17\nSa3s1 0 s1n16\nC1s1 0 s1n13\nL0s2 OUT s2n9\nSa0s2 BUS1 s2n9\nSb0s2 0 s2n9\nCbus1 BUS1 0\n",
+  "eff": 95.527,
+  "worst": 91.665,
+  "n": 11,
+  "stress": 27.9,
+  "duty": 0.1302,
+  "found": [
+   "V90_7/s2"
+  ],
+  "dup": [],
+  "drop": [
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "L0s1 IN s1n17\nSb1s1 s1n13 s1n17\nL1s1 BUS1 s1n16\nSa2s1 BUS1 s1n17\nC0s1 s1n16 s1n17\nSa3s1 0 s1n16\nC1s1 0 s1n13\nL0s2 OUT s2n9\nSa0s2 BUS1 s2n9\nSb0s2 0 s2n9"
+ },
+ {
+  "core": "L0s1 s1n9 s1n10\nSb0s1 IN s1n9\nC0s1 0 BUS1\nSa0s1 0 s1n10\nL1s1 BUS1 s1n10\nC1s1 s1n9 s1n10\nSa0s2 0 s2n10\nSb0s2 BUS1 s2n9\nSb1s2 s2n9 s2n10\nL0s2 OUT s2n10\n",
+  "eff": 95.497,
+  "worst": 93.456,
+  "n": 10,
+  "stress": 48.1,
+  "duty": 0.7472,
+  "found": [
+   "_V95N_CTL/s2"
+  ],
+  "dup": [],
+  "drop": [
+   "C0s1"
+  ],
+  "match": null,
+  "kept": "L0s1 s1n9 s1n10\nSb0s1 IN s1n9\nSa0s1 0 s1n10\nL1s1 BUS1 s1n10\nC1s1 s1n9 s1n10\nSa0s2 0 s2n10\nSb0s2 BUS1 s2n9\nSb1s2 s2n9 s2n10\nL0s2 OUT s2n10"
+ },
+ {
+  "core": "Sb0s1 0 s1n9\nC0s1 BUS1 s1n10\nSa0s1 s1n10 s1n11\nL0s1 IN s1n10\nL1s1 BUS1 s1n9\nSa1s1 s1n9 s1n11\nSb0s2 BUS1 s2n9\nL0s2 OUT s2n10\nSb1s2 0 s2n10\nSa0s2 s2n9 s2n10\nC1s2 0 s2n9\nC2s2 BUS1 s2n9\n",
+  "eff": 95.492,
+  "worst": 91.905,
+  "n": 12,
+  "stress": 48.0,
+  "duty": 0.2536,
+  "found": [
+   "V90_8/s4"
+  ],
+  "dup": [],
+  "drop": [],
+  "match": null,
+  "kept": "Sb0s1 0 s1n9\nC0s1 BUS1 s1n10\nSa0s1 s1n10 s1n11\nL0s1 IN s1n10\nL1s1 BUS1 s1n9\nSa1s1 s1n9 s1n11\nSb0s2 BUS1 s2n9\nL0s2 OUT s2n10\nSb1s2 0 s2n10\nSa0s2 s2n9 s2n10\nC1s2 0 s2n9\nC2s2 BUS1 s2n9"
+ },
+ {
+  "core": "C0s1 s1n9 s1n10\nSb0s1 0 s1n9\nC1s1 0 BUS1\nL0s1 BUS1 s1n10\nSb1s1 s1n9 s1n10\nSa0s1 IN s1n9\nSa0s2 BUS1 s2n9\nSb0s2 0 s2n10\nL0s2 OUT s2n10\nSa1s2 s2n9 s2n11\nSa2s2 s2n10 s2n11\n",
+  "eff": 95.486,
+  "worst": 91.819,
+  "n": 11,
+  "stress": 48.0,
+  "duty": 0.2537,
+  "found": [
+   "STAGE_2/s3"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s1"
+  ],
+  "match": null,
+  "kept": "C0s1 s1n9 s1n10\nSb0s1 0 s1n9\nL0s1 BUS1 s1n10\nSb1s1 s1n9 s1n10\nSa0s1 IN s1n9\nSa0s2 BUS1 s2n9\nSb0s2 0 s2n10\nL0s2 OUT s2n10\nSa1s2 s2n9 s2n11\nSa2s2 s2n10 s2n11"
+ },
+ {
+  "core": "L0s1 s1n9 s1n10\nSb0s1 IN s1n9\nC0s1 0 BUS1\nSa0s1 0 s1n10\nL1s1 BUS1 s1n10\nC1s1 s1n9 s1n10\nL0s2 OUT s2n10\nSb0s2 BUS1 s2n10\nSa0s2 0 s2n10\n",
+  "eff": 95.476,
+  "worst": 93.443,
+  "n": 9,
+  "stress": 48.1,
+  "duty": 0.7472,
+  "found": [
+   "_STAGE_2/s2"
+  ],
+  "dup": [],
+  "drop": [
+   "C0s1"
+  ],
+  "match": "known-comp:V90_3/s4",
+  "kept": "L0s1 s1n9 s1n10\nSb0s1 IN s1n9\nSa0s1 0 s1n10\nL1s1 BUS1 s1n10\nC1s1 s1n9 s1n10\nL0s2 OUT s2n10\nSb0s2 BUS1 s2n10\nSa0s2 0 s2n10"
+ },
+ {
+  "core": "C0s1 BUS1 s1n10\nL0s1 s1n9 s1n10\nSa0s1 BUS1 s1n10\nSa1s1 IN s1n9\nC1s1 0 BUS1\nSb0s1 0 s1n9\nSb0s2 0 s2n10\nL0s2 OUT s2n10\nSa0s2 s2n9 s2n10\nSa1s2 BUS1 s2n9\n",
+  "eff": 95.473,
+  "worst": 91.804,
+  "n": 10,
+  "stress": 48.0,
+  "duty": 0.2539,
+  "found": [
+   "V90_4/s4"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s1"
+  ],
+  "match": null,
+  "kept": "C0s1 BUS1 s1n10\nL0s1 s1n9 s1n10\nSa0s1 BUS1 s1n10\nSa1s1 IN s1n9\nSb0s1 0 s1n9\nSb0s2 0 s2n10\nL0s2 OUT s2n10\nSa0s2 s2n9 s2n10\nSa1s2 BUS1 s2n9"
+ },
+ {
+  "core": "L0s1 BUS1 s1n9\nSb1s1 IN s1n9\nC0s1 IN BUS1\nSa0s1 0 s1n9\nSb0s2 0 s2n9\nSb1s2 BUS2 s2n10\nL0s2 BUS2 s2n9\nSa0s2 BUS1 s2n10\nC0s2 s2n9 s2n10\nC1s2 0 BUS2\nSa0s3 0 s3n9\nSa1s3 s3n9 s3n10\nSa2s3 0 s3n10\nSb0s3 BUS2 s3n10\nL0s3 OUT s3n10\n",
+  "eff": 95.449,
+  "worst": 92.043,
+  "n": 15,
+  "stress": 48.0,
+  "duty": 0.5785,
+  "found": [
+   "V90R_2/s2"
+  ],
+  "dup": [],
+  "drop": [
+   "C0s1"
+  ],
+  "match": null,
+  "kept": "L0s1 BUS1 s1n9\nSb1s1 IN s1n9\nSa0s1 0 s1n9\nSb0s2 0 s2n9\nSb1s2 BUS2 s2n10\nL0s2 BUS2 s2n9\nSa0s2 BUS1 s2n10\nC0s2 s2n9 s2n10\nC1s2 0 BUS2\nSa0s3 0 s3n9\nSa1s3 s3n9 s3n10\nSa2s3 0 s3n10\nSb0s3 BUS2 s3n10\nL0s3 OUT s3n10"
+ },
+ {
+  "core": "Sa0s1 IN s1n14\nSb0s1 0 s1n14\nL0s1 s1n13 s1n14\nC0s1 IN s1n13\nL1s1 BUS1 s1n16\nSb2s1 0 s1n16\nSa3s1 s1n13 s1n16\nSb0s2 0 s2n9\nSa0s2 BUS1 s2n10\nSb1s2 s2n9 s2n10\nL0s2 OUT s2n10\nSb2s2 0 s2n10\nCbus1 BUS1 0\n",
+  "eff": 95.43,
+  "worst": 92.013,
+  "n": 13,
+  "stress": 48.0,
+  "duty": 0.397,
+  "found": [
+   "V90_5/s2"
+  ],
+  "dup": [],
+  "drop": [
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 IN s1n14\nSb0s1 0 s1n14\nL0s1 s1n13 s1n14\nC0s1 IN s1n13\nL1s1 BUS1 s1n16\nSb2s1 0 s1n16\nSa3s1 s1n13 s1n16\nSb0s2 0 s2n9\nSa0s2 BUS1 s2n10\nSb1s2 s2n9 s2n10\nL0s2 OUT s2n10\nSb2s2 0 s2n10"
+ },
+ {
+  "core": "L0s1 BUS1 s1n4\nSa0s1 s1n4 0\nC0s1 s1n2 0\nL1s1 s1n2 IN\nSb0s1 s1n2 s1n4\nC1s1 BUS1 0\nSa0s2 0 s2n8\nSb0s2 BUS1 s2n9\nSb1s2 s2n8 s2n9\nL0s2 OUT s2n8\n",
+  "eff": 95.388,
+  "worst": 91.625,
+  "n": 10,
+  "stress": 48.0,
+  "duty": 0.7451,
+  "found": [
+   "V90_4/s3"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s1"
+  ],
+  "match": null,
+  "kept": "L0s1 BUS1 s1n4\nSa0s1 s1n4 0\nC0s1 s1n2 0\nL1s1 s1n2 IN\nSb0s1 s1n2 s1n4\nSa0s2 0 s2n8\nSb0s2 BUS1 s2n9\nSb1s2 s2n8 s2n9\nL0s2 OUT s2n8"
+ },
+ {
+  "core": "L0s1 BUS1 s1n10\nSa0s1 0 s1n10\nSa1s1 IN s1n3\nSb0s1 s1n3 s1n10\nC1s1 s1n3 0\nSb0s2 BUS1 s2n10\nL0s2 OUT s2n9\nC0s2 s2n10 s2n11\nSa0s2 0 s2n9\nSb1s2 s2n9 s2n11\nSa1s2 s2n10 s2n11\nCbus1 BUS1 0\n",
+  "eff": 95.383,
+  "worst": 91.679,
+  "n": 12,
+  "stress": 48.0,
+  "duty": 0.7451,
+  "found": [
+   "V90_4/s7"
+  ],
+  "dup": [],
+  "drop": [
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "L0s1 BUS1 s1n10\nSa0s1 0 s1n10\nSa1s1 IN s1n3\nSb0s1 s1n3 s1n10\nC1s1 s1n3 0\nSb0s2 BUS1 s2n10\nL0s2 OUT s2n9\nC0s2 s2n10 s2n11\nSa0s2 0 s2n9\nSb1s2 s2n9 s2n11\nSa1s2 s2n10 s2n11"
+ },
+ {
+  "core": "L0s1 BUS1 s1n10\nSa0s1 0 s1n10\nSb0s1 s1n9 s1n10\nSa1s1 IN s1n9\nC1s1 0 s1n9\nL0s2 s2n13 s2n14\nSb0s2 0 s2n14\nSa0s2 BUS1 s2n14\nSa1s2 0 s2n16\nSb1s2 0 s2n15\nSa2s2 s2n13 s2n15\nC0s2 OUT s2n16\nL1s2 OUT s2n15\nC1s2 OUT s2n13\nSb2s2 s2n15 s2n16\nC2s2 BUS1 s2n16\n",
+  "eff": 95.371,
+  "worst": 92.188,
+  "n": 16,
+  "stress": 48.0,
+  "duty": 0.3063,
+  "found": [
+   "V90_9/s7"
+  ],
+  "dup": [
+   "Sbx2:0-s2n15"
+  ],
+  "drop": [
+   "C0s2",
+   "C2s2"
+  ],
+  "match": null,
+  "kept": "L0s1 BUS1 s1n10\nSa0s1 0 s1n10\nSb0s1 s1n9 s1n10\nSa1s1 IN s1n9\nC1s1 0 s1n9\nL0s2 s2n13 s2n14\nSb0s2 0 s2n14\nSa0s2 BUS1 s2n14\nSb1s2 0 s2n15\nSa2s2 s2n13 s2n15\nL1s2 OUT s2n15\nC1s2 OUT s2n13\nSb2s2 s2n15 0"
+ },
+ {
+  "core": "Sa0s1 s1n9 s1n10\nL0s1 0 s1n10\nL1s1 BUS1 s1n9\nC0s1 BUS1 s1n10\nC1s1 0 BUS1\nSb0s1 IN s1n9\nL0s2 OUT s2n10\nSb0s2 s2n4 s2n10\nSa0s2 0 s2n10\nSb1s2 s2n4 BUS1\nC0s2 0 s2n4\n",
+  "eff": 95.362,
+  "worst": 91.577,
+  "n": 11,
+  "stress": 48.1,
+  "duty": 0.7452,
+  "found": [
+   "V90_8/s3"
+  ],
+  "dup": [],
+  "drop": [
+   "C0s2",
+   "C1s1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 s1n9 s1n10\nL0s1 0 s1n10\nL1s1 BUS1 s1n9\nC0s1 BUS1 s1n10\nSb0s1 IN s1n9\nL0s2 OUT s2n10\nSb0s2 s2n4 s2n10\nSa0s2 0 s2n10\nSb1s2 s2n4 BUS1"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nC1s1 BUS1 0\nSa0s2 BUS1 s2n9\nC0s2 s2n2 0\nSb0s2 s2n6 s2n9\nSb1s2 s2n2 s2n6\nL0s2 BUS2 s2n9\nL1s2 s2n2 0\nSa0s3 BUS2 s3n1\nSb0s3 s3n1 0\nL0s3 s3n1 OUT\nCbus2 BUS2 0\n",
+  "eff": 95.324,
+  "worst": 91.312,
+  "n": 16,
+  "stress": 24.1,
+  "duty": 0.3599,
+  "found": [
+   "V90R_1/s2"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 BUS1\nSa1s1 s1n2 BUS1\nSb1s1 s1n2 0\nC0s1 s1n1 s1n2\nSa0s2 BUS1 s2n9\nC0s2 s2n2 0\nSb0s2 s2n6 s2n9\nSb1s2 s2n2 s2n6\nL0s2 BUS2 s2n9\nL1s2 s2n2 0\nSa0s3 BUS2 s3n1\nSb0s3 s3n1 0\nL0s3 s3n1 OUT\nCbus2 BUS2 0"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 0\nL0s1 s1n1 BUS1\nL0s2 BUS2 s2n9\nC0s2 BUS1 s2n10\nSb0s2 s2n9 s2n10\nSa0s2 0 s2n9\nSb1s2 BUS1 s2n10\nC1s2 0 BUS2\nSa0s3 BUS2 s3n1\nSb0s3 s3n1 0\nL0s3 s3n1 OUT\nCbus1 BUS1 0\n",
+  "eff": 95.286,
+  "worst": 91.609,
+  "n": 13,
+  "stress": 48.0,
+  "duty": 0.3,
+  "found": [
+   "V90R_1/s3"
+  ],
+  "dup": [],
+  "drop": [
+   "C0s2",
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 0\nL0s1 s1n1 BUS1\nL0s2 BUS2 s2n9\nSb0s2 s2n9 s2n10\nSa0s2 0 s2n9\nSb1s2 BUS1 s2n10\nC1s2 0 BUS2\nSa0s3 BUS2 s3n1\nSb0s3 s3n1 0\nL0s3 s3n1 OUT"
+ },
+ {
+  "core": "Sb0s1 0 s1n10\nSa0s1 IN s1n10\nC0s1 0 BUS1\nL0s1 BUS1 s1n10\nL0s2 s2n13 s2n14\nSb0s2 0 s2n14\nSa0s2 BUS1 s2n14\nSa1s2 0 s2n16\nSb1s2 0 s2n15\nSa2s2 s2n13 s2n15\nC0s2 OUT s2n16\nL1s2 OUT s2n15\nC1s2 OUT s2n13\nSb2s2 s2n15 s2n16\n",
+  "eff": 95.284,
+  "worst": 91.763,
+  "n": 14,
+  "stress": 48.0,
+  "duty": 0.3973,
+  "found": [
+   "V90_9/s7"
+  ],
+  "dup": [
+   "Sbx2:0-s2n15"
+  ],
+  "drop": [
+   "C0s1",
+   "C0s2"
+  ],
+  "match": null,
+  "kept": "Sb0s1 0 s1n10\nSa0s1 IN s1n10\nL0s1 BUS1 s1n10\nL0s2 s2n13 s2n14\nSb0s2 0 s2n14\nSa0s2 BUS1 s2n14\nSb1s2 0 s2n15\nSa2s2 s2n13 s2n15\nL1s2 OUT s2n15\nC1s2 OUT s2n13\nSb2s2 s2n15 0"
+ },
+ {
+  "core": "L0s1 BUS1 s1n9\nL1s1 s1n8 s1n9\nSa0s1 0 s1n8\nSb0s1 IN s1n8\nC0s1 IN s1n9\nC2s1 BUS1 s1n9\nL0s2 OUT s2n11\nSa0s2 0 s2n11\nSb3s2 BUS1 s2n11\n",
+  "eff": 95.255,
+  "worst": 93.011,
+  "n": 9,
+  "stress": 48.1,
+  "duty": 0.7469,
+  "found": [
+   "_STAGE_2/s2"
+  ],
+  "dup": [],
+  "drop": [],
+  "match": null,
+  "kept": "L0s1 BUS1 s1n9\nL1s1 s1n8 s1n9\nSa0s1 0 s1n8\nSb0s1 IN s1n8\nC0s1 IN s1n9\nC2s1 BUS1 s1n9\nL0s2 OUT s2n11\nSa0s2 0 s2n11\nSb3s2 BUS1 s2n11"
+ },
+ {
+  "core": "L0s1 BUS1 s1n11\nSa0s1 0 s1n11\nSb1s1 IN s1n11\nL0s2 s2n13 s2n14\nSb0s2 0 s2n14\nSa0s2 BUS1 s2n14\nSb1s2 0 s2n15\nSa2s2 s2n13 s2n15\nL1s2 OUT s2n15\nC1s2 BUS1 s2n13\nCbus1 BUS1 0\n",
+  "eff": 95.25,
+  "worst": 91.584,
+  "n": 11,
+  "stress": 48.0,
+  "duty": 0.3,
+  "found": [
+   "V90_4/s2"
+  ],
+  "dup": [],
+  "drop": [
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "L0s1 BUS1 s1n11\nSa0s1 0 s1n11\nSb1s1 IN s1n11\nL0s2 s2n13 s2n14\nSb0s2 0 s2n14\nSa0s2 BUS1 s2n14\nSb1s2 0 s2n15\nSa2s2 s2n13 s2n15\nL1s2 OUT s2n15\nC1s2 BUS1 s2n13"
+ },
+ {
+  "core": "Sa0s1 BUS1 s1n10\nC0s1 0 BUS1\nSb0s1 0 s1n9\nSa1s1 IN s1n9\nL0s1 0 s1n10\nC1s1 s1n9 s1n10\nL0s2 s2n13 s2n14\nSb0s2 0 s2n14\nSa0s2 BUS1 s2n14\nSb1s2 0 s2n15\nSa2s2 s2n13 s2n15\nL1s2 OUT s2n15\nC1s2 BUS1 s2n13\n",
+  "eff": 95.2,
+  "worst": 91.585,
+  "n": 13,
+  "stress": 48.1,
+  "duty": 0.3,
+  "found": [
+   "V90_4/s2"
+  ],
+  "dup": [],
+  "drop": [
+   "C0s1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 BUS1 s1n10\nSb0s1 0 s1n9\nSa1s1 IN s1n9\nL0s1 0 s1n10\nC1s1 s1n9 s1n10\nL0s2 s2n13 s2n14\nSb0s2 0 s2n14\nSa0s2 BUS1 s2n14\nSb1s2 0 s2n15\nSa2s2 s2n13 s2n15\nL1s2 OUT s2n15\nC1s2 BUS1 s2n13"
+ },
+ {
+  "core": "Sa0s1 s1n14 s1n15\nSb0s1 s1n14 s1n16\nSa1s1 s1n15 s1n16\nL0s1 IN s1n16\nSb2s1 s1n14 s1n18\nL1s1 BUS1 s1n17\nSa2s1 BUS1 s1n18\nC0s1 s1n17 s1n18\nSa3s1 0 s1n17\nC1s1 0 s1n14\nL0s2 OUT s2n10\nSb0s2 BUS1 s2n9\nSa0s2 0 s2n10\nSb1s2 s2n9 s2n10\nCbus1 BUS1 0\n",
+  "eff": 95.176,
+  "worst": 91.131,
+  "n": 15,
+  "stress": 37.5,
+  "duty": 0.7116,
+  "found": [
+   "V90_4/s2"
+  ],
+  "dup": [
+   "Sax2:s1n14-s1n15"
+  ],
+  "drop": [
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 s1n14 s1n15\nSa1s1 s1n15 s1n14\nL0s1 IN s1n14\nSb2s1 s1n14 s1n18\nL1s1 BUS1 s1n17\nSa2s1 BUS1 s1n18\nC0s1 s1n17 s1n18\nSa3s1 0 s1n17\nC1s1 0 s1n14\nL0s2 OUT s2n10\nSb0s2 BUS1 s2n9\nSa0s2 0 s2n10\nSb1s2 s2n9 s2n10"
+ },
+ {
+  "core": "L0s1 s1n13 s1n14\nSb0s1 0 s1n14\nSa0s1 IN s1n14\nSb1s1 0 s1n15\nSa2s1 s1n13 s1n15\nL1s1 BUS1 s1n15\nC1s1 BUS1 s1n13\nC0s2 s2n12 0\nSa0s2 BUS1 s2n16\nSb1s2 0 s2n16\nSa1s2 s2n12 s2n19\nSb2s2 BUS1 s2n12\nL1s2 OUT s2n16\nSa2s2 s2n16 s2n19\nCbus1 BUS1 0\n",
+  "eff": 95.167,
+  "worst": 91.667,
+  "n": 15,
+  "stress": 48.0,
+  "duty": 0.3974,
+  "found": [
+   "V90_4/s4"
+  ],
+  "dup": [
+   "Cx2:0-BUS1"
+  ],
+  "drop": [
+   "C0s2",
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "L0s1 s1n13 s1n14\nSb0s1 0 s1n14\nSa0s1 IN s1n14\nSb1s1 0 s1n15\nSa2s1 s1n13 s1n15\nL1s1 BUS1 s1n15\nC1s1 BUS1 s1n13\nSa0s2 BUS1 s2n16\nSb1s2 0 s2n16\nSa1s2 BUS1 s2n19\nL1s2 OUT s2n16\nSa2s2 s2n16 s2n19"
+ },
+ {
+  "core": "Sb0s1 IN s1n9\nSa0s1 0 s1n9\nL0s1 BUS1 s1n9\nC3s1 0 BUS1\nSb0s2 s2n13 s2n14\nC0s2 s2n12 s2n13\nSa0s2 BUS1 s2n14\nL0s2 s2n12 s2n14\nC1s2 0 s2n12\nSb1s2 0 s2n13\nSb2s2 0 s2n15\nSa1s2 s2n12 s2n15\nL1s2 OUT s2n15\n",
+  "eff": 95.167,
+  "worst": 91.592,
+  "n": 13,
+  "stress": 48.0,
+  "duty": 0.3,
+  "found": [
+   "V90_9/s2"
+  ],
+  "dup": [],
+  "drop": [
+   "C3s1"
+  ],
+  "match": null,
+  "kept": "Sb0s1 IN s1n9\nSa0s1 0 s1n9\nL0s1 BUS1 s1n9\nSb0s2 s2n13 s2n14\nC0s2 s2n12 s2n13\nSa0s2 BUS1 s2n14\nL0s2 s2n12 s2n14\nC1s2 0 s2n12\nSb1s2 0 s2n13\nSb2s2 0 s2n15\nSa1s2 s2n12 s2n15\nL1s2 OUT s2n15"
+ },
+ {
+  "core": "Sa0s1 IN s1n14\nSb0s1 0 s1n14\nL0s1 s1n14 s1n16\nSa1s1 s1n13 s1n15\nSb1s1 0 s1n15\nL1s1 BUS1 s1n15\nSa3s1 s1n13 s1n16\nC0s1 IN s1n16\nSa0s2 BUS1 s2n12\nSb0s2 s2n12 s2n14\nSa1s2 s2n13 s2n14\nSb1s2 BUS1 s2n13\nC0s2 0 s2n14\nSb2s2 0 s2n15\nL0s2 OUT s2n15\nC1s2 s2n12 s2n15\nL1s2 OUT s2n13\nCbus1 BUS1 0\n",
+  "eff": 95.063,
+  "worst": 91.487,
+  "n": 18,
+  "stress": 48.0,
+  "duty": 0.3595,
+  "found": [
+   "V90_8/s3"
+  ],
+  "dup": [],
+  "drop": [
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 IN s1n14\nSb0s1 0 s1n14\nL0s1 s1n14 s1n16\nSa1s1 s1n13 s1n15\nSb1s1 0 s1n15\nL1s1 BUS1 s1n15\nSa3s1 s1n13 s1n16\nC0s1 IN s1n16\nSa0s2 BUS1 s2n12\nSb0s2 s2n12 s2n14\nSa1s2 s2n13 s2n14\nSb1s2 BUS1 s2n13\nC0s2 0 s2n14\nSb2s2 0 s2n15\nL0s2 OUT s2n15\nC1s2 s2n12 s2n15\nL1s2 OUT s2n13"
+ },
+ {
+  "core": "C0s1 0 s1n10\nL0s1 BUS1 s1n10\nSa0s1 IN s1n9\nL1s1 s1n9 s1n10\nC1s1 0 BUS1\nSb0s1 0 s1n9\nC0s2 OUT s2n10\nSb0s2 0 s2n9\nSa0s2 s2n9 s2n10\nL0s2 OUT s2n9\nSb1s2 BUS1 s2n10\nC1s2 BUS1 OUT\nCbus1 BUS1 0\n",
+  "eff": 95.03,
+  "worst": 91.025,
+  "n": 13,
+  "stress": 48.0,
+  "duty": 0.2543,
+  "found": [
+   "V90_5/s6"
+  ],
+  "dup": [
+   "Cx2:0-BUS1"
+  ],
+  "drop": [
+   "C1s1",
+   "C1s2",
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "C0s1 0 s1n10\nL0s1 BUS1 s1n10\nSa0s1 IN s1n9\nL1s1 s1n9 s1n10\nSb0s1 0 s1n9\nC0s2 OUT s2n10\nSb0s2 0 s2n9\nSa0s2 s2n9 s2n10\nL0s2 OUT s2n9\nSb1s2 BUS1 s2n10"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 0\nL0s1 s1n1 BUS1\nL0s2 BUS1 s2n13\nSb0s2 0 s2n14\nSa1s2 0 s2n16\nSb1s2 s2n14 s2n15\nSa2s2 s2n13 s2n15\nC0s2 s2n13 s2n16\nL1s2 OUT s2n15\nSb2s2 s2n14 s2n16\n",
+  "eff": 94.931,
+  "worst": 90.559,
+  "n": 11,
+  "stress": 48.0,
+  "duty": 0.2546,
+  "found": [
+   "V90_9/s3"
+  ],
+  "dup": [
+   "Sbx2:0-s2n14"
+  ],
+  "drop": [],
+  "match": null,
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 0\nL0s1 s1n1 BUS1\nL0s2 BUS1 s2n13\nSb0s2 0 s2n14\nSb1s2 s2n14 s2n15\nSa2s2 s2n13 s2n15\nC0s2 s2n13 0\nL1s2 OUT s2n15\nSb2s2 s2n14 0"
+ },
+ {
+  "core": "Sa0s1 IN s1n1\nSb0s1 s1n1 0\nL0s1 s1n1 BUS1\nSb0s2 s2n13 s2n14\nL0s2 s2n12 s2n13\nSa0s2 0 s2n14\nC0s2 s2n12 s2n14\nSa1s2 BUS1 s2n13\nSa2s2 s2n12 s2n15\nL1s2 OUT s2n15\nSb1s2 0 s2n15\nCbus1 BUS1 0\n",
+  "eff": 94.906,
+  "worst": 91.044,
+  "n": 12,
+  "stress": 48.0,
+  "duty": 0.3977,
+  "found": [
+   "V90_4/s7"
+  ],
+  "dup": [],
+  "drop": [
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 IN s1n1\nSb0s1 s1n1 0\nL0s1 s1n1 BUS1\nSb0s2 s2n13 s2n14\nL0s2 s2n12 s2n13\nSa0s2 0 s2n14\nC0s2 s2n12 s2n14\nSa1s2 BUS1 s2n13\nSa2s2 s2n12 s2n15\nL1s2 OUT s2n15\nSb1s2 0 s2n15"
+ },
+ {
+  "core": "Sb0s1 s1n13 s1n14\nL0s1 s1n13 s1n15\nL1s1 0 s1n14\nC0s1 s1n12 s1n14\nSa0s1 IN s1n13\nC1s1 IN s1n14\nSb1s1 0 s1n15\nL2s1 BUS1 s1n15\nSa1s1 s1n12 s1n15\nSb0s2 0 s2n9\nSa0s2 BUS1 s2n9\nL0s2 OUT s2n9\nCbus1 BUS1 0\n",
+  "eff": 94.829,
+  "worst": 90.684,
+  "n": 13,
+  "stress": 48.1,
+  "duty": 0.2546,
+  "found": [
+   "V90_6/s3"
+  ],
+  "dup": [],
+  "drop": [
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "Sb0s1 s1n13 s1n14\nL0s1 s1n13 s1n15\nL1s1 0 s1n14\nC0s1 s1n12 s1n14\nSa0s1 IN s1n13\nC1s1 IN s1n14\nSb1s1 0 s1n15\nL2s1 BUS1 s1n15\nSa1s1 s1n12 s1n15\nSb0s2 0 s2n9\nSa0s2 BUS1 s2n9\nL0s2 OUT s2n9"
+ },
+ {
+  "core": "Sa0s1 s1n20 s1n21\nSb0s1 s1n20 s1n22\nSa1s1 s1n21 s1n22\nL0s1 IN s1n22\nSb1s1 s1n20 s1n24\nL1s1 s1n19 s1n23\nSa2s1 s1n19 s1n24\nC0s1 s1n23 s1n24\nSa3s1 0 s1n23\nC1s1 0 s1n20\nSa4s1 s1n25 s1n26\nSa5s1 0 s1n26\nC2s1 s1n19 s1n25\nL2s1 BUS1 s1n23\nSb3s1 0 s1n25\nSb0s2 BUS1 s2n9\nSa0s2 0 s2n9\nL0s2 OUT s2n9\nCbus1 BUS1 0\n",
+  "eff": 94.689,
+  "worst": 90.756,
+  "n": 19,
+  "stress": 37.5,
+  "duty": 0.7113,
+  "found": [
+   "V90_9/s6"
+  ],
+  "dup": [
+   "Sax2:s1n20-s1n21",
+   "Sax2:0-s1n26"
+  ],
+  "drop": [
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 s1n20 s1n21\nSa1s1 s1n21 s1n20\nL0s1 IN s1n20\nSb1s1 s1n20 s1n24\nL1s1 s1n19 s1n23\nSa2s1 s1n19 s1n24\nC0s1 s1n23 s1n24\nSa3s1 0 s1n23\nC1s1 0 s1n20\nSa4s1 0 s1n26\nSa5s1 0 s1n26\nC2s1 s1n19 0\nL2s1 BUS1 s1n23\nSb0s2 BUS1 s2n9\nSa0s2 0 s2n9\nL0s2 OUT s2n9"
+ },
+ {
+  "core": "Sa0s1 s1n14 s1n15\nL0s1 0 s1n15\nSa1s1 IN s1n16\nSb0s1 0 s1n16\nC0s1 s1n15 s1n16\nSa2s1 s1n17 s1n18\nSa3s1 s1n14 s1n18\nL1s1 BUS1 s1n17\nSb2s1 0 s1n17\nL0s2 OUT s2n9\nSb0s2 0 s2n9\nSa0s2 s2n8 s2n9\nSa1s2 BUS1 s2n8\nCbus1 BUS1 0\n",
+  "eff": 94.683,
+  "worst": 90.823,
+  "n": 14,
+  "stress": 48.0,
+  "duty": 0.3,
+  "found": [
+   "V90_7/s2"
+  ],
+  "dup": [],
+  "drop": [
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "Sa0s1 s1n14 s1n15\nL0s1 0 s1n15\nSa1s1 IN s1n16\nSb0s1 0 s1n16\nC0s1 s1n15 s1n16\nSa2s1 s1n17 s1n18\nSa3s1 s1n14 s1n18\nL1s1 BUS1 s1n17\nSb2s1 0 s1n17\nL0s2 OUT s2n9\nSb0s2 0 s2n9\nSa0s2 s2n8 s2n9\nSa1s2 BUS1 s2n8"
+ },
+ {
+  "core": "Sb0s1 IN s1n9\nSa1s1 0 s1n9\nL0s1 BUS1 s1n9\nC0s2 OUT s2n9\nSa0s2 s2n9 s2n10\nSb0s2 BUS1 s2n10\nL0s2 OUT s2n10\nL1s2 0 s2n9\nC1s2 0 OUT\nCbus1 BUS1 0\n",
+  "eff": 94.652,
+  "worst": 90.253,
+  "n": 10,
+  "stress": 48.0,
+  "duty": 0.744,
+  "found": [
+   "V90_8/s2"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s2",
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "Sb0s1 IN s1n9\nSa1s1 0 s1n9\nL0s1 BUS1 s1n9\nC0s2 OUT s2n9\nSa0s2 s2n9 s2n10\nSb0s2 BUS1 s2n10\nL0s2 OUT s2n10\nL1s2 0 s2n9"
+ },
+ {
+  "core": "L0s1 BUS1 s1n12\nSa1s1 IN s1n12\nSb0s1 0 s1n12\nL0s2 OUT s2n9\nSa0s2 BUS1 s2n9\nSb0s2 s2n9 s2n10\nC0s2 OUT s2n10\nL1s2 0 s2n10\nC1s2 0 OUT\nCbus1 BUS1 0\n",
+  "eff": 94.652,
+  "worst": 90.253,
+  "n": 10,
+  "stress": 48.0,
+  "duty": 0.255,
+  "found": [
+   "V90_9/s5"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s2",
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "L0s1 BUS1 s1n12\nSa1s1 IN s1n12\nSb0s1 0 s1n12\nL0s2 OUT s2n9\nSa0s2 BUS1 s2n9\nSb0s2 s2n9 s2n10\nC0s2 OUT s2n10\nL1s2 0 s2n10"
+ },
+ {
+  "core": "L0s1 IN s1n15\nSb0s1 s1n14 s1n15\nSa0s1 s1n14 s1n16\nSb1s1 0 s1n16\nC0s1 s1n15 s1n16\nSb2s1 s1n17 s1n18\nC1s1 BUS1 s1n18\nL1s1 BUS1 s1n17\nL2s1 0 s1n18\nC2s1 BUS1 s1n14\nSa1s1 s1n14 s1n17\nL0s2 OUT s2n10\nSa0s2 BUS1 s2n10\nSb1s2 0 s2n10\nCbus1 BUS1 0\n",
+  "eff": 94.575,
+  "worst": 90.421,
+  "n": 15,
+  "stress": 37.5,
+  "duty": 0.2875,
+  "found": [
+   "V90_9/s5"
+  ],
+  "dup": [],
+  "drop": [
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "L0s1 IN s1n15\nSb0s1 s1n14 s1n15\nSa0s1 s1n14 s1n16\nSb1s1 0 s1n16\nC0s1 s1n15 s1n16\nSb2s1 s1n17 s1n18\nC1s1 BUS1 s1n18\nL1s1 BUS1 s1n17\nL2s1 0 s1n18\nC2s1 BUS1 s1n14\nSa1s1 s1n14 s1n17\nL0s2 OUT s2n10\nSa0s2 BUS1 s2n10\nSb1s2 0 s2n10"
+ },
+ {
+  "core": "C0s1 0 s1n14\nL0s1 s1n13 s1n14\nSa0s1 s1n13 s1n14\nSa1s1 IN s1n13\nSb0s1 s1n12 s1n13\nSa2s1 s1n12 s1n15\nSb1s1 0 s1n15\nL1s1 BUS1 s1n15\nC1s1 0 s1n12\nSa0s2 BUS1 s2n11\nL0s2 OUT s2n11\nSb0s2 s2n6 s2n11\nSb1s2 s2n6 0\nCbus1 BUS1 0\n",
+  "eff": 94.544,
+  "worst": 90.085,
+  "n": 14,
+  "stress": 48.0,
+  "duty": 0.255,
+  "found": [
+   "V90_5/s3"
+  ],
+  "dup": [],
+  "drop": [
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "C0s1 0 s1n14\nL0s1 s1n13 s1n14\nSa0s1 s1n13 s1n14\nSa1s1 IN s1n13\nSb0s1 s1n12 s1n13\nSa2s1 s1n12 s1n15\nSb1s1 0 s1n15\nL1s1 BUS1 s1n15\nC1s1 0 s1n12\nSa0s2 BUS1 s2n11\nL0s2 OUT s2n11\nSb0s2 s2n6 s2n11\nSb1s2 s2n6 0"
+ },
+ {
+  "core": "Sa0s1 BUS1 s1n11\nL0s1 s1n9 s1n10\nSa1s1 0 s1n10\nC0s1 s1n9 s1n11\nSb0s1 BUS1 s1n9\nSb1s1 IN s1n10\nL1s1 0 s1n11\nSb0s2 s2n9 s2n10\nSa0s2 0 s2n10\nSb1s2 BUS1 s2n10\nL0s2 OUT s2n10\nC1s2 OUT s2n9\nCbus1 BUS1 0\n",
+  "eff": 94.475,
+  "worst": 91.724,
+  "n": 13,
+  "stress": 48.1,
+  "duty": 0.6013,
+  "found": [
+   "V90_4/s3"
+  ],
+  "dup": [],
+  "drop": [
+   "C1s2",
+   "Cbus1",
+   "Sb0s2"
+  ],
+  "match": null,
+  "kept": "Sa0s1 BUS1 s1n11\nL0s1 s1n9 s1n10\nSa1s1 0 s1n10\nC0s1 s1n9 s1n11\nSb0s1 BUS1 s1n9\nSb1s1 IN s1n10\nL1s1 0 s1n11\nSa0s2 0 s2n10\nSb1s2 BUS1 s2n10\nL0s2 OUT s2n10"
+ },
+ {
+  "core": "L0s1 s1n13 s1n14\nSb0s1 0 s1n15\nSa0s1 IN s1n14\nSb1s1 0 s1n14\nSa1s1 s1n13 s1n15\nL1s1 BUS1 s1n15\nC2s1 BUS1 s1n13\nSb0s2 0 s2n10\nL0s2 OUT s2n10\nSa0s2 s2n9 s2n10\nSa1s2 BUS1 s2n9\nCbus1 BUS1 0\n",
+  "eff": 94.274,
+  "worst": 90.013,
+  "n": 12,
+  "stress": 48.0,
+  "duty": 0.3991,
+  "found": [
+   "V90_4/s4"
+  ],
+  "dup": [],
+  "drop": [
+   "Cbus1"
+  ],
+  "match": null,
+  "kept": "L0s1 s1n13 s1n14\nSb0s1 0 s1n15\nSa0s1 IN s1n14\nSb1s1 0 s1n14\nSa1s1 s1n13 s1n15\nL1s1 BUS1 s1n15\nC2s1 BUS1 s1n13\nSb0s2 0 s2n10\nL0s2 OUT s2n10\nSa0s2 s2n9 s2n10\nSa1s2 BUS1 s2n9"
+ }
+]

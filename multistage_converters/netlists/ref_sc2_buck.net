@@ -1,0 +1,10 @@
+# textbook reference: sc2_buck
+Sa0 IN n1
+Sb0 n1 n3
+Sa1 n2 n3
+Sb1 n2 0
+C0 n1 n2
+C1 n3 0
+Sa2 n3 n4
+Sb2 n4 0
+L0 n4 OUT

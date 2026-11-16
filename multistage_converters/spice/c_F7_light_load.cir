@@ -1,0 +1,65 @@
+* converter deck, bench.py (v90 48V->3V)
+* corner=light_load duty=0.1264
+* device map (netlist -> deck): Sa0s1->S1, Sb0s1->S2, L0s1->L1, Sa0s2->S3, Sb0s2->S4, Sa1s2->S5, Sb1s2->S6, C0s2->C1, Sb2s2->S7, L0s2->L2, C1s2->C2, L1s2->L3, Cbus1->C3
+* nodes: IN->VIN, OUT->VOUT, 0->0, X->nX
+Vin VIN 0 DC 48.0
+Vpa PA 0 PULSE(0 1 0 1n 1n 2.528e-07 2e-06)
+Vpb PB 0 PULSE(1 0 0 1n 1n 2.528e-07 2e-06)
+.model SWMOD SW(ron=0.005 roff=1000000.0 vt=0.5 vh=0.01)
+S1 VIN ns1n1 PA 0 SWMOD
+S2 ns1n1 0 PB 0 SWMOD
+L1 ns1n1 lx1 2.2e-06
+RL1 lx1 nBUS1 0.006
+S3 nBUS1 ns2n12 PA 0 SWMOD
+S4 ns2n12 ns2n14 PB 0 SWMOD
+S5 ns2n13 ns2n14 PA 0 SWMOD
+S6 nBUS1 ns2n13 PB 0 SWMOD
+C1 0 cx1 4.7e-05
+RC1 cx1 ns2n14 0.002
+S7 0 ns2n15 PB 0 SWMOD
+L2 VOUT lx2 2.2e-06
+RL2 lx2 ns2n15 0.006
+C2 ns2n12 cx2 4.7e-05
+RC2 cx2 ns2n15 0.002
+L3 VOUT lx3 2.2e-06
+RL3 lx3 ns2n13 0.006
+C3 nBUS1 cx3 4.7e-05
+RC3 cx3 0 0.002
+Rout VOUT 0 0.6
+Cout VOUT co_x 4.7e-05
+RCo co_x 0 0.002
+.options gmin=1e-12 reltol=1e-3 abstol=1e-9 vntol=1e-6 itl1=200 itl4=100
+.control
+set noaskquit
+tran 1e-08 0.004 0.00396 1e-08
+let pout = v(VOUT)*v(VOUT)/0.6
+let pin = -48.0*i(vin)
+meas tran vout_avg AVG v(VOUT) from=0.00396 to=0.004
+meas tran pout_avg AVG pout from=0.00396 to=0.004
+meas tran pin_avg  AVG pin  from=0.00396 to=0.004
+meas tran vout_max MAX v(VOUT) from=0.00396 to=0.004
+meas tran vout_min MIN v(VOUT) from=0.00396 to=0.004
+let vs1 = v(VIN)-v(ns1n1)
+meas tran vs1_max MAX vs1 from=0.00396 to=0.004
+meas tran vs1_min MIN vs1 from=0.00396 to=0.004
+let vs2 = v(ns1n1)
+meas tran vs2_max MAX vs2 from=0.00396 to=0.004
+meas tran vs2_min MIN vs2 from=0.00396 to=0.004
+let vs3 = v(nBUS1)-v(ns2n12)
+meas tran vs3_max MAX vs3 from=0.00396 to=0.004
+meas tran vs3_min MIN vs3 from=0.00396 to=0.004
+let vs4 = v(ns2n12)-v(ns2n14)
+meas tran vs4_max MAX vs4 from=0.00396 to=0.004
+meas tran vs4_min MIN vs4 from=0.00396 to=0.004
+let vs5 = v(ns2n13)-v(ns2n14)
+meas tran vs5_max MAX vs5 from=0.00396 to=0.004
+meas tran vs5_min MIN vs5 from=0.00396 to=0.004
+let vs6 = v(nBUS1)-v(ns2n13)
+meas tran vs6_max MAX vs6 from=0.00396 to=0.004
+meas tran vs6_min MIN vs6 from=0.00396 to=0.004
+let vs7 = -v(ns2n15)
+meas tran vs7_max MAX vs7 from=0.00396 to=0.004
+meas tran vs7_min MIN vs7 from=0.00396 to=0.004
+quit
+.endc
+.end

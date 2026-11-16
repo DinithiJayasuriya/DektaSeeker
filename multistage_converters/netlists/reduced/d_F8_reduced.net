@@ -1,0 +1,12 @@
+# design (d) F8: current-fed (input inductor) hybrid -> buck (2 stages)
+# found by: V90_3/s2   record 27 of provenance/final_all48_1114.json
+# format: <device> <nodeA> <nodeB>; Sa* = phase A (on for D*T), Sb* = phase B (complement); s1/s2/s3 suffix = stage; BUS1/BUS2 = inter-stage buses
+# REDUCED core (redundancy/filter-cap stripping; dropped: ['C0s1']). Not what the figure numbers used.
+Sa0s1 0 s1n10
+Sa1s1 BUS1 s1n9
+L0s1 IN s1n9
+C1s1 s1n9 s1n10
+Sb0s1 BUS1 s1n10
+Sb0s2 0 s2n9
+Sa1s2 BUS1 s2n9
+L0s2 OUT s2n9

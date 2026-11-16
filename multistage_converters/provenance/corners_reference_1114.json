@@ -1,0 +1,274 @@
+{
+ "sc2_buck": [
+  {
+   "name": "nominal",
+   "feasible": true,
+   "duty": 0.1278,
+   "eff": 0.9750107013606942,
+   "ripple": 0.013900000000000023,
+   "stress_max": 24.0387
+  },
+  {
+   "name": "heavy_load",
+   "feasible": true,
+   "duty": 0.1312,
+   "eff": 0.9513940654071306,
+   "ripple": 0.014057999999999904,
+   "stress_max": 24.07774
+  },
+  {
+   "name": "light_load",
+   "feasible": true,
+   "duty": 0.1262,
+   "eff": 0.9870634829337234,
+   "ripple": 0.013815999999999828,
+   "stress_max": 24.01976
+  },
+  {
+   "name": "low_line_tol",
+   "feasible": true,
+   "duty": 0.1422,
+   "eff": 0.9744867149269636,
+   "ripple": 0.020723999999999965,
+   "stress_max": 21.64959
+  }
+ ],
+ "sc4_buck": [
+  {
+   "name": "nominal",
+   "feasible": true,
+   "duty": 0.2573,
+   "eff": 0.9705866308325525,
+   "ripple": 0.011474000000000206,
+   "stress_max": 24.03237
+  },
+  {
+   "name": "heavy_load",
+   "feasible": true,
+   "duty": 0.2652,
+   "eff": 0.9425261668320116,
+   "ripple": 0.011529000000000345,
+   "stress_max": 24.06628
+  },
+  {
+   "name": "light_load",
+   "feasible": true,
+   "duty": 0.2534,
+   "eff": 0.9849087983043711,
+   "ripple": 0.011441000000000034,
+   "stress_max": 24.01606
+  },
+  {
+   "name": "low_line_tol",
+   "feasible": true,
+   "duty": 0.2863,
+   "eff": 0.9686242150892538,
+   "ripple": 0.01691799999999999,
+   "stress_max": 21.64288
+  }
+ ],
+ "buck_buck_a": [
+  {
+   "name": "nominal",
+   "feasible": true,
+   "duty": 0.2523,
+   "eff": 0.9657315337397429,
+   "ripple": 0.011482999999999688,
+   "stress_max": 48.03312
+  },
+  {
+   "name": "heavy_load",
+   "feasible": true,
+   "duty": 0.2566,
+   "eff": 0.9365986778685664,
+   "ripple": 0.011686999999999781,
+   "stress_max": 48.04633
+  },
+  {
+   "name": "light_load",
+   "feasible": true,
+   "duty": 0.2501,
+   "eff": 0.979299654513748,
+   "ripple": 0.011373999999999995,
+   "stress_max": 48.02669
+  },
+  {
+   "name": "low_line_tol",
+   "feasible": true,
+   "duty": 0.267,
+   "eff": 0.9647579270915139,
+   "ripple": 0.017400000000000304,
+   "stress_max": 43.23738
+  }
+ ],
+ "F7": [
+  {
+   "name": "nominal",
+   "feasible": true,
+   "duty": 0.1283,
+   "eff": 0.9700385624058967,
+   "ripple": 8.200000000035956e-05,
+   "stress_max": 48.03731
+  },
+  {
+   "name": "heavy_load",
+   "feasible": true,
+   "duty": 0.1322,
+   "eff": 0.9431854343738589,
+   "ripple": 0.0001289999999998237,
+   "stress_max": 48.06272
+  },
+  {
+   "name": "light_load",
+   "feasible": true,
+   "duty": 0.1264,
+   "eff": 0.9832634996965036,
+   "ripple": 6.200000000022854e-05,
+   "stress_max": 48.02462
+  },
+  {
+   "name": "low_line_tol",
+   "feasible": true,
+   "duty": 0.1428,
+   "eff": 0.9687880926929303,
+   "ripple": 0.00016300000000013526,
+   "stress_max": 43.24017
+  }
+ ],
+ "F19": [
+  {
+   "name": "nominal",
+   "feasible": true,
+   "duty": 0.7141,
+   "eff": 0.9643860141175521,
+   "ripple": 0.010836999999999986,
+   "stress_max": 37.41523
+  },
+  {
+   "name": "heavy_load",
+   "feasible": true,
+   "duty": 0.7066,
+   "eff": 0.9326497752787961,
+   "ripple": 0.011083999999999872,
+   "stress_max": 37.29594
+  },
+  {
+   "name": "light_load",
+   "feasible": true,
+   "duty": 0.7179,
+   "eff": 0.9798864058058948,
+   "ripple": 0.010708000000000162,
+   "stress_max": 37.48474
+  },
+  {
+   "name": "low_line_tol",
+   "feasible": true,
+   "duty": 0.7,
+   "eff": 0.9627937450982724,
+   "ripple": 0.016000000000000014,
+   "stress_max": 33.33273
+  }
+ ],
+ "F57": [
+  {
+   "name": "nominal",
+   "feasible": true,
+   "duty": 0.4254,
+   "eff": 0.9592192112841548,
+   "ripple": 0.008630000000000138,
+   "stress_max": 24.03205
+  },
+  {
+   "name": "heavy_load",
+   "feasible": true,
+   "duty": 0.437,
+   "eff": 0.9212653366065032,
+   "ripple": 0.008682999999999996,
+   "stress_max": 24.06532
+  },
+  {
+   "name": "light_load",
+   "feasible": true,
+   "duty": 0.4197,
+   "eff": 0.978541383443322,
+   "ripple": 0.008596999999999966,
+   "stress_max": 24.01659
+  },
+  {
+   "name": "low_line_tol",
+   "feasible": true,
+   "duty": 0.456,
+   "eff": 0.9559344586149986,
+   "ripple": 0.012716999999999867,
+   "stress_max": 21.64328
+  }
+ ],
+ "F9": [
+  {
+   "name": "nominal",
+   "feasible": true,
+   "duty": 0.1445,
+   "eff": 0.9686499052556655,
+   "ripple": 0.014107000000000092,
+   "stress_max": 25.91754
+  },
+  {
+   "name": "heavy_load",
+   "feasible": true,
+   "duty": 0.1498,
+   "eff": 0.9397062776830839,
+   "ripple": 0.014334999999999987,
+   "stress_max": 26.03359
+  },
+  {
+   "name": "light_load",
+   "feasible": true,
+   "duty": 0.1418,
+   "eff": 0.9834159567175871,
+   "ripple": 0.013988000000000334,
+   "stress_max": 25.86173
+  },
+  {
+   "name": "low_line_tol",
+   "feasible": true,
+   "duty": 0.1633,
+   "eff": 0.9681703335141538,
+   "ripple": 0.021056000000000186,
+   "stress_max": 23.57426
+  }
+ ],
+ "F8": [
+  {
+   "name": "nominal",
+   "feasible": true,
+   "duty": 0.1187,
+   "eff": 0.9690133879566868,
+   "ripple": 0.013949999999999907,
+   "stress_max": 25.55202
+  },
+  {
+   "name": "heavy_load",
+   "feasible": true,
+   "duty": 0.122,
+   "eff": 0.9404374434012346,
+   "ripple": 0.014156999999999975,
+   "stress_max": 25.62656
+  },
+  {
+   "name": "light_load",
+   "feasible": true,
+   "duty": 0.1171,
+   "eff": 0.9835875960257008,
+   "ripple": 0.01384400000000019,
+   "stress_max": 25.5172
+  },
+  {
+   "name": "low_line_tol",
+   "feasible": true,
+   "duty": 0.1304,
+   "eff": 0.9686869192681671,
+   "ripple": 0.020694999999999908,
+   "stress_max": 23.14547
+  }
+ ]
+}

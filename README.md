@@ -185,3 +185,9 @@ python plot_waveforms.py --netlist "Sb0 n1 0; L0 n1 OUT; Sa0 IN n1; C0 IN OUT" -
   bad circuits. Trust the fixed-duty numbers from `plot_waveforms.py` / `mech_verify.py`.
 - In the paper: the Fig. 7 caption says three topologies but the figure has four, Table III
   says `Fig. ??`, and the text uses (a)(b)(c) while the table uses D1..D4. These need fixing.
+
+---
+
+## New (11/16): multi-stage 48 V → 3 V converters
+
+See [`multistage_converters/`](multistage_converters/README.md). It holds the four multi-stage converters from the DAC paper figure, with netlists, ngspice decks, a runner script and an analysis plan.
