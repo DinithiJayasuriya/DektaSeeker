@@ -33,6 +33,7 @@ RCo co_x 0 0.002
 .options gmin=1e-12 reltol=1e-3 abstol=1e-9 vntol=1e-6 itl1=200 itl4=100
 .control
 set noaskquit
+save all @c1[i] @c2[i] @c3[i] @c4[i] @cout[i]
 tran 1e-08 0.004 0.00396 1e-08
 let pout = v(VOUT)*v(VOUT)/0.3
 let pin = -48.0*i(vin)
@@ -68,6 +69,22 @@ meas tran vs8_min MIN vs8 from=0.00396 to=0.004
 let vs9 = v(ns3n1)
 meas tran vs9_max MAX vs9 from=0.00396 to=0.004
 meas tran vs9_min MIN vs9 from=0.00396 to=0.004
+* --- capacitor current probes ---
+meas tran ic_c0s1_rms RMS @c1[i] from=0.00396 to=0.004
+meas tran ic_c0s1_max MAX @c1[i] from=0.00396 to=0.004
+meas tran ic_c0s1_min MIN @c1[i] from=0.00396 to=0.004
+meas tran ic_c1s1_rms RMS @c2[i] from=0.00396 to=0.004
+meas tran ic_c1s1_max MAX @c2[i] from=0.00396 to=0.004
+meas tran ic_c1s1_min MIN @c2[i] from=0.00396 to=0.004
+meas tran ic_c0s2_rms RMS @c3[i] from=0.00396 to=0.004
+meas tran ic_c0s2_max MAX @c3[i] from=0.00396 to=0.004
+meas tran ic_c0s2_min MIN @c3[i] from=0.00396 to=0.004
+meas tran ic_cbus2_rms RMS @c4[i] from=0.00396 to=0.004
+meas tran ic_cbus2_max MAX @c4[i] from=0.00396 to=0.004
+meas tran ic_cbus2_min MIN @c4[i] from=0.00396 to=0.004
+meas tran ic_cout_rms RMS @cout[i] from=0.00396 to=0.004
+meas tran ic_cout_max MAX @cout[i] from=0.00396 to=0.004
+meas tran ic_cout_min MIN @cout[i] from=0.00396 to=0.004
 quit
 .endc
 .end

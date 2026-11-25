@@ -16,6 +16,7 @@ RCo co_x 0 0.002
 .options gmin=1e-12 reltol=1e-3 abstol=1e-9 vntol=1e-6 itl1=200 itl4=100
 .control
 set noaskquit
+save all @cout[i]
 tran 1e-08 0.004 0.00396 1e-08
 let pout = v(VOUT)*v(VOUT)/0.3
 let pin = -43.2*i(vin)
@@ -30,6 +31,10 @@ meas tran vs1_min MIN vs1 from=0.00396 to=0.004
 let vs2 = v(nn1)
 meas tran vs2_max MAX vs2 from=0.00396 to=0.004
 meas tran vs2_min MIN vs2 from=0.00396 to=0.004
+* --- capacitor current probes ---
+meas tran ic_cout_rms RMS @cout[i] from=0.00396 to=0.004
+meas tran ic_cout_max MAX @cout[i] from=0.00396 to=0.004
+meas tran ic_cout_min MIN @cout[i] from=0.00396 to=0.004
 quit
 .endc
 .end

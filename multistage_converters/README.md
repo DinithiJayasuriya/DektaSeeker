@@ -62,7 +62,7 @@ python3 tools/run_design.py netlists/*.net --json results/all_corners.json --wor
 # run a deck straight in ngspice (prints the measured vout/pin/pout/ripple/|Vds|)
 ngspice -b spice/c_F7_nominal.cir
 
-# waveforms (last 20 periods: every node voltage, every inductor current, input current) + plot
+# waveforms (last 20 periods: every node voltage, every inductor and capacitor current, input current) + plot
 python3 tools/run_design.py netlists/c_F7.net --corner 0 --waves results/waves/waves
 python3 tools/plot_waves.py results/waves/waves_c_F7_nominal.txt --periods 4
 
@@ -74,7 +74,16 @@ python3 tools/run_design.py netlists/c_F7.net --corner 0 --short  C1s2
 python3 tools/run_design.py netlists/c_F7.net --corner 0 --duty 0.13
 ```
 
-**Names in decks and waveforms.** `bench.py` renumbers devices: switches become S1, S2, …, inductors L1, L2, … and capacitors C1, C2, … in netlist order. Every internal node gets an `n` prefix (`BUS1` → `nBUS1`, `s2n12` → `ns2n12`), with `IN` → `VIN` and `OUT` → `VOUT`. Each deck's header lists the exact device map, e.g. `L1s2->L3`, so `@l3[i]` in the waveform file is the current in `L1s2`. Inductor current is positive from the netlist's first node to its second.
+**Capacitor current probes.** Every deck in `spice/` measures the current of each capacitor (including `Cout`) over the last 20 periods, named by its netlist device. Run a deck directly to read them:
+
+```bash
+ngspice -b spice/a_F57_nominal.cir | grep '^ic_'
+# ic_c0s2_rms = 3.39   ic_c0s2_max = 4.79   ic_c0s2_min = -10.6   (stage-2 flying cap C0s2, amps)
+```
+
+The probes are the `meas tran ic_<device>_{rms,max,min} ... @cN[i]` lines at the end of each deck (`save all @c1[i] ...` sits above `tran`). To probe something else, add a line in the same form, e.g. `meas tran il1_rms RMS @l1[i] from=0.00396 to=0.004`. For the full waveform, use `--waves` + `plot_waves.py` above; the plot has a capacitor-current panel.
+
+**Names in decks and waveforms.** `bench.py` renumbers devices: switches become S1, S2, …, inductors L1, L2, … and capacitors C1, C2, … in netlist order. Every internal node gets an `n` prefix (`BUS1` → `nBUS1`, `s2n12` → `ns2n12`), with `IN` → `VIN` and `OUT` → `VOUT`. Each deck's header lists the exact device map, e.g. `L1s2->L3`, so `@l3[i]` in the waveform file is the current in `L1s2`. Inductor and capacitor currents (`@lN[i]`, `@cN[i]`) are positive from the netlist's first node to its second; `--waves` also writes a `.map.json` next to the dump so `plot_waves.py` labels each trace with its netlist name.
 
 ---
 

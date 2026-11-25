@@ -87,12 +87,22 @@ def deck_text(nl, duty, ci, waves=None):
     head = "* corner=%s duty=%.4f\n* device map (netlist -> deck): %s\n* nodes: IN->VIN, OUT->VOUT, 0->0, X->nX\n" % (
         spec.CORNERS[ci]["name"], duty, ", ".join(f"{k}->{v}" for k, v in m.items()))
     txt = txt.replace("* LaMAGIC-style converter, bench.py\n", "* converter deck, bench.py (v90 48V->3V)\n" + head, 1)
+    # capacitor-current probes (always in the deck): RMS / max / min over the measurement window, named by netlist
+    # device, e.g. "ic_c0s2_rms = 3.39". Sign: positive from the capacitor's first node to its second (deck line order).
+    win = re.search(r"from=(\S+) to=(\S+)", txt)
+    caps = [(v.lower(), k) for k, v in m.items() if v[0] == "C"] + [("cout", "Cout")]
+    probe = "save all " + " ".join(f"@{d}[i]" for d, _ in caps) + "\n" + "".join(
+        f"meas tran ic_{n.lower()}_{f.lower()} {f} @{d}[i] from={win[1]} to={win[2]}\n"
+        for d, n in caps for f in ("RMS", "MAX", "MIN"))
+    txt = re.sub(r"^(tran .*)$", probe.split("\n", 1)[0] + r"\n\1", txt, count=1, flags=re.M)
+    txt = txt.replace("quit\n.endc", "* --- capacitor current probes ---\n" + probe.split("\n", 1)[1] + "quit\n.endc")
     if waves:
         Ls = [v.lower() for v in m.values() if v[0] == "L"]
+        Cs = [v.lower() for v in m.values() if v[0] == "C"]
         nodes = sorted({bench._net(x) for _, a, b in nl for x in (a, b)} - {"0"})
-        sav = "save all " + " ".join(f"@{l}[i]" for l in Ls)
+        sav = "save all " + " ".join(f"@{d}[i]" for d in Ls + Cs)
         txt = re.sub(r"^(tran .*)$", sav + r"\n\1", txt, count=1, flags=re.M)
-        vec = " ".join([f"v({n})" for n in nodes] + [f"@{l}[i]" for l in Ls] + ["i(vin)"])
+        vec = " ".join([f"v({n})" for n in nodes] + [f"@{d}[i]" for d in Ls + Cs] + ["i(vin)"])
         txt = txt.replace("quit\n.endc", f"set wr_singlescale\nset wr_vecnames\nwrdata {waves} {vec}\nquit\n.endc")
     return txt
 
@@ -105,7 +115,7 @@ def main():
     ap.add_argument("--remove", default="", help="comma list of devices to delete (open)")
     ap.add_argument("--short", default="", help="comma list of devices to replace by a wire")
     ap.add_argument("--decks", help="directory: write the ngspice deck used at each corner's chosen duty")
-    ap.add_argument("--waves", help="file prefix: re-run each corner at its duty and dump waveforms (last 20 periods)")
+    ap.add_argument("--waves", help="file prefix: re-run each corner at its duty and dump waveforms (last 20 periods; node voltages, L and C currents, input current)")
     ap.add_argument("--json", help="write all results here")
     ap.add_argument("--workers", type=int, default=8)
     a = ap.parse_args()
@@ -132,6 +142,8 @@ def main():
                 with tempfile.TemporaryDirectory() as td:
                     dk = Path(td, "w.cir"); dk.write_text(deck_text(nl, r["duty"], ci, waves=w))
                     subprocess.run([bench.NGSPICE, "-b", str(dk)], capture_output=True, text=True, timeout=600)
+                # sidecar: deck name -> netlist name, so plot_waves.py can label e.g. @c3[i] as C0s2
+                Path(w).with_suffix(".map.json").write_text(json.dumps({v: k for k, v in name_map(nl).items()}, indent=1))
                 print("waveforms ->", w)
     for k, v in out.items():
         print(f"\n== {k}" + (f"  removed={rm}" if rm else "") + (f"  shorted={sh}" if sh else ""))
