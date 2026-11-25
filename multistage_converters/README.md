@@ -161,3 +161,14 @@ Please put what you produce in a new folder under `results/`, e.g. `results/mayo
 - Netlists come from `provenance/final_all48_1114.json` (the `core` field), records 129 / 28 / 24 / 27 = designs a / b / c / d. They were found by search runs V90R_1/s4, V90_3/s2, V90_8/s3 and V90_3/s2 respectively.
 - The paper's corner numbers are in `provenance/corners_reference_1114.json`. The re-run in `results/all_corners.json` matches them.
 - The figure script is `provenance/make_fig_conv_compact.py`. It only runs inside the original repo, and it draws the circuits by hand from the netlists.
+
+---
+
+## Modifications on 11_25 (capacitor current probes)
+
+- **Probes added to every deck in `spice/`.** Each capacitor's current is measured (RMS, max, min), named by its netlist device (e.g. `ic_c0s2_rms`). The probes are the `meas tran ic_...` lines at the end of each `.cir` file; the code that writes them is in `tools/run_design.py` (function `deck_text`).
+- **How to run:**
+  ```bash
+  ngspice -b spice/a_F57_nominal.cir | grep '^ic_'
+  ```
+- **Waveform figures with capacitor currents** (bottom panel): `results/waves/waves_a_F57_nominal.png`, `results/waves/waves_b_F9_nominal.png`.
